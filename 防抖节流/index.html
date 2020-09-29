@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addEventListener与on</title>
+</head>
+<body>
+<div style="height: 20000px"></div>
+</body>
+</html>
+<script>
+    function say (num) {
+        return function () {
+            console.log(num)
+        }
+    }
+    // window.addEventListener('scroll',say(1))
+    // window.addEventListener('scroll',say(2))
+    // window.onscroll= say(3)
+    // window.onscroll = say(4)
+  
+    const refThread = (fn)=>{
+        let lock = false
+        return (...arguments)=>{
+            if(!lock){
+            requestAnimationFrame(()=>{
+                fn.apply(this,arguments)
+                lock = false
+            })
+            lock = true
+            }
+        }
+    }
+    window.addEventListener('scroll',refThread((e)=>{
+        console.log(1)
+        console.log(e)
+    },))
+</script>

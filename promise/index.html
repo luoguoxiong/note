@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promise</title>
+    <script src="./index.js"></script>
+</head>
+<body>
+</body>
+</html>
+<script>
+    new MyPromise((res,rej)=>{
+        setTimeout(() => {
+            res(1)
+        }, 2000);
+    }).then(val=>{
+        console.log(val)
+    })
+</script>
