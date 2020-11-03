@@ -122,14 +122,18 @@ function commitRootImpl(fiber) {
 }
 
 // 任务调度
-let nextUnitOfWork = null;
-let workInProgressRoot = null;
-let currentRoot = null;
+let nextUnitOfWork = null; // 下一个任务存在
+let workInProgressRoot = null; //正在执行的任务
+let currentRoot = null; //
 let deletions = null;
+
+let i = 1;
 // workLoop用来调度任务
 function workLoop(deadline) {
   // 这个while循环会在任务执行完或者时间到了的时候结束
   while (nextUnitOfWork && deadline.timeRemaining() > 1) {
+    console.log(nextUnitOfWork);
+    console.log(i++);
     nextUnitOfWork = performUnitOfWork(nextUnitOfWork);
   }
   // 任务做完后统一渲染
@@ -260,7 +264,6 @@ function updateFunctionComponent(fiber) {
   wipFiber = fiber;
   hookIndex = 0;
   wipFiber.hooks = []; // hooks用来存储具体的state序列
-
   // 函数组件的type就是个函数，直接拿来执行可以获得DOM元素
   const children = [fiber.type(fiber.props)];
 
@@ -281,10 +284,9 @@ function updateHostComponent(fiber) {
 }
 
 // performUnitOfWork用来执行任务，参数是我们的当前fiber任务，返回值是下一个任务
-function performUnitOfWork(fiber) {
+var performUnitOfWork = (fiber) => {
   // 检测函数组件
   const isFunctionComponent = fiber.type instanceof Function;
-  console.log(isFunctionComponent);
   if (isFunctionComponent) {
     updateFunctionComponent(fiber);
   } else {
@@ -309,11 +311,12 @@ function performUnitOfWork(fiber) {
 
     nextFiber = nextFiber.return;
   }
-}
+};
 // 使用requestIdleCallback开启workLoop
 requestIdleCallback(workLoop);
 
 function render(vDom, container) {
+  // workInProgressRoot 数据结构？？
   workInProgressRoot = {
     dom: container,
     props: {
@@ -323,7 +326,6 @@ function render(vDom, container) {
   };
 
   deletions = [];
-
   nextUnitOfWork = workInProgressRoot;
 }
 
