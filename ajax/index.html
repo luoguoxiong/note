@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<input type="file" id="file" />
+<script>
+  const xhr = new XMLHttpRequest();
+
+  //   xhr.timeout = 1;
+
+  //   xhr.ontimeout = () => console.log('请求超时');
+  xhr.open('GET', 'http://common.ipin.com/web/images/ads/ads_oem.jpg', false);
+  xhr.onprogress = (event) => {
+    if (event.lengthComputable) {
+      //   var percentComplete = event.loaded / event.total;
+    }
+  };
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+      if (xhr.status >= 200 || xhr.status < 300 || xhr.status === 304) {
+        console.log(xhr.responseText);
+      }
+    }
+  };
+  xhr.send(null);
+  const file = document.getElementById('file');
+  file.onchange = (event) => {
+    const reads = new FileReader();
+    const files = event.target.files[0];
+    console.log(files);
+    reads.readAsDataURL(files);
+    const form = new FormData();
+    form.append('name', files);
+    reads.onload = (event) => {
+      console.log(form.get('name'));
+
+      const img = document.createElement('img');
+      img.src = event.target.result;
+      document.body.appendChild(img);
+    };
+    // xhr.send(form)
+  };
+</script>
