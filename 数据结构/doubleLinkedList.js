@@ -168,7 +168,6 @@ class DoubleLinkList extends LinkedList {
       if (index === 0) {
         this.head = current.next;
         if (this.count === 1) {
-          // {2}
           this.tail = undefined;
         } else {
           this.head.prev = undefined;
