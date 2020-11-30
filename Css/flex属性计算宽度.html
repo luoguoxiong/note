@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>flex属性计算宽度</title>
+  </head>
+  <!-- flex :flex-group flex-shirk flex-basis -->
+  <!-- 
+        flex-group 补充计算
+        let = fixWidth * leftGroup / (leftGroup + rightGroup)
+        flex-shrik 溢出计算
+        left = leftWidth - overWidth * (leftWidth * leftShrink / ( leftWidth * leftShrink + rightWidth * rightShrink)) */
+        flex-basis 基础宽度，如果设置了width和flex-basis，那么flex-basis会覆盖width值。
+   -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      width: 600px;
+      height: 300px;
+      display: flex;
+      overflow-x: auto;
+    }
+    .left {
+      flex: 2 0 100px;
+      background: red;
+    }
+    .right {
+      flex: 3 0 200px;
+      background: blue;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>
