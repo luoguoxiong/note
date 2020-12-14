@@ -36,7 +36,7 @@ const rotateRight = (head, k) => {
     head = current.next; // 定位新的头节点
     current.next = null; // 打断链表环
   }
-  return cur;
+  return head;
 };
 
 // 哈希法
