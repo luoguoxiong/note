@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BFC</title>
+  </head>
+  <style>
+    /*  <h4>①相邻兄弟元素margin重叠问题</h4> */
+    .content {
+      width: 400px;
+      height: 400px;
+      border: 1px solid;
+    }
+    .item {
+      width: 100px;
+      height: 50px;
+      background-color: gold;
+      margin: 40px 0;
+    }
+    .bfc {
+      overflow: hidden;
+      /* display: flex; */
+    }
+    /*  <h4>②父子元素margin重叠问题</h4> */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: gold;
+    }
+    .wrap {
+      background: greenyellow;
+      overflow: hidden;
+    }
+    .wrap h1 {
+      background: pink;
+      margin: 40px;
+    }
+    /*<h4>③BFC不会重叠浮动元素</h4> */
+    .box3 {
+      height: 100px;
+      width: 100px;
+      float: left;
+      background: lightblue;
+    }
+    .box4 {
+      width: 400px;
+      height: 200px;
+      background: #eee;
+    }
+  </style>
+  <body>
+    <h4>①相邻兄弟元素margin重叠问题</h4>
+    <div class="content">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="bfc">
+        <div class="item"></div>
+      </div>
+    </div>
+    <h4>②父子元素margin重叠问题</h4>
+    <div class="box"></div>
+    <div class="wrap">
+      <h1>h1</h1>
+    </div>
+    <h4>③BFC不会重叠浮动元素</h4>
+    <div>
+      <div class="box3">我是一个左浮动的元素</div>
+      <div class="box4">
+        <!-- <div class="box3">我是一个左浮动的元素</div> -->
+        喂喂喂!大家不要生气嘛，生气会犯嗔戒的。悟空你也太调皮了，
+        我跟你说过叫你不要乱扔东西，你怎么又……你看，我还没说完你就把棍子给扔掉了!
+        月光宝盒是宝物，你把它扔掉会污染环境，要是砸到小朋友怎么办，就算砸不到小朋友，
+        砸到花花草草也是不对的。
+      </div>
+    </div>
+  </body>
+</html>
