@@ -19,3 +19,10 @@ function create(Con, ...args) {
 
 const p2 = create(Persion, 'hewei1');
 p2.say();
+
+// 复制原型的方法->执行fn函数->判断fn执行返回结果？return:obj
+const create = (fn, ...args) => {
+  const obj = Object.create(fn.prototype);
+  const result = fn.call(obj, args);
+  return result ? result : obj;
+};

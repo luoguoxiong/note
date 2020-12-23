@@ -35,3 +35,28 @@ function fun(arg1, arg2) {
 const _this = { name: 'YIYING' };
 // 接受的是一个参数列表;方法立即执行
 fun.ownCall(_this, 1, 2);
+
+Function.prototype.myCall = function (context, ...args) {
+  const key = Symbol();
+  context[key] = this;
+  const returnVal = context[key](...args);
+  delete context[key];
+  return returnVal;
+};
+Function.prototype.myApply = function (context, args) {
+  const key = Symbol();
+  context[key] = this;
+  const returnVal = context[key](...args);
+  delete context[key];
+  return returnVal;
+};
+Function.prototype.myBind = function (context) {
+  const that = this;
+  return function (...args) {
+    that.myCall(context, ...args);
+  };
+};
+fun.myCall(_this, 1, 3);
+fun.myApply(_this, [2, 3]);
+
+fun.myBind(_this)(1, 3);

@@ -29,12 +29,37 @@ var d = add(1, 2, 3)(4); // f 10
 
 // // 可以利用隐式转换的特性参与计算
 console.log(a + 10); // 20
-// console.log(b + 20); // 30
+
+// function curry(fn, args) {
+//   var length = fn.length; // 函数接收参数的长度
+//   var args = args || [];
+//   return function () {
+//     newArgs = args.concat(Array.prototype.slice.call(arguments));
+//     if (newArgs.length < length) {
+//       return curry.call(this, fn, newArgs);
+//     } else {
+//       return fn.apply(this, newArgs);
+//     }
+//   };
+// }
+
+// 整合参数
+const curry = (fn) => {
+  const judge = (...args) =>
+    fn.length === args.length ? fn(...args) : (arg) => judge(...args, arg);
+  return judge;
+};
+
+function multiFn(a, b, c) {
+  return a * b * c;
+}
+
+var multi = curry(multiFn);
+
+console.log(multi(2)(3)(4));
+// multi(2, 3, 4);
+// multi(2)(3, 4);
+// console.log(multi(2, 3)(4));
+// // console.log(b + 20); // 30
 // console.log(c + 30); // 40
 // console.log(d + 40); // 50
-
-// // 也可以继续传入参数，得到的结果再次利用隐式转换参与计算
-// console.log(a(10) + 100); // 120
-// console.log(b(10) + 100); // 120
-// console.log(c(10) + 100); // 120
-// console.log(d(10) + 100); // 120

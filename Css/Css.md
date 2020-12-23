@@ -143,3 +143,138 @@ width:auto会使元素撑满整个父元素，margin、border、padding、conten
 （2）样式与内容分离：将css代码定义到外部css中。
 ```
 
+#### 11.一个宽高自适应的正方形
+
+> 1. 元素的margin/padding百分比是相对父元素width的性质来实现
+> 2. 利用vw来实现
+
+```css
+/*1.第一种方式是利用vw来实现*/
+.square {
+  width: 10%;
+  height: 10vw;
+  background: tomato;
+}
+
+/*2.第二种方式是利用元素的margin/padding百分比是相对父元素width的性质来实现*/
+.square {
+  width: 20%;
+  height: 0;
+  padding-top: 20%;
+  background: orange;
+}
+
+/*3.第三种方式是利用子元素的margin-top的值来实现的*/
+.square {
+  width: 30%;
+  overflow: hidden;
+  background: yellow;
+}
+
+.square::after {
+  content: "";
+  display: block;
+  margin-top: 100%;
+}
+```
+
+#### 12. 实现单行/多行溢出...
+
+```css
+/*单行文本溢出*/
+p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*多行文本溢出*/
+p {
+  position: relative;
+  line-height: 1.5em;
+  /*高度为需要显示的行数*行高，比如这里我们显示两行，则为3*/
+  height: 3em;
+  overflow: hidden;
+}
+
+p:after {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+}
+```
+
+#### 13.vertical-align 的特殊性
+
+```text
+（1）vertical-align的默认值是baseline，即基线对齐，而基线的定义是字母x的下边缘。
+（2）vertical-align:top就是垂直上边缘对齐。
+（3）vertical-align:middle是中间对齐。
+（4）vertical-align支持数值属性，根据数值的不同，相对于基线往上或往下偏移，如果是负值，往下偏移，如果是正值，往上偏移。
+（5）vertical-align属性的百分比值则是相对于`line-height`的计算值计算的。
+
+需要注意它的生效条件：
+内联元素span、strong、em、img、button、input等
+display值为inline、inline-block、inline-table或table-cell的元素
+需要注意浮动和绝对定位会让元素块状化，因此此元素绝对不会生效
+```
+
+#### 14.display: none和 visibility:hidden的区别
+
+```text
+1. 是否占据空间
+- display: none 不占据空间
+- visibility:hidden 占据空间
+
+2. 是否渲染
+- display:none，会触发reflow（回流），进行渲染。
+- visibility:hidden，只会触发repaint（重绘），因为没有发现位置变化，不进行渲染。
+
+3. 是否是继承属性(株连性)
+- display:none，display不是继承属性，元素及其子元素都会消失。
+- visibility:hidden，visibility是继承属性，若子元素使用了visibility:visible，则不继承，这个子孙元素又会显现出来。
+```
+
+#### 15.REM实现原理
+
+1. 基础知识
+
+```reStructuredText
+默认浏览器设置的字体大小为16px
+viewport属性
+width、height、initial-scale、maximum-scale、minimum-scale、user-scalable这些属性，分别表示宽度、高度、初始缩放比例、最大缩放比例、最小缩放比例、是否允许用户缩放
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0, user-scalable=no">
+复制代码
+dpr, dpr是设备像素比，是css里面1px所能显示的像素点的个数，dpr的值越大，显示的越精细;window.devicePixelRatio获取到当前设备的dpr。
+```
+
+2.实现原理
+
+```reStructuredText
+核心思想： 百分比布局可实现响应式布局，而rem相当于百分比布局。
+实现原理：动态获取当前视口宽度width，除以一个固定的数n，得到rem的值。表达式为rem = width / n。
+通过此方法，rem大小始终为width的n等分。
+
+var scale = 1 / devicePixelRatio;  
+document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale='+ scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no'
+
+复制代码实际开发过程中，可以使用 lib-flexible库，但是如果每次写的时候都要手动去计算有点太过麻烦了，我们可以通过在webpack中配置 px2rem-loader, 或者 pxrem-loader，主要原理就是需要自己配置 px转rem的计算规则，在编辑的时候直接计算转成rem。所以在开发的时候直接按照设计稿的尺寸写px，编译后会直接转化成rem；
+```
+
+#### 16.清除浮动
+
+```text
+解决浮动父级元素高度坍塌
+1. 父级div定义height
+2. 额外标签法： 在有浮动的父级元素的末尾插入了一个没有内容的块级元素div 并添加样式clear:both。
+3. 利用伪元素：父级div定义 伪类:after，我们可以写一个.clearfix 工具样式，当需要清除浮动时，就为其加上这个类 .clearfix:after { display: block; clear :both; content: '';}。
+4. 父级添加overflow属性： 包含浮动元素的父标签添加样式overflow为hidden或auto，通过触发BFC方式，实现清除浮动
+```
+
+#### 17.Flex布局 
+
+http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+
+flex:flex-group flex-skip base-width;

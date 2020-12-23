@@ -7,6 +7,7 @@
   <!-- flex :flex-group flex-shirk flex-basis -->
   <!-- 
         flex-group 补充计算
+        fixWidth = 600-100-200
         let = fixWidth * leftGroup / (leftGroup + rightGroup)
         flex-shrik 溢出计算
         left = leftWidth - overWidth * (leftWidth * leftShrink / ( leftWidth * leftShrink + rightWidth * rightShrink)) */
@@ -24,18 +25,31 @@
       overflow-x: auto;
     }
     .left {
-      flex: 2 0 100px;
+      /* flex: 2 0 100px; */
+      flex: 2 1 300px;
       background: red;
     }
     .right {
-      flex: 3 0 200px;
+      /* flex: 3 0 200px; */
+      flex: 3 2 400px;
       background: blue;
+    }
+    .content {
+      width: 100px;
+      height: 100px;
+    }
+    .box {
+      padding: 20px;
+      height: 100%;
     }
   </style>
   <body>
     <div class="container">
       <div class="left"></div>
       <div class="right"></div>
+    </div>
+    <div class="content">
+      <div class="box"></div>
     </div>
   </body>
 </html>

@@ -8,18 +8,15 @@ const debounce = (fn: Function, time: number) => {
   };
 };
 
-const thread = (fn: Function, time: number, thredTime: number) => {
-  let timer: any = null;
-  return (...arguments: any) => {
-    const now = new Date().getTime();
-    timer && clearTimeout(timer);
-    if (new Date().getTime() > now + thredTime) {
+const throttle = (fn, time) => {
+  let flag = true;
+  return function (...arguments) {
+    if (!flag) return;
+    flag = false;
+    setTimeout(() => {
       fn.apply(this, arguments);
-    } else {
-      timer = setTimeout(() => {
-        fn.apply(this, arguments);
-      }, time);
-    }
+      flag = true;
+    }, time);
   };
 };
 

@@ -10,39 +10,104 @@
       height: 500px;
       margin: 200px auto;
       display: block;
-      border: 1px solid;
     }
   </style>
   <body>
-    <canvas id="canvas" width="300" height="300"></canvas>
-    <!-- 注意: 用width和height属性为<canvas>明确规定宽高，而不是使用CSS。 -->
+    <canvas id="canvas" width="500" height="500"></canvas>
   </body>
 </html>
 <script>
-  var sun = new Image();
-  var moon = new Image();
-  var earth = new Image();
-  function init() {
-    sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
-    moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
-    earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
-    window.requestAnimationFrame(draw);
-  }
+  const draw = (() => {
+    return ({ range, colors, values }, ele) => {
+      const context = ele.getContext('2d');
 
-  function draw() {
-    var ctx = document.getElementById('canvas').getContext('2d');
+      const rangeWidth = 20;
+      // 根据数值取颜色
+      const getColors = (val) => {
+        let [max, ...other] = range;
+        let min = 0;
+        let i = 0;
+        while (!(val >= min && val <= max)) {
+          min = max;
+          max = other[i];
+          i++;
+        }
+        return colors[i];
+      };
 
-    ctx.globalCompositeOperation = 'destination-over';
-    ctx.fillStyle = 'rgba(0,0,0,0.4)';
-    ctx.strokeStyle = 'rgba(0,153,255,0.4)';
-    ctx.translate(150, 150);
-    ctx.rotate((Math.PI / 180) * 90);
-    ctx.save();
-    ctx.fillRect(0, 0, 100, 24); // Shadow
-    ctx.restore();
-    ctx.fillRect(0, 0, 24, 48); // Shadow
-    // window.requestAnimationFrame(draw);
-  }
+      const roundColor = '#f2f2f2';
+      const roundColor2 = '#e5e5e5';
 
-  init();
+      const drawCircle = (ctx, x, y, radius, color) => {
+        ctx.beginPath();
+        ctx.fillStyle = color;
+        ctx.arc(x, y, radius, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+      };
+      // 画背景图
+      const drawBg = (ctx, range) => {
+        const bgWidth = 250 - rangeWidth;
+        for (let i = range.length - 1; i >= 0; i--) {
+          const radius = bgWidth * (range[i] / 100);
+          const color = i % 2 == 0 ? roundColor : roundColor2;
+          drawCircle(ctx, 250, 250, radius, color);
+        }
+      };
+
+      // 画环形弧度
+      const drawArc = (ctx, x, y, radius, begin, end, color) => {
+        ctx.beginPath();
+        ctx.fillStyle = color;
+        ctx.arc(x, y, radius, begin, end);
+        ctx.lineTo(x, y);
+        ctx.fill();
+      };
+      const everyPi = (2 * Math.PI) / (values.length + 1);
+      for (let i = 0; i < values.length; i++) {
+        drawArc(
+          context,
+          250,
+          250,
+          250,
+          everyPi * (i + 2),
+          everyPi * (i + 3) - 0.01,
+          getColors(values[i].value),
+        );
+      }
+      drawBg(context, range);
+      context.font = '25px'; //设置字体
+      context.fillStyle = 'green';
+      context.fillText('欢迎收看', 225, 250); //设置文本内容
+    };
+  })();
+
+  const config = {
+    range: [20, 40, 60, 80, 100],
+    colors: ['#FD6E49', '#FD9B40', '#FCC644', '#7CD762', '#44B979'],
+    values: [
+      {
+        label: '推理能力0',
+        value: 20,
+      },
+      {
+        label: '感知能力1',
+        value: 40,
+      },
+      {
+        label: '感知能力2',
+        value: 60,
+      },
+      {
+        label: '感知能力3',
+        value: 80,
+      },
+      {
+        label: '感知能力4',
+        value: 90,
+      },
+    ],
+  };
+  const ele = document.getElementById('canvas');
+  draw(config, ele);
 </script>

@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>promise</title>
     <script src="./index.js"></script>
-</head>
-<body>
-</body>
+  </head>
+  <body></body>
 </html>
 <script>
-    new MyPromise((res,rej)=>{
-        setTimeout(() => {
-            res(1)
-        }, 2000);
-    }).then(val=>{
-        console.log(val)
-    })
+  new MyPromise((res, rej) => {
+    setTimeout(() => {
+      res(1);
+    }, 2000);
+  }).then((val) => {
+    console.log(val);
+  });
+  //   MyPromise.race([
+  //     new MyPromise((res, rej) => {
+  //       setTimeout(() => {
+  //         res(1);
+  //       }, 1000);
+  //     }),
+  //     new MyPromise((res, rej) => {
+  //       setTimeout(() => {
+  //         res(2);
+  //       }, 500);
+  //     }),
+  //   ]).then((val) => {
+  //     console.log(val);
+  //   });
 </script>
