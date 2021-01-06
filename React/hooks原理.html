@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>hooks原理</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const App = () => {
+    const [state, setState] = useState(0);
+    const [num, setNum] = useState(0);
+    console.log('num', num);
+    console.log('state', state);
+    return {
+      onClick() {
+        setState((state) => {
+          return state + 1;
+        });
+        setState((state) => {
+          return state + 1;
+        });
+      },
+      onClick2() {
+        setNum((state) => {
+          return state + 1;
+        });
+      },
+    };
+  };
+  let isMount = true;
+  //   当前执行的hook
+  let workInHook = null;
+  const fiber = {
+    memoloziedState: null,
+    stateNode: App,
+  };
+  //   模拟调度
+  const run = () => {
+    workInHook = fiber.memoloziedState;
+    console.log(workInHook);
+    const app = fiber.stateNode();
+    isMount = false;
+    return app;
+  };
+
+  const dispatchAction = (queue, action) => {
+    console.log(queue);
+    const upate = {
+      action,
+      next: null,
+    };
+    // 貌似只会执行这里
+    if (queue.padding === null) {
+      upate.next = upate;
+    } else {
+      upate.next = queue.padding.next;
+      queue.padding.next = upate;
+    }
+    queue.padding = upate;
+    run();
+  };
+
+  const useState = (initState) => {
+    let hook = {};
+
+    // 这段很关键
+
+    // 初始化形成环状链表，workInHook当前执行的hook
+    if (isMount) {
+      hook = {
+        queue: {
+          padding: null,
+        },
+        memoloziedState: initState,
+        next: null,
+      };
+
+      //   workInHook形成环形链表
+      if (!fiber.memoloziedState) {
+        fiber.memoloziedState = hook;
+      } else {
+        workInHook.next = hook;
+      }
+      workInHook = hook;
+    } else {
+      hook = workInHook;
+      workInHook = workInHook.next;
+    }
+
+    let baseState = hook.memoloziedState;
+
+    if (hook.queue.padding) {
+      let firstUpdate = hook.queue.padding.next;
+      do {
+        const action = firstUpdate.action;
+        baseState = action(baseState);
+        firstUpdate = firstUpdate.next;
+      } while (firstUpdate != hook.queue.padding.next);
+      hook.queue.padding = null;
+    }
+
+    hook.memoloziedState = baseState;
+
+    return [baseState, dispatchAction.bind(null, hook.queue)];
+  };
+
+  window.app = run();
+</script>
