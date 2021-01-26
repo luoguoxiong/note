@@ -109,7 +109,7 @@ class MyPromise {
 
   static all(promiseList) {
     return new MyPromise((res, rej) => {
-      for (let [i, value] of promiseList) {
+      for (let value in promiseList) {
         let values = [];
         let count = 0;
         this.resolve(value).then(
@@ -127,13 +127,13 @@ class MyPromise {
   }
   static race(promiseList) {
     return new MyPromise((res, rej) => {
-      for (let [i, value] of promiseList) {
+      for (let value in promiseList) {
         this.resolve(value).then(
           (val) => {
             res(val);
           },
           (err) => {
-            reject(err);
+            rej(err);
           },
         );
       }

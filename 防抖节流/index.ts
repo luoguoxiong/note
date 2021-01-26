@@ -24,9 +24,10 @@ const refThread = (fn: Function) => {
   let lock = false;
   return (...arguments: any) => {
     if (!lock) {
+      lock = true;
       requestAnimationFrame(() => {
         fn.apply(this, arguments);
-        lock = true;
+        lock = false;
       });
     }
   };

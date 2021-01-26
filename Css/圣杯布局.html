@@ -53,6 +53,7 @@
       margin-right: -100%; /* rightContent width */
       background: rgb(231, 105, 2);
     }
+
     .triangle {
       width: 0;
       height: 0;
@@ -61,13 +62,41 @@
       border-color: tomato transparent transparent transparent;
     }
   </style>
+  <style>
+    .content {
+      height: 100px;
+    }
+    .rol {
+      float: left;
+      height: 100px;
+    }
+    .left {
+      width: 200px;
+      margin-left: -100%;
+    }
+    .right {
+      width: 300px;
+      margin-left: -300px;
+    }
+    .center {
+      width: 100%;
+      padding-left: 200px;
+      padding-right: 300px;
+      box-sizing: border-box;
+    }
+  </style>
   <body>
-    <div id="header">#header</div>
+    <div class="content">
+      <div class="center rol">111</div>
+      <div class="left rol">2</div>
+      <div class="right rol">3</div>
+    </div>
+    <!-- <div id="header">#header</div>
     <div id="container">
       <div id="center" class="column">#center</div>
       <div id="left" class="column">#left</div>
       <div id="right" class="column">#right</div>
     </div>
-    <div class="triangle"></div>
+    <div class="triangle"></div> -->
   </body>
 </html>

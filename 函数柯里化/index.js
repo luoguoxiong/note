@@ -46,7 +46,7 @@ console.log(a + 10); // 20
 // 整合参数
 const curry = (fn) => {
   const judge = (...args) =>
-    fn.length === args.length ? fn(...args) : (arg) => judge(...args, arg);
+    fn.length === args.length ? fn(...args) : (...arg) => judge(...args, ...arg);
   return judge;
 };
 
@@ -57,9 +57,6 @@ function multiFn(a, b, c) {
 var multi = curry(multiFn);
 
 console.log(multi(2)(3)(4));
-// multi(2, 3, 4);
-// multi(2)(3, 4);
-// console.log(multi(2, 3)(4));
 // // console.log(b + 20); // 30
 // console.log(c + 30); // 40
 // console.log(d + 40); // 50

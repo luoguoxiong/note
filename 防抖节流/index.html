@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>addEventListener与on</title>
-</head>
-<body>
-<div style="height: 20000px"></div>
-</body>
+  </head>
+  <body>
+    <div style="height: 20000px"></div>
+  </body>
 </html>
 <script>
-    function say (num) {
-        return function () {
-            console.log(num)
-        }
-    }
-    // window.addEventListener('scroll',say(1))
-    // window.addEventListener('scroll',say(2))
-    // window.onscroll= say(3)
-    // window.onscroll = say(4)
-  
-    const refThread = (fn)=>{
-        let lock = false
-        return (...arguments)=>{
-            if(!lock){
-            requestAnimationFrame(()=>{
-                fn.apply(this,arguments)
-                lock = false
-            })
-            lock = true
-            }
-        }
-    }
-    window.addEventListener('scroll',refThread((e)=>{
-        console.log(1)
-        console.log(e)
-    },))
+  const tho = (fn, seconds) => {
+    let timer = null;
+    return function (...args) {
+      const context = this;
+      timer && clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn.apply(context, args);
+      }, seconds);
+    };
+  };
+  const tho2 = (fn, seconds) => {
+    let flag = false;
+    return function (...args) {
+      const context = this;
+      if (!flag) {
+        setTimeout(() => {
+          fn.apply(context, args);
+          flag = false;
+        }, seconds);
+        flag = true;
+      }
+    };
+  };
+  window.addEventListener(
+    'scroll',
+    tho2((e) => {
+      console.log(e);
+    }, 50),
+  );
 </script>
