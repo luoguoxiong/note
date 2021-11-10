@@ -1,0 +1,25 @@
+{
+  "name": "note",
+  "version": "1.0.0",
+  "description": "https://juejin.im/post/6875152247714480136#heading-27",
+  "main": ".prettierrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@tools-list/eslint-config-self": "0.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luoguoxiong/note.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luoguoxiong/note/issues"
+  },
+  "homepage": "https://github.com/luoguoxiong/note#readme"
+}
