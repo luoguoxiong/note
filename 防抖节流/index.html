@@ -32,10 +32,34 @@
       }
     };
   };
+  const throad = (callback) => {
+    let isLock = false;
+    let timer;
+    return function(...args){
+        const self = this
+        if(isLock) return;
+        isLock = true;
+        timer = setTimeout(() => {
+            callback.call(self,...args);
+            isLock = false;
+            clearTimeout(timer);
+        }, 20);
+    };
+  };
+  const debundece = (callback) => {
+  let timer;
+  return function(...args) {
+      const self = this
+    timer&&clearTimeout(timer);
+    timer = setTimeout(() => {
+      callback.call(self,...args);
+    }, 2000);
+  };
+};
   window.addEventListener(
     'scroll',
-    tho2((e) => {
+    debundece((e) => {
       console.log(e);
-    }, 50),
+    },2000),
   );
 </script>
