@@ -1,0 +1,3 @@
+# Python 3.10 - 3.13
+crewai>=0.100.0
+python-dotenv>=1.0.0

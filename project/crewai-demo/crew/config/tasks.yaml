@@ -1,0 +1,26 @@
+research_task:
+  description: >
+    针对「{topic}」进行全面调研：识别最新趋势、代表框架/产品、对比数据与主要争议点。
+    输出带要点的结构化研究笔记。对无法确证的信息，明确标注置信度而不是编造。
+  expected_output: >
+    一份不少于 800 字的中文研究笔记，包含 3-5 个核心发现、
+    数据/框架对比要点，以及风险提示。
+  agent: researcher
+
+writing_task:
+  description: >
+    基于研究员的研究笔记撰写深度文章：需要明确标题、引言、正文分节与结论，
+    面向技术管理者阅读，观点鲜明但不夸大。
+  expected_output: 一篇 1000-1500 字、Markdown 格式的完整文章。
+  agent: writer
+  context:
+    - research_task
+
+review_task:
+  description: >
+    审阅文章，修正事实/逻辑问题并润色语言，保持原意与整体结构。
+  expected_output: >
+    润色后的最终版文章（Markdown），并在文末附「编辑说明」列出主要修改点。
+  agent: reviewer
+  context:
+    - writing_task
