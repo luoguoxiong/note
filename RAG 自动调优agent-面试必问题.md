@@ -20,6 +20,7 @@
 - 每条样例包含：**问题、标准答案、相关证据 chunk ID、业务分类、数据版本**。
 - 证据 chunk ID 是核心设计：只有它才能区分"**证据没被召回**"（检索问题）和"**召回了但模型没用好**"（生成/上下文组装问题）——这是诊断分流的前提。
 - 覆盖多种业务分类，保证能发现"某类问题上退化"的局部回归，而不是只看全局均值。
+- 评测集不是一次性建好，而是**数据飞轮**：从线上 Trace 自动挖掘低分 Case → LLM 聚类去重、难度分层 → 沉淀为分层回归评测集（事实类/推理类/拒答类），随线上流量持续回流更新，避免"固定评测集过拟合"与"评测集漂移"。
 - 评测集、模型版本、评测代码**三者绑定版本**，每次实验结果可复现；评测集变更走变更管理，不允许实验中途改题。
 
 ### 3. 多目标怎么权衡？硬约束怎么校验？
@@ -50,11 +51,12 @@
 
 ## 二、高频追问
 
-### 6. 状态机怎么实现可恢复和幂等？
+### 6. 工作流怎么实现可恢复和幂等？
 
-- LangGraph（或自研状态机）把流程拆为 9 个状态：Diagnose → Plan → Experiment → Evaluate → Compare → Approval → Canary → Monitor → Success/Rollback/Failed/Rejected。
-- 每个状态迁移**持久化**关键字段：optimization_run_id、baseline_version、experiment_id、candidate_config 快照、evaluation_report、approval_status、deployment_status。
-- 崩溃后从最后持久化状态恢复，不重跑整个流程；同一实验的重试带幂等键，避免重复评测产生双份数据。
+- 基于 LangChain Workflow（LCEL 编排）把调优主流程拆为 9 个节点：Diagnose → Plan → Experiment → Evaluate → Compare → Approval → Canary → Monitor → Success/Rollback/Failed/Rejected。
+- 每个节点执行完成即把关键状态**持久化**到 PostgreSQL：optimization_run_id、baseline_version、experiment_id、candidate_config 快照、evaluation_report、approval_status、deployment_status。
+- 崩溃后从最后持久化的节点恢复，不重跑整个流程；同一实验的重试带幂等键，避免重复评测产生双份数据。
+- **如实口径**：LangChain 负责流程编排与 LLM/工具集成，跨节点的状态持久化和断点恢复是自建能力（每个节点带 run_id 的检查点写入），不是框架自带的——这样讲不会被框架细节问住。
 - 设计动机：避免把所有逻辑塞进一个长循环——长循环挂了只能从头来，且中间结果不可见。
 
 ### 7. 参数搜索用什么方法？怎么选？
@@ -77,7 +79,7 @@
 
 ### 10. ⚠ 你们的实验结果怎么样？
 
-- **有真实数据**：给具体数字 + 对比表（Recall@5 基线 0.68 → 候选 0.82，Faithfulness 0.91 → 0.90，P95 1.8s → 2.2s，成本 1.12x），并解释当时的取舍。
+- **有真实数据**：给具体数字 + 对比表（Recall@5 基线 0.68 → 候选 0.82，Faithfulness 0.91 → 0.90，P95 1.8s → 2.2s，成本 1.12x），并解释当时的取舍。周期口径与简历一致：单轮调参 3 天人工 → 2 小时全自动（诊断约 10 分钟 + 参数搜索与离线评测约 1 小时 + 对比报告生成；灰度观察期另计，不计入 2 小时）。
 - **只有原型**：如实说"目前完成了 XX 环节的原型验证，跑了 X 组实验；完整闭环在设计方案中"，展示设计深度，不虚构生产成果——编造的数字在追问细节时必然露馅。
 
 ### 11. 这个系统最大的技术难点是什么？
