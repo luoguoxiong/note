@@ -98,6 +98,11 @@
 - 六阶段 `npm run eval`（tools/slots/memory/recall/load/restart）；数据带 `eval-<RUN>-` 前缀自动清理防污染；报告落盘 `data/eval-*.json` 可回归对比。
 - 踩坑：eval 子进程要 `delete env.NODE_OPTIONS`（本地 shim 破坏 `crypto`）。
 
+### Q20 如何保证多次请求不重复发送？（分层答，配 Q7）
+- **前端互斥锁（第一道）**：`state.busy` 标志，请求在途即 `setInputEnabled(false)` 锁死输入区 + 禁用发送按钮；Enter 快捷键路径再判一次双保险；弹窗补参、转人工、新会话同样互斥。关键是 `finally` 里复位 `busy`，异常不会把用户永久锁死。
+- **服务端原子取出（第二道）**：挂起槽位 `takePending` 用 GETDEL 语义"取出即删"——并发/双开标签页重复补参只有一个成功，其余 409/410；`/api/chat/slots` 进 SSE 前先 `hasPendingSlots` 只读探测，重复提交提前拦截（与 Q7 同一机制，只是面试官换了个问法）。
+- **服务端幂等键（第三道，已落地）**：`msgId` 由前端每条消息生成（`crypto.randomUUID`），随 `POST /api/chat`、`POST /api/chat/slots` 上报；服务端 `idempotency.js` 以 `SET key __processing__ NX PX ttl` 抢占，同 id 并发请求在进 SSE 前直接 `409 duplicate_request` 拦下（不占并发闸、不触发 LLM）；执行成功后把可重放 SSE 事件序列（token 增量已合并为整段）写回同 key 并重置 TTL——幂等窗口内同 id 重复请求**直接重放第一次结果**（不重复落库/记忆提取）；执行失败 `DEL` 释放占位，允许客户端带同一 msgId 重试。Redis 故障按"可用性优先"放行（退化为无幂等，不影响正常请求）。前端锁挡不住的重放和多端登录，由这一层兜住——三层按"请求粒度"各管一段，分层清晰。
+
 ---
 
 ## 六、数字要脱口而出
