@@ -1,0 +1,54 @@
+{
+  "ts": 1793584800576,
+  "phase": [
+    "rules"
+  ],
+  "report": {
+    "rules": [
+      {
+        "name": "R001 缺发票 → block",
+        "pass": true
+      },
+      {
+        "name": "R002 超过 7 天时效 → block",
+        "pass": true
+      },
+      {
+        "name": "R002 申请早于签收 → warn",
+        "pass": true
+      },
+      {
+        "name": "R003 申报超保价 → block",
+        "pass": true
+      },
+      {
+        "name": "R003 大额案件 → warn",
+        "pass": true
+      },
+      {
+        "name": "R004 生鲜缺温控记录 → warn",
+        "pass": true
+      },
+      {
+        "name": "R005 禁运品类（充电宝）→ block",
+        "pass": true
+      },
+      {
+        "name": "R006 同运单重复理赔 → block",
+        "pass": true
+      },
+      {
+        "name": "R006 90 天 4 次理赔 → warn",
+        "pass": true
+      },
+      {
+        "name": "R007 运单核验失败 → warn（证据不足）",
+        "pass": true
+      },
+      {
+        "name": "基线案件无 block",
+        "pass": true
+      }
+    ]
+  }
+}

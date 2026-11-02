@@ -1,0 +1,39 @@
+{
+  "name": "logistics-claim-multi-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "物流智能理赔审核 Multi-Agent 系统：LangGraph Supervisor 编排（材料解析 / 运单核验 / 历史工单核验 / 规则审核 / 风险评估 / 报告生成）+ interrupt 人工审批 + MCP 工具 + PostgreSQL/Redis",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "seed": "tsx scripts/seed.ts",
+    "start": "tsx src/server/index.ts",
+    "dev": "tsx watch src/server/index.ts",
+    "mcp:waybill": "tsx src/mcp/waybill-server.ts",
+    "demo": "tsx scripts/demo.ts",
+    "eval": "tsx scripts/eval.ts"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.3.2",
+    "@langchain/deepseek": "^1.1.21",
+    "@langchain/langgraph": "^1.6.0",
+    "@langchain/langgraph-checkpoint-postgres": "^1.1.2",
+    "@langchain/mcp-adapters": "^2.0.1",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "dotenv": "^18.0.8",
+    "express": "^4.21.2",
+    "ioredis": "^5.11.1",
+    "pg": "^8.13.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.0",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.23.15",
+    "typescript": "^5.7.2"
+  }
+}
