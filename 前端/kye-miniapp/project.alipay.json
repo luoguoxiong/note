@@ -1,0 +1,31 @@
+{
+  "format": 2,
+  "compileOptions": {
+    "treeShaking": true,
+    "component2": true,
+    "transpile": {
+      "script": {
+        "ignore": [
+          "node_modules/**"
+        ]
+      }
+    },
+    "resolveAlias": {
+      "~/*": "./*"
+    },
+    "globalObjectMode": "enable"
+  },
+  "developOptions": {
+    "minify": true,
+    "sourcemap": {
+      "ignoreInputMaps": true,
+      "columns": false,
+      "ignore": [
+        "**/node_modules/**"
+      ]
+    },
+    "skipTranspile": false
+  },
+  "miniprogramRoot": "./",
+  "assetsInclude":["**/*.xml"]
+}

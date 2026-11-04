@@ -1,0 +1,40 @@
+.id-card-page-edit__popup-content {
+  .value {
+    font-size: 32px;
+    color: #24262B;
+    font-weight: 600;
+    padding: 27px 0;
+    text-align: center;
+    border-bottom: 1px solid #E6E8ED;
+
+    &.active {
+      color: #8365F6;
+    }
+  }
+
+  .cancel-btn {
+    border-top: 8px solid #F1F2F7;
+    font-size: 32px;
+    color: #24262B;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    background: #fff;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .jobs_scroll-view::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background-color: transparent !important;
+  }
+
+  .jobs_scroll-view {
+    white-space: nowrap;
+    max-height: 80vh;
+  }
+}

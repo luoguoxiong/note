@@ -1,0 +1,47 @@
+$spacings: 4, 8, 12, 16, 24, 32, 40, 48, 64, 96, 160;
+
+@each $size in $spacings {
+  .mt-#{$size} {
+    margin-top: #{$size}px;
+  }
+
+  .mb-#{$size} {
+    margin-bottom: #{$size}px;
+  }
+
+  .mr-#{$size} {
+    margin-right: #{$size}px;
+  }
+
+  .ml-#{$size} {
+    margin-left: #{$size}px;
+  }
+
+  .mx-#{$size} {
+    margin: 0 #{$size}px;
+  }
+
+  .my-#{$size} {
+    margin: #{$size}px 0;
+  }
+
+  .px-#{$size} {
+    padding: 0 #{$size}px;
+  }
+
+  .py-#{$size} {
+    padding: #{$size}px 0;
+  }
+
+  .pb-#{$size} {
+    padding-bottom: #{$size}px;
+  }
+
+  .pt-#{$size} {
+    padding-top: #{$size}px;
+  }
+
+  .pl-#{$size} {
+    padding-left: #{$size}px;
+  }
+}

@@ -1,0 +1,162 @@
+.question-container {
+  width: 100%;
+  height: 80vh;
+
+  .question-header {
+    display: flex;
+    align-items: center;
+    background: url('https://ic-img.ky-express.com/netc/20250304_3572831147_!!1741077674063_1500_304.png') no-repeat;
+    background-size: contain;
+    padding: 32px;
+    height: 96px;
+
+    .question-title {
+      font-size: 34px;
+      line-height: 48px;
+      font-weight: 600;
+      color: #24262B;
+    }
+  }
+
+  .question-content {
+    padding: 16px 32px 32px;
+    overflow: auto;
+    box-sizing: border-box;
+    height: calc(100% - 160px - 120px - 88px);
+
+    .question-types {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+
+      .question-type-btn {
+        width: 158px;
+        height: 56px;
+        text-align: center;
+        font-size: 24px;
+        line-height: 52px;
+        color: #24262B;
+        border: 2px solid #D3D5DB;
+        border-radius: 8px;
+        box-sizing: border-box;
+
+        &.selected {
+          border: 2px solid #8365F6;
+          background: #F2EFFE;
+          color: #8365F6;
+        }
+      }
+    }
+
+    .question-answers {
+      margin-top: 24px;
+      padding: 0 16px;
+      background: #F7F8FA;
+      border-radius: 8px;
+      position: relative;
+
+      .question-answers-icon {
+        width: 0;
+        height: 0;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-bottom: 16px solid #F7F8FA;
+        position: absolute;
+        left: 48px;
+        top: -16px;
+      }
+
+      .custom-radio {
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        line-height: 42px;
+
+        .custom-radio-img {
+          width: 28px;
+          height: 28px;
+        }
+        .custom-radio-label {
+          margin-left: 4px;
+          font-size: 28px;
+          color: #24262B;
+        }
+      }
+    }
+  }
+
+  .question-footer {
+    padding: 16px 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.05);
+    gap: 24px;
+
+    button{
+      flex: 1;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    button:first-child{
+      height: 88px;
+      border: 2px solid #8365f6;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #8365f6;
+      background: #fff;
+    }
+    button:last-child{
+      height: 88px;
+      background-color: #8365F6;
+      border-radius: 12px;
+      font-size: 32px;
+      font-weight: bold;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::after {
+        border: none;
+      }
+    }
+  }
+
+  .remind-container {
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .remind-container_content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .remind-container_content-img {
+        width: 28px;
+        height: 28px;
+      }
+
+      .remind-container_content-info {
+        margin-left: 4px;
+        font-size: 28px;
+        line-height: 40px;
+        color: #686B75;
+      }
+    }
+  }
+}
+
+.question-answers-item{
+  .ky-textarea{
+    width: 100%;
+  }
+  textarea{
+    height: 80px;
+  }
+}

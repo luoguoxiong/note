@@ -1,0 +1,29 @@
+.el-select .el-input .el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1px #7143F0 inset !important;
+}
+
+.el-select .el-input.is-focus .el-input__wrapper {
+  box-shadow: 0 0 0 1px #7143F0 inset !important;
+}
+.el-select-dropdown__item.selected{
+  font-size: 13px !important;
+  color: #7143F0 !important;
+}
+.el-select-dropdown__item{
+  font-size: 13px !important;
+  color: #24262B !important;
+}
+.el-input__inner{
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #24262B !important;
+}
+.el-icon.el-select__caret.el-select__icon{
+  color: #24262B !important;
+}
+.el-popper__arrow{
+  display: none !important;
+}
+.el-popper.el-select__popper{
+  inset: 32px auto auto 0 !important;
+}

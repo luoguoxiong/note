@@ -1,0 +1,45 @@
+.batch-fee-card {
+  &-content {
+    position: relative;
+    width: 100%;
+    background: #fff0f0;
+
+    &-popover {
+      position: absolute;
+      bottom: -9px;
+      left: 110px;
+      width: 15px;
+      height: 15px;
+      background-color: #fff0f0;
+      border-top:2px solid #ff706d;
+      border-left: 2px solid #ff706d;
+      transform: rotate(-135deg);
+    }
+    > div {
+      position: relative;
+      display: block;
+      padding: 20px 24px 20px 24px;
+      font-size: 24px;
+      font-weight: 400;
+      text-align: justify;
+      //color: #fe743c;
+      color: #ff706d;
+      line-height: 36px;
+      box-sizing: border-box;
+
+      .warn {
+        position: absolute;
+        top: 24px;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        color: red;
+        // background: url('https://ic-img.ky-express.com/netc/20250619_14821_!!1750314362795_40_40.png') no-repeat;
+        // background-size: cover;
+      }
+      .text {
+        text-indent: 30px;
+      }
+    }
+  }
+}

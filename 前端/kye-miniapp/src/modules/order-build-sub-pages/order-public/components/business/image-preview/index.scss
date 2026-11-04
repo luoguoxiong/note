@@ -1,0 +1,83 @@
+.save-tips {
+  position: fixed;
+  top: 35px;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 24px 0 14px;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(#000, 0.7);
+  border-radius: 0 99px 99px 0;
+  line-height: 50px;
+  .van-icon {
+    margin-top: -2px;
+    margin-right: 10px;
+    font-size: 22px;
+  }
+}
+.roateBox {
+  position: fixed;
+  right: 48px;
+  bottom: 64px;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  //   text-align: center;
+  img {
+    width: 36px;
+    height: 38px;
+    // margin: 20px 0 0 24px;
+    pointer-events: none;
+  }
+}
+.saveBox {
+  position: fixed;
+  bottom: 64px;
+  left: 48px;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  //   text-align: center;
+  img {
+    width: 36px;
+    height: 38px;
+    // margin: 20px 0 0 21.5px;
+    pointer-events: none;
+  }
+}
+:deep(.van-image-preview__index) {
+  top: initial;
+  bottom: 72px;
+  height: 50px;
+  padding: 0 20px;
+  background-color: rgba(#000, 0.7);
+  border-radius: 99px;
+  line-height: 50px;
+}
+
+.turn {
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  width: 75px;
+  height: 75px;
+  transform: translateY(-50%);
+
+  img {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+  }
+
+  &.right {
+    right: 40px;
+  }
+
+  &.left {
+    left: 40px;
+  }
+}

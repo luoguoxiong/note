@@ -1,0 +1,56 @@
+.address-ocr {
+  width: auto;
+  .ky-textarea {
+    .ky-cell {
+      padding: 0;
+    }
+
+    .ky-cell__value {
+      border: 0;
+      border-radius: initial;
+    }
+  }
+
+  .container {
+    .container__ocr {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      padding: 36px 24px;
+      background: #fff;
+      border-radius: 24px;
+      box-sizing: border-box;
+
+      .container__ocr__text {
+        font-size: 28px;
+        color: #888ea6;
+      }
+      .container__ocr__right {
+        display: flex;
+      }
+      .container__ocr__camera {
+        display: flex;
+        align-items: center;
+        padding: 4px 10px;
+        text-align: center;
+        background: #f1f2f7;
+        border-radius: 12px;
+        box-sizing: border-box;
+
+        .icon {
+          display: flex;
+          width: 40px;
+          height: 40px;
+          background: url('https://ic-img.ky-express.com/netc/20250619_69444_!!1750302611186_64_64.png') no-repeat;
+          background-size: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .ocr {
+    border-radius: 24px;
+  }
+}

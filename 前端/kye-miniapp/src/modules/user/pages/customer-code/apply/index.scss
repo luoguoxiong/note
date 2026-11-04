@@ -1,0 +1,215 @@
+.apply-bind {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__header {
+    width: 100%;
+    height: 148px;
+    background: url('https://ic-img.ky-express.com/netc/20260204_37615_!!1770191999480_1500_296.png') no-repeat;
+    background-size: cover;
+    padding: 0 32px;
+    position: relative;
+    box-sizing: border-box;
+
+    &.is-muti-screen {
+      height: 106px;
+      background: url('https://ic-img.ky-express.com/netc/20260204_16875_!!1770192002139_2960_212.png') no-repeat;
+      background-size: cover;
+    }
+
+    .tip {
+      font-size: 26px;
+      color: #24262b;
+      line-height: 42px;
+      padding-top: 32px;
+
+      text {
+        color: #ff9300;
+      }
+    }
+  }
+
+  &__body {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 140px;
+
+    .apply-content {
+      &__cur_code {
+        .title {
+          font-size: 28px;
+          color: #24262b;
+          line-height: 40px;
+          margin-left: 32px;
+          margin-bottom: 4px;
+        }
+
+        .add-normal {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 88px;
+          background: #f2f3f7;
+          border-radius: 10px;
+          margin: 0 32px 24px;
+          border: 2px solid #e6e8ed;
+          border-radius: 12px;
+          padding: 0 16px;
+          box-sizing: border-box;
+
+          .code {
+            font-size: 28px;
+            color: #8c8f99;
+            font-weight: 600;
+          }
+        }
+      }
+
+      &__code {
+
+        .add-top {
+          margin-left: 32px;
+
+          &__num {
+            font-size: 28px;
+            color: #24262b;
+            display: flex;
+            align-items: center;
+
+            .required-icon {
+              width: 40px;
+              height: 40px;
+              margin-left: 4px;
+            }
+          }
+        }
+
+        .code-list {
+          overflow-x: hidden;
+          max-height: 600px;
+          box-sizing: border-box;
+          overflow-y: auto;
+          margin-bottom: 16px;
+          .h5-input {
+            z-index: 0;
+          }
+        }
+        .add-code {
+          position: relative;
+          padding: 0 32px;
+        }
+
+        .add-button {
+          display: block;
+          width: 224px;
+          height: 56px;
+          margin: 0 auto;
+          font-size: 24px;
+          color: #fff;
+          line-height: 34px;
+          border-radius: 8px;
+          background-color: #8365f6;
+          font-weight: normal;
+          padding: 0;
+          border: none;
+          &::before {
+            opacity: 0;
+          }
+          &:active {
+            background: #6b37f9;
+          }
+        }
+      }
+      &__reason1 {
+        margin-top: 24px;
+        padding: 0 32px;
+        .ky-field {
+          margin-bottom: 24px;
+          .ky-field--top--content {
+            width: 100%;
+            height: 88px;
+          }
+
+          .ky-popover-container {
+            width: 100%;
+            .ky-input {
+              box-sizing: border-box;
+              height: 88px;
+            }
+          }
+        }
+      }
+      &__reason {
+        .ky-textarea {
+          width: 100%;
+          height: auto;
+          background-color: #f7f8fa;
+          border-radius: 12px;
+          padding-top: 24px;
+          padding-bottom: 28px;
+          padding-left: 24px;
+          padding-right: 24px;
+          font-size: 28px;
+          font-weight: 500;
+          border: 2px solid #e6e8ed;
+          
+          .textarea-placeholder {
+            color: #888ea6;
+            font-weight: normal;
+          }
+        }
+        .ky-input--clear {
+          margin: 0;
+          padding: 0;
+          font-size: 28px;
+          position: absolute;
+          left: 0;
+          bottom: 0px;
+
+          &::before {
+            display: none;
+          }
+
+          &::after {
+            content: '清空';
+            color: #8365f6;
+          }
+        }
+
+        .ky-field {
+          &.error {
+            border-color: #ff4d4f;
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    background: #ffffff;
+    border-top: 1px solid #e6e8ed;
+    box-sizing: border-box;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+    z-index: 99;
+
+    &.fixed {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &.safe-area {
+      padding-bottom: calc(16px + env(safe-area-inset-bottom, 34px));
+    }
+
+    .submit-button {
+      width: 100%;
+    }
+  }
+}

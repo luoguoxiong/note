@@ -1,0 +1,134 @@
+.waybill-remark-slide-tag-box {
+  .waybill-remark-slide-tag-title {
+    margin: 12px 12px 12px 0;
+    margin-right: 0;
+    height: 52px;
+    line-height: 52px;
+    display: flex;
+    align-items: center;
+    .title {
+      font-size: 24px;
+      color: #8c8f99;
+      flex: 1;
+    }
+    .delete-box {
+      width: 176px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      .no-active {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        height: 52px;
+        .delete-svg {
+          font-size: 32px;
+        }
+      }
+      .active-delete {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        color: #8365f6;
+        span {
+          flex: 1;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .waybill-remark-slide-tag {
+    position: relative;
+    // max-height: calc(90vh-);
+    // overflow-y: auto;
+    .edit_tag {
+      background: #f4f5f6;
+    }
+    .waybill-remark-slide-tag-content {
+      padding-left: 1px;
+      gap: 12px;
+      flex-wrap: wrap;
+      .waybill-remark-tag-content {
+        height: auto;
+        display: block;
+        flex-shrink: 0;
+        padding: 7px 16px;
+        border: 1.5px solid #E6E8ED;
+        border-radius: 8px;
+        line-height: 34px;
+        word-break: break-all;
+        box-sizing: border-box;
+        max-width: 100%;
+        &:active {
+          background: rgba(0, 0, 0, 0.06);
+        }
+      }
+      button {
+        z-index: 1;
+      }
+    }
+    .waybill-remark-slide-tag-contain-clear {
+      width: calc(100% - 70px);
+    }
+  }
+  .tag-contain-clear_edit {
+    .waybill-remark-slide-tag-contain-clear {
+      width: calc(100% - 172px);
+    }
+  }
+  .color-sub-title-span {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #686B75;
+    .tag-info {
+      flex: 1;
+      line-height: 34px;
+    }
+    .close-tinge-svg {
+      width: 24px;
+      height: 24px;
+      margin-left: 4px;
+    }
+  }
+
+  .waybill-remark-slide-tag-content::-webkit-scrollbar {
+    display: none;
+    opacity: 0;
+  }
+
+  .waybill-remark-slide-tag-content.data-show-scroll-bar {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    &::-webkit-scrollbar {
+      display: initial;
+      height: 10px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: transparent;
+      transition: background-color 1s linear;
+    }
+
+    &:hover {
+      &::-webkit-scrollbar {
+        height: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+    }
+  }
+  .waybill-remark-slide-tag-scroll {
+    max-height: calc(70vh - 360px);
+  }
+}

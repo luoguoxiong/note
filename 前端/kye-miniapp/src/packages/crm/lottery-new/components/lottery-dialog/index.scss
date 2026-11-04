@@ -1,0 +1,84 @@
+.lottery-dialog-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background: rgba($color: #000000, $alpha: .7);
+  z-index: 11;
+  .icon-close {
+    position: absolute;
+    top: 105rpx;
+    right: 40rpx;
+    width: 64rpx;
+    height: 64rpx;
+    z-index: 99999;
+  }
+  .lottery {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .lottery-result {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .result-box {
+      width: 500rpx;
+      height: 790rpx;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: -46rpx;
+      .top {
+        display: flex;
+        justify-content: center;
+        margin-top: 65rpx;
+        Image {
+          height: 64rpx;
+        }
+      }
+      .middle {
+        flex: 1;
+        width: 100%;
+        .not-wining-prize-box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 80rpx;
+    
+          .lucky-flower {
+            width: 240rpx;
+            height: 240rpx;
+            margin-bottom: 24rpx;
+          }
+    
+          .lucky-text {
+            text-align: center;
+            color: #A41B00;
+            font-size: 28rpx;
+          }
+        }
+      }
+      .bottom {
+        height: 77rpx;
+        display: flex;
+        justify-content: center;
+        Image {
+          height: 77rpx;
+        }
+      }
+    }
+  }
+}
+

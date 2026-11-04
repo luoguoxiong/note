@@ -1,0 +1,10 @@
+export const LOCAL = {
+  // 来自下单默认设置的缓存
+  TEMPLATE_ID_FROM_DEFAULT_CONFIG: 'TEMPLATE_ID_FROM_DEFAULT_CONFIG',
+  // 从下单配置跳到默认设置的标识
+  SOURCE_ORDER_CONFIG: 'SOURCE_ORDER_CONFIG',
+  // message 消息监听的数据
+  TEMPLATE_DATA_FROM_DEFAULT_CONFIG: 'TEMPLATE_DATA_FROM_DEFAULT_CONFIG',
+}
+
+export const SESSION = {}

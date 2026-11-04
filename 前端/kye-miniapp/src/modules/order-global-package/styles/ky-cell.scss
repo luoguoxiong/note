@@ -1,0 +1,46 @@
+.ky-cell {
+  display: flex;
+  align-items: center;
+  min-height: 96px !important;
+  background: #fff;
+  padding: 28px 24px;
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+
+  &::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 16px;
+    bottom: 0;
+    left: 16px;
+    transform: scaleY(0.5);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .ky-cell-extra {
+    margin-top: 8px;
+    line-height: 34px;
+    font-size: 24px;
+  }
+}
+
+.ky-cell-large-value {
+  .ky-cell__title {
+    flex: none;
+  }
+
+  .ky-cell__value {
+    padding-left: 40px;
+  }
+}
+
+.ky-popover-container {
+  display: block;
+}
+
+.ky-cell-no-bg-disabled {
+  @include no-bg-disabled;
+}

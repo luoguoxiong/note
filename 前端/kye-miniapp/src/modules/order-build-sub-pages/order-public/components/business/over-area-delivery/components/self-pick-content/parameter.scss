@@ -1,0 +1,18 @@
+@mixin tips {
+  color: #ff9300;
+  font-weight: $font-normal;
+}
+
+@mixin font-normal {
+  font-size: 24px;
+}
+
+@mixin bg-divider {
+  background: #d8d8d8;
+}
+
+@mixin flex {
+  display: flex;
+}
+
+$color-error: #ff706d;

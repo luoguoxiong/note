@@ -1,0 +1,4 @@
+export const LOGINTYPE = {
+  SMSLOGIN: 'SMSLOGIN',
+  PWDLOGIN: 'PWDLOGIN',
+}

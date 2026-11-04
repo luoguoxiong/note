@@ -1,0 +1,21 @@
+/* 适配微信skyline hover效果 */
+.ky-button-hover{
+  &:not(.ky-button--disabled){
+    &.ky-button--primary{
+      background-color: #6B37F9;
+      color: $white;
+    }
+    &.ky-button--plain.ky-button--primary{
+      color: $button-primary-border-color;
+      border-color: $button-primary-border-color;
+      background-color: #f6f5f5;
+    }
+    &:not(.ky-button--plain).ky-button--warning{
+      @include darken-color($button-warning-border-color);
+    }
+    &:not(.ky-button--plain).ky-button--danger{
+      @include darken-color($button-danger-border-color);
+    }
+    background-color: #efefef;
+  }
+}

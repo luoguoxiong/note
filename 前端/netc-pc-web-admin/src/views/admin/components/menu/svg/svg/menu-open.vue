@@ -1,0 +1,21 @@
+<template>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    fill="currentColor"
+    version="1.1"
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+  >
+    <g>
+      <g>
+        <path
+          d="M2,2L14,2L14,3.5L2,3.5L2,2ZM10,11L14,8L10,5L10,11ZM2,7.25L9,7.25L9,8.75L2,8.75L2,7.25ZM2,12.5L14,12.5L14,14L2,14L2,12.5Z"
+          fill-rule="evenodd"
+          fill-opacity="1"
+        />
+      </g>
+    </g>
+  </svg>
+</template>

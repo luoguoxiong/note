@@ -1,0 +1,151 @@
+// 固定电话-分机号，样式
+.address-telephone-ext {
+  display: flex;
+  // overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+
+  &:hover .clear-btn {
+    display: block;
+  }
+
+  :deep(.el-input__wrapper) {
+    height: 32px;
+    border: 1px solid rgb(220 223 230);
+    border-radius: 4px 0 0 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+    &:hover {
+      box-shadow: none;
+    }
+
+    &.is-focus {
+      padding-right: 10px;
+      border: 1px solid #7143f0;
+      box-shadow: none;
+    }
+  }
+
+  &__left {
+    // min-width: 106px;
+    position: relative;
+    // flex: 1; // 解决固定电话抖抖抖?
+    width: 65%;
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: block;
+      width: 4px;
+      height: 1px;
+      background: #d8d8d8;
+      content: '';
+    }
+
+    :deep(.el-input__wrapper) {
+      border-radius: 4px 0 0 4px;
+      border-right: none;
+
+      &.is-focus {
+        box-shadow: none;
+      }
+    }
+
+    :deep(.isHoverIng .el-input__wrapper) {
+      border: 1px solid #8c8f99;
+      // box-shadow: 0 0 0 1px #8c8f99 inset;
+      border-right: none;
+    }
+
+    :deep(.onFocusFlag .el-input__wrapper) {
+      padding-right: 10px;
+      border: 1px solid #7143f0;
+      box-shadow: none !important;
+      border-right: none;
+    }
+  }
+
+  &__right {
+    // flex: 1; // 解决固定电话抖抖抖?
+    position: relative;
+    width: 35%;
+
+    :deep(.el-input__wrapper) {
+      overflow: visible;
+      border-radius: 0 4px 4px 0;
+      border-left: none;
+
+      &.is-focus {
+        border-left: none;
+      }
+    }
+
+    :deep(.isHoverIng .el-input__wrapper) {
+      border: 1px solid #8c8f99;
+      border-left: none;
+    }
+
+    :deep(.onFocusFlag .el-input__wrapper) {
+      padding-right: 10px;
+      border: 1px solid #7143f0;
+      box-shadow: none !important;
+      border-left: none;
+    }
+
+    .clear-btn {
+      line-height: 14px;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      display: none;
+
+      img {
+        width: 12px;
+        height: 12px;
+      }
+
+      .svg-icon {
+        z-index: 1;
+      }
+      &::after {
+        position: absolute;
+        background-color: #fff;
+        content: '';
+        inset: -6px;
+      }
+    }
+  }
+
+  .address-telephone-ext_disabled {
+    width: 100%;
+
+    :deep(.el-input__wrapper) {
+      border-right: 1px solid rgb(220 223 230) !important;
+      border-radius: 4px !important;
+    }
+
+    :deep(.el-input.is-disabled .el-input__wrapper) {
+      box-shadow: 0 0 0 0 transparent;
+    }
+  }
+}
+
+.validate_error_pc {
+  :deep(.el-input__wrapper) {
+    box-shadow: none !important;
+  }
+
+  .address-unfold-telephone-ext__left {
+    :deep(.el-input__wrapper) {
+      border: 1px solid #f22517;
+      border-right: none;
+    }
+  }
+
+  .address-unfold-telephone-ext__right {
+    :deep(.el-input__wrapper) {
+      border: 1px solid #ff706d;
+      border-left: none;
+    }
+  }
+}

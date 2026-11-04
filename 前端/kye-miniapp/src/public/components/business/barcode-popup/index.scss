@@ -1,0 +1,115 @@
+.waybill-barcode-popup-box {
+  .ky-popup-content {
+    border-radius: 24px;
+    overflow: visible;
+    background: unset;
+  }
+
+  .ky-popup-body {
+    background: unset;
+  }
+
+  .barcode-popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+
+    .barcode-popup__content {
+      width: 590px;
+      min-height: 755px;
+      background-color: #fff;
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+
+      .barcode-popup__content-logo {
+        width: 582px;
+        height: 320px;
+        background: url('https://ic-img.ky-express.com/netc/20230405_15463213466_!!1680667511962_1166_869.png') 0 center
+          no-repeat;
+        background-size: cover;
+        margin: 32px auto 0;
+      }
+
+      .barcode-popup__content-title {
+        font-size: 42px;
+        line-height: 42px;
+        text-align: center;
+        color: #03050d;
+        margin-top: 16px;
+        font-weight: bold;
+      }
+
+      .barcode-popup__content-desc {
+        font-size: 28px;
+        line-height: 28px;
+        text-align: center;
+        color: #888ea6;
+        margin-top: 33px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .highlight {
+          color: #fe743c;
+        }
+      }
+
+      .barcode-popup__content-barcode {
+        width: 480px;
+        height: 148px;
+        margin: 40px auto 0;
+        pointer-events: none;
+
+        .barcode-popup__content-barcode-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .barcode-popup__content-waybill {
+        font-size: 38px;
+        line-height: 47px;
+        text-align: center;
+        color: #333333;
+        margin-top: 8px;
+        font-weight: 500;
+      }
+
+      .barcode-popup__content-footer {
+        padding: 32px 0;
+        display: flex;
+        justify-content: center;
+
+        .save-image {
+          width: fit-content;
+          background-color: #8365f6 !important;
+          border: 1px solid #8365f6 !important;
+          border-radius: 16px;
+          height: 88px;
+          width: 192px;
+          font-size: 32px;
+          font-weight: 600;
+          box-sizing: border-box;
+        }
+      }
+    }
+
+    .barcode-popup__content-close {
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      image {
+        margin-top: 48px;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        background-size: cover;
+      }
+    }
+  }
+}

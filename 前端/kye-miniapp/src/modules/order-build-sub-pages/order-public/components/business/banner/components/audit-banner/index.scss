@@ -1,0 +1,44 @@
+.banner-audit {
+  position: relative;
+  height: 288px;
+  max-height: 400px;
+  padding: 24px 32px;
+  margin: -20px -20px -64px;
+  box-sizing: border-box;
+  background: linear-gradient(294deg, #B1A3FF 4%, #7177FF 93%);
+
+  display: flex;
+
+  .status-desc {
+    max-height: 200px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 52px;
+      color: #FFFFFF;
+    }
+
+    .content {
+      font-size: 28px;
+      font-weight: normal;
+      line-height: 40px;
+      text-align: justify;
+      color: #FFFFFF;
+      margin-top: 16px;
+    }
+  }
+
+  .status-icon {
+    height: 200px;
+    width: 200px;
+    margin-left: 32px;
+    .svg-icon {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

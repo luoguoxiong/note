@@ -1,0 +1,28 @@
+@import '../../parameter.scss';
+
+.network-pick-address_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 118px;
+
+  .network-pick-address_img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
+  }
+
+  .distance {
+    margin: 2px 0;
+    line-height: 24px;
+    font-size: 24px;
+    color: #24262b;
+  }
+
+  .network-pick-label {
+    color: #888ea6;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "lib": ["es2021", "dom"],
+    "target": "es2017",
+    "module": "commonjs",
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "lib",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "rootDir": ".",
+    "jsx": "preserve",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "types": ["miniprogram-api-typings", "@mini-types/alipay"],
+    "paths": {
+      // TS5090 leading "./"
+      "@/*": ["./src/*"],
+      "@public/*": ["./src/public/*"],
+      "@modules/*": ["./src/modules/*"],
+      "@layout/*": ["./src/layout/*"],
+      "@order-public/*": ["./src/modules/order-build/order-public/*"],
+      "@pages/*": ["./src/modules/order-build/pages/*"],
+      "@order-public-sub-public/*": ["./src/modules/order-build-sub-pages/order-public/*"],
+      "@order-public-sub-root-pages/*": ["./src/modules/order-build-sub-pages/root-pages/*"],
+      "@order-global-package-order/*": ["./src/modules/order-build/order-global-package/*"],
+      "@order-global-package-order-sub/*": ["./src/modules/order-build-sub-pages/order-global-package/*"],
+      "@order-global-package-freight-time/*": ["./src/modules/freight-time/order-global-package/*"],
+      "@packages/*": ["./node_modules/@kye-netc/kye-miniui/packages/*"],
+      "@ky-miniui-lib/ky-miniui-lib": ["./node_modules/@kye-netc/kye-miniui/packages/__components/*"],
+      "@freight-time/*": ["./src/modules/freight-time/*"],
+    }
+  },
+  "include": ["./src", "./types", "./config", "./**/*.vue"],
+  "compileOnSave": false
+}

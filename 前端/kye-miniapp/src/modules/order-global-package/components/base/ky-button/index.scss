@@ -1,0 +1,18 @@
+.ky-button {
+  display: block;
+  // &--h5{
+  //   border-radius: 20px;
+  // }
+
+  &::before {
+    // background: transparent;
+    background: rgb(0 0 0 / 60%);
+  }
+
+  &.disabled {
+    background: $bg-button-disable;
+    border-color: $bg-button-disable;
+    opacity: 1;
+  }
+}
+// .address-unfold .info-container {

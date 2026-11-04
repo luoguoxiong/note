@@ -1,0 +1,183 @@
+.cbus{
+  &-title{
+    padding: 0 32px;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    font-size: 34px;
+    font-weight: 600;
+    color: #03050D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #edeef3;
+  }
+}
+
+.cbus-close-wrap{
+  width: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cbus-close{
+  width: 32px;
+  height: 32px;
+  background-image: url('https://ic-img.ky-express.com/netc/20250118_42870395139_!!1737186469837_64_64.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.cbus-empty{
+  padding: 32px 32px;
+}
+.cbus-empty-img{
+  width: 280px;
+  height: 280px;
+  display: block;
+  margin: 0 auto;
+}
+
+.cbus-empty-text{
+  padding: 24px 0 8px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #03050D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cbus-empty-desc{
+  font-size: 28px;
+  color: #686B75;
+  line-height: 40px;
+  text-align: center;
+}
+.cbus-empty-btns{
+  padding-top: 24px;
+  display: flex;
+  justify-content: center;
+  &>.ky-button:nth-child(2){
+    margin-left: 32px;
+  }
+}
+
+.cbus-qrcode{
+  height: 444px;
+  .cbus-qrcode-desc{
+    padding: 37px 0 16px;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #6E6D72;
+  }
+  .cbus-qrcode-img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin:  0 auto;
+  }
+  .cbus-qrcode-btns{
+    margin-top: 37px;
+    height: 128px;
+    background: white;
+    box-shadow: 0px -6px 20px 0px rgba(184, 171, 255, 0.102);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &>.ky-button{
+      width: 702px;
+    }
+  }
+}
+
+.cbus-form{
+  display: flex;
+  flex-direction: column;
+  &-title{
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 46px;
+    padding: 80px 0 16px;
+    color: #24262B;
+    box-sizing: border-box;
+  }
+  &-phone{
+    height: 64px;
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #24262B;
+    text-align: center;
+    line-height: 64px;
+    padding-bottom: 40px;
+  }
+  &-edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #8365F6;
+    padding-bottom: 64px;
+  }
+  &-icon {
+    width: 32px;
+    height: 32px;
+  }
+  &-input{
+    padding: 0 32px 128px;
+  }
+  &-btns{
+    height: 128px;
+    background: white;
+    box-shadow: 0px -6px 20px 0px rgba(184, 171, 255, 0.102);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    box-sizing: border-box;
+    &>.ky-button{
+      flex: 1;
+    }
+    &>.ky-button:nth-child(2){
+      margin-left: 24px;
+    }
+  }
+}
+
+.cbus-loading{
+  height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-wrap{
+  position: relative;
+}
+.input-popover{
+  position: absolute;
+  top: -76px;
+  left: 0;
+  border-radius: 8px;
+  opacity: 1;
+  padding: 16px 20px;
+  background: rgba(36, 38, 43,0.9);
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.input-popover-arrow{
+  position: absolute;
+  bottom: -11.8px;
+  left: 24px;
+  width: 24px;
+  height: 16px;
+}

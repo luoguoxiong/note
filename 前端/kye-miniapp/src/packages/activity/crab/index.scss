@@ -1,0 +1,200 @@
+.crabContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  .crabBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+  }
+
+  .crabUsed {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 205px;
+    height: 72px;
+    opacity: 0.7;
+    background: #ff6c00;
+    border-radius: 0px 100px 100px 0px;
+    font-size: 32px;
+    line-height: 72px;
+    text-align: center;
+    color: #ffffff;
+    z-index: 10;
+  }
+
+  .crabPlate {
+    position: absolute;
+    right: 0;
+    top: -35px;
+    width: 466px;
+    height: 254px;
+    z-index: 5;
+  }
+
+  .crabTitle {
+    position: absolute;
+    top: 128px;
+    left: 50%;
+    margin-left: -309px;
+    width: 618px;
+    height: 305px;
+    z-index: 5;
+  }
+
+  .crabContent {
+    position: absolute;
+    top: 440px;
+    width: 100%;
+    height: calc(100vh - 440px);
+    z-index: 5;
+
+    .crabRightMoney {
+      width: 120px;
+      height: 135px;
+      position: absolute;
+      top: -57px;
+      right: 40px;
+      z-index: 1;
+    }
+
+    .crabLeftMoney {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 600px;
+      left: 30px;
+      z-index: 1;
+    }
+
+    .crabBag {
+      width: 80%;
+      height: 826px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .crabOpen {
+      width: 436px;
+      height: 192px;
+      position: absolute;
+      top: 456px;
+      left: 50%;
+      margin-left: -218px;
+    }
+
+    .topRibbon {
+      position: absolute;
+      width: 90px;
+      height: 120px;
+      left: 26px;
+      top: 93px;
+    }
+
+    .bottomRibbon {
+      position: absolute;
+      width: 66px;
+      height: 82px;
+      left: 66px;
+      top: 390px;
+    }
+
+    .rightRibbon {
+      position: absolute;
+      width: 66px;
+      height: 86px;
+      right: 36px;
+      top: 264px;
+    }
+
+    .leftRibbon {
+      position: absolute;
+      width: 100px;
+      height: 130px;
+      right: 46px;
+      top: 500px;
+    }
+
+    .leftTicket {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 50px;
+      top: -60px;
+    }
+
+    .rightTicket {
+      position: absolute;
+      width: 72px;
+      height: 52px;
+      right: 30px;
+      top: 100px;
+    }
+
+    .bottomTicket {
+      position: absolute;
+      width: 50px;
+      height: 60px;
+      right: 30px;
+      top: 680px;
+    }
+  }
+
+  .crabPlate {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 466px;
+    height: 254px;
+  }
+
+        .usedTitle {
+          font-size: 30px;
+          color: #999999;
+          line-height: 48px;
+
+          .usedCaption {
+            color: #333333;
+          }
+        }
+
+        .rule-section {
+          margin-bottom: 30px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .rule-title {
+          font-size: 32px;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 20px;
+          line-height: 1.4;
+        }
+
+        .rule-item {
+          font-size: 28px;
+          color: #666;
+          line-height: 1.6;
+          margin-bottom: 12px;
+          padding-left: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .rule-highlight {
+          color: #333;
+          font-weight: 500;
+        }
+}

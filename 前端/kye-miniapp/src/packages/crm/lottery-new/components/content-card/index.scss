@@ -1,0 +1,30 @@
+.content-card-box {
+  position: relative;
+  border-radius: 24rpx;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20rpx;
+  .title {
+    position: absolute;
+    top: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 268rpx;
+    height: 50rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    color: #fff;
+    background: url('https://ic-img.ky-express.com/default/20240530_886279072_!!1717075005287_268_50.png') no-repeat;
+    background-size: 100%;
+    .title-bg {
+      width: 132rpx;
+      height: 32rpx;
+    }
+  }
+  .inner-box {
+    border-radius: 16rpx;
+    background: #fff;
+  }
+}
+

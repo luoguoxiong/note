@@ -1,0 +1,88 @@
+.map-position-bottom-search {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 9999;
+  display: flex;
+  overflow: hidden;
+  min-height: 800px !important;
+  max-height: 800px !important;
+  flex-direction: column;
+  background: #fff;
+  .address-search {
+    display: flex;
+    align-items: center;
+    padding: 28px 24px;
+    .ky-input {
+      flex: 1;
+    }
+  }
+  .search-icon {
+    margin-right: 16px;
+    font-size: 32px;
+  }
+  .address-search__cancel {
+    font-size: 28px;
+    margin-left: 24px;
+    color: #8365f6;
+  }
+
+  // .bottom-popup {
+  //   position: relative;
+  //   z-index: 9999;
+  //   display: flex;
+  //   overflow: hidden;
+  //   min-height: 800px !important;
+  //   max-height: 800px !important;
+  //   flex-direction: column;
+  //   background: #fff;
+
+  //   .container {
+  //     display: flex;
+  //     overflow: hidden;
+  //     height: 100%;
+  //     flex-direction: column;
+
+  //     &__body {
+  //       display: flex;
+  //       overflow: hidden;
+  //       height: 100%;
+  //       padding-right: 0;
+  //       padding-bottom: 0;
+  //       flex-direction: column;
+  //     }
+  //   }
+  // }
+
+  .list-refresh-load {
+    flex: 1;
+    overflow: auto;
+    padding: 0 24px 16px 24px;
+
+    .ky-list {
+      .ky-list__finished-text {
+        margin-bottom: 20px;
+        line-height: initial;
+      }
+    }
+    .map-position-list {
+      padding-right: 0;
+    }
+    ::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+  .map-position-bottom-search-footer {
+    padding: 10px 16px;
+    box-shadow: 0 -0.08rem 0.26667rem 0 rgba(184, 171, 255, 0.1);
+    box-sizing: border-box;
+    // position: relative;
+    // bottom: ;
+    padding-bottom: calc(20px + env(safe-area-inset-bottom, 20px));
+    .map-position-bottom-search-footer-button {
+      width: 100%;
+    }
+  }
+  .ky-loading {
+    justify-content: center;
+  }
+}

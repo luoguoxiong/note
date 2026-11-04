@@ -1,0 +1,269 @@
+/* stylelint-disable */
+$primary-color: #7143f0;
+$primary-color-hover: #8a61f2;
+$primary-color-active: #3e25e9;
+$primary-color-disabled: #bda5f8;
+.ky-button-wrapper {
+  display: inline-block;
+  & + .ky-button-wrapper {
+    margin-left: 12px;
+  }
+  :deep(.ky-common-loading) {
+    margin-right: 2px;
+  }
+}
+.ky-button {
+  border-radius: 4px;
+  :deep([class*='el-icon'] + span) {
+    margin-left: 4px;
+  }
+  :deep(img) {
+    width: 16px;
+    // height: 16px;
+    position: relative;
+    top: -0.5px;
+  }
+  &.el-button.is-loading {
+    background-color: $primary-color;
+  }
+  &.el-button {
+    border: none;
+    font-size: $font-size-small;
+    height: 32px;
+    min-width: 80px;
+    max-width: 160px;
+    line-height: $line-height-normal;
+    font-weight: 400;
+    padding: 8px 0;
+  }
+  &.el-button--primary {
+    background-color: $primary-color;
+    &.is-loading {
+      &::before {
+        // 设计要求修改loading状态颜色
+        background: none;
+      }
+    }
+  }
+  &.el-button:hover {
+    background-color: $primary-color-hover;
+    border: none;
+    color: $white;
+  }
+  &.el-button:active {
+    background-color: $primary-color-active;
+  }
+
+  &.el-button--large {
+    min-width: 88px;
+    max-width: 176px;
+    padding: 10px 0;
+    height: 40px;
+  }
+
+  &.el-button--small {
+    font-size: $font-size-xs;
+    width: 80px;
+    min-width: 60px;
+    max-width: 128px;
+    padding: 3px 0;
+    height: 24px;
+  }
+  &.el-button.disabled {
+    background-color: $primary-color-disabled;
+  }
+  &.el-button--text {
+    color: #7143f0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    &:hover {
+      color: #9f5ef6;
+      background: transparent;
+    }
+    &:active {
+      color: #3e25e9;
+      background: transparent;
+    }
+    &.is-loading {
+      color: #7143f0;
+      background: transparent;
+    }
+    &.disabled {
+      color: #8c8f99;
+    }
+  }
+  // 幽灵按钮样式
+  &.el-button--ghost {
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+  &.el-button--ghost.is-loading {
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+  &.el-button--ghost:hover {
+    background-color: transparent;
+    border: 1px solid $primary-color-hover;
+    color: $primary-color-hover;
+  }
+  &.el-button--ghost:active {
+    background-color: transparent;
+    border: 1px solid $primary-color-active;
+    color: $primary-color-active;
+  }
+  &.el-button--ghost.disabled {
+    background-color: transparent;
+    border: 1px solid $color-border;
+    background-color: #f2f3f7;
+    color: #8c8f99;
+  }
+
+  // 设计规范稿>次按钮 第一种 --- start -------------
+  &.btn-secondary {
+    border: 1px solid $primary-color;
+    background: #ffffff;
+    color: $primary-color;
+    &:hover {
+      background: #f0ecfd;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+    }
+    &:active {
+      background: rgba(113, 67, 240, 0.24);
+      color: $primary-color;
+      border: 1px solid $primary-color;
+    }
+    &.disabled {
+      border: 1px solid $color-border;
+      background: #f2f3f7;
+      color: #8c8f99;
+    }
+    &.is-loading {
+      background-color: #ffffff;
+      border: 1px solid $primary-color;
+      color: $primary-color;
+    }
+  }
+
+  // 设计规范稿>次按钮 第二种 --- start -------------
+  &.el-button--ghost-bg-color {
+    border: 1px solid $primary-color;
+    background: #f0ecfd;
+    color: $primary-color;
+  }
+  &.el-button--ghost-bg-color.is-loading {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    background: #f0ecfd;
+  }
+  &.el-button--ghost-bg-color:hover {
+    border: 1px solid $primary-color-hover;
+    background: rgba(138, 97, 242, 0.24);
+    color: $primary-color-hover;
+  }
+  &.el-button--ghost-bg-color:active {
+    border: 1px solid $primary-color-active;
+    background: rgba(62, 37, 233, 0.24);
+    color: $primary-color-active;
+  }
+  &.el-button--ghost-bg-color.disabled {
+    border: 1px solid $color-border;
+    background: #f2f3f7;
+    color: #8c8f99;
+  }
+  // 幽灵按钮黑
+  &.el-button--ghost-black {
+    background: #ffffff;
+    border: 1px solid $text-color-level4;
+    color: $text-color-level1;
+  }
+  &.el-button--ghost-black.is-loading {
+    border: 1px solid $text-color-level4;
+    color: #03050d;
+  }
+  &.el-button--ghost-black:hover {
+    background: #ffffff;
+    border: 1px solid $primary;
+    color: $primary;
+  }
+  &.el-button--ghost-black:active {
+    background: #ffffff;
+    border: 1px solid $primary-color-active;
+    color: $primary-color-active;
+  }
+  &.el-button--ghost-black.disabled {
+    border: 1px solid $color-border;
+    background-color: $bg-disabled;
+    color: $text-color-level3;
+  }
+
+  // 幽灵按钮 灰
+  &.el-button--ghost-grey {
+    width: 80px;
+    min-width: 60px;
+    max-width: 176px;
+    // padding: 6px 12px;
+    background: #ffffff;
+    border: 1px solid $text-color-level4;
+    color: $text-color-level1;
+  }
+  &.el-button--ghost-grey.is-loading {
+    background: #ffffff;
+    border: 1px solid $color-border;
+    color: $text-color-level3;
+  }
+  &.el-button--ghost-grey:hover {
+    background: #ffffff;
+    border: 1px solid $primary;
+    color: $primary-color;
+  }
+  &.el-button--ghost-grey:active {
+    background: #ffffff;
+    border: 1px solid #3e25e9;
+    color: #3e25e9;
+  }
+  &.el-button--ghost-grey.disabled {
+    background: #f2f3f7;
+    border: 1px solid $text-color-level4;
+    color: #03050d;
+  }
+
+  // 携带icon的按钮
+  &.ky-button--icon {
+    &:hover {
+      background: #f0ecfd;
+      border-color: #7143f0;
+      color: #7143f0;
+    }
+    &:active {
+      background: rgba(113, 67, 240, 0.24);
+      border: 1px solid #7143f0;
+      color: #7143f0;
+    }
+  }
+
+  // 设计规范稿>文字按钮(无背景色) 第二种 灰色
+  &.el-button--ghost-grey-text {
+    background: transparent;
+    border: 0 none;
+    color: #686b75;
+    &:hover {
+      color: #7143f0;
+    }
+    &:active {
+      color: #3e25e9;
+    }
+  }
+}
+
+// 加载
+.btn-loading {
+  &.el-button {
+    .ky-common-loading {
+      margin-right: 4px;
+    }
+  }
+}

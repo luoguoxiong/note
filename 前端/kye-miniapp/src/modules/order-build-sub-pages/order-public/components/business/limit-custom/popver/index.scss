@@ -1,0 +1,14 @@
+.validate-popover{
+  .content{
+    margin-right: 10px;
+  }
+  .close{
+    align-self: flex-start;
+    margin-top: -3px;
+    cursor: pointer;
+    pointer-events: auto;
+    i{
+      font-size: 18px;
+    }
+  }
+}

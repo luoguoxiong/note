@@ -1,0 +1,5 @@
+@import 'pickerItem.common.scss';
+
+/* #ifdef h5 */
+@import 'pickerItem.h5.scss';
+/* #endif */

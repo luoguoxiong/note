@@ -1,0 +1,9 @@
+.transition-enter,.transition-leave-to  {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.transition-enter-to,.transition-leave {
+  opacity: 1;
+  transform: translateX(0%);
+}

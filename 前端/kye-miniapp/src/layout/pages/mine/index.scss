@@ -1,0 +1,123 @@
+.page-mine-scroll{
+  height: 100vh;
+}
+
+.page-mine {
+  position: relative;
+  padding: 0 24px;
+  background: #f1f2f7;
+
+  // 顶部背景
+  &-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 380px;
+
+    image {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    }
+  }
+
+  // 中部胶囊背景
+  &-middle {
+    position: absolute;
+    top: 380px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 360px;
+    background: linear-gradient(180deg, #fff 81%, #f1f2f7 100%);
+  }
+
+  &-middle-fs {
+    height: 104px;
+  }
+
+  // 内容
+  &-content {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    box-sizing: border-box;
+  }
+
+  // 模块区域
+  &-header {
+    height: 170px;
+    padding-bottom: 16px;
+  }
+
+  &-market,
+  &-buystock {
+    display: flex;
+    box-sizing: border-box;
+  }
+
+  &-market {
+    height: 168px;
+    padding: 24px 0;
+  }
+
+  &-notice,
+  &-businesser {
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+
+  &-notice {
+    height: 64px;
+  }
+
+  &-businesser {
+    height: 116px;
+  }
+
+  &-buystock {
+    justify-content: space-between;
+    height: 136px;
+    margin-bottom: 16px;
+  }
+
+  // 卡片
+  &-card {
+    width: 702px;
+    margin: 0 auto 16px;
+    padding: 8px 20px 0 22px;
+    background: #fff;
+    border-radius: 16px;
+    box-sizing: border-box;
+  }
+
+  &-light-app > view:last-child {
+    margin-bottom: 0;
+  }
+
+  &-card-title {
+    height: 78px;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: #24262b;
+  }
+
+  &-app-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

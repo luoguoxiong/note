@@ -1,0 +1,22 @@
+.return-waybill-auto-sync-content {
+  padding: 0 24px 24px 24px;
+  border-radius: 0px 0px 24px 24px;
+  opacity: 1;
+  background: #FFFFFF;
+  .return-waybill-auto-sync-content-text {
+    width: 100%;
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #8C8F99;
+    display: block;
+    text {
+      display: inline;
+    }
+    .waring {
+      color: #ff9300;
+      display: inline;
+      word-break: break-all;
+    }
+  }
+}

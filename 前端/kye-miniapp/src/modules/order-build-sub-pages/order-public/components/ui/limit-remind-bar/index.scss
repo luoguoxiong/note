@@ -1,0 +1,119 @@
+.limit-remind-bar {
+  position: relative;
+  margin: 24px 0 0;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  .paLouDes {
+    display: flex;
+  }
+  &.paLou {
+    margin-bottom: 0;
+    font-size: 24px;
+    color: #ff706d;
+    line-height: 24px;
+  }
+  &__message {
+    padding: 8px 40px 8px 24px;
+    line-height: 34px;
+    font-size: 24px;
+    word-break: break-all;
+    text-align: justify;
+
+    &.padding-style {
+      padding-right: 24px;
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 28px;
+    cursor: pointer;
+    background: url('https://ic-img.ky-express.com/netc/20250715_2616_!!1752570465506_144_112.png') no-repeat;
+    background-size: 100%;
+  }
+
+  &__more {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: url('https://ic-img.ky-express.com/netc/20250710_13228_!!1752151412551_64_64.png') no-repeat;
+    background-size: 100%;
+    transform: translateY(-50%);
+  }
+
+  // 疫情 其它
+  &--66,
+  &--10,
+  &--80,
+  &--100,
+  &--1001 {
+    color: #f05a05;
+    background-color: #fffaf3;
+  }
+
+  // 台风 雨雪
+  &--20,
+  &--30 {
+    color: #073385;
+    background-color: #eef3fc;
+  }
+
+  // 汛期
+  &--40 {
+    color: #00617d;
+    background-color: #effcff;
+  }
+
+  // 假期 春运
+  &--50,
+  &--60 {
+    color: #f15556;
+    background-color: #fff9f7;
+  }
+
+  // 国际会议
+  &--70 {
+    color: #1236ad;
+    background-color: #f0f8ff;
+  }
+
+  // 夜间拦截
+  &--90 {
+    color: #2d3356;
+    background-color: #eef3fc;
+  }
+
+  // 报关
+  &--200 {
+    color: #f05a05;
+    background-color: #fffaf3;
+  }
+
+  // 调价
+  &--110 {
+    color: #f15556;
+    background-color: #fff1ec;
+  }
+  // 默认
+  &---1 {
+    color: #ff9300;
+    background: #fff5e8;
+  }
+
+  // 预存
+  &--4001 {
+    color: #5848a8;
+    background-color: #f0edff;
+  }
+}

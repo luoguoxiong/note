@@ -1,0 +1,264 @@
+.home-idcard {
+    width: 100%;
+
+    .home-idcard-footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        .contact-btn {
+            width: 48%;
+            /* 自动布局 */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 0px;
+
+            border-radius: 44px;
+            opacity: 1;
+            background: #FFFFFF;
+
+            .contact-item-img {
+                width: 40px;
+                height: 40px;
+                margin-right: 12px;
+            }
+
+            .contact-item {
+                font-size: 26px;
+                font-weight: normal;
+                line-height: 36px;
+                letter-spacing: 0px;
+                margin-left: 8px;
+                color: #24262B;
+            }
+        }
+    }
+
+
+    .home-idcard-popup-content_wechat_mode {
+        padding-bottom: 0;
+    }
+}
+
+.home-idcard-popup-content_wechat_mode_spacing {
+    padding-bottom: 70px !important;
+}
+
+
+
+.home-idcard-phone-popup {
+    .header {
+        height: 108px;
+        border-bottom: 2px solid #f2f0f4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+
+        .title {
+            font-size: 34px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .closeIcon {
+            width: 32px;
+            height: 32px;
+            padding: 14px;
+            padding-right: 0;
+        }
+    }
+
+    .home-idcard-popup-content {
+        position: relative;
+        padding: 40px 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .contact-shangwu {
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            flex-direction: column;
+            box-sizing: border-box;
+
+            .shangwu-text {
+                font-size: 28px;
+                font-weight: normal;
+                line-height: 40px;
+                text-align: center;
+                color: #686B75;
+                margin-bottom: 40px;
+            }
+
+            .shangwu-img {
+                width: 240px;
+                height: 240px;
+            }
+        }
+
+        .contact-phone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            position: relative;
+
+            .contact-phone-item {
+                width: 100%;
+            }
+
+            .prue-phone-text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 48px;
+                margin-bottom: 40px;
+
+                .phone-text {
+                    color: #8365F6;
+                    font-weight: bold;
+                }
+
+                .edit-icon {
+                    margin-left: 52px;
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+
+            .contact-phone-text {
+                font-size: 36px;
+                font-weight: bold;
+                line-height: 36px;
+                text-align: center;
+                color: #03050D;
+                margin-bottom: 48px;
+            }
+
+            .phone-btn-warp {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0px;
+
+                background: #FFFFFF;
+
+                box-sizing: border-box;
+
+                box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.05);
+                position: relative;
+
+                .contact-phone-call {
+                    width: 100%;
+                    border-radius: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background: #8365F6;
+                    color: #fff;
+
+                    height: 90px;
+                }
+            }
+
+            .contact-phone-item-inputValue {
+                position: relative;
+                height: 72px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 40px;
+
+                .contact-phone-inputValue__input {
+                    width: 100%;
+                    padding: 0 12px;
+                    height: 100%;
+                }
+
+                .inputValue-clear-icon {
+                    position: absolute;
+                    right: 10px;
+                    width: 34px;
+                    height: 34px;
+                }
+            }
+        }
+
+        .contact-shangwu-warp_QW {
+            margin-bottom: 120px;
+        }
+        .contact-shangwu-warp {
+            width: 100%;
+
+            .noQrcode-link-warp {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 0px;
+            }
+
+            .noQrcode-link-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                flex-direction: column;
+
+                margin-bottom: 120px;
+
+                .noQrcode-link-img {
+                    width: 212px;
+                    height: 212px;
+                }
+
+                .noQrcode-link-text {
+                    margin-top: 24px;
+                    font-weight: normal;
+                    line-height: 40px;
+                    text-align: center;
+                    letter-spacing: 0px;
+                    color: #6E6D72;
+                }
+            }
+
+            .noQrcode-link-contact-phone-item {
+                padding: 16px 32px;
+                width: 90%;
+                position: fixed;
+                height: 120px;
+                bottom: 0;
+                padding: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 0;
+                box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.05);
+
+                .noQrcode-link-contact-phone-call {
+                    width: 100%;
+                    border-radius: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background: #8365F6;
+                    font-weight: 600;
+                    color: #fff;
+                    height: 88px;
+                }
+            }
+        }
+    }
+}

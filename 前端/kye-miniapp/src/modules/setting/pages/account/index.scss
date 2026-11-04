@@ -1,0 +1,9 @@
+.account-setting {
+  background: #f1f2f7;
+  .setting-page {
+    padding-bottom: 0;
+    .setting-page-item:last-child {
+      border: none;
+    }
+  }
+}

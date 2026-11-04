@@ -1,0 +1,71 @@
+.quick-entry-guide {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  animation: quick-entry-guide-fade-in 0.2s ease-out;
+
+  &__arrow {
+    align-self: flex-end;
+    width: 17px;
+    height: 12px;
+    margin-right: 48px;
+    margin-bottom: -4px; // 设计稿：三角高 12、占位行高 8，与气泡主体叠合 4px
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 4px; // $gap-4
+    padding: 12px 16px; // $gap-12 / $gap-16
+    background-color: #24262b; // $text-color-level1
+    border-radius: 8px; // $radius-8
+    box-shadow:
+      0 2px 10px 0 rgba(0, 0, 0, 0.05),
+      0 8px 16px 0 rgba(0, 0, 0, 0.03);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 4px; // $gap-4
+    font-size: 24px; // $fs-24
+    line-height: 34px; // $lh-34
+    color: #ffffff; // $white
+  }
+
+  &__more {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__close {
+    // 设计稿关闭热区 40x40，图标 32x32，负边距避免撑大气泡
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: -4px;
+  }
+
+  &__close-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@keyframes quick-entry-guide-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

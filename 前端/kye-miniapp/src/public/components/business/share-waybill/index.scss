@@ -1,0 +1,17 @@
+:deep(.share-guide-overlay) {
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+}
+
+.share-guide {
+  position: absolute;
+  top: 150px;
+  right: 64px;
+
+  &__card {
+    image {
+      width: 481px;
+    }
+  }
+}

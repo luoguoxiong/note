@@ -1,0 +1,39 @@
+.batch-waybill-receive {
+  position: relative;
+  width: 750px;
+  min-height: 205px;
+  padding: 32px 32px 76px;
+  margin: -20px -20px -68px;
+  background: url('https://ic-img.ky-express.com/netc/20250619_71759_!!1750300231062_1500_444.png') no-repeat;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  &-info {
+    .receive-info-detail {
+      &-left {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+        text-align: center;
+        color: #fff;
+        background-color: $primary;
+        border-radius: 12px;
+        line-height: 40px;
+      }
+      &-right {
+        flex: 1;
+        .receive-user-phone {
+          font-weight: 500;
+          margin-left: 12px;
+          font-size: 34px;
+        }
+        .receive-address {
+          line-height: 36px;
+        }
+      }
+    }
+  }
+}
+.small-margin {
+  margin: -20px -20px -98px;
+}

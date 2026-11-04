@@ -1,0 +1,120 @@
+.clear-addr-box {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  .top-tip {
+    font-family: PingFang SC;
+    font-size: 26px;
+    min-height: 36px;
+    line-height: 36px;
+    color: #686b75;
+    padding: 24px 32px;
+  }
+
+  .addr-detail-list-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background: #f1f2f7;
+    padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 120px);
+    .list-refresh-load {
+      box-sizing: border-box;
+      height: 100%;
+    }
+    .addr-detail-list {
+      .select-box {
+        display: flex;
+        align-items: center;
+        margin-right: 24px;
+        .icon {
+          width: 44px;
+          height: 44px;
+        }
+      }
+      .addr-detail-card {
+        display: flex;
+        margin: 0 20px 24px;
+        padding: 28px 24px;
+        border-radius: 24px;
+        background: #fff;
+        font-family: PingFang SC;
+        font-size: 26px;
+        font-weight: normal;
+        line-height: 36px;
+        letter-spacing: normal;
+        color: #888ea6;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .person-mobile {
+          font-family: PingFang SC;
+          font-size: 28px;
+          font-weight: 500;
+          line-height: 28px;
+          color: #03050d;
+          margin-bottom: 12px;
+          .person {
+            margin-right: 12px;
+          }
+        }
+        .companyName {
+          font-family: PingFang SC;
+          font-size: 26px;
+          font-weight: normal;
+          letter-spacing: normal;
+          color: #55596c;
+          margin-bottom: 12px;
+        }
+        .address {
+          font-size: 26px;
+          font-weight: normal;
+          line-height: 36px;
+          letter-spacing: normal;
+          color: #888ea6;
+          display: -webkit-box;
+          overflow: hidden;
+          @include multi-ellipsis(2);
+          .item-part {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+
+  .addr-footer-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .clear-addr-btn {
+      width: 686px;
+      height: 88px;
+      border-radius: 16px;
+      background: #8365f6;
+      font-size: 32px;
+      font-weight: 600;
+      color: #ffffff;
+      text-align: center;
+      line-height: 88px;
+      margin: 16px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .clear-addr-btn-disabled {
+      background: #d3d5db;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.protect-price {
+  position: relative;
+  padding: 24px;
+
+  @include hairline(after, $border-bottom-color, bottom);
+}

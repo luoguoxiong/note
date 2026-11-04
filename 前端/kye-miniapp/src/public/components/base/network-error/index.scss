@@ -1,0 +1,29 @@
+.netwrok-error{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .network-content{
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    image{
+      width: 280px;
+      height: 280px;
+    }
+    .network-text{
+      padding: 24px 0;
+      font-size: 28px;
+      font-weight: normal;
+      line-height: 40px;
+      text-align: center;
+      letter-spacing: normal;
+      color: #686B75;
+    }
+    .ky-button{
+      height: 56px;
+      display: inline-block;
+      margin: 0 auto;
+    }
+  }
+}

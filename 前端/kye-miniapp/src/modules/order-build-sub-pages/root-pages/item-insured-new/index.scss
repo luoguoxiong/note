@@ -1,0 +1,58 @@
+.item-insured-new {
+  overflow-y: scroll;
+  height: 100vh;
+  padding: 32px;
+  font-size: 26px;
+  line-height: 55px;
+  div {
+    text-indent: 43px;
+    font-size: 26px;
+    text-align: justify;
+    color: #03050d;
+    line-height: 56px;
+  }
+  .set-font-weight {
+    font-weight: bold;
+  }
+}
+
+.my-table {
+  .h5-div {
+    border: 0px solid #000000;
+    border-width: 1px 0px;
+    .h5-p {
+      display: flex;
+      border: 1px solid #000000;
+      border-width: 0 1px;
+      justify-content: space-between;
+      &.MsoNormal {
+        display: none;
+      }
+      > .h5-text {
+        border: 1px solid #000000;
+        padding: 0 2px;
+        line-height: 2;
+        display: flex;
+        align-items: center;
+        padding-bottom: 40px;
+
+        .h5-text {
+          padding: 0;
+          border: none;
+        }
+        // border-width: 0 1px 0 0;
+        flex: 1;
+        &:first-child {
+          max-width: 42px;
+          min-width: 42px;
+          padding-right: 10px;
+        }
+        &:not(:first-child) {
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,201 @@
+.scan-code {
+  background-color: #e3f1fc;
+  height: 100vh;
+
+  &__wrapper {
+    background: url('https://ic-img.ky-express.com/netc/20221229_52563841430_!!1672312830493_1500_2316.png') no-repeat;
+    background-size: 750px 1158px;
+    padding-top: 405px;
+    margin-bottom: 38px;
+  }
+  &__bgImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 678px;
+    height: 258px;
+  }
+  &__content {
+    position: relative;
+    width: 678px;
+    margin: 0 auto;
+    border-radius: 24px 24px 0 0;
+    background-color: #ffffff;
+    padding-top: 204px;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__login-account {
+    height: 45px;
+    font-size: 32px;
+    font-family: PingFangSC, PingFangSC-Regular;
+    font-weight: 400;
+    text-align: left;
+    color: #888ea6;
+    line-height: 45px;
+    // margin-top: 205px;
+    position: relative;
+  }
+  &__phoneNumber {
+    width: 582px;
+    height: 115.5px;
+    font-size: 64px;
+    font-family: DINAlternate, DINAlternate-Bold;
+    font-weight: 700;
+    text-align: center;
+    color: #03050d;
+    line-height: 84px;
+    margin-top: 24px;
+    border-bottom: 4px dashed #ebedf5;
+  }
+  &__textWrap {
+    padding: 0 53px;
+    line-height: 45px;
+    color: #888ea6;
+    margin-top: 42px;
+  }
+  &__footer {
+    width: 678px;
+    padding: 25px 0;
+    // padding: 60px 0;
+    background-color: #ffffff;
+    margin: 0 auto;
+    border-radius: 0 0 24px 24px;
+    .contactBtn {
+      width: 160px;
+      height: 38px;
+      margin: 32px auto 0;
+      font-size: 28px;
+      font-family:
+        PingFang SC,
+        PingFang SC-5;
+      font-weight: 400;
+      text-align: center;
+      color: #8365f6;
+      line-height: 38px;
+      // border: 1px solid red;
+      display: flex;
+      align-items: center;
+    }
+    .phoneIcon {
+      width: 38px;
+      height: 38px;
+      margin-right: 8px;
+    }
+  }
+
+  &__btn {
+    width: 534px;
+    height: 96px;
+    background: linear-gradient(138deg, #ac97ff 3%, #8365f6 98%);
+    border-radius: 12px;
+    font-size: 36px;
+    font-family: PingFangSC, PingFangSC-Medium;
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+    line-height: 96px;
+    margin: 0 auto;
+  }
+
+  .alertContent {
+    height: 96px;
+    font-size: 30px;
+    font-family: PingFangSC, PingFangSC-Regular;
+    text-align: center;
+    color: #6e6d72;
+    line-height: 96px;
+  }
+
+  &__failWrap {
+    position: relative;
+    // border: 1px solid red;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .vaildText {
+      position: relative;
+      margin-top: 45px;
+      width: 252px;
+      height: 59px;
+      font-size: 42px;
+      font-family:
+        PingFang SC,
+        PingFang SC-6;
+      font-weight: 500;
+      text-align: center;
+      color: #ffffff;
+      line-height: 59px;
+    }
+    .contactText {
+      position: relative;
+      margin-top: 8px;
+      width: 288px;
+      height: 180px;
+      font-size: 32px;
+      font-family:
+        PingFang SC,
+        PingFang SC-5;
+      text-align: center;
+      color: #ffffff;
+      line-height: 45px;
+    }
+    .qrImage {
+      width: 328px;
+      height: 328px;
+      position: absolute;
+      top: 0;
+      left: 175px;
+      // margin: 0 auto;
+      // margin: 203px auto 0;
+      display: block;
+    }
+    .alignCenter {
+      margin-top: 106px;
+    }
+  }
+
+  .c_333 {
+    color: #333333;
+  }
+
+  .f_w_600 {
+    font-weight: 600;
+  }
+
+  .f_w_400 {
+    font-weight: 400;
+  }
+
+  .t_a_c {
+    text-align: center;
+  }
+
+  .m_l_12 {
+    margin-left: 12px;
+  }
+
+  .m_r_24 {
+    margin-right: 24px;
+  }
+
+  .m_l_24 {
+    margin-left: 24px;
+  }
+
+  .pd60 {
+    padding: 60px 0 78px;
+  }
+
+  .pd40 {
+    padding: 40px 0 48px;
+  }
+
+  .f_s_32 {
+    font-size: 32px;
+  }
+}

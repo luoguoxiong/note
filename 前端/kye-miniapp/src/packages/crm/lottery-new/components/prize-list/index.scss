@@ -1,0 +1,130 @@
+.wining-prize-box {
+  display: flex;
+  justify-content: space-around;
+
+  .prize-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .prize-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18rpx;
+      background: #FFECE7;
+
+      Image {
+        border-radius: 8rpx;
+      }
+    }
+
+    .prize-name {
+      width: 100%;
+      font-size: 24rpx;
+      color: #844848;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .copon-tag {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 120rpx;
+      height: 69rpx;
+    }
+  }
+}
+
+.wining-prize-box-1 {
+  padding-top: 112rpx;
+  .prize-item {
+    width: 240rpx;
+  }
+
+  .prize-icon {
+    width: 240rpx;
+    height: 240rpx;
+    margin-bottom: 27rpx;
+  }
+}
+
+.wining-prize-box-2 {
+  padding: 130rpx 16rpx 0;
+  .prize-item {
+    width: 180rpx;
+  }
+
+  .prize-icon {
+    width: 180rpx;
+    height: 180rpx;
+    margin-bottom: 31rpx;
+  }
+}
+
+.wining-prize-box-3 {
+  padding: 160rpx 6rpx 0;
+  .prize-item {
+    width: 140rpx;
+  }
+
+  .prize-icon {
+    width: 140rpx;
+    height: 140rpx;
+    margin-bottom: 16rpx;
+  }
+
+  .prize-name {
+    font-size: 22rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.wining-prize-box-4 {
+  padding: 60rpx 0 0;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .prize-item {
+    width: 140rpx;
+    margin: 14rpx 35rpx;
+  }
+
+  .prize-icon {
+    width: 140rpx;
+    height: 140rpx;
+    margin-bottom: 16rpx;
+  }
+
+  .prize-name {
+    font-size: 22rpx;
+  }
+}
+
+.wining-prize-box-5 {
+  padding: 70rpx 0 0;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .prize-item {
+    width: 140rpx;
+    margin: 14rpx 8rpx;
+  }
+
+  .prize-icon {
+    width: 140rpx;
+    height: 140rpx;
+    margin-bottom: 16rpx;
+  }
+
+  .prize-name {
+    font-size: 22rpx;
+  }
+}
+

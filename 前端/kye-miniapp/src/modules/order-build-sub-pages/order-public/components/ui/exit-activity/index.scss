@@ -1,0 +1,51 @@
+.exit-activity-drag-button{
+  position: fixed;
+  max-width: 152px;
+  z-index: 9999;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+.exit-container {
+  position: absolute;
+  right: 0;
+  width: 152px;
+  height: 52px;
+  color: #55596c;
+  background-color: rgba(#fff, 0.8);
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 10%);
+  transition: width 0.5s;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  transform: translateZ(0);
+}
+
+.exit-container.data-active {
+  width: 66px;
+}
+.icon-arrow {
+  width: 28px;
+  height: 48px;
+}
+
+.icon-arrow.data-active {
+  margin-right: 12px;
+}
+
+.icon-arrow.data-active {
+  transform: rotate(180deg);
+}
+
+.text-exit {
+  height: 52px;
+  margin-top: 2px;
+  white-space: nowrap;
+  line-height: 52px;
+}
+}

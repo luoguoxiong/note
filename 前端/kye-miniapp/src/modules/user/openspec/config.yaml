@@ -1,0 +1,168 @@
+schema: spec-driven
+
+# Project context
+context: |
+  # 模块概述
+  用户模块 (user) 是跨越速运小程序的核心业务模块，负责用户身份认证、信息管理、登录登出等核心功能。
+
+  # 1. 技术栈
+
+  ## 前端框架
+  - **框架**: Vue 3 + Taro 4.1.2
+  - **语言**: TypeScript 5.4.5
+  - **CSS**: Sass (SCSS)
+
+  ## 状态管理
+  - **Pinia** ^3.0.2 - 模块级状态管理
+  - **storageEventCenter** - 事件订阅机制（跨页面通信）
+
+  ## UI 组件库
+  - **kye-miniui** 0.2.35-beta.50 - 内部 UI 组件库
+  - 组件库文档: http://miniui-doc.ky-tech.com.cn/components/button.html
+  - 基础组件: ky-button、ky-form、ky-field、ky-dialog、ky-popup、ky-checkbox、ky-radio、ky-switch 等
+
+  ## 构建工具
+  - **Webpack** 5.91.0
+  - **Taro CLI** 4.1.2
+  - **ESLint** + **Prettier** - 代码规范
+
+  # 2. 项目结构
+
+  ## 2.1 核心目录
+  - `modules/user/`
+    - `apis/`              # API 接口定义
+
+      - `login/`           # 登录相关 API
+      - `realname/`        # 实名认证相关 API
+      - `user/`            # 用户信息相关 API
+    - `components/`         # 公共组件
+      - `agree-protocol/`  # 协议组件
+      - `agreement-popup/`  # 协议弹窗
+      - `code-input/`      # 验证码输入
+      - `sms-code-popup/`  # 短信验证码弹窗
+    - `constants/`          # 常量定义
+    - `hooks/`             # 可复用 hooks（模块级别）
+    - `pages/`             # 页面集合
+    - `report/`            # 埋点上报
+    - `store/`             # 模块级 Pinia store
+    - `utils/`             # 工具函数
+
+  ## 2.2 页面列表
+
+  | 页面 | 路径 | 功能描述 |
+  |------|------|---------|
+  | 登录 | `pages/login/` | 手机号登录、一键登录、扫码登录 |
+  | 切换登录 | `pages/changeLogin/` | 切换登录手机号 |
+  | 绑定手机 | `pages/bind-phone/` | 微信授权绑定手机号 |
+  | 更换手机 | `pages/change-phone/` | 更换已绑定手机号 |
+  | 实名认证 | `pages/realname/` | 个人/企业实名认证 |
+  
+  | 用户设置 | `pages/user-setting/` | 个人信息设置 |
+  | 用户编辑 | `pages/userEdit/` | 用户信息编辑 |
+  | 注销账号 | `pages/account-logoff/` | 账号注销流程 |
+  | 扫码绑定 | `pages/scanBindCode/` | 扫码绑定客户编码 |
+  | 扫码登录 | `pages/scanLogin/` | 扫码登录 |
+  | 邀请海报 | `pages/invite-poster/` | 邀请海报生成 |
+
+  # 3. 代码规范
+
+  ## 命名约定
+  - **组件名**: PascalCase（如 BindCodeForm）
+  - **文件名**: kebab-case（如 bind-code-form）
+  - **变量/函数**: camelCase（如 handleConfirm）
+  - **常量**: UPPER_CASE_SNAKE_CASE（如 MAX_LENGTH）
+  - **hooks**: use 前缀（如 useBindCodeAction）
+  - **枚举**: PascalCase，成员 UPPER_CASE_SNAKE_CASE
+
+  ## 文件组织
+  - 页面目录结构: `pages/{page-name}/index.vue` + `index.config.ts` + `index.scss`
+  - 组件目录结构: `components/{component-name}/index.vue` + `index.scss`
+  - API 目录结构: `apis/{module-name}/index.ts` + `types.ts`
+  - hooks 目录结构: `hooks/{hook-name}/index.ts`
+
+  ## 页面组件结构
+  ```
+  pages/{page-name}/
+  ├── index.vue           # 主页面
+  ├── index.config.ts     # 页面配置
+  ├── index.scss          # 页面样式
+  ├── components/         # 页面私有组件
+  ├── hooks/              # 页面私有 hooks
+  ├── store/              # 页面私有 store
+  ├── utils/              # 页面私有工具
+  └── api/                # 页面私有 API
+  ```
+
+  ## 设计模式
+  - **Composition API**: Vue 3 Composition API 优先
+  - **状态管理**: Pinia store + hooks 组合
+  - **事件总线**: storageEventCenter（公共事件订阅机制）
+  - **模块化**: 按业务域划分模块
+  - **关注点分离**: Store 专注状态、Hook 专注业务逻辑、组件专注视图
+
+  # 4. 核心依赖
+
+  | 依赖 | 版本 | 用途 |
+  |------|------|------|
+  | vue | ^3.5.13 | 前端框架 |
+  | @tarojs/taro | 4.1.2 | 跨端框架 |
+  | pinia | ^3.0.2 | 状态管理 |
+  | @kye-netc/kye-miniui | 0.2.35-beta.50 | UI 组件库 |
+  | dayjs | ^1.11.13 | 日期处理 |
+
+  # 5. 核心功能模块
+
+  ## 5.1 登录模块 (pages/login)
+  - 手机号 + 验证码登录
+  - 一键登录
+  - 微信授权登录
+  - 第三方登录（QQ、微博）
+  - 协议勾选组件
+
+  ## 5.2 实名认证模块 (pages/realname)
+  - 个人实名认证（身份证 OCR + 人脸识别）
+  - 企业实名认证（营业执照 + 法人认证）
+  - 认证状态查询
+  - 认证结果展示
+
+  ## 5.3 用户信息模块
+  - 个人信息查看/编辑
+  - 头像上传/裁剪
+  - 手机号绑定/更换
+  - 账号注销
+
+  # 6. API 接口
+
+  | 模块 | 文件 | 说明 |
+  |------|------|------|
+  | 登录 | `apis/login/` | 登录、验证码发送、微信授权 |
+  | 用户 | `apis/user/` | 用户信息查询/修改 |
+  | 实名认证 | `apis/realname/` | 实名认证申请、状态查询 |
+  
+  | 账户注销 | `apis/account-logoff/` | 注销申请、协议查询 |
+
+  # 7. 公共组件
+
+  | 组件 | 说明 |
+  |------|------|
+  | agree-protocol | 协议勾选组件 |
+  | agreement-popup | 协议展示弹窗 |
+  | code-input | 验证码输入框 |
+  | sms-code-popup | 短信验证码弹窗 |
+
+# Per-artifact rules
+rules:
+  proposal:
+    - 必须包含"目标"、"方案"、"风险"三个核心部分
+    - 方案描述应具体可执行
+    - 需评估对现有功能的影响
+    - 涉及登录/实名认证等安全相关功能需额外评审
+    - 不可修改本目录外的文件
+    - 注明是否影响其他团队接口
+  specs:
+    - 使用 Given/When/Then 格式描述行为
+  tasks:
+    - 单个任务工作量不超过 2 小时
+    - 任务之间应有明确依赖关系
+    - 每个任务应有可验证的交付物
+    - API 修改需同步更新 types.ts

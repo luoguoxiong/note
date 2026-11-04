@@ -1,0 +1,154 @@
+.netc-agreement {
+  .icon-content {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    margin-right: 8px;
+
+    .netc-agreement__icon {
+      height: 100%;
+      width: 100%;
+      flex: 1;
+      display: inline-block;
+      margin-top: -1px;
+    }
+  }
+
+  .netc-agreement__checkbox {
+    display: flex;
+    overflow: visible;
+    align-items: center;
+
+    .netc-agreement__item {
+      color: $primary;
+    }
+  }
+
+  .netc-agreement-__checkbox-text {
+    color: #55596C;
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .ky-checkbox {
+    overflow: visible;
+
+    .van-checkbox__icon {
+
+      .svg-icon {
+        position: relative;
+        bottom: 4px;
+      }
+
+      .netc-svg-icon {
+        vertical-align: inherit;
+      }
+
+    }
+
+    .netc-agreement__icon {
+      width: 22px;
+      height: 22px;
+      padding: 4px;
+      margin-top: 1px;
+    }
+
+    .van-checkbox__label {
+      margin-left: 8px;
+      font-size: $fs-level4;
+      white-space: nowrap;
+      color: #55596C;
+      font-weight: normal;
+      line-height: 32px;
+
+      .netc-agreement__item {
+        color: $primary;
+      }
+    }
+  }
+
+  &__popup {
+    .netc-agreement__popup--body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-height: 60vh;
+      padding: 0;
+    }
+
+    &--body {
+      img {
+        max-width: 100%;
+      }
+
+      overflow: auto;
+      padding: 40px 32px;
+      font-size: 28px;
+      color: #03050d;
+      font-weight: 400;
+      line-height: 56px;
+      flex: 1 1 auto;
+    }
+
+    &--footer-btn {
+      padding-top: 20px;
+      padding-bottom: 0;
+      box-shadow: 0 -0.08rem 0.2666rem 0 rgb(184 171 255 / 10%);
+      width: 100%;
+      box-sizing: border-box;
+
+      .cancel-button {
+        width: 240px;
+        color: #8365f6;
+        border: 1px solid #8365f6;
+      }
+
+      .confirm-button {
+        color: #fff;
+        border: 0;
+        flex: 1 1 auto;
+        width: 100%;
+      }
+
+      .van-button--disabled {
+        background: #cacedb !important;
+      }
+    }
+
+    &--loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 400px;
+
+      &__text {
+        margin-top: 20px;
+        font-size: 28px;
+        color: #888ea6;
+        font-weight: 400;
+        line-height: 40px;
+      }
+
+      // :deep(.van-loading__spinner) {
+      //   display: none;
+      // }
+
+      // :deep() {
+      //   .van-loading__text {
+      //     display: flex;
+      //     justify-content: center;
+      //     align-items: center;
+      //     flex-direction: column;
+
+      //     img {
+      //       width: 120px;
+      //     }
+      //   }
+      // }
+    }
+  }
+}

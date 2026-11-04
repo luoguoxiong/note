@@ -1,0 +1,26 @@
+.product-info {
+  position: relative;
+  &.disabled {
+    @include no-bg-disabled;
+
+    .product-spec-required {
+      display: none;
+    }
+
+    .product-name-title-required {
+      display: none;
+    }
+
+    .stepper .van-button .van-icon-minus::before {
+      background: #ccc;
+    }
+
+    .stepper .van-button .van-icon-plus::before {
+      background: #ccc;
+    }
+
+    .stepper .van-button .van-icon-plus::after {
+      background: #ccc;
+    }
+  }
+}

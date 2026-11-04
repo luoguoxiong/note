@@ -1,0 +1,12 @@
+{
+  "project": {
+    "dependencies": [
+      "com.huawei.agconnect:agcp:1.6.0.300"
+    ]
+  },
+  "app": {
+    "plugins": [
+      "com.huawei.agconnect"
+    ]
+  }
+}

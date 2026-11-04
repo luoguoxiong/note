@@ -1,0 +1,23 @@
+{
+  "name": "sub-app-1",
+  "version": "1.0.0",
+  "description": "子应用1",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@kye-netc/micro-module": "0.0.15-beta.7",
+    "@kye-netc/micro-native": "0.0.12",
+    "core-js": "^3.30.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.8",
+    "@vue/cli-service": "~5.0.8",
+    "webpack-manifest-plugin": "^5.0.0"
+  }
+}

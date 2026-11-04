@@ -1,0 +1,154 @@
+.payment-qrcode {
+    box-sizing: border-box;
+    position: relative;
+    background: #fff url("https://ic-img.ky-express.com/netc/20241111_5666301159_!!1731313642656_1500_2930.png") top center no-repeat;
+    background-size: 100% auto;
+    .qrcode-entity {
+      // position: absolute;
+      // z-index: -1;
+      // left: -9999px;
+      // width: 1px;
+      // height: 1px;
+      // overflow: hidden;
+    }
+    .pc-wrap.qrcode-wrap {
+      width: 750px;
+      background: #fff url("https://ic-img.ky-express.com/netc/20241111_5666301159_!!1731313642656_1500_2930.png") top center no-repeat;
+      background-size: 100% auto;
+      padding-top: 70px;
+      .payment-info {
+        text-align: center;
+        padding: 30px 40px 25px;
+        .title {
+          font-size: 28px;
+          font-weight: 500;
+          color: #333333; 
+          line-height: 32px; /* 增加 line-height，确保文本有足够的空间换行 */
+          white-space: normal; /* 允许自动换行 */
+          overflow: hidden; /* 隐藏溢出部分，便于检测是否换行 */
+          padding: 30px 0;
+          padding-bottom: 24px;
+        }
+        .money {
+          margin-top: 26rpx;
+          font-size: 64px;
+          font-weight: 500;
+          color: #fe7121;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          padding-bottom: 15px;
+          span {
+            font-size: 64px;
+            font-weight: 500;
+            line-height: 64px;
+          }
+          .money-symbol {
+            font-size: 42px;
+          }
+        }
+        .money-wrap {
+          margin-top: 0 !important;
+        }
+        .info-tips {
+          font-size: 24px;
+          font-weight: 400;
+          color: #fe7121;
+          line-height: 30px;
+        }
+      }
+      .qrcode-card {
+        background-image: url("https://ic-img.ky-express.com/netc/20241111_86766301133_!!1731313608525_1500_2012.png");
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        height: 1006px;
+        box-sizing: border-box;
+        padding: 0 50px 40px;
+        position: relative;
+        .card-body {
+          padding: 50px 40px;
+        }
+      }
+      .wrap-background {
+        background-image: url("https://ic-img.ky-express.com/netc/20241108_10666301124_!!1731058165045_1500_2112.png");
+      }
+      .qrcode-box {
+        padding-top: 30rpx;
+        width: 422px;
+        height: 422px;
+        margin: 0 auto;
+        position: relative;
+        // background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        .qrcode-img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+        .qrcode-icon {
+          width: 96px;
+          height: 96px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -48px;
+          margin-top: -32px;
+        }
+      }
+    }
+    .page-footer {
+      background: transparent;
+      padding-top: 136px;
+      z-index: 200;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      .footer-btn {
+        width: 48%;
+        height: 88px;
+        background: linear-gradient(315deg, #8568f6 0%, #aa95fe 100%);
+        border-radius: 44px;
+        font-size: 32px;
+        font-weight: 500;
+        color: #ffffff;
+        &.van-button--disabled {
+          opacity: 0.4;
+        }
+      }
+    }
+    .page-body {
+      position: relative;
+    }
+    &.is-share {
+      padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 30px);
+    }
+    .img-bg {
+      padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 128px);
+      img {
+        display: block;
+        max-width: 100%;
+        -webkit-touch-callout: none;
+      }
+      div {
+        background-size: 100% 100% !important;
+        height: 100%;
+      }
+    }
+
+    .page-mark {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      color: #fff;
+      justify-content: center;
+    }
+  }

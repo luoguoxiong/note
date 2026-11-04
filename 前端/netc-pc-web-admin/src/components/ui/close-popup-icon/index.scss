@@ -1,0 +1,14 @@
+.svg-icon {
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: #24262b;
+  cursor: pointer;
+  &:hover {
+    fill: #8a61f2;
+  }
+  &:active {
+    fill: #3e25e9;
+  }
+}

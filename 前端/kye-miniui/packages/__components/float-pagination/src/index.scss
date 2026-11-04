@@ -1,0 +1,158 @@
+.ky-float-pagination {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  width: 124px;
+  height: 312px;
+  background-image: url('https://ic-img.ky-express.com/netc/20250721_57720_!!1753085318316_248_624.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-left: 8px;
+  z-index: 1;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  opacity: 0;
+
+  .ky-float-pagination__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 12px 0;
+
+    .ky-float-pagination__expand {
+      width: 24px;
+      height: 24px;
+      // transform: rotate(180deg);
+      position: absolute;
+      top: 50%;
+      transform: rotate(180deg) translateY(50%);
+      right: -20px;
+    }
+  }
+
+  .ky-float-pagination__button {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    background: #f7f8fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:active {
+      background: rgba(0, 0, 0, 0.04);
+    }
+
+    .ky-float-pagination__button-text {
+      font-size: 18px;
+      line-height: 24px;
+      color: #666973;
+    }
+
+    .ky-float-pagination__arrow-up,
+    .ky-float-pagination__arrow-down {
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+    }
+
+    .ky-float-pagination__arrow-up {
+      border-bottom: 12px solid #666973;
+
+      &.can-click {
+        border-bottom: 12px solid #8365f6;
+      }
+    }
+
+    .ky-float-pagination__arrow-down {
+      border-top: 12px solid #666973;
+
+      &.can-click {
+        border-top: 12px solid #8365f6;
+      }
+    }
+
+    .ky-float-pagination__arrow-up-img,
+    .ky-float-pagination__arrow-down-img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .ky-float-pagination__num {
+    // padding: 0 10px;
+    color: #24262b;
+    text-align: center;
+
+    .ky-float-pagination__num-top {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 34px;
+    }
+
+    .ky-float-pagination__num-bottom {
+      // border-top: 1px solid #e6e8ed;
+      padding-top: 3px;
+      font-size: 24px;
+      line-height: 34px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 1px;
+        background-color: #e6e8ed;
+        transform: scaleY(0.5);
+        transform-origin: 0 0;
+      }
+    }
+  }
+
+  // 右靠边：整体水平镜像，内部内容再翻转回来保证文字/图标方向正常
+  &--right {
+    left: auto;
+    right: 0;
+    transform: translateY(-50%) scaleX(-1);
+
+    .ky-float-pagination__inner {
+      transform: scaleX(-1);
+    }
+
+    .ky-float-pagination__center {
+      .ky-float-pagination__expand {
+        right: auto;
+        left: -20px;
+      }
+    }
+  }
+}
+
+.ky-float-pagination__collapse {
+  position: fixed;
+  left: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+  opacity: 0;
+
+  &-img {
+    width: 100px;
+    height: 200px;
+  }
+
+  // 右靠边：镜像收起态图形
+  &--right {
+    left: auto;
+    right: -35px;
+    transform: translateY(-50%) scaleX(-1);
+  }
+}

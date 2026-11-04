@@ -1,0 +1,85 @@
+.card {
+  background: #fff;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  height: 138px;
+  overflow: hidden;
+  // transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease; /* 过渡效果 */
+
+  &.line2 {
+    height: 282px;
+  }
+  &.line3 {
+    height: 420px;
+  }
+  &.line4 {
+    height: 558px;
+  }
+
+  &-item {
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    width: 20%;
+    margin-bottom: 24px;
+    &-image {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 16px;
+    }
+    &-text {
+      font-size: 24px;
+      color: #24262b;
+      line-height: 34px;
+    }
+
+    &-subscript {
+      position: absolute;
+      top: -8px;
+      right: 8px;
+      height: 28px;
+      line-height: 28px;
+      font-size: 20px;
+      padding: 0 8px;
+      color: #ff9300;
+      background-color: #fff3e5;
+    }
+
+    &:not(:nth-child(5n))::after {
+      position: absolute;
+      content: '';
+      top: 10px;
+      right: -0.5px;
+      width: 1px;
+      height: 48px;
+      background: #e6e8ed;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 0;
+  &-text {
+    font-size: 24px;
+    color: #8365f6;
+    line-height: 34px;
+    margin-right: 4px;
+  }
+  &-image {
+    width: 24px;
+    height: 24px;
+  }
+}

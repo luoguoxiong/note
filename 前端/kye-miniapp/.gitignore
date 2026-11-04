@@ -1,0 +1,34 @@
+dist/
+dist-wx/
+deploy_versions/
+.temp/
+.rn_temp/
+node_modules/
+.DS_Store
+.swc
+*.local
+.vscode
+.idea
+./src/subpackages.ts
+build/*
+!build/.gitkeep
+
+src/subpackages.ts
+src/modules/*-build/
+#src/modules/*-sub-pages/
+
+# src/subpackages
+src/modules/kye-miniapp-order
+src/modules/kye-miniapp-waybill
+
+src/modules/freight-time/order-global-package
+src/modules/order-build-sub-pages/order-global-package
+
+# AI Agent/IDE directories and files
+.trae/
+.cursor/
+.claude/
+.codebuddy/
+.codex/
+workflow-workspace/
+.yarn/

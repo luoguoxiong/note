@@ -1,0 +1,21 @@
+.ky-checkbox-group {
+  display: inline-block;
+  .ky-checkbox {
+    margin-bottom: 5px;
+  }
+  &--horizontal {
+    .ky-checkbox-item {
+      display: inline-flex;
+      margin-right: 16px;
+      vertical-align: middle;
+      &:last-child {
+        margin-right: 0;
+      }
+      &--round {
+        .ky-checkbox__label {
+          margin: 0 6px;
+        }
+      }
+    }
+  }
+}

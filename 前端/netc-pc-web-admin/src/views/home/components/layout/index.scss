@@ -1,0 +1,24 @@
+.content {
+  position: relative;
+  display: flex;
+  column-gap: 8px;
+  width: 100%;
+  min-width: 1104px; // 左栏 826px + 右栏 270px + 间距 8px。
+}
+
+.right-side {
+  flex: none;
+  // 先按 1920px 的 1276 : 461 等比缩小，再固定右栏 364px。
+  // 左栏达到 826px 后，右栏使用剩余空间继续缩小，最小为 270px。
+  width: clamp(270px, calc(100% - 8px - 826px), max(364px, calc((100% - 8px) * 461 / 1737)));
+  min-width: 270px;
+  box-sizing: border-box;
+}
+
+.left-side {
+  flex: 1;
+  min-width: 826px;
+  container-name: home-left;
+  container-type: inline-size;
+  box-sizing: border-box;
+}

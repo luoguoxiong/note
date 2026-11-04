@@ -1,0 +1,55 @@
+.map-position-list {
+  display: flex;
+  flex-direction: column;
+  padding-right: 32px;
+
+  .map-position-list__item {
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    border: 2px solid #ebedf5;
+    border-radius: 24px;
+    box-sizing: border-box;
+
+    &:active {
+      background: #f2effe;
+      border: 2px solid #8365f6;
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: 600;
+      color: #03050d;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+      font-size: 26px;
+      color: #888ea6;
+
+      .content__distance {
+        flex-shrink: 0;
+        text-align: justify;
+      }
+
+      .content__line {
+        margin: 0 10px;
+      }
+
+      .content__address {
+        overflow: hidden;
+        text-align: justify;
+        text-overflow: ellipsis;
+        // white-space: nowrap;
+        display: block;
+        flex-shrink: 0;
+        width: 530px;
+      }
+    }
+  }
+  .is-select-position {
+    background: #f2effe;
+    border: 2px solid #8365f6;
+  }
+}

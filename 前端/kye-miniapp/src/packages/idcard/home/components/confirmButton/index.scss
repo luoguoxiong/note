@@ -1,0 +1,67 @@
+.confirmButton {
+    width: 100%;
+    background: #ffffff;
+    border-top: 2rpx solid #eaebf0;
+    box-sizing: border-box;
+    padding: 20px 0;
+    left: 0;
+    z-index: 5;
+    padding-bottom: env(safe-area-inset-bottom);
+
+    .confirmContainer {
+        display: flex;
+        padding: 0 30px;
+        align-items: center;
+    }
+
+    .cancelButtonName {
+        flex: 1;
+        margin: 0 auto;
+        font-size: 32px;
+        margin-right: 32px;
+        border-radius: 44px;
+        height: 84px;
+        color: #9673f6;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgba(150, 115, 246, 0.3);
+    }
+    .pri-color {
+        background: linear-gradient(315deg, #a482ff 0%, #b69bff 100%);
+    }
+    .disabled-color {
+        background: #cccccc;
+    }
+    .disabled-special-color {
+        background: linear-gradient(315deg, #e9e1ff 0%, #e7deff 100%);
+    }
+    .confirmButtonName {
+        flex: 1;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 32px;
+        border-radius: 44px;
+        height: 88px;
+    }
+}
+.button-shadow {
+    border: 0;
+    box-shadow: 0px -6px 20px 0px rgba(171, 192, 255, 0.1);
+}
+.padding-tp {
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+
+.idcard-comfirm-btn {
+  .confirmButtonName {
+      border-radius: 16rpx;
+      background: #8365F6 !important;
+  }
+}

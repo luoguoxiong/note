@@ -1,0 +1,1 @@
+export const arrowImg = 'https://ic-img.ky-express.com/netc/20250118_81970395190_!!1737164979551_56_56.png'

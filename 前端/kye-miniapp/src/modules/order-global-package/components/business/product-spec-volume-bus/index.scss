@@ -1,0 +1,122 @@
+.product-spec-required {
+  width: 40px;
+  margin-left: 8px;
+}
+
+.product-info-volume-size-popup {
+  padding-right: 0;
+  padding-left: 0;
+
+  &::after {
+    right: 0;
+    left: 0;
+    border: 0;
+  }
+
+  @include hairline(after, $border-bottom-color, bottom) {
+    left: 0;
+    right: 0;
+  }
+}
+
+.product-volume {
+  position: relative;
+  display: flex;
+  .product-volume-item {
+    position: relative;
+    flex: 1;
+    .gross-weight-tips {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding-left: 8px;
+      font-size: 24px;
+      color: #ff9300;
+      font-weight: normal;
+      left: 83px;
+    }
+  }
+
+  .volume-label {
+    word-break: keep-all;
+  }
+
+  .gross-weight-tips {
+    flex: 1;
+  }
+}
+
+// :deep(.product-spec-volume-popover) {
+//   &.van-popover {
+//     padding: 0 8px;
+//   }
+
+//   .van-popover__wrapper {
+//     display: block;
+//   }
+// }
+
+.gross-weigth-tips {
+  position: absolute;
+  top: 0;
+  right: 84px;
+  transform: translateY(-120%);
+
+  .gross-weigth-tips-content {
+    position: relative;
+    padding: 12px 24px;
+    font-size: 24px;
+    color: #ff706d;
+    background: #fff0f0;
+    border: 1px solid #ff706d;
+    border-radius: 8px;
+    font-weight: normal;
+
+    .gross-weight-tips-arrow {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 0;
+      margin-bottom: -14px;
+      color: rgb(255 240 240 / 0%);
+      border-style: solid;
+      border-width: 12px;
+      border-color: transparent;
+      border-top-color: currentcolor;
+      border-bottom-width: 0;
+      transform: translate(-50%);
+
+      &::after {
+        position: absolute;
+        top: -17px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: #fff0f0;
+        content: '';
+        border-top: 1px solid #ff706d;
+        border-left: 1px solid #ff706d;
+        transform: rotate(-135deg);
+      }
+    }
+
+    .gross-weight-tips-content {
+      line-height: normal;
+    }
+  }
+}
+
+.product-stepper-content {
+  .ky-input--disabled .h5-input {
+    background: #f7f8fa !important;
+    background-color: #f7f8fa !important;
+  }
+}
+
+.freight-time-volume-bus {
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 24px;
+}

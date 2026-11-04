@@ -1,0 +1,10 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  .save-button {
+    position: fixed;
+    bottom: 40px;
+    left: 10px;
+    z-index: 200;
+  }
+}

@@ -1,0 +1,461 @@
+.service-mode {
+  // margin-top: 20px;
+  padding: 0 24px 40px;
+  &-header {
+    display: block;
+    width: 100%;
+  }
+  &-content {
+    padding: 28px 24px;
+    background: #fff;
+    border-radius: 0 0 24px 24px;
+    overflow: hidden;
+    
+    .coupon-banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 122px;
+      margin: 0 -24px;
+      margin-top: -28px;
+      background: linear-gradient(180deg, #ECE7FF 0%, #FFFFFF 100%);
+
+      .coupon-head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        .coupon-line {
+          width: 6px;
+          border-radius: 8px;
+          background: #8365F6;
+
+          &--1 {
+            height: 8px;
+            opacity: 0.4;
+          }
+          &--2 {
+            height: 12px;
+            opacity: 0.5;
+          }
+          &--3 {
+            height: 16px;
+            opacity: 0.7;
+          }
+        }
+
+        .coupon-title {
+          margin: 0 16px;
+          font-size: 34px;
+          font-weight: 600;
+          line-height: 52px;
+          color: #24262B;
+        }
+      }
+
+      .coupon-desc {
+        font-size: 24px;
+        line-height: 34px;
+        color: #686B75;
+      }
+    }
+
+    .contact-entry {
+      background: #fff;
+      padding: 24px 16px 4px;
+      color: #8C8F99;
+      .contact-text {
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 34px;
+        // display: flex;
+        align-items: center;
+        letter-spacing: normal;
+      }
+
+      .contact-link {
+        font-size: 24px;
+        letter-spacing: normal;
+        color: #8365f6;
+        // flex-shrink: 0;
+        // &::before {
+        //   content: '';
+        //   top: 0;
+        //   left: 0;
+        //   position: absolute;
+        //   width: 32px;
+        //   height: 32px;
+        //   background: url('https://ic-img.ky-express.com/netc/20260602_78223_!!1780403185211_32_32.png') no-repeat;
+        //   background-size: 100%;
+        // }
+      }
+    }
+
+    .limit-block {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 32px;
+
+      .pickup {
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+
+        .limit-icon {
+          width: 96px;
+          height: 112px;
+        }
+
+        .limit-text {
+          width: 540px;
+          padding: 20px 0;
+          font-size: 24px;
+          font-weight: 500;
+          text-align: justify;
+          word-break: break-all;
+          line-height: 36px;
+          box-sizing: border-box;
+        }
+
+        &--10,
+        &--80,
+        &--100 {
+          color: #f05a05;
+          background: linear-gradient(270deg, #fffaf3 65%, #fff5ec, #ffe5cd);
+        }
+        &--20,
+        &--30 {
+          color: #073385;
+          background: linear-gradient(270deg, #eef3fc 65%, #eef3fc, #bdd3f7);
+        }
+        &--40 {
+          color: #00617d;
+          background: linear-gradient(270deg, #e8faff 65%, #e8faff, #9fdbed);
+        }
+        &--50,
+        &--60 {
+          color: #f15556;
+          background: linear-gradient(270deg, #fff9f7 65%, #fff7f5, #ffcbcb);
+        }
+        &--70 {
+          color: #1236ad;
+          background: linear-gradient(270deg, #e8f4ff 65%, #e0efff, #a9ccf5);
+        }
+        &--200 {
+          color: #5848a8;
+          background: linear-gradient(270deg, #f6f5ff 65%, #efecff, #d3cafe);
+        }
+      }
+    }
+
+    .service-block {
+      .service-content {
+        background: #F7F8FA;
+        border-radius: 16px;
+      }
+      .header {
+        // background: #f7f8fa;
+        border-radius: 8px;
+        position: relative;
+        height: 88px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
+
+        .service-title {
+          position: relative;
+          font-size: 24px;
+          font-weight: 400;
+          color: #24262B;
+          display: flex;
+          align-items: center;
+          .service-icon {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-left: 4px
+          }
+        }
+
+        .expected-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .expected-btn {
+          min-width: 158px;
+          height: 56px;
+          display: inline-flex;
+          align-items: center;
+          padding-left: 16px;
+          padding-right: 32px;
+          box-sizing: border-box;
+          border-radius: 8px;
+          background: #ffffff;
+          border: 1px solid #d3d5db;
+          position: relative;
+          font-size: 26px;
+          font-weight: 400;
+          color: #6e6d72;
+
+          &--fee {
+            margin-left: 20px;
+          }
+
+          .sort-arrow {
+            position: absolute;
+            top: 50%;
+            right: 6px;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 30px;
+            background: url('https://ic-img.ky-express.com/netc/20260602_74151_!!1780403146652_28_28.png') no-repeat;
+            background-size: 100%;
+
+            &.ascending {
+              background-image: url('https://ic-img.ky-express.com/netc/20260602_66776_!!1780403167188_28_28.png');
+            }
+
+            &.descending {
+              background-image: url('https://ic-img.ky-express.com/netc/20260602_70098_!!1780403179027_28_28.png');
+            }
+          }
+        }
+      }
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 0 16px 16px;
+        &-item {
+          display: flex;
+          flex-direction: column;
+          padding: 22px;
+          box-sizing: border-box;
+          border-radius: 16px;
+          background: #ffffff;
+          border: 1px solid #e6e8ed;
+          margin-top: 16px;
+
+          &-content {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+          }
+
+          .list-item-left {
+            &-name {
+              font-size: 34px;
+              font-weight: 500;
+              line-height: 34px;
+              color: #03050d;
+            }
+
+            .disable {
+              font-size: 24px;
+              line-height: 34px;
+              color: #8c8f99 !important;
+              margin-top: 20px;
+            }
+
+            &-time {
+              font-size: 24px;
+              line-height: 30px;
+              color: #888ea6;
+              margin-top: 20px;
+              width: 358px;
+              display: block;
+            }
+          }
+          .new-customer-icon {
+            width: 168px;
+            height: 80px;
+          }
+          // PRD改动：费用区 合计+运费+木架费 → 总费用 + 明细
+          .list-item-right-fee {
+            width: 252px;
+            .fee-total {
+              font-size: 28px;
+              font-weight: normal;
+              line-height: 40px;
+              text-align: right;
+              color: #ff706d;
+
+              .fee-value {
+                font-weight: 600;
+              }
+
+              .fee-unit {
+                font-size: 24px;
+                color: #ADB0B8;
+              }
+            }
+
+            .fee-detail {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              font-size: 24px;
+              font-weight: normal;
+              line-height: 34px;
+              text-align: right;
+              color: #8365f6;
+              margin-top: 5px;
+
+              .detail-arrow {
+                font-size: 28px;
+                margin-left: 2px;
+              }
+            }
+          }
+
+          .list-item-right-nofee {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 46px;
+            text-align: right;
+            letter-spacing: normal;
+            color: #8c8f99;
+            display: flex;
+            align-items: center;
+          }
+          .fee-discount {
+            width: 168px;
+            height: 80px;
+            border-radius: 8px;
+            border: 2px solid #EDDECE;
+            font-size: 24px;
+            color: #733909;
+            text-align: center;
+            .fee-discount-text {
+              line-height: 36px;
+              background: linear-gradient(270deg, #FFF0E8 0%, #FFFBF6 30%, #FFFAF5 62%, #FFEFE5 100%);
+            }
+            .fee-discount-amount {
+              line-height: 44px;
+              color: #732B09;
+              font-weight: 600;
+              .fee-discount-value {
+                font-size: 36px;
+              }
+            }
+          }
+          .invalid-reason {
+            position: absolute;
+            top: -35px;
+            right: -24px;
+            padding: 6px 8px 4px;
+            font-size: 24px;
+            color: #fff;
+            border-bottom-left-radius: 16px;
+            border-top-right-radius: 16px;
+            background: #888ea6;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon-disable {
+              width: 24px;
+              height: 24px;
+              margin-right: 4px;
+              margin-top: -1px;
+            }
+          }
+        }
+
+        .disabled-item {
+          padding: 36px 24px;
+          border-radius: 16px;
+          background: #f7f8fa;
+          box-sizing: border-box;
+          border: 1px solid #e6e8ed;
+        }
+
+        .list-item-arrive-tips {
+          position: relative;
+          margin-top: 20px;
+          margin-left: 22px;
+          font-size: 24px;
+          font-weight: 400;
+          color: #ff8038;
+          text-align: justify;
+          line-height: 30px;
+          box-sizing: border-box;
+        }
+
+        .invalid-tips {
+          font-size: 24px;
+          font-weight: normal;
+          line-height: 24px;
+          text-align: right;
+          color: #8365f6;
+          margin-top: 8px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          &-text {
+            padding-right: 8px;
+          }
+        }
+
+        &-tips {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin-top: 20px;
+
+          text {
+            position: relative;
+            font-size: 24px;
+            font-weight: 400;
+            color: #ff706d;
+            line-height: 32px;
+            text-align: justify;
+            background: #fff0f0;
+            padding: 16px 24px;
+            border-radius: 12px;
+          }
+        }
+      }
+    }
+
+    .empty-state-area,
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 0;
+
+      .empty-img {
+        width: 200px;
+        height: 200px;
+      }
+
+      .empty-desc {
+        font-size: 28px;
+        color: #888ea6;
+        margin-top: 24px;
+        text-align: center;
+        max-width: 496px;
+      }
+
+      .empty-btn {
+        margin-top: 24px;
+        padding: 11px 24px;
+        background: #8365f6;
+        border-radius: 8px;
+        font-size: 24px;
+        color: #fff;
+      }
+    }
+  }
+}

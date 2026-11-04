@@ -1,0 +1,52 @@
+/**
+ * 细边框处理
+ */
+/* stylelint-disable */
+@mixin hairline($pseudo: after, $borderColor: #ccc, $direction: '', $radius: 0, $gap: 16px) {
+  position: relative;
+
+  &::#{$pseudo} {
+    position: absolute;
+    box-sizing: border-box;
+    content: " ";
+    pointer-events: none;
+    right: $gap;
+    bottom: 0;
+    left: $gap;
+    transform: scaleY(0.5);
+
+    @if $direction ==left {
+      border-left: 2px solid $borderColor;
+    }
+
+    @else if $direction ==top {
+      border-top: 2px solid $borderColor;
+    }
+
+    @else if $direction ==bottom {
+      border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    }
+
+    @else if $direction ==right {
+      border-right: 2px solid $borderColor;
+    }
+
+    @else {
+      border: 2px solid $borderColor;
+      border-radius: $radius * 2;
+    }
+
+    @content;
+  }
+}
+
+/**
+ * 底部按钮容器上边框
+ */
+
+@mixin popup-footer-border {
+  border-width: 1px 0px 0px 0px;
+  border-style: solid;
+  border-color: #E6E8ED;
+  box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.05);
+}

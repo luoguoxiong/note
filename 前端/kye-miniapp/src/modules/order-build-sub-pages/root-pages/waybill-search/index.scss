@@ -1,0 +1,101 @@
+.waybill-search-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .page-waybill-head {
+    width: 100%;
+    flex-shrink: 0;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.05);
+    .page-waybill-search {
+      padding: 16px 32px;
+      display: flex;
+      .page-waybill-search-input {
+        flex: 1;
+      }
+      .page-waybill-search-filter {
+        margin-left: 12px;
+        padding: 0 12px;
+        .page-waybill-search-filter-icon {
+          width: 40px;
+          height: 40px;
+          display: block;
+        }
+        .page-waybill-search-filter-text {
+          font-size: 24px;
+          color: #24262b;
+          line-height: 34px;
+          display: block;
+        }
+      }
+      .page-waybill-head-menus {
+        margin-left: 12px;
+        .page-waybill-search-more {
+          .page-waybill-search-more-icon {
+            width: 40px;
+            height: 40px;
+            display: block;
+          }
+          .page-waybill-search-more-text {
+            font-size: 24px;
+            color: #24262b;
+            line-height: 34px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .page-waybill-tabs {
+    padding: 0 8px;
+  }
+  .page-waybill-list {
+    flex: 1;
+    padding: 0 24px;
+    .waybill-card {
+      .waybill-card-head {
+        .waybill-card-head-right {
+          flex: 1;
+          padding-left: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .right-extra-btn {
+            display: flex;
+            align-items: center;
+            image {
+              width: 24px;
+              height: 24px;
+              display: block;
+            }
+            .right-extra-btn-text {
+              font-size: 24px;
+              line-height: 34px;
+              color: #8365f6;
+              display: block;
+              margin-left: 4px;
+            }
+          }
+        }
+      }
+      .waybill-card-bottom {
+        border-top: 2px solid #e6e8ed;
+        padding: 20px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .waybill-card-bottom-right {
+          flex: 1;
+          padding-left: 32px;
+          display: flex;
+          justify-content: end;
+          .ky-button {
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+  }
+}

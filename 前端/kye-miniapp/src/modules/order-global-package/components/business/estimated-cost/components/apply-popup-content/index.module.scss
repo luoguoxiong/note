@@ -1,0 +1,67 @@
+.apply-content {
+  margin-left: 36px;
+
+  .apply-status {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+
+    .status-icon {
+      position: absolute;
+      left: -32px;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 28px;
+      height: 28px;
+      /* #ifdef h5 */
+      width: 0.7rem !important;
+      /* #endif */
+    }
+
+    .status-title {
+      font-size: 30px;
+      color: #03050d;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .status-time {
+      margin-left: 8px;
+      font-size: 24px;
+      color: #888ea6;
+    }
+  }
+
+  .apply-reason {
+    margin: 30px 0;
+    font-size: 26px;
+    color: #55596c;
+    line-height: 40px;
+    word-break: break-all;
+  }
+  .apply-commerce {
+    padding: 20px;
+    font-size: 26px;
+    background: #f7f8fa;
+    border-radius: 12px;
+    .commerce-qr {
+       width: 38px;
+      height: 38px;
+      margin-bottom: -8px;
+      margin-left: 24px;
+    }
+    .commerce-btn {
+      color: #8365f6;
+    }
+  }
+}
+
+// 输入区域样式 - 只影响当前组件的 textarea
+.apply-textarea {
+  &:global(.kye-order-custom-textarea) {
+    background: #f7f8fa;
+    border-radius: 12px;
+    min-height: 240px;
+    padding: 24px;
+  }
+}

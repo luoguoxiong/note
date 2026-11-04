@@ -1,0 +1,19 @@
+.specify-address-position {
+  display: flex;
+  align-items: center;
+  margin-left: 190px;
+  cursor: pointer;
+
+  .text {
+    font-size: 24px;
+    color: #696969;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+    margin-left: 8px;
+    background: url('https://ic-img.ky-express.com/netc/20250619_34012_!!1750313945883_72_72.png') no-repeat;
+    background-size: 100%;
+  }
+}

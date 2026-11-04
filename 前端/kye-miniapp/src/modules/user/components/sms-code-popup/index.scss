@@ -1,0 +1,41 @@
+.sms-code-popup {
+  .sms-code-popup__header {
+    z-index: 0;
+    font-weight: 600;
+    color: #03050D;
+    display: flex;
+    align-items: center;
+    height: 98px;
+    padding: 0 32px;
+    font-size: 34px;
+    border-bottom: 1px solid #EBEDF5;
+  }
+
+  .sms-code-popup__header-close {
+    height: 32px;
+    width: 32px;
+    margin-left: auto;
+  }
+
+  .sms-code-popup__body {
+    padding: 24px 32px;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+    font-weight: 400;
+    font-size: 28px;
+    color: #686B75;
+  }
+
+  .extra-bottom {
+    display: flex;
+    justify-content: flex-end;
+
+    .resend {
+      font-size: 24px;
+      font-weight: normal;
+      line-height: 34px;
+      text-align: right;
+      letter-spacing: -0.64px;
+      color: #8365F6;
+    }
+  }
+}

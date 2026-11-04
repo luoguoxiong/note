@@ -1,0 +1,165 @@
+@import'../settings/font';
+
+/* 以下字体mixin的字重不同，但是color都相同 */
+@mixin weight($weight) {
+  font-weight: $weight;
+}
+
+/* 一级文字 适用场景：一级标题 导航栏标题 */
+@mixin font-level1 {
+  font-size: $fs-level1;
+  line-height: $line-level1;
+  color: $text-color-level1;
+
+  @include weight($font-bold);
+}
+
+/* 大按钮/弹窗标题/公共大按钮文本 */
+@mixin font-special-big {
+  font-size: $fs-spcecial-big;
+  color: $text-color-level1;
+
+  @include weight($font-bold);
+}
+
+/* 二级标题/表单列表标题/卡片标题/ */
+@mixin font-level2 {
+  font-size: $fs-level2;
+  line-height: $line-level2;
+  color: $text-color-level1;
+
+  @include weight($font-bold);
+}
+
+/* 正文/输入框标题、静默文案（已录入使用加粗）/公共中按钮文本 */
+@mixin font-level3 {
+  font-size: $fs-level3;
+  color: $text-color-level1;
+
+  @include weight($font-normal);
+}
+
+/* 用于信息层级较多时/特殊场景使用 */
+@mixin font-special {
+  font-size: $fs-special-normal;
+
+  @include weight($font-normal);
+}
+
+/* 用于信息层级较多时/特殊场景使用 */
+@mixin font-level4 {
+  font-size: $fs-level4;
+
+  @include weight($font-normal);
+}
+
+/* 标签/角标/徽标 */
+@mixin font-level5 {
+  font-size: $fs-level5;
+
+  @include weight($font-normal);
+}
+
+/* 单行文本溢出 */
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 多行文本溢出 */
+@mixin multi-ellipsis($line: 1) {
+  @if $line <=0 {
+    $line: 1;
+  }
+
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin multi-screen-max-width {
+  width: 100%;
+  max-width: $screen-max-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@mixin multi-screen-max-small-width {
+  width: 100%;
+  max-width: $screen-max-small-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@mixin no-bg-disabled {
+  pointer-events: none;
+
+  .ky-input {
+    color: $text-color-disabled !important;
+  }
+
+  .h5-input {
+    color: $text-color-disabled !important;
+  }
+
+  .ky-input .h5-input {
+    color: $text-color-disabled !important;
+  }
+
+  .svg-icon {
+    &.required {
+      display: none;
+    }
+  }
+
+  .required-field {
+    padding-left: 0 !important;
+  }
+
+  .h5-div,
+  .h5-span,
+  .ky-cell__title {
+    color: $text-color-disabled !important;
+
+    .h5-div {
+      color: $text-color-disabled !important;
+    }
+
+    .h5-span {
+      color: $text-color-disabled !important;
+    }
+  }
+
+  .h5-div,
+  .h5-span,
+  custom-input {
+    color: $text-color-disabled !important;
+  }
+
+  .ky-cell__value {
+    color: $text-color-disabled !important;
+
+    .h5-div {
+      color: $text-color-disabled !important;
+
+      .h5-span {
+        color: $text-color-disabled !important;
+      }
+    }
+
+    .h5-span {
+      color: $text-color-disabled !important;
+    }
+  }
+
+  .ky-cell__link {
+    display: none;
+  }
+
+  .required-icon {
+    display: none;
+  }
+}

@@ -1,0 +1,54 @@
+.limit-popup-content {
+  min-height: 236px;
+  padding-bottom: env(safe-area-inset-bottom, 20px);
+  font-size: 32px;
+  color: $text-color-level1;
+  font-weight: $font-bold;
+  word-wrap: break-word;
+  line-height: 46px;
+  .h5-strong, .h5-text, .h5-span {
+    display: inline;
+  }
+  .content{
+    //display: flex;
+  }
+  .tip{
+    font-size: 23px;
+    color: $text-color-level3;
+    line-height: 40px;
+    font-weight: normal;
+    margin: 14px 0  0 0;
+    background: none;
+  }
+  .money{
+    color: #ff706d;
+  }
+  .limit-popup-padding{
+    height: 30px;
+  }
+}
+.limit-popup-button {
+  width: 100%;
+  > .van-button {
+    width: 48%;
+  }
+}
+.limit-popup-button-cancel,.limit-popup-button-submit {
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.limit-popup-button-submit {
+  margin-left: 24px;
+}
+.adjust_price{
+  .container{
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 130px;
+    background-image: url('https://ic-img.ky-express.com/netc/20250619_5134_!!1750300974989_1500_252.png');
+  }
+}
+.limit-popup-content-masker{
+  position: fixed;
+}

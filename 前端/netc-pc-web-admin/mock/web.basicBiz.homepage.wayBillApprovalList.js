@@ -1,0 +1,40 @@
+module.exports = {
+  enable: true, // 是否启用
+  data: {
+    code: 0,
+    msg: 'OK',
+    data: {
+      paymentVO: null,
+      payAuthCount: null,
+      payAuthList: null,
+      authApprovalCount: null,
+      authApprovalList: null,
+      wayBillApprovalCount: 1,
+      wayBillApprovalList: [
+        {
+          id: 18511,
+          waybillNumber: 'KY5000286045838',
+          sendCity: '北京市',
+          receiveCity: '杭州市',
+          sendName: '杨梓桐',
+          receiveName: '毛毛虫',
+          sendCustomer: '上海思纬生物科技有限公司',
+          receiveCustomer: '深圳美女仙女',
+          serviceMode: '省内次日',
+          goodTime: '1716430500000',
+          disPlayForecastCost: true,
+          forecastCost: 202323,
+          placeOrderName: null,
+          placeOrderPhone: '17792803216',
+          viewMoreUrl: '/admin/permission-manage?activeTab=20',
+          agreeUrl: '/admin/permission-manage?activeTab=20&id=18511&operateType=1',
+          rejectUrl: '/admin/permission-manage?activeTab=20&id=18511&operateType=2',
+          detailsUrl: '/admin/permission-manage?activeTab=20&id=18511&operateType=3',
+        },
+      ],
+      locateTo: 'WAYBILL_APPROVAL',
+    },
+    traceId: 'de1061ba15145db8856944e71b0b45ef',
+    success: true,
+  },
+}

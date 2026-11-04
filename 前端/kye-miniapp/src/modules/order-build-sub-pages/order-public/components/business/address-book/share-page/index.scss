@@ -1,0 +1,142 @@
+.address-book-share-receive {
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    height: calc(100vh - 296px - env(safe-area-inset-bottom));
+    background: #f1f2f7;
+    .container {
+      flex: 1;
+      padding: 24px;
+      padding-top: 0;
+      margin-top: -74px;
+      background: #f1f2f7;
+
+      .address-ocr {
+        margin-bottom: 20px;
+      }
+
+      .extra-style {
+        .address-unfold-companyName {
+          &::after {
+            border: 0;
+          }
+        }
+      }
+
+      .container__ocr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 36px 24px;
+        background: #fff;
+        border-radius: 24px;
+        box-sizing: border-box;
+
+        &__text {
+          font-size: 28px;
+          color: #888ea6;
+        }
+
+        &__right {
+          display: flex;
+          padding: 4px 10px;
+          background: #f1f2f7;
+          border-radius: 12px;
+          box-sizing: border-box;
+
+          .icon {
+            width: 40px;
+            height: 40px;
+            background: url('https://ic-img.ky-express.com/netc/20250619_69444_!!1750302611186_64_64.png') no-repeat;
+            background-size: 100%;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .container__info {
+        margin-top: 24px;
+        padding: 24px;
+        padding-bottom: 0;
+        background: #fff;
+        border-radius: 24px;
+        box-sizing: border-box;
+
+        .margin-style {
+          margin-top: 20px;
+        }
+
+        .padding-style {
+          padding-bottom: 4px;
+        }
+
+        .info-container {
+          padding-bottom: 0;
+          margin-left: 0;
+        }
+        .address-unfold {
+          .info-container {
+            padding-bottom: 0;
+            margin-left: 0;
+          }
+        }
+
+        .address-unfold-dropdown-menu {
+          left: -26px;
+          width: 703px;
+        }
+      }
+      .ky-input--bottom {
+        border-bottom: transparent;
+      }
+      .ky-popover-container {
+        display: block;
+      }
+      .ky-cell {
+        min-height: 96rpx !important;
+        &::after {
+          position: absolute;
+          box-sizing: border-box;
+          content: ' ';
+          pointer-events: none;
+          right: 16px;
+          bottom: 0;
+          left: 16px;
+          transform: scaleY(0.5);
+          border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    .address-book-receive-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-bottom: env(safe-area-inset-bottom, 20px);
+      background: #fff;
+      box-shadow: 0 -6px 20px 0 rgb(184 171 255 / 10%);
+      height: auto;
+      z-index: 10;
+
+      .footer__wrap {
+        width: 100%;
+        padding: 20px 24px;
+        display: flex;
+        box-sizing: border-box;
+        z-index: 999;
+        .btn {
+          flex: 1;
+          &.go-order {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}

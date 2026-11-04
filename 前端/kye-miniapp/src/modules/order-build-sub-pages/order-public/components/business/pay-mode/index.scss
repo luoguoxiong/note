@@ -1,0 +1,44 @@
+.pay-mode {
+  position: relative;
+  box-sizing: border-box;
+  .product-spec-required {
+    // font-size: $line-level4;
+    width: 40px;
+  }
+  .validate-error {
+    :deep(.ky-cell-placeholder) {
+      color: #ff706d;
+    }
+  }
+  .edit-return-waybill {
+    position: absolute;
+    inset: 0;
+    z-index: 12;
+  }
+  .cell-wrapper {
+    position: relative;
+    :deep(.ky-cell) {
+      &::after {
+        position: absolute;
+        right: 0;
+        left: 24px;
+        width: 662px;
+        content: '';
+        box-sizing: border-box;
+        pointer-events: none;
+        transform: scaleY(0.5);
+        border-bottom: 2px solid #ebedf5;
+      }
+    }
+  }
+
+  &.disabled {
+    .cell-wrapper {
+      :deep(.ky-cell) {
+        .ky-cell-value {
+          color: #cacaca;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+
+.gt-tool {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 88px;
+  background: #fff;
+  border-bottom: 1px solid #ebedf5;
+  box-sizing: border-box;
+
+  .gt-tool--label {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 26px;
+    color: #03050d;
+  }
+}

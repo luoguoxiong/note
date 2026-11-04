@@ -1,0 +1,44 @@
+.label {
+    margin: 24px 0;
+    font-size: 26px;
+    color: #03050D;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    :deep(.screen-overlay__input) {
+        padding: 18px 24px;
+        margin-right: 22px;
+        background: #F7F8FA;
+        border-radius: 10px;
+
+        .van-field__control,
+        .van-field__body {
+            height: 24px;
+            line-height: 24px;
+            font-size: 24px;
+
+            i {
+                font-size: 36px;
+            }
+        }
+
+
+    }
+
+    >div {
+        flex: 1;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

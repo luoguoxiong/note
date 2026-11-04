@@ -1,0 +1,29 @@
+@import '@order-global-package-order-sub/styles/index.scss';
+
+.pickup-information-content {
+  .cell-content {
+    position: relative;
+    box-sizing: border-box;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 24px;
+      width: 662px;
+      content: '';
+      box-sizing: border-box;
+      pointer-events: none;
+      transform: scaleY(0.5);
+      border-bottom: 2px solid #ebedf5de;
+    }
+  }
+}
+
+.cell_tip {
+  flex-shrink: 0;
+  width: 100%;
+  margin-bottom: -10px;
+  font-size: 24px;
+  color: $warning;
+}

@@ -1,0 +1,47 @@
+.estimation-cost-apply {
+  margin-left: 36px;
+  &-status {
+    position: relative;
+    align-items: baseline;
+    &-svg {
+      position: absolute;
+      left: -32px;
+      top: 4px;
+      width: 28px;
+      height: 28px;
+    }
+    &-title {
+      font-size: 30px;
+      color: #03050d;
+      font-weight: 600;
+    }
+    &-desc {
+      margin-left: 8px;
+      font-size: 24px;
+      color: #888ea6;
+    }
+  }
+  &-content {
+    margin: 30px 0;
+    font-size: 26px;
+    color: #55596c;
+    line-height: 40px;
+    word-break: break-all;
+  }
+  &-commerce {
+    padding: 20px;
+    font-size: 26px;
+    background: #f7f8fa;
+    border-radius: 12px;
+    &-relation {
+      color: #8365f6;
+    }
+
+    &-business-relation {
+      width: 38px;
+      height: 38px;
+      margin-bottom: -8px;
+      margin-left: 24px;
+    }
+  }
+}

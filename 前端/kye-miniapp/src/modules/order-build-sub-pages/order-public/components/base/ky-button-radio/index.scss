@@ -1,0 +1,73 @@
+.ky-button-radio {
+  padding: 0;
+  border-radius: 20px;
+
+  &::before {
+    // background: transparent;
+    background: rgb(0 0 0 / 60%);
+  }
+
+  &.disabled {
+    color: #55596c !important;
+    background: #f1f2f7 !important;
+    border-color: $bg-button-disable !important;
+    opacity: 1;
+  }
+
+  &.van-button--large {
+    font-size: 34px;
+  }
+
+  &.van-button--normal {
+    font-size: 34px;
+  }
+
+  :deep(.van-button--small) {
+    font-size: 28px;
+  }
+
+  :deep(.van-button--mini) {
+    font-size: 24px;
+  }
+
+  :deep(.van-button__icon) {
+    margin-right: 4px;
+  }
+
+  :deep(.van-button__text) {
+    justify-content: center;
+    margin-left: 0;
+    flex-direction: row !important;
+  }
+
+  :deep(.icon-content) {
+    margin-right: 12px;
+    .select-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  :deep(.van-icon__image) {
+    width: 28px;
+    height: 28px;
+  }
+
+  .loading {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
+    animation: van-rotate var(--van-loading-spinner-duration) linear infinite;
+
+    &--primary {
+      background: url('https://ic-img.ky-express.com/netc/20250619_56028_!!1750300472509_70_70.png') no-repeat;
+      background-size: cover;
+    }
+
+    &--plain {
+      background: url('https://ic-img.ky-express.com/netc/20250619_7203_!!1750300412331_70_70.png') no-repeat;
+      background-size: cover;
+    }
+  }
+}

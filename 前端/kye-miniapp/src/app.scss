@@ -1,0 +1,27 @@
+.greyTheme{
+  filter: grayscale(1);
+}
+
+view {
+  font-family: BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Segoe UI", Arial, Roboto, "PingFang SC", miui, "Hiragino Sans GB", "Microsoft Yahei", sans-serif !important;
+}
+
+/* #ifdef h5 */
+@import './app.h5.scss';
+/* #endif */
+
+.vod_player_main{
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'DINNum';
+  src: url('./assets/DINCondensedC-num.woff2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.DINNum {
+  font-family: 'DINNum', sans-serif !important;
+}

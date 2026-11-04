@@ -1,0 +1,11 @@
+@import '@order-global-package-order-sub/styles/index.scss';
+
+.file-list {
+  margin-bottom: calc(20px + env(safe-area-inset-bottom, 20px));
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.new-file-list {
+  margin-bottom: 0;
+}

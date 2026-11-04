@@ -1,0 +1,25 @@
+{
+  "name": "@ky-miniui-lib/example",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev:dev": "vite --mode dev",
+    "dev:uat": "vite --mode uat",
+    "dev:prod": "vite --mode prod",
+    "build:dev": "vue-tsc --noEmit && vite build --mode dev",
+    "build:uat": "vue-tsc --noEmit && vite build --mode uat",
+    "build:prod": "vue-tsc --noEmit && vite build --mode prod",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "sass": "^1.63.3",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-plugin-vue-setup-extend": "^0.4.0"
+  },
+  "dependencies": {
+    "@ky-miniui-lib/ky-miniui-lib": "workspace:^",
+    "element-plus": "^2.3.6"
+  }
+}

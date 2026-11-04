@@ -1,0 +1,45 @@
+.search-overlay {
+    position: fixed;
+    top: 100px;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000, $alpha: 70%);
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        height: 80%;
+        border-radius: 0 0 12px 12px;
+        flex-direction: column;
+
+        &-all {
+            overflow: auto;
+            padding: 20px;
+            background: #F7F8FA;
+            flex: 1;
+
+            &-concenter {
+                padding: 0 24px 20px;
+                background-color: #fff;
+                border-radius: 16px;
+            }
+        }
+
+        &-footer {
+            display: flex;
+            padding: 20px;
+            background-color: #fff;
+
+            .reset {
+                margin-right: 24px;
+            }
+        }
+    }
+
+    &-gray {
+        width: 100%;
+        height: 20%;
+    }
+}

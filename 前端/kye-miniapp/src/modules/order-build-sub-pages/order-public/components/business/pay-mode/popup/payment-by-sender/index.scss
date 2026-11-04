@@ -1,0 +1,52 @@
+.payment-by-receiving {
+  .body {
+    height: 413px;
+    padding-top: 30px;
+    box-sizing: border-box;
+  }
+
+  .cur-companyName {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: $font-normal;
+    .label {
+      color: #55596c;
+    }
+    .value {
+      color: #03050d;
+    }
+  }
+  .tips {
+    position: relative;
+    padding-left: 15px;
+    margin-top: 32px;
+    font-size: 22px;
+    color: #888ea6;
+    line-height: 32px;
+    font-weight: $font-normal;
+    .star-tips {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 12px;
+      height: 12px;
+    }
+  }
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 128px;
+    padding: 20px 24px;
+    margin-left: -32px;
+    background: #FFF;
+    opacity: 1;
+    box-shadow: 0 -6px 20px 0 rgb(184 171 255 / 10%);
+    box-sizing: border-box;
+    .confirm-btn {
+      width: calc(100% - 32px) !important;
+    }
+  }
+}

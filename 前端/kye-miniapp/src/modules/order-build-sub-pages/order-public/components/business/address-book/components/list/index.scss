@@ -1,0 +1,335 @@
+.add-b-p-l {
+  display: flex;
+  flex-direction: column;
+
+  .address-list {
+    position: relative;
+    padding: 24px 24px 0;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 24px;
+    box-sizing: border-box;
+    width: 100%;
+
+    &.border-style {
+      border-radius: 24px 0 0 24px;
+    }
+
+    // 地址待完善标签
+    &__correction-tag {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      height: 32px;
+      padding: 4px 8px;
+      font-size: 22px; // $fs-22（提示类文案，较原徽标档 20px 大一档）
+      line-height: 30px; // $lh-30（与 $fs-22 成组）
+      color: #fa7d00; // 用户指定色（设计语言枚举外，最接近 Orange-06 #FA7D0D）
+      background: #fff3e5; // $bg-warning（Orange-01，工程变量 $bg-warning 实际为 #fff5e8 与设计稿不符，按设计稿取值）
+      border-radius: 0 24px 0 16px;
+      box-sizing: border-box;
+
+      &__icon {
+        width: 23px;
+        height: 23px;
+        margin-right: 10px;
+      }
+    }
+
+    &.select-active {
+      &:active {
+        background: rgb(131 101 246 / 6%);
+        opacity: 1;
+      }
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      padding-bottom: 24px;
+
+      @include hairline(after, $border-bottom-color, bottom);
+
+      &__icon {
+        flex-shrink: 0;
+        margin-right: 24px;
+        font-size: 40px;
+      }
+
+      &__base {
+        overflow: hidden;
+        .info {
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+
+          &__name {
+            overflow: hidden;
+            font-size: 28px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: $font-bold;
+          }
+
+          &__mobile {
+            flex-shrink: 0;
+            margin-bottom: -1px;
+            margin-left: 12px;
+            font-size: 30px;
+            font-weight: 500;
+          }
+
+          &__flag {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            height: 30px;
+            padding: 0 12px;
+            margin-left: 12px;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid #ffd8a4;
+            border-radius: 8px;
+            box-sizing: border-box;
+
+            &.default {
+              color: #f57200;
+              border: 2px solid #ffd8a4;
+            }
+
+            &.common {
+              color: #1972f7;
+              border: 2px solid #8abdfc;
+            }
+
+            &.justAddedFlag {
+              color: #1bb396;
+              border: 2px solid #8be0d1;
+            }
+            &.customFlag {
+              border: 1px solid #d3d5db;
+              color: #686b75;
+            }
+          }
+        }
+
+        .companyName,
+        .telephone {
+          margin-top: 12px;
+          font-size: 26px;
+          text-align: justify;
+          color: #55596c;
+          word-break: break-all;
+        }
+
+        .addressdetail {
+          margin-top: 12px;
+          font-size: 26px;
+          text-align: justify;
+          color: #888ea6;
+          line-height: 36px;
+          word-break: break-all;
+        }
+
+        .create-info {
+          font-size: 26px;
+          font-weight: normal;
+          line-height: 36px;
+          color: #888ea6;
+          margin-top: 12px;
+          display: flex;
+
+          .create {
+            margin-right: 24px;
+          }
+        }
+      }
+    }
+
+    &__operate {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // margin-top: 20px;
+
+      // @include hairline(after, $border-bottom-color, top);
+
+      // &.disabled {
+      //   opacity: 0.3;
+      // }
+
+      &.flex-style {
+        justify-content: flex-end;
+      }
+
+      .save {
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        &__icon {
+          width: 23px;
+          height: 23px;
+          padding: 4px;
+        }
+
+        &__text {
+          margin-left: 8px;
+          font-size: 24px;
+        }
+
+        &.edit-disabled {
+          color: #cacaca;
+        }
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+
+        &.disabled {
+          display: flex;
+          align-items: center;
+          pointer-events: none;
+          background: transparent;
+          width: 100%;
+        }
+
+        &__text {
+          position: relative;
+          height: 80px;
+          padding-right: 32px;
+          padding-left: 64px;
+          font-size: 24px;
+          line-height: 80px;
+          box-sizing: border-box;
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 26px;
+            width: 32px;
+            height: 32px;
+            content: '';
+            transform: translateY(-50%);
+          }
+          &.delete {
+            margin-left: auto;
+            &:active {
+              background: rgb(0 0 0 / 6%);
+            }
+
+            &::before {
+              background: url('https://ic-img.ky-express.com/netc/20250619_42512_!!1750313443302_36_37.png') no-repeat;
+              background-size: 100%;
+            }
+          }
+
+          &.delete-disabled {
+            color: #cacaca;
+
+            // pointer-events: none;
+            &::before {
+              background: url('https://ic-img.ky-express.com/netc/20250619_86697_!!1750313521301_64_64.png') no-repeat;
+              background-size: 100%;
+            }
+          }
+
+          &.copy {
+            &:active {
+              background: rgb(0 0 0 / 6%);
+            }
+
+            &::before {
+              background: url('https://ic-img.ky-express.com/netc/20250619_90815_!!1750313371279_64_64.png') no-repeat;
+              background-size: 100%;
+            }
+          }
+
+          &.copy-disabled {
+            color: #cacaca;
+
+            &::before {
+              background: url('https://ic-img.ky-express.com/netc/20250619_12238_!!1750313410833_64_64.png') no-repeat;
+              background-size: 100%;
+            }
+          }
+
+          &.edit {
+            &:active {
+              background: rgb(0 0 0 / 6%);
+            }
+
+            &::before {
+              background: url('https://ic-img.ky-express.com/netc/20250619_30555_!!1750313603633_64_64.png') no-repeat;
+              background-size: 100%;
+            }
+          }
+
+          &.edit-disabled {
+            color: #cacaca;
+
+            &::before {
+              background: url('https://ic-img.ky-express.com/netc/20250619_2550_!!1750313625946_64_64.png') no-repeat;
+              background-size: 100%;
+            }
+          }
+
+          &.correction {
+            &:active {
+              background: rgb(0 0 0 / 6%);
+            }
+
+            &::before {
+              background: url('https://ic-img.ky-express.com/netc/20250619_30555_!!1750313603633_64_64.png') no-repeat;
+              background-size: 100%;
+            }
+          }
+
+          &.correction-disabled {
+            color: #cacaca;
+
+            &::before {
+              background: url('https://ic-img.ky-express.com/netc/20250619_2550_!!1750313625946_64_64.png') no-repeat;
+              background-size: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .item_disabled {
+    background: #f7f8fa;
+
+    .companyName,
+    .info,
+    .address,
+    .telephone {
+      color: #8c8f99 !important;
+    }
+  }
+
+  .ky-swipe-cell__right {
+    box-sizing: border-box;
+    // padding-bottom: 20px;
+    border-radius: 24px 24px 0 0;
+    .delete {
+      border-radius: 0 24px 24px 0;
+    }
+  }
+  .address-list-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 100%;
+    padding: 0 24px;
+    font-size: 26px;
+    color: #fff;
+    background: #ff706d;
+    box-sizing: border-box;
+    border-radius: 0 24px 24px 0;
+  }
+}

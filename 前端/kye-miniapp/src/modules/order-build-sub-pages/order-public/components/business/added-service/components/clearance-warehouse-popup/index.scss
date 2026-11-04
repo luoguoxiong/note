@@ -1,0 +1,47 @@
+.clearance-warehouse-popup {
+  .clearance-warehouse-popup-content {
+    .popup-content-cell-desc {
+      line-height: 32px;
+      .icon-tip {
+        padding-top: 2px;
+      }
+      span {
+        line-height: 32px;
+      }
+      .svg-icon {
+        line-height: 32px;
+      }
+      .tips {
+        font-weight: 400;
+        :deep(p) {
+          margin: 0;
+        }
+      }
+    }
+    .popup-content-cell-radio {
+      padding-right: 60px;
+      .ky-radio{
+        &:first-child {
+          margin-right: 84px;
+        }
+      }
+      :deep(.van-radio) {
+        .van-radio__label {
+          font-weight: 400;
+        }
+        .van-radio__label--disabled {
+          color: #323233;
+        }
+      }
+    }
+    .van-radio__icon {
+      font-size: 24px;
+    }
+    .popup-content-cell {
+      //border-bottom: 2px solid $bg-input-disable;
+    }
+  }
+}
+//.html-clearance>view{
+//  display: flex;
+//}

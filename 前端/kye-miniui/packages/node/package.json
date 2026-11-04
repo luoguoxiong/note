@@ -1,0 +1,27 @@
+{
+  "name": "@kye-netc/kye-miniui-native-plugin",
+  "version": "0.0.12",
+  "description": "小程序组件库脚手架",
+  "author": "KYE",
+  "private": false,
+  "main": "./dist/taro-plugin-miniui-native.cjs",
+  "scripts": {
+    "build": "pnpm exec rimraf ./dist && vite build --config ./vite.config.node.ts",
+    "publish": "pnpm build && npm publish --ignore-scripts"
+  },
+  "files": [
+    "dist",
+    "taro-plugin-miniui-native",
+    "package.json",
+    "register-native-components.ts",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://nexus.ky-tech.com.cn:8081/repository/npmjs-hosted"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "vite": "^4.5.5"
+  }
+}

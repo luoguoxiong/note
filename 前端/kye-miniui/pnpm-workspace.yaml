@@ -1,0 +1,14 @@
+packages:
+  - packages/*
+  - packages/__components/*
+  - cli
+  - docs
+  - example
+  - preview/*
+  - '!**/test/**'
+
+catalog:
+  prettier: latest
+
+hoist-pattern:
+  - prettier

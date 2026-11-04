@@ -1,0 +1,17 @@
+.share-page {
+  min-height: 100vh;
+  background: #f1f2f7;
+  .ky-empty {
+    padding-top: 356px;
+    box-sizing: border-box;
+    .ky-empty__description {
+      font-size: 24px;
+      font-weight: normal;
+      line-height: normal;
+      text-align: center;
+      color: #888ea6;
+      padding: 0 30px;
+      box-sizing: border-box;
+    }
+  }
+}

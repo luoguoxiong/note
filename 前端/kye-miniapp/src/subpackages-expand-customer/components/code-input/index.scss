@@ -1,0 +1,62 @@
+@keyframes ky-cursor-flicker {
+    from {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.code-input {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40rpx;
+
+    &__item {
+        position: relative;
+        min-width: 60rpx;
+        width: 60rpx;
+        height: 72rpx;
+        line-height: 72rpx;
+        font-size: 32rpx;
+        color: #333;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        border-bottom: 1rpx solid #c5c5c5;
+        border-radius: 0;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    &__cursor {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 40%;
+        background-color: #323233;
+        transform: translate(-50%, -50%);
+        animation: 1s ky-cursor-flicker infinite;
+    }
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 200%;
+        height: 100%;
+        background-color: #f3f3f3;
+        opacity: 0;
+        overflow: hidden;
+    }
+}
+

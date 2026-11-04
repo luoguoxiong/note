@@ -1,0 +1,122 @@
+{
+  "miniVersion": "v2",
+  "name": "%name%",
+  "version": "0.0.10",
+  "versionCode": 108,
+  "i18nFilePath": "i18n",
+  "mini-android": {
+    "resourcePath": "miniapp/android/nativeResources",
+    "sdkVersion": "1.6.17",
+    "toolkitVersion": "0.11.0",
+    "useExtendedSdk": {
+      "media": false,
+      "bluetooth": false,
+      "network": true,
+      "scanner": true,
+      "xweb": true,
+      "skyline": true,
+      "xwebEmbed": true
+    },
+    "icons": {
+      "hdpi": "",
+      "xhdpi": "",
+      "xxhdpi": "",
+      "xxxhdpi": ""
+    },
+    "splashscreen": {
+      "hdpi": "miniapp/static/4801080@1x.png",
+      "xhdpi": "miniapp/static/7201620@1x.png",
+      "xxhdpi": "miniapp/static/10802430@1x.png"
+    },
+    "enableVConsole": "close",
+    "privacy": {
+      "enable": true
+    },
+    "abi": {
+      "arm64-v8a": false
+    }
+  },
+  "mini-ios": {
+    "sdkVersion": "1.6.22",
+    "toolkitVersion": "0.0.9",
+    "useExtendedSdk": {
+      "WeAppOpenFuns": false,
+      "WeAppNetwork": false,
+      "WeAppBluetooth": false,
+      "WeAppMedia": false,
+      "WeAppLBS": false,
+      "WeAppOthers": true,
+      "WeAppSkyline": true,
+      "WeAppCamera": true,
+      "WeAppImage": true,
+      "WeAppOpenFuns_HasPay": true
+    },
+    "enableVConsole": "close",
+    "icons": {
+      "mainIcon120": "",
+      "mainIcon180": "",
+      "spotlightIcon80": "",
+      "spotlightIcon120": "",
+      "settingsIcon58": "",
+      "settingsIcon87": "",
+      "notificationIcon40": "",
+      "notificationIcon60": "",
+      "appStore1024": ""
+    },
+    "splashscreen": {
+      "customImage": "miniapp/static/7201620@1x.png"
+    },
+    "privacy": {
+      "enable": false
+    },
+    "enableOpenUrlNavigate": true,
+    "appleConnect": {
+      "issuerId": "4e39b8b3-d537-4d24-a734-c4e17f3defaf",
+      "keyId": "3499693PB3",
+      "keyPath": "miniapp/ios/dragSource_AuthKey_3499693PB3.p8"
+    },
+    "buildCloud": {
+      "useRemote": true,
+      "p12": "miniapp/ios/iosCloudBuildMaterial/7V647UM586_DEVELOPMENT_1783414049000.p12",
+      "p12passwordEncrypted": "nd74ZFZTSzOYXLRA7fIlvH/3LWE6Zv+syBhlNfeWDsuPCwWOQuPSrgkMZp/Ck6VnMaNg6lRaP/xNE6DkqBf6l3WK1LZ4QWKUDC8CltnHQi/bKrtxCy4LOyHP8MFmqbwtBI5VdtyzmQzkCvT1bYtVCRg1Hb1GxzUAmI3T36gMW4A=",
+      "certificate": "Apple Development: Created via API (3499693PB3)",
+      "profile": "miniapp/ios/iosCloudBuildMaterial/Z5LC7K2JK9_IOS_APP_DEVELOPMENT_1783414657067.mobileprovision"
+    },
+    "privateDescriptions": {
+      "NSPhotoLibraryUsageDescription": "当前应用程序需要访问用户的相册，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSCameraUsageDescription": "当前应用程序需要访问用户的相机，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSMicrophoneUsageDescription": "当前应用程序需要访问用户的麦克风，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSLocationWhenInUseUsageDescription": "当前应用程序需要在使用时访问用户的位置，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSLocationAlwaysUsageDescription": "当前应用程序需要始终访问用户的位置，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSLocationAlwaysAndWhenInUseUsageDescription": "当前应用程序需要始终和在使用时访问用户的位置，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSContactsUsageDescription": "当前应用程序需要访问用户的联系人，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSCalendarsUsageDescription": "当前应用程序需要访问用户的日历，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSRemindersUsageDescription": "当前应用程序需要访问用户的提醒事项，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSBluetoothPeripheralUsageDescription": "当前应用程序需要访问用户的蓝牙，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSBluetoothAlwaysUsageDescription": "当前应用程序需要始终访问用户的蓝牙，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSSpeechRecognitionUsageDescription": "当前应用程序需要使用语音识别，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSLocalNetworkUsageDescription": "当前应用程序需要访问本地网络，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSSystemAdministrationUsageDescription": "当前应用程序需要进行系统管理操作，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可」",
+      "NSPhotoLibraryAddUsageDescription": "应用程序在请求访问照片库，如需修改描述请前往「project.miniapp.json - 隐私信息访问许可描述」修改，并且关闭「自动使用默认描述补全默认隐私信息访问许可"
+    }
+  },
+  "mini-ohos": {
+    "sdkVersion": "0.4.1",
+    "privateDescriptions": {
+      "APPROXIMATELY_LOCATION": "位置权限未开启",
+      "LOCATION": "位置权限未开启",
+      "USEBLUETOOTH": "用于应用接入蓝牙并使用蓝牙能力",
+      "DISCOVER_BLUETOOTH": "用于应用接入蓝牙并使用蓝牙能力",
+      "ACCESS_BLUETOOTH": "用于应用接入蓝牙并使用蓝牙能力"
+    }
+  },
+  "mini-plugin": {
+    "ios": [
+      {
+        "open": true,
+        "pluginId": "wxd42b3c0b319911b2",
+        "pluginVersion": "0.0.1"
+      }
+    ]
+  }
+}

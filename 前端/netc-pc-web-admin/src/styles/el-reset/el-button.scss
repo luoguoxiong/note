@@ -1,0 +1,31 @@
+
+.el-button--primary {
+  font-size: 13px !important;
+  color: #fff !important;
+  background: #7143F0 !important;
+  border-color: #7143F0 !important;
+  &:hover,
+  &:focus {
+    color: #fff !important;
+    background:#8A61F2 !important;
+    border-color: #8A61F2 !important;
+  }
+  &:active {
+    color: #fff !important;
+    background: #3E25E9 !important;
+    border-color: #3E25E9 !important;
+  }
+}
+
+.el-button.is-plain {
+  --el-button-hover-text-color: #7653d6 !important;
+  --el-button-hover-bg-color: white !important;
+  --el-button-hover-border-color: #7653d6 !important;
+}
+
+.el-button:active {
+  color:#3e25e9 !important;
+  background-color: white;
+  border-color: #3e25e9 !important;
+  outline: 0;
+}

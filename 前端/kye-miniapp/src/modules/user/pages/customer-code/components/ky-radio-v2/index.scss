@@ -1,0 +1,43 @@
+.ky-radio-v2 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  .radio-content {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    &.size-32 {
+      width: 32px;
+      height: 32px;
+    }
+    &.size-36 {
+      width: 36px;
+      height: 36px;
+    }
+    .icon-radio {
+      height: 100%;
+      width: 100%;
+    }
+
+    .icon-tips {
+      height: 100%;
+      width: 100%;
+    }
+
+    margin-right: 8px;
+    &.no-label {
+      margin-right: 0px;
+    }
+  }
+
+  .radio-text {
+    flex: 1;
+    font-size: 13px;
+    font-weight: 600;
+    color: #24262b;
+  }
+} 

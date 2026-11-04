@@ -1,0 +1,52 @@
+.payment-share{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg,#786af6, #4a3eb6);
+    overflow-y: hidden;
+    &__warpper{
+        width: 689px;
+        height: 953px;
+        background: url("https://ic-h5.kye-erp.com/intro/miniprogram/payment-card.png");
+        background-size: 100% 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__logo{
+        margin-left: 60px;
+        margin-top: 70px;
+        image{
+            width: 194px;
+            height: 48px;
+            display: block;
+        }
+    }
+    &__title{
+        font-size: 40px;
+        color: #03050d;
+        margin-top: 38px;
+        margin-left: 60px;
+    }
+    &__btn{
+        width: 500px;
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        image{
+            display: block;
+            &:first-child{
+                width: 500px;
+                height: 100px;
+            }
+            &:last-child{
+                width: 188px;
+                height: 188px;
+                position: absolute;
+                bottom: -22px;
+                right: -28px;
+            }
+        }
+    }
+}

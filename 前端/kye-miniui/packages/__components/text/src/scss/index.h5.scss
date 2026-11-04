@@ -1,0 +1,14 @@
+/* H5 换行支持 */
+.ky-text{
+  &--overflow{
+    /* H5 换行支持 */
+    &.ky-text--WEB{
+      overflow: hidden;
+      text-align: justify;
+      text-overflow: ellipsis;
+      word-wrap: normal;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+  }
+}

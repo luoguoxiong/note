@@ -1,0 +1,49 @@
+.waybill-special-encrypt {
+  display: block;
+
+  .waybill-encrypt-kycell {
+    .ky-cell__value {
+      width: 400px !important;
+      flex: unset !important;
+      @include ellipsis;
+    }
+  }
+
+  .van-cell__title {
+    width: 220px;
+    flex: unset;
+  }
+
+  .encrypt-type-tips {
+    display: block;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    font-size: 24px;
+    font-weight: normal;
+    color: #55596C;
+    margin-right: 16px;
+    @include ellipsis;
+  }
+}
+
+.switch-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .encrypt-type-tips {
+    flex: 1;
+    @include ellipsis;
+  }
+
+  .ky-switch {
+    width: 80px;
+  }
+}
+
+.encrypt-bottom-popup {
+  .footer {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,22 @@
+.page-waybill-native {
+  .base-header-wrap {
+    display: none !important;
+  }
+  .base-page-content {
+    height: 100vh !important;
+  }
+  .page-search-history, .kye-overlay.page-search-history{
+    top: 0 !important;
+  }
+}
+/* #ifdef h5 */
+.page-waybill-h5 {
+  .base-page-content {
+    height: calc(100vh - var(--kye-tabbar-height)) !important;
+  }
+
+  .ky-popup-content.bottom {
+    bottom: var(--kye-tabbar-height) !important;
+  }
+}
+/* #endif */

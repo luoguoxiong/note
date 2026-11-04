@@ -1,0 +1,103 @@
+.cropper-popup {
+  max-width: 100%;
+  background-color: inherit;
+  background: rgba(0,0,0,1);
+  position: fixed;
+  z-index: 101;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+}
+.cropper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
+  .vue-cropper {
+    background-image: none;
+    width: calc(100% - 64px);
+    margin: 0 auto;
+  }
+
+  .crop-point {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 10px solid #8365f6;
+    border-radius: inherit;
+    opacity: 1;
+  }
+
+  .point1 {
+    top: 0;
+    left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  .point3 {
+    top: 0;
+    right: 0;
+    border-left: 0;
+    border-bottom: 0;
+  }
+
+  .point6 {
+    bottom: 0;
+    left: 0;
+    border-top: 0;
+    border-right: 0;
+  }
+
+  .point8 {
+    right: 0;
+    bottom: 0;
+    border-top: 0;
+    border-left: 0;
+  }
+
+  .crop-line {
+    border: 0;
+  }
+
+  .cropper-view-box {
+    outline-color: transparent;
+  }
+  .cropper-image-wrap {
+    width: 100%;
+    flex: 1;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 144px;
+    font-size: 34px;
+    color: #fff;
+    background: #131313;
+    padding-bottom: env(safe-area-inset-bottom, 40px);
+    z-index: 1;
+    view {
+      display: flex;
+      align-items: center;
+      width: 20%;
+      height: 144px;
+      justify-content: center;
+    }
+  }
+
+  &__describe {
+    position: absolute;
+    top: 40px;
+    z-index: 10000;
+    width: 100%;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    pointer-events: none;
+  }
+}

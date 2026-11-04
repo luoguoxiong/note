@@ -1,0 +1,148 @@
+@mixin switch-icon() {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  // left: 24px;
+  display: block;
+  background-color: #fff;
+  transform: translateX(-50%);
+
+  .svg-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.sender {
+  position: relative;
+  padding: 24px 24px 0;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+
+  .border-bottom {
+    padding-bottom: 24px;
+
+    &::after {
+      position: absolute;
+      width: 662px;
+      margin: 0;
+      content: '';
+      inset: -50% 0 -50% 24px;
+      box-sizing: border-box;
+      pointer-events: none;
+      transform: scaleY(0.5);
+      border-bottom: 2px solid #ebedf5;
+    }
+  }
+
+  .address-block {
+    &::after {
+      position: absolute;
+      top: 50px;
+      left: 20px;
+      width: 0;
+      height: calc(100% - 52px);
+      content: '';
+      transform: translateX(-50%);
+      border-left: 2.5px dashed #cfd2de;
+    }
+
+    .switch-icon {
+      @include switch-icon();
+    }
+
+    .right {
+      &__unfilled {
+        @include hairline(after, $border-bottom-color, bottom);
+
+        .address {
+          padding-bottom: 24px;
+        }
+      }
+
+      .placeholder {
+        padding-bottom: 24px;
+      }
+    }
+
+    .exhibition {
+      .placeholder {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .address-unfold {
+    &::after {
+      position: absolute;
+      top: 84px;
+      left: 42px;
+      width: 2px;
+      height: calc(100% - 96px);
+      content: '';
+      transform: translateX(-50%);
+      border-left: 2.5px dashed #cfd2de;
+    }
+
+    .switch-icon {
+      @include switch-icon();
+      left: 22px;
+    }
+  }
+
+  /** 寄件模块禁用场景 */
+  &.disabled {
+    @include no-bg-disabled;
+
+    .book-btn {
+      display: none;
+    }
+
+    .switch-icon {
+      display: none;
+    }
+
+    .address-unfold-header {
+      .header__right {
+        display: none;
+      }
+
+      .required {
+        display: none;
+      }
+    }
+
+    .address-unfold-detail-address {
+      .right {
+        display: none;
+      }
+    }
+
+    .header__left__icon {
+      .text {
+        color: #fff !important;
+      }
+    }
+
+    .address-block {
+      .left {
+        .left__icon {
+          color: #fff !important;
+        }
+
+        .h5-span {
+          color: #fff !important;
+        }
+      }
+    }
+
+    .header__left {
+      .header__left__icon {
+        .h5-span {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}

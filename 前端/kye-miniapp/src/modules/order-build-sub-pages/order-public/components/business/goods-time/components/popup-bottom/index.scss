@@ -1,0 +1,45 @@
+.goods-bottom-popup {
+  :deep(.header) {
+    border-bottom: 1px solid #ebedf5;
+  }
+
+  .good-time-header {
+    font-size: 34px;
+    line-height: 34px;
+    font-weight: 600;
+    color: #03050d;
+    display: flex;
+    align-items: center;
+    .good-time-hind {
+      font-size: 32px;
+    }
+  }
+  .good-time-header-content {
+    display: inline-block;
+    margin-left: 8px;
+    &-tip {
+      display: inline-block;
+      color: #ff9300;
+      font-size: 24px;
+      line-height: 34px;
+      margin-right: 4px;
+      font-weight: 400;
+    }
+  }
+  // .goods-bottom-popup-content {
+    // margin: 0px 32px 0px;
+  // }
+  .container__body {
+    padding: 0;
+  }
+}
+:deep(.container__body) {
+  padding: 0;
+}
+// .goods-time-popup {
+//   position: relative;
+//   z-index: 300;
+//   .ky-popup-content {
+//     z-index: 200 !important;
+//   }
+// }

@@ -1,0 +1,130 @@
+@import '@order-global-package-order-sub/styles/index.scss';
+
+.pickup-form-address-unfold-dropdown-menu {
+  position: absolute;
+  top: 108px;
+  left: 50%;
+  z-index: 110;
+  display: flex;
+  overflow: hidden;
+  width: calc(100vw - 48px);
+  max-height: 600px;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 6px 15px 0 rgb(0 0 0 / 10%);
+  transform: translateX(-50%);
+  flex-direction: column;
+  box-sizing: border-box;
+
+  /* #ifdef h5 */
+  max-width: 750px;
+  /* #endif */
+
+  .content {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .dropdown-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    font-size: 24px;
+    color: #888ea6;
+  }
+
+  .clear {
+    font-size: 26px;
+    line-height: 32px;
+    color: #8365f6;
+  }
+
+  .list__connect__name_box {
+    display: flex;
+    max-width: 422px;
+  }
+
+  .list {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    @include hairline(after, $border-bottom-color, bottom);
+
+    &:active {
+      background: rgb(79 9 217 / 6%);
+    }
+
+    &__phone {
+      margin-top: 12px;
+      font-size: 30px;
+      text-align: justify;
+      color: #55596c;
+      line-height: 36px;
+      word-break: break-all;
+    }
+
+    &__connect {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      color: #03050d;
+
+      &__name {
+        overflow: hidden;
+        font-size: 28px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: $font-bold;
+        flex: 1;
+      }
+
+      &__mobile {
+        flex-shrink: 0;
+        margin-left: 12px;
+        font-size: 30px;
+        font-weight: $font-bold;
+      }
+    }
+  }
+
+  .item-clear {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 48px;
+    height: 100%;
+
+    .clear-icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .item-tuijian__icon {
+    width: 48px;
+    height: 32px;
+    margin-right: 8px;
+  }
+
+  .pickup-form-address-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
+    box-shadow: 0 -6px 20px 0 rgb(184 171 255 / 10%);
+
+    &__text {
+      font-size: 32px;
+      font-weight: $font-bold;
+      color: $primary;
+    }
+  }
+}

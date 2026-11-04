@@ -1,0 +1,41 @@
+@import '../common.scss';
+
+.todo-waybill-auth {
+  @include card;
+
+  .todo-waybill-auth__header {
+    @include card-header;
+  }
+
+  .todo-waybill-auth__content {
+    display: flex;
+    flex-direction: column;
+
+    .todo-waybill-auth__info {
+      @include express-info;
+    }
+
+    .todo-waybill-auth__form {
+      @include form;
+      padding-bottom: 24px;
+      .todo-waybill-auth__form__item__cost {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        height: 34px;
+      }
+    }
+  }
+
+  .todo-waybill-auth__footer {
+    @include card-footer;
+    justify-content: flex-end;
+    gap: 16px;
+    &>.ky-button{
+      min-width: 120px;
+    }
+    .mr-16 {
+      margin-right: 16px;
+    }
+  }
+}

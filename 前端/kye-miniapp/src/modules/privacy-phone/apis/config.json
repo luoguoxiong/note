@@ -1,0 +1,20 @@
+[
+  {
+    "apis": [
+      "web.uam.client.sms.send",
+      "web.uam.client.phonePrivacy.sms.check",
+      "web.uam.client.phonePrivacy.send.switchWithRisk",
+      "web.uam.client.phonePrivacy.send.customerSwitch",
+      "web.uam.client.phonePrivacy.add",
+      "web.uam.client.phonePrivacy.delete",
+      "web.uam.client.phonePrivacy.send.detail",
+      "web.uam.client.phonePrivacy.list",
+      "web.uam.client.phonePrivacy.send.switch.close"
+    ],
+    "defaultOptions": {
+      "web.ssoChangeAccount.login": { "hideToast": true },
+      "web.ssoChangeAccount.changeBack": { "hideToast": true }
+    },
+    "output": "./src/modules/privacy-phone/apis"
+  }
+]

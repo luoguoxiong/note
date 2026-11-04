@@ -1,0 +1,22 @@
+{
+  "name": "@kye-netc/utils",
+  "version": "0.2.4",
+  "description": "",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "dev": "father dev",
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "publish": "father build && npm publish --ignore-scripts"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://nexus.ky-tech.com.cn:8081/repository/npmjs-hosted"
+  },
+  "devDependencies": {
+    "father": "^4.5.3"
+  },
+  "author": "",
+  "license": "ISC"
+}

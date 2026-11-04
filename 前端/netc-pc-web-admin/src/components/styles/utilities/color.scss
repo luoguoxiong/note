@@ -1,0 +1,102 @@
+/* 颜色相关原子CSS */
+@import '../settings/color';
+
+/* 主要信息高亮填充色 */
+.bg-primary {
+  background-color: $primary;
+}
+
+/* 标签选中背景色 */
+.bg-selected {
+  background-color: $selected;
+}
+
+/* 置灰按钮背景色{与白色文本使用}/输入框不可点击边框色/分隔线 场景：分割线/交互反馈 */
+.bg-button-disable {
+  background-color: $bg-disabled;
+}
+
+/* 输入框不可点击背景色/分割线（边框色为#CACEDB） */
+.bg-input-disable {
+  background-color: $bg-disabled;
+}
+
+/* 页面背景色 */
+.bg-page {
+  background-color: $bg-page;
+}
+
+/* 输入框背景色/文本域背景色 */
+.bg-input {
+  background-color: $bg-input;
+}
+
+/* 一级文本色/重要文本色（如：标题/文本录入/正文/输入文本填充色/次要按钮文本/列表主要文本 */
+.color-primary {
+  color: $text-color-level1;
+}
+
+/* 二级文本色（用于系统二级文本/推荐标签文本/副标题文本/弹窗文本/说明示例文案等) */
+.color-sub-title {
+  color: $text-color-level2;
+}
+
+/* 三级辅助文本色（用于静默文案/注释文本/缺省图文本/) */
+.color-assist {
+  color: $text-color-level3;
+}
+
+/* 四级辅助文本色（置灰文本） */
+.color-disable {
+  color: $text-color-level4;
+}
+
+/* 场景：用于成功状态提示 主要用于系统成功类提示/操作成功反馈提示 成功类的弹窗内容/限制类的提示等 */
+.color-success {
+  color: $success;
+}
+
+/* 背景色，文本使用#00C58C */
+.bg-success {
+  background-color: $bg-success;
+}
+
+/* 场景：通告警告/重点突出信息提示 主要用于系统警告提示/需要特别突出的文本 警告类的弹窗内容/限制类的提示等 */
+.color-warning {
+  color: $warning;
+}
+
+/* 背景色，文本使用#FF706D */
+.bg-warning {
+  background-color: $bg-warning;
+}
+
+.color-fee-tip {
+  color: $red-color-text;
+}
+
+/* 场景：错误状态提示/金额 */
+.color-error {
+  color: $error;
+}
+
+/* 背景色，文本使用#FF706D */
+.bg-error {
+  background-color: $bg-error;
+}
+
+/* 点击色 */
+
+/* 卡片-大面积使用场景 */
+.active-big {
+  &:active {
+    background-color: $click-big;
+  }
+}
+
+/* 小面积/功能容器 如：按钮、标签、图标等 */
+.active-small {
+  &:active {
+    background-color: $click-small;
+  }
+}

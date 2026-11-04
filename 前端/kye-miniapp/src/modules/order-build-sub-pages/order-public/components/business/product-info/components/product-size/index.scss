@@ -1,0 +1,213 @@
+.product-size {
+  padding: 36px 24px;
+  border-bottom: 2px solid $border-bottom-color;
+
+  &.product-size-unfold {
+    height: 65vh;
+    overflow-y: auto;
+  }
+
+  .product-size-title {
+    padding-bottom: 20px;
+
+    .product-size-title-required {
+      width: 40px;
+      margin-left: 8px;
+    }
+
+    .history-size-tag {
+      text-align: right;
+      color: $primary;
+
+      .history-size-icon {
+        width: 28px;
+        height: 28px;
+        margin-top: -2px;
+      }
+    }
+  }
+
+  .product-size-desc {
+    line-height: 32px;
+    padding-bottom: 12px;
+  }
+
+
+
+  .product-size-input-cell {
+    position: relative;
+    align-items: center;
+    gap: 10px;
+
+    .ky-input--focus {
+      .ky-input--input-container {
+        width: 100%;
+      }
+    }
+
+    .ky-input {
+      padding: 0 !important;
+    }
+
+    .radius10 {
+      :deep(.van-field__body) {
+        height: 60px;
+        border-radius: 10px;
+
+        .van-field__control {
+          text-align: center;
+        }
+      }
+    }
+
+    // padding-bottom: 32px;
+    .product-size-join-icon {
+      display: block;
+      width: 15px;
+      margin-top: 2px;
+      margin-left: 4px;
+    }
+
+    .text-center {
+      width: 92px;
+    }
+  }
+
+  .over-weight-content {
+    padding-bottom: 32px;
+
+    .over-weight-content-tip {
+      padding-top: 12px;
+    }
+  }
+
+  .product-size-sub-btn {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-left: 12px;
+    background-color: $bg-input;
+    border: 2px solid $border-bottom-color;
+    border-radius: 10px;
+
+    &:hover {
+      background: rgb(0 0 0 / 10%);
+    }
+
+    &:active {
+      background: rgb(0 0 0 / 10%);
+    }
+
+    &:focus {
+      background: rgb(0 0 0 / 10%);
+    }
+
+    .product-size-sub-btn-icon {
+      font-size: 28;
+      height: 36px;
+      width: 36px;
+    }
+
+    &.disabled {
+      background: $bg-input;
+
+      .product-size-sub-btn-icon {
+        font-size: 28;
+      }
+    }
+  }
+
+  .product-size-add {
+    padding-bottom: 32px;
+    // 这个高度是解决 新增按钮在键盘下方时，切换长宽高，按钮和数字键盘 会闪动问题, 因生产上大多是跳转场景 产品让先去除
+    // margin-bottom: 200px;
+
+    .product-size-add-btn {
+      width: 211px;
+      height: 56px;
+      color: #ffffff;
+      border: 2px dashed $primary;
+      border-radius: 8px;
+      background: #8365f6;
+      font-size: 24px;
+
+      .product-size-add-btn-icon {
+        padding-right: 10px;
+      }
+
+      // &:active {
+      //   background: #7655fa;
+      // }
+    }
+  }
+
+  .line {
+    border-bottom: 1px solid #e6e8ed;
+    margin-bottom: 32px;
+  }
+
+  .product-size-unit-weight-tip {
+    padding: 8px 0 16px 0;
+    line-height: 32px;
+  }
+
+  .product-size-bottom-desc {
+    line-height: 32px;
+
+    .product-size-bottom-desc-text {
+      color: #8C8F99;
+    }
+
+    .product-size-bottom-desc-btn {
+      display: inline;
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+
+  .reminder {
+    margin-top: 2px;
+
+    .reminder__icon {
+      margin-right: 4px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .color-error {
+      line-height: 32px;
+    }
+  }
+}
+
+.product-size-unfold {
+  padding-top: 0;
+}
+
+.product-size-popup {
+  padding-right: 0;
+  padding-left: 0;
+  border-bottom: none;
+}
+
+#app {
+  .product-size {
+    .product-size-input-cell {
+      :deep(.color-black) {
+        input {
+          color: $text-color-level1 !important;
+        }
+      }
+
+      :deep(.text-center) {
+        input {
+          text-align: center;
+        }
+      }
+    }
+
+    :deep(.van-field__body) {
+      padding: 0 16px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.pickup-mode-content {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  .cell-wrapper {
+    .van-cell {
+      flex-wrap: wrap;
+      height: auto;
+    }
+  }
+  .pickup-mode-title {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: $text-color-level1;
+    font-weight: $font-normal;
+    letter-spacing: 0;
+  }
+  .title-text {
+    flex: 1;
+    align-items: center;
+
+    @include multi-ellipsis;
+  }
+  .required-icon {
+    width: 40px;
+    margin-left: 8px;
+    .svg-icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .van-cell__title {
+    flex: 1;
+  }
+}
+.cell_tip {
+  flex-shrink: 0;
+  width: 100%;
+  margin-bottom: -10px;
+  font-size: 24px;
+  color: $warning;
+}
+.pickup-mode-p {
+  height: 120px!important;
+}

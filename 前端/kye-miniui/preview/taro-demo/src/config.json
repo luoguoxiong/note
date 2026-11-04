@@ -1,0 +1,379 @@
+{
+  "nav": [
+    {
+      "name": "基础组件",
+      "enName": "basic",
+      "packages": [
+        {
+          "version": "1.0.0",
+          "name": "Button",
+          "cName": "按钮",
+          "setup": true,
+          "desc": "按钮用于触发一个操作，如提交表单。",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=button"
+        },
+        {
+          "version": "1.0.0",
+          "name": "Cell",
+          "cName": "单元格",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=cell"
+        },
+        {
+          "version": "1.0.0",
+          "name": "Popup",
+          "cName": "弹出层",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=popup"
+        },
+        {
+          "version": "1.0.0",
+          "name": "Overlay",
+          "cName": "遮罩层",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=overlay"
+        }
+      ]
+    },
+    {
+      "name": "布局组件",
+      "enName": "layout",
+      "packages": [
+        {
+          "version": "1.0.0",
+          "name": "container",
+          "cName": "动作面板",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=container"
+        }
+      ]
+    },
+    {
+      "name": "数据录入",
+      "enName": "input",
+      "packages": [
+        {
+          "version": "1.0.0",
+          "name": "AutoComplete",
+          "cName": "输入面板",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=auto-complete"
+        },
+        {
+          "version": "1.0.0",
+          "name": "Input",
+          "cName": "输入框",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=input"
+        },
+        {
+          "version": "1.0.0",
+          "name": "TextArea",
+          "cName": "文本域",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=textarea"
+        },
+        {
+          "version": "1.0.0",
+          "name": "field",
+          "cName": "文本域",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=field"
+        },
+        {
+          "version": "1.0.0",
+          "name": "form",
+          "cName": "文本域",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=form"
+        },
+        {
+          "version": "1.0.0",
+          "name": "checkbox",
+          "cName": "复选按钮",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=checkbox"
+        },
+        {
+          "version": "1.0.0",
+          "name": "radio",
+          "cName": "单选按钮",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=radio"
+        },
+        {
+          "version": "1.0.0",
+          "name": "picker",
+          "cName": "选择器",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=picker"
+        },
+        {
+          "version": "1.0.0",
+          "name": "timepicker",
+          "cName": "时间选择器",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=timepicker"
+        },
+        {
+          "version": "1.0.0",
+          "name": "time-select",
+          "cName": "时间选择",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=time-select"
+        },
+        {
+          "version": "1.0.0",
+          "name": "popover",
+          "cName": "气泡弹出层",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=popover"
+        },
+        {
+          "version": "1.0.0",
+          "name": "popover-menu",
+          "cName": "气泡弹出层",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=popover-menu"
+        },
+        {
+          "version": "1.0.0",
+          "name": "calendar",
+          "cName": "日历",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=calendar"
+        },
+        {
+          "version": "1.0.0",
+          "name": "text",
+          "cName": "文字框",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=text"
+        }
+      ]
+    },
+    {
+      "name": "操作反馈",
+      "enName": "operation",
+      "packages": [
+        {
+          "version": "1.0.0",
+          "name": "ActionSheet",
+          "cName": "动作面板",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=action-sheet"
+        },
+        {
+          "version": "1.0.0",
+          "name": "dialog",
+          "cName": "动作面板",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=dialog"
+        },
+        {
+          "version": "1.0.0",
+          "name": "floating-panel",
+          "cName": "浮动面板",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=floating-panel"
+        },
+        {
+          "version": "1.0.0",
+          "name": "floating-bubble",
+          "cName": "浮动气泡",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=floating-bubble"
+        },
+        {
+          "version": "1.0.0",
+          "name": "float-pagination",
+          "cName": "浮动分页",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=float-pagination"
+        },
+        {
+          "version": "1.0.0",
+          "name": "swipe-group",
+          "cName": "滑动手势",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=swipe-group"
+        },
+        {
+          "version": "1.0.0",
+          "name": "switch",
+          "cName": "开关",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=switch"
+        },
+        {
+          "version": "1.0.0",
+          "name": "transition",
+          "cName": "过渡动画",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=transition"
+        }
+      ]
+    },
+    {
+      "name": "导航组件",
+      "enName": "navigation",
+      "packages": [
+        {
+          "version": "1.0.0",
+          "name": "tab",
+          "cName": "选项卡切换",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=tab"
+        }
+      ]
+    },
+    {
+      "name": "展示组件",
+      "enName": "viewComponent",
+      "packages": [
+        {
+          "version": "1.0.0",
+          "name": "circle",
+          "cName": "圆进度",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=circle"
+        },
+        {
+          "version": "1.0.0",
+          "name": "empty",
+          "cName": "空白",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=empty"
+        },
+        {
+          "version": "1.0.0",
+          "name": "image-preview",
+          "cName": "图片预览",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=image-preview"
+        },
+        {
+          "version": "1.0.0",
+          "name": "list",
+          "cName": "列表",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=list"
+        },
+        {
+          "version": "1.0.0",
+          "name": "list-standard",
+          "cName": "列表-标准",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=list-standard"
+        },
+        {
+          "version": "1.0.0",
+          "name": "loading",
+          "cName": "加载loading",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=loading"
+        },
+        {
+          "version": "1.0.0",
+          "name": "swiper",
+          "cName": "轮播",
+          "setup": true,
+          "desc": "",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=swiper"
+        }
+      ]
+    },
+    {
+      "name": "页面级",
+      "enName": "page",
+      "packages": [
+        {
+          "version": "1.0.0",
+          "name": "Navbar",
+          "cName": "按钮",
+          "setup": true,
+          "desc": "用于顶部导航栏",
+          "author": "",
+          "pagePath": "/modules/container/pages/navbar/index"
+        },
+        {
+          "version": "1.0.0",
+          "name": "list",
+          "cName": "虚拟列表",
+          "setup": true,
+          "desc": "用于顶部导航栏",
+          "author": "",
+          "pagePath": "/pages/h5-preview/index?name=list-virtual"
+        }
+      ]
+    }
+  ]
+}

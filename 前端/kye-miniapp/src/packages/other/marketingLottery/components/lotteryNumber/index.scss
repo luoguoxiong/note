@@ -1,0 +1,189 @@
+.lottery-number {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    // 订阅失败弹窗样式
+    .dialog-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 10001;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .dialog-content {
+        width: 590px;
+        background: #ffffff;
+        border-radius: 20px;
+        padding-bottom: 0;
+    }
+    
+    .dialog-title {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        color: #03050d;
+        line-height: 50px;
+        padding-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .dialog-message {
+        width: 510px;
+        min-height: 80px;
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+        color: #6e6d72;
+        line-height: 48px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    
+    .dialog-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        border-top: 1px solid #ebedf5;
+    }
+    
+    .dialog-btn {
+        font-size: 34px;
+        font-weight: 400;
+        height: 100%;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        
+        &::after {
+            display: none;
+        }
+    }
+    
+    .cancel-btn {
+        color: #888ea6;
+        border-right: 1px solid #ebedf5;
+    }
+    
+    .confirm-btn {
+        color: #8365f6;
+    }
+    
+    .common-button {
+        display: block;
+        width: 560px;
+        height: 80px;
+        line-height: 80px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0 20px 0;
+        font-family: "PingFangSC, PingFangSC-Semibold;";
+        font-weight: 600;
+        color: #920f05;
+        font-size: 46px;
+        letter-spacing: 2px;
+        text-align: center;
+        animation: breath .9s linear infinite;
+        -webkit-animation: breath .9s linear infinite;
+        -moz-animation: breath .9s linear infinite;
+    }
+    .colorful-button {
+        background-image: url("https://ic-h5.kye-erp.com/intro/miniprogram/marketing-lottery/large-button-bg.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .colorful-button-new {
+        background-image: url("https://ic-img.ky-express.com/default/20230315_96159032927_!!1678890227038_1156_196.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    @keyframes breath {
+      0% { transform: scale(0.84); }
+      50% { transform: scale(1); }
+      100% { transform: scale(0.84); }
+    }
+    @-webkit-keyframes breath {
+      0% { transform: scale(0.84); }
+      50% { transform: scale(1); }
+      100% { transform: scale(0.84); }
+    }
+    @-moz-keyframes breath {
+      0% { transform: scale(0.84); }
+      50% { transform: scale(1); }
+      100% { transform: scale(0.84); }
+    }
+}
+
+.common-card {
+    position: relative;
+    width: 640px;
+    min-height: 590px;
+    margin-top: 400px;
+    padding-bottom: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 48px;
+    box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.5);
+    .avatar-button {
+        position: relative;
+        width: 215px;
+        height: 215px;
+        padding: 1px;
+        margin-top: -100px;
+        background: transparent;
+        border-radius: 50%;
+        overflow: hidden;
+        .avatar {
+            width: 200px;
+            height: 200px;
+            border: 6px solid #f6f9ff;
+            background: #f6f9ff;
+            border-radius: 50%;
+        }
+        .cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 24px;
+            color: #ffd655;
+            line-height: 220px;
+            background: rgba(0, 0, 0, 0.6);
+            .edit { width: 16px; height: 18px; margin-right: 6px; }
+        }
+        &::after { display: none; }
+    }
+    .tips { margin-top: 32px; color: #3a17af; font-weight: 600; font-size: 32px; text-align: center; }
+    .code {
+        width: 440px; height: 114px; background: #ffffff; border-radius: 57px; margin: 19px auto;
+        font-family: Helvetica, Helvetica-Regular; color: #6134f7; font-size: 66px; line-height: 114px; font-weight: bold; text-align: center;
+    }
+    .raward {
+        position: absolute; bottom: 20px; width: 100%; padding: 10px 0; color: #a672f3; font-size: 24px; font-weight: 400; display: flex; align-items: center; justify-content: center;
+        image { width: 24px; height: 24px; }
+    }
+    .lottery-place {
+        width: 500px; margin: 0 auto; font-size: 21px; font-family: PingFangSC, PingFangSC-Medium; font-weight: bold; color: #34332f; line-height: 40px; text-align: left;
+        .label { display: inline-block; min-width: 110px; }
+        .view-box { display: flex; }
+    }
+    .subscribe { width: 640px; padding: 25px 0; text-align: center; }
+}
+.card { background: rgba(255, 255, 255, 0.86); }
+.card-new { background: rgba(255, 255, 255, 0.31); }
+
+

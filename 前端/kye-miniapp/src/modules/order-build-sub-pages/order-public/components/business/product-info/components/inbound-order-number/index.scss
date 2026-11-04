@@ -1,0 +1,19 @@
+.product-info-inbound-order-number {
+  padding: 24px 0;
+  border-bottom: 1.5px solid $border-bottom-color;
+  .inbound-order-number-title {
+    padding-bottom: 12px;
+    &-tips {
+      height: 24px;
+      margin-bottom: 12px;
+      font-size: 24px;
+      color: #ff9300;
+      line-height: 24px;
+      letter-spacing: 0;
+    }
+  }
+}
+.inbound-order-number-page {
+  margin-right: 32px;
+  margin-left: 32px;
+}

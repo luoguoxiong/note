@@ -1,0 +1,144 @@
+@import './parameter.scss';
+
+.network-pick-new__body {
+  box-sizing: border-box;
+
+  .pick-phone {
+  
+    .title {
+      color: #24262B !important;
+      font-weight: normal !important;
+    }
+  }
+}
+
+/* #ifndef h5 */
+.address {
+  padding: 0 32px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f7f8fa;
+}
+/* #endif */
+
+.pick-dots {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 46px;
+  color: #24262b;
+}
+
+.pick-phone {
+  margin: 24px 0 8px;
+
+  .ky-popover-container {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 28px;
+    color: #24262B;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .title-required {
+    // display: inline-block;
+    width: 40px;
+    height: 24px;
+    // text-align: center;
+    // border-radius: 4px;
+    // box-sizing: border-box;
+    // border: 1px solid #fde1e0;
+    // font-size: 16px;
+    // line-height: 24px;
+    // color: #ff8772;
+    margin-left: 8px;
+  }
+}
+
+.tip {
+  margin-bottom: 24px;
+  font-size: 20px;
+  @extend %tips;
+
+  .tip-text {
+    color: #ff9300;
+  }
+}
+
+.network-pick-label {
+  color: #8c8f99;
+  white-space: nowrap;
+  @extend %font-normal;
+  line-height: 34px;
+}
+
+.network-pick-content {
+  color: #03050d;
+  @extend %font-normal;
+}
+
+.network-pick-copy {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  transform: translateY(6px);
+}
+
+.network-pick-address {
+  display: flex;
+  align-items: center;
+  line-height: 36px;
+  @extend %font-normal;
+  margin-top: 8px;
+
+  .network-pick-address_detail {
+    max-width: 570px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    color: #24262b;
+    border-right: 2px dashed #ebedf5;
+    padding-right: 24px;
+    margin-right: 8px;
+  }
+
+  .divider {
+    margin: 0 8px 0 24px;
+    min-height: 94px;
+    max-height: 100%;
+    width: 1px;
+    border-left: 2px dashed #ebedf5;
+  }
+
+  .network-copy-address {
+    display: inline;
+    align-items: flex-end;
+  }
+
+  .network-copy-address_divider {
+    display: inline-block;
+    width: 2px;
+    height: 24px;
+    margin-right: 12px;
+    margin-left: 10px;
+    transform: translateY(5px);
+    @extend %bg-divider;
+  }
+
+  .network-copy-address_text {
+    color: #7556ed;
+    line-height: 24px;
+  }
+}
+
+/* #ifdef h5 */
+.network-pick-address {
+  .network-pick-address_detail {
+    border-right: none;
+    max-width: 100%;
+  }
+}
+/* #endif */

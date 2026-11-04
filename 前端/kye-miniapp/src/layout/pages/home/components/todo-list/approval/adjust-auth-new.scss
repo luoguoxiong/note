@@ -1,0 +1,59 @@
+@import '../common.scss';
+
+.todo-adjust-auth {
+  @include card;
+
+  .todo-adjust-auth__header {
+    @include card-header;
+  }
+
+  .todo-adjust-auth__content {
+    display: flex;
+    flex-direction: column;
+
+    .todo-adjust-auth__info {
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+
+      .item {
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 34px;
+        color: #24262B;
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .label {
+          color: #686B75;
+          width: 120px;
+          display: inline-block;
+        }
+
+        .money {
+          color: #FF706D;
+          font-weight: 600;
+        }
+
+        .tips {
+          color: #8C8F99;
+        }
+      }
+    }
+  }
+
+  .todo-adjust-auth__footer {
+    @include card-footer;
+    justify-content: flex-end;
+    gap: 16px;
+    .w-132 {
+      width: 132px;
+    }
+    .w-120 {
+      width: 120px;
+    }
+  }
+}

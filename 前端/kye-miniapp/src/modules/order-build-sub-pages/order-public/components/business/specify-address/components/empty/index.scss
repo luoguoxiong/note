@@ -1,0 +1,10 @@
+.specify-address-empty {
+  :deep(.van-empty) {
+    margin-top: 100px;
+    .van-empty {
+      &__description {
+        margin-top: 0;
+      }
+    }
+  }
+}

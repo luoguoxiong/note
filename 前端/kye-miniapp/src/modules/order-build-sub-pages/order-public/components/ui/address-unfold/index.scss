@@ -1,0 +1,43 @@
+.address-unfold {
+  .info-container {
+    padding-bottom: 24px;
+    margin-left: 60px;
+    margin-top: 8px;
+    .address-ocr{
+      .left{
+        flex-shrink: 0;
+      }
+    }
+    .ky-cell {
+      padding: 16px 0;
+      box-sizing: border-box;
+      &::after {
+        left: 0;
+        right: 0;
+      }
+    }
+
+    .address-unfold-detail-address {
+      .ky-cell {
+        padding: 16px 0;
+        box-sizing: border-box;
+      }
+    }
+
+    .border-bottom-style {
+      // @include hairline(after, $border-bottom-color, bottom);
+
+      &:last-child {
+        &::after {
+          border: 0;
+        }
+      }
+    }
+  }
+  .ky-field  {
+    .required {
+      left: 0;
+      margin-top: -14px;
+    }
+  }
+}

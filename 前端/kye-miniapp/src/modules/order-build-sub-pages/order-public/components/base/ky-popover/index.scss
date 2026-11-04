@@ -1,0 +1,46 @@
+.ky-popover-comp {
+  padding: 12px 24px;
+  font-size: 24px;
+  color: #ff706d;
+  background: #fff0f0;
+  border: 1px solid #ff706d;
+  border-radius: 8px;
+  font-weight: normal;
+
+  .van-popover__content {
+    overflow: visible;
+    background: #fff0f0;
+    box-shadow: none;
+  }
+
+  .van-popover__arrow {
+    // position: relative;
+    color: rgb(255 240 240 / 0%);
+    &::after {
+      position: absolute;
+      top: -17px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      background-color: #fff0f0;
+      content: '';
+      border-top: 1px solid #ff706d;
+      border-left: 1px solid #ff706d;
+      transform: rotate(-135deg);
+    }
+  }
+
+  &.bottom {
+    .van-popover__arrow{
+      &::after{
+        top: 4px;
+        width: 8px;
+        height: 8px;
+        border-bottom: 1px solid #ff706d;
+        border-right: 1px solid #ff706d;
+        border-top:0;
+        border-left:0;
+      }
+    }
+  }
+}

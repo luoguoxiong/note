@@ -1,0 +1,86 @@
+.waybill-card-restrict-tips {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  padding: 0 8px;
+  border-radius: 8px;
+  background: #fff3e5;
+  color: #ff9300;
+
+  .waybill-card-restrict-tips-icon {
+    width: 50px;
+    height: 60px;
+    flex-shrink: 0;
+    align-self: center;
+  }
+
+  .waybill-card-restrict-tips-desc {
+    flex: 1;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 16px 8px;
+    flex-wrap: wrap;
+    display: flex;
+
+    .desc {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .desc-btn {
+      flex-shrink: 0;
+    }
+
+    text {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      white-space: normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-all;
+    }
+  }
+
+  .waybill-card-restrict-tips-close {
+    margin: 16px 8px 0 0;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
+  .waybill-card-restrict-tips-box {
+    align-self: flex-start;
+  }
+
+  .waybill-card-restrict-tips-open {
+    margin-right: 8px;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    align-self: center;
+  }
+}
+
+.waybill-route-header__confirm-bar {
+  border-radius: 8px;
+  background: #fff3e5;
+  padding: 0 16px 12px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24px;
+  line-height: 34px;
+  color: #ff9300;
+  margin-top: 16px;
+  width: 100%;
+
+  &__img {
+    margin-left: 12px;
+    width: 24px;
+    height: 24px;
+  }
+}

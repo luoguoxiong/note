@@ -1,0 +1,51 @@
+.label {
+    margin: 24px 0;
+    font-size: 26px;
+    color: #03050D;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+
+    .half {
+        width: calc(50% - 10px);
+        flex: none;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    :deep(.van-popover__wrapper) {
+        width: 100%;
+    }
+
+    :deep(.van-field) {
+        padding: 18px 24px;
+        margin-right: 22px;
+        background: #F7F8FA;
+        border-radius: 10px;
+
+        .van-field__control,
+        .van-field__body {
+            height: 30px;
+            line-height: 30px;
+            font-size: 24px;
+
+            i {
+                font-size: 36px;
+            }
+        }
+    }
+
+    >div {
+        flex: 1;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

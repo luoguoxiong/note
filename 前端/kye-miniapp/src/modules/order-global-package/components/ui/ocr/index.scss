@@ -1,0 +1,274 @@
+.ocr {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+
+  &.batch-ocr-wrap {
+    background-color: #f7f8fa;
+  }
+
+  .text-area {
+    position: relative;
+
+    // 文本框内粘贴识别热区（仅 iOS App）
+    .paste-recognize-hotspot {
+      position: absolute;
+      top: 6%;
+      left: 22px;
+      z-index: 4;
+
+      &__text {
+        display: inline-block;
+        padding: 4px 2px;
+        font-size: 28px;
+        color: #8365f6;
+        border-radius: 6px;
+        line-height: 28px;
+        cursor: pointer;
+
+        &:active {
+          color: #6a4fd4;
+        }
+      }
+    }
+
+    // 热区显示时隐藏原生 placeholder
+    &.has-hotspot {
+      .ky-textarea {
+        .ky-field__control::placeholder {
+          color: transparent;
+        }
+      }
+    }
+
+    .ky-textarea {
+      background-color: transparent;
+      border: none;
+      .ky-cell {
+        position: inherit;
+        .ky-cel__value {
+          position: inherit;
+          padding: 0;
+          background: transparent;
+        }
+      }
+
+      .ky-field {
+        font-size: 28px;
+        font-weight: normal;
+        line-height: 40px;
+        background: transparent;
+
+        .ky-field__control {
+          text-align: justify;
+          color: #03050d;
+          word-break: break-all;
+
+          &::placeholder {
+            text-align: justify;
+            color: #ADB0B8;
+          }
+        }
+
+        .ky-field__clear {
+          right: 200px;
+          display: block;
+          &::after {
+            position: absolute;
+            bottom: 14px;
+            left: auto;
+            z-index: 20;
+            width: 48px;
+            padding: 0 20px;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+    // &.batch-Ocr {
+    //   .ky-textarea {
+    //     .van-field__clear {
+    //       right: 80px;
+    //     }
+    //   }
+    // }
+  }
+
+  .extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px 24px;
+    min-height: 60px;
+    .left {
+      display: flex;
+      align-items: center;
+
+      .left {
+        &__img {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 8px 16px 6px 32px;
+          // font-size: 22px;
+          color: #03050d;
+          background: transparent;
+          //border: 2px solid $bg-button-disable;
+          border-radius: 8px;
+          // font-weight: normal;
+
+          &:active {
+            background: rgb(0 0 0 / 6%);
+          }
+
+          // @include hairline(after, $bg-button-disable, border, 8px);
+
+          .text {
+            position: relative;
+            font-size: 24px;
+            color: #03050d;
+
+            &::before {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: -36px;
+              width: 28px;
+              height: 28px;
+              background: url('https://ic-img.ky-express.com/netc/20251119_59920_!!1763554004622_48_48.png') no-repeat;
+              background-size: cover;
+              content: '';
+            }
+          }
+        }
+
+        &__help {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 8px 6px 6px 36px;
+          margin-left: -8px;
+          background: transparent;
+          //border: 2px solid $bg-button-disable;
+          border-radius: 8px;
+
+          &:active {
+            background: rgb(0 0 0 / 6%);
+          }
+
+          // @include hairline(after, $bg-button-disable, border, 8px);
+          .text {
+            position: relative;
+            font-size: 24px;
+            color: #8c8f99;
+
+            &::before {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: -36px;
+              width: 28px;
+              height: 28px;
+              background: url('https://ic-img.ky-express.com/netc/20251119_30581_!!1763554004619_48_48.png') no-repeat;
+              background-size: cover;
+              content: '';
+            }
+          }
+        }
+        &__audio {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 8px 16px 6px 36px;
+          margin-left: -8px;
+          background: transparent;
+          border-radius: 8px;
+          &:active {
+            background: rgb(0 0 0 / 6%);
+          }
+          .text {
+            position: relative;
+            font-size: 24px;
+            color: #03050d;
+            &::before {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: -36px;
+              width: 28px;
+              height: 28px;
+              background: url('https://ic-img.ky-express.com/netc/20251117_5847_!!1763359839651_48_48.png') no-repeat;
+              background-size: cover;
+              content: '';
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      .right__identify {
+        width: 130px;
+        height: 48px;
+        font-size: 24px;
+        border-radius: 12px;
+        line-height: 48px;
+        font-weight: normal;
+        padding: 0;
+
+        .loading--primary {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .paste-and-recognize {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 168px;
+        height: 48px;
+        font-size: 24px;
+        color: #fff;
+        background: #8365f6;
+        border-radius: 12px;
+        font-weight: normal;
+      }
+      .clear-btn {
+        padding: 0 20px;
+        font-size: 24px;
+        color: #8365f6;
+      }
+    }
+
+    .ky-icon__image {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .ky-button--normal {
+    padding: 0;
+  }
+}
+.audio_agr {
+  text-align: left;
+  color: #686b75;
+  display: flex;
+  align-items: flex-start;
+  .audio_disc {
+    line-height: 40px;
+    width: 10px;
+    height: 10px;
+    background: #686b75;
+    border-radius: 50%;
+    margin: 24px 24px 0;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+  .audio_agr_strong {
+    color: #24262b;
+    flex-shrink: 0;
+  }
+}

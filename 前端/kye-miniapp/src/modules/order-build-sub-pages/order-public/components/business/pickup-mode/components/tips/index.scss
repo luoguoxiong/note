@@ -1,0 +1,68 @@
+.tip-content-main {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+.tip-content {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #FF9300;
+}
+
+.content-main {
+  border-radius: 4px;
+  margin-top: 12px;
+  opacity: 1;
+  background: #F7F8FA;
+  box-sizing: border-box;
+  border: 1px solid #E6E8ED;
+  font-size: 26px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: #24262B;
+  padding: 16px;
+  .line {
+    margin-top: 8px;
+    height: 36px;
+  }
+  .address {
+    margin-top: 16px;
+    height: auto;
+    min-height: 36px;
+  }
+  .title {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  .copy-info {
+    margin-left: 18px;
+    color: #8365F6;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    .icon-content {
+      height: 13px;
+      width: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .icon-copy {
+        height: 100%;
+        width: 100%;
+        font-size: unset;
+        margin-right: 2px;
+      }
+    }
+  }
+  .mobile {
+    margin-left: 8px;
+  }
+  .time {
+    color: #8C8F99;
+  }
+}

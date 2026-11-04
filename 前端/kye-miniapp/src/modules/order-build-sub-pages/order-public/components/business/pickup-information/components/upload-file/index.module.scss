@@ -1,0 +1,57 @@
+@import '@order-global-package-order-sub/styles/index.scss';
+
+.upload {
+  height: 135px;
+  margin-top: 16px;
+  background: #fff;
+
+  .order-upload__select--item {
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+    font-size: 32px;
+    color: #03050d;
+    flex: 1;
+  }
+
+  .center-line {
+    width: 2px;
+    height: 48px;
+    background: $border-bottom-color;
+  }
+
+  .order-upload__img {
+    width: 88px;
+    height: 88px;
+    margin-right: 24px;
+  }
+}
+
+.file-list {
+  background: #fff;
+}
+
+.pickup-new-upload {
+  display: flex;
+  justify-content: flex-end;
+  padding: 24px 0;
+
+  .pickup-upload-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #8365f6;
+    text-align: center;
+    line-height: 48px;
+    padding: 0 16px;
+    height: 48px;
+    margin-left: 16px;
+    border-radius: 8px;
+    color: #8365f6;
+    font-size: 24px;
+
+    .pickup-upload-text {
+      margin-left: 4px;
+    }
+  }
+}

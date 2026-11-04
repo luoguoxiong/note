@@ -1,0 +1,31 @@
+@import '../common.scss';
+
+.todo-permission-auth {
+  @include card;
+
+  .todo-permission-auth__header {
+    @include approval-card-header;
+  }
+
+  .todo-permission-auth__form {
+    @include form;
+    padding: 24px;
+  }
+
+  .todo-permission-auth__footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 24px;
+
+    border-width: 2px 0px 0px 0px;
+    border-style: solid;
+    border-color: #e6e8ed;
+    &>.ky-button{
+      min-width: 120px;
+    }
+    .mr-16 {
+      margin-right: 16px;
+    }
+  }
+}

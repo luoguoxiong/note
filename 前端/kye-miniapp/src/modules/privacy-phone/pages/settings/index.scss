@@ -1,0 +1,135 @@
+.protection-phone-config-page {
+  min-height: 100vh;
+  background: #f1f2f7;
+  display: flex;
+  flex-direction: column;
+}
+
+.current-phone-section {
+  display: flex;
+  align-items: center;
+  padding: 22px 32px;
+  background: #ffffff;
+  font-size: 26px;
+  line-height: 24px;
+
+  .section-value {
+    display: flex;
+    align-items: center;
+  }
+
+  .phone-text {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: #24262b;
+  }
+
+  .toggle-btn {
+    width: 48px;
+    height: 48px;
+    margin-left: 4px;
+  }
+}
+
+.protection-section-card {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 16px;
+  background: #ffffff;
+  margin: 24px 24px 0;
+
+  .section-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: #24262b;
+    line-height: 46px;
+    height: 46px;
+
+    .section-title__switch {
+      margin-left: auto;
+    }
+  }
+
+  .section-description {
+    font-size: 24px;
+    font-weight: normal;
+    color: #686b75;
+    line-height: 34px;
+  }
+
+  .section-extra {
+    padding: 8px;
+    background: #f7f8fa;
+    border-radius: 8px;
+
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 36px;
+
+    .section-extra__header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 8px;
+      box-sizing: border-box;
+      min-height: 64px;
+      color: #686b75;
+    }
+
+    .section-extra__value {
+      color: #24262b;
+    }
+
+    .section-extra__right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-extra__bold {
+      font-weight: 600;
+      color: #24262b;
+    }
+
+    .section-extra__link {
+      font-size: 24px;
+      font-weight: normal;
+      color: #8365f6;
+      gap: 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      image {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .section-extra__switch {
+      margin-left: auto;
+    }
+
+    .section-extra__label {
+      display: flex;
+      align-items: center;
+
+      .section-extra__question {
+        margin-left: 4px;
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+}

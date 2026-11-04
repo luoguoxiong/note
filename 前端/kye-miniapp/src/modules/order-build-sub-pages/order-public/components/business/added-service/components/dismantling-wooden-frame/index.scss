@@ -1,0 +1,54 @@
+.dismantling-wooden-frame {
+  position: relative;
+  &-content {
+    height: 40px;
+  }
+  &-icon {
+    width: 34px;
+    height: 32px;
+    margin-bottom: -2px;
+  }
+  .hot-zone {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 13;
+    min-height: 20px;
+  }
+  .dismantling-reminder {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-top: 12px;
+    .icon {
+      height: 24px;
+      float: left;
+      max-width: 24px;
+    }
+    div.bottom-desc {
+      padding-top: 0;
+    }
+  }
+}
+.bottom-desc {
+  color: #9598a7;
+  display: flex;
+  align-items: center;
+}
+
+.dismantling-wooden-frame-content {
+  position: relative;
+  .dismantling-wooden-frame-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .font-level3 {
+    font-weight: 600;
+    &.font-normal {
+      font-weight: normal;
+    }
+  }
+}

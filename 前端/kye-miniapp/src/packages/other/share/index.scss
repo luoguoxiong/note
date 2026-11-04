@@ -1,0 +1,68 @@
+page {
+  background: #c299f1;
+  overflow: hidden;
+}
+
+.share-image image {
+  display: block; // 防止默认间隙
+  width: 100%;
+  height: 1448rpx;
+  object-fit: cover; // 图片填充更稳妥
+}
+
+.share {
+  min-height: 100vh;
+  background: #c299f1;
+
+  &__footer {
+    position: absolute;
+    top: 79%;
+    left: 0;
+    width: 100%;
+    padding: 0 20rpx; // 给点内边距，避免贴边
+    box-sizing: border-box;
+
+    // 跳转跨越领鲜：按钮距底部 123px（设计稿标注）
+    &--lingxin {
+      top: auto;
+      bottom: 133px;
+      padding: 0 112px;
+    }
+  }
+
+  &__btn {
+    width: 568rpx;
+    height: 156rpx;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 36rpx;
+    font-weight: 600;
+    text-align: center;
+
+    background: url("https://ic-img.ky-express.com/netc/20250521_2658405350_!!1747815384547_1013_292.png")
+                no-repeat center/cover;
+    border-radius: 16rpx; // 圆角更自然
+    box-sizing: border-box;
+
+    // 如果内部 image 真的有必要保留，可以限制尺寸
+    image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+
+    // 跳转跨越领鲜专属按钮样式
+    &--lingxin {
+      width: 100%;
+      height: 114px;
+      background: linear-gradient(180deg, #ff7e90 0%, #ff3f5c 100%);
+      border: 6rpx solid #fff;
+      border-radius: 57px;
+    }
+  }
+}

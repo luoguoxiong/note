@@ -1,0 +1,121 @@
+.product-name {
+  width: 100%;
+  &.relative {
+    position: relative;
+  }
+
+  .column-input {
+    height: 70px !important;
+    background: #f7f8fa;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0px 24px !important;
+    &.full-column {
+      width: 100%;
+    }
+  }
+
+  &.highLight {
+    :deep(.van-field) {
+      border-color: #8365f6;
+    }
+  }
+
+  &.validation-error {
+    :deep(.van-field__control) {
+      color: #ff706d;
+    }
+  }
+}
+
+.product-link {
+  border-radius: 24px;
+  background: #ffffff;
+  box-sizing: border-box;
+  border: 2px solid #ebedf5;
+  border-bottom: none;
+  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: absolute;
+  z-index: 9;
+  // top: 80px;
+  bottom: 70px;
+  left: 0px;
+  // width: 100%;
+
+  &.bottom {
+    bottom: auto;
+    top: 70px;
+  }
+
+  &-box {
+    max-height: 310px;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    .product-link-item:last-child {
+      border-bottom: none !important;
+    }
+  }
+
+  &-mask {
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    padding: 36px 0px;
+    margin: 0px 12px;
+
+    .name {
+      font-weight: 500;
+      font-size: 28px;
+      color: #03050d;
+      flex: 1;
+      word-break: keep-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .type {
+      padding: 8px;
+      font-size: 24px;
+      color: #888ea6;
+      margin-left: 16px;
+      width: 124px;
+      word-break: keep-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &.check {
+        text-align: center;
+        width: 112px;
+        border-radius: 8px;
+        background: #f1f2f7;
+      }
+    }
+
+    &.close {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      box-sizing: border-box;
+      // box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.1);
+      padding: 32px 0;
+      margin: 0;
+      font-size: 28px;
+      color: #8365f6;
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+    }
+  }
+}

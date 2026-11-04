@@ -1,0 +1,28 @@
+.add-label-container {
+  // border: 1px solid red;
+  box-sizing: border-box;
+  .h5-input {
+    text-align: left;
+  }
+}
+.label-footer-content {
+  height: 100px;
+  display: flex;
+  .btn {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #ebedf5;
+    font-size: 34px;
+    cursor: pointer;
+  }
+  .cancel {
+    border-right: 1px solid #ebedf5;
+    color: #03050D;
+  }
+  .confirm {
+    color: #8365F6;
+  }
+}

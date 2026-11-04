@@ -1,0 +1,131 @@
+.card {
+  margin-bottom: 24px;
+
+  .card-header {
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background: white;
+  }
+
+  .card-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #24262B;
+    margin-right: 8px;
+  }
+
+  .card-left {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .card-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .card-btn {
+    font-size: 28px;
+    line-height: 40px;
+    color: #8365F6;
+    height: 100%;
+    margin-left: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    image {
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+    }
+  }
+
+  .card-btn.disabled {
+    color: #8C8F99;
+  }
+
+  .card-wrap {
+    padding-top: 16px;
+    background: white;
+  }
+
+  .card-loading {
+    height: 420px;
+  }
+
+  // .card {
+  margin-bottom: 24px;
+  // }
+
+  .view-margin {
+    margin-left: 8px;
+    font-size: 24px;
+    color: #8C8F99;
+    flex: 1;
+    display: flex;
+
+    text {
+      margin-left: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .card-empty {
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #686B75;
+  }
+
+  // .card {
+  .no-show-text {
+    font-size: 26px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0px;
+
+    color: #8C8F99;
+    margin-left: 10rpx;
+  }
+
+  .card-title-tswitch {
+    display: flex;
+    align-items: center;
+  }
+
+  // }
+
+  .tag {
+    margin: 0 8px;
+    width: 88px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #FFFFFF;
+    background: #FF9300;
+    border-radius: 4px;
+  }
+
+  .tag.error {
+    background: #FF706D;
+  }
+
+  .card-tips {
+    width: 32px;
+    height: 32px;
+    margin: 0 8px;
+  }
+}

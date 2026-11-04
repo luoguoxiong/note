@@ -1,0 +1,22 @@
+<view class="custom-textarea-wrapper">
+  <textarea
+    class="custom-textarea"
+    type="{{type}}"
+    value="{{innerValue}}"
+    maxlength="{{maxlength}}"
+    placeholder="{{placeholder}}"
+    placeholder-style="{{placeholderStyle}}"
+    disabled="{{disabled}}"
+    adjust-position="{{adjustPosition}}"
+    cursor-spacing="{{cursorSpacing}}"
+    hold-keyboard="{{holdKeyboard}}"
+    auto-height="{{autoHeight}}"
+    disable-default-padding="{{disableDefaultPadding}}"
+    focus="{{focus}}"
+    bindinput="onInput"
+    bindfocus="onFocus"
+    bindblur="onBlur"
+    bindconfirm="onConfirm"
+    bindkeyboardheightchange="onKeyboardHeightChange"
+  />
+</view>

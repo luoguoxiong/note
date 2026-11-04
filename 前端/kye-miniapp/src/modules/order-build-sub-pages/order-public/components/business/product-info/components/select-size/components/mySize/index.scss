@@ -1,0 +1,170 @@
+.select-size-content-list {
+  padding: 8px 8px 0;
+
+  .select-size-title {
+    height: 56px;
+    line-height: 56px;
+    .color-assist {
+      color: #8c8f99;
+    }
+    .batch-toggle {
+      flex-shrink: 0;
+      color: #8365f6;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      .color-assist {
+        color: #8c8f99;
+      }
+      .batch-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        vertical-align: middle;
+      }
+
+      &.disabled {
+        color: #c8c9cc;
+      }
+    }
+  }
+
+  .select-size-block {
+    padding: 24px;
+    margin-top: 16px;
+    background-color: #fff;
+    border-radius: 24px;
+
+    // 删除按钮的定位参照
+    position: relative;
+    &-top {
+      padding-bottom: 6px;
+      .select-size-icon {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        // 让出右侧删除按钮的空间（按钮 36px + right 24px）
+        box-sizing: border-box;
+        padding-right: 60px;
+        .icon-content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 40px;
+          width: 40px;
+          padding: 0px;
+          border-radius: 12px;
+          background: #ebedf5;
+          box-sizing: border-box;
+        }
+        .size-icon {
+          height: 100%;
+          width: 100%;
+        }
+        .size-no {
+          width: 88%;
+          padding-left: 8px;
+          flex: 1;
+          font-size: 28px;
+          font-weight: 600;
+          color: #03050d;
+          @include ellipsis;
+        }
+      }
+      .operate-content {
+        // 相对卡片标题行定位
+        position: absolute;
+        top: 26px;
+        right: 24px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        .my-size {
+          width: 36px;
+          height: 36px;
+
+          .svg-icon {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+
+          // 批量态：icon 置灰
+          .svg-icon-disabled {
+            filter: grayscale(100%);
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+    &-content {
+      flex-wrap: wrap;
+      .select-size-items {
+        width: calc(50% - 12px);
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-content {
+          padding: 12px;
+          background-color: $bg-input;
+          border-radius: 12px;
+          @include ellipsis;
+        }
+      }
+    }
+  }
+  .active {
+    background-color: #f2effe;
+    .select-size-items-content {
+      background-color: #fff;
+    }
+  }
+  &.my-size {
+    .select-size-block-content {
+      .select-size-items {
+        width: unset;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+// 批量态样式
+.select-size-content-list {
+  .select-size-block {
+    // 批量态：单选框位于卡片左侧垂直居中
+    &.is-batch {
+      display: flex;
+      align-items: center;
+
+      .select-size-block-main {
+        flex: 1;
+        min-width: 0;
+      }
+
+      // 批量态：删除不可操作
+      .operate-content {
+        pointer-events: none;
+      }
+    }
+  }
+
+  .batch-radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+
+    .radio-icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

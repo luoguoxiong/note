@@ -1,0 +1,82 @@
+.card-func__warp {
+  .func-swiper {
+    height: 396px;
+    box-sizing: border-box;
+  }
+
+  .func-swiper ::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background-color: transparent !important;
+  }
+
+  .func-item {
+    width: 624px;
+    height: 396px;
+    display: inline-block;
+    margin-left: 24px;
+  }
+
+  .func-item:last-child {
+    margin-right: 24px;
+  }
+
+  .func-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333333;
+    height: 40px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 16px;
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      content: '';
+      display: block;
+      width: 4px;
+      height: 20px;
+      border-radius: 0px 2px 2px 0px;
+      opacity: 1;
+      background: #8365F6;
+    }
+  }
+
+  .func-content {
+    height: 340px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .func-icon {
+    width: 100%;
+    height: 340px;
+  }
+
+  .progress-wrap {
+    width: 200px;
+    padding-top: 24px;
+    margin: 0 auto;
+  }
+
+  .func-desc {
+    width: 100%;
+    font-size: 28px;
+    font-weight: normal;
+    color: #FFFFFF;
+    height: 72px;
+    padding: 0 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  }
+}

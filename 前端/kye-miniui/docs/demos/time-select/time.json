@@ -1,0 +1,2594 @@
+{
+  "choosableTimes": [
+    {
+      "date": "2026-07-09",
+      "dayOfWeek": 4,
+      "matchPeriods": [
+        {
+          "periodType": 0,
+          "startTime": "08:00:00",
+          "endTime": "18:00:00"
+        },
+        {
+          "periodType": 1,
+          "startTime": "08:00:00",
+          "endTime": "12:00:00"
+        },
+        {
+          "periodType": 2,
+          "startTime": "12:00:00",
+          "endTime": "18:00:00"
+        }
+      ],
+      "exactTimeRanges": [
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ],
+      "timeRanges": [
+        {
+          "text": "8点",
+          "hour": 8,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "9点",
+          "hour": 9,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-10",
+      "dayOfWeek": 5,
+      "matchPeriods": [
+        {
+          "periodType": 0,
+          "startTime": "08:00:00",
+          "endTime": "18:00:00"
+        },
+        {
+          "periodType": 1,
+          "startTime": "08:00:00",
+          "endTime": "12:00:00"
+        },
+        {
+          "periodType": 2,
+          "startTime": "12:00:00",
+          "endTime": "18:00:00"
+        }
+      ],
+      "exactTimeRanges": [
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ],
+      "timeRanges": [
+        {
+          "text": "8点",
+          "hour": 8,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "9点",
+          "hour": 9,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "dayOfWeek": 6,
+      "matchPeriods": [
+        {
+          "periodType": 0,
+          "startTime": "08:00:00",
+          "endTime": "18:00:00"
+        },
+        {
+          "periodType": 1,
+          "startTime": "08:00:00",
+          "endTime": "12:00:00"
+        },
+        {
+          "periodType": 2,
+          "startTime": "12:00:00",
+          "endTime": "18:00:00"
+        }
+      ],
+      "exactTimeRanges": [
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ],
+      "timeRanges": [
+        {
+          "text": "8点",
+          "hour": 8,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "9点",
+          "hour": 9,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-12",
+      "dayOfWeek": 7,
+      "matchPeriods": [
+        {
+          "periodType": 0,
+          "startTime": "08:00:00",
+          "endTime": "18:00:00"
+        },
+        {
+          "periodType": 1,
+          "startTime": "08:00:00",
+          "endTime": "12:00:00"
+        },
+        {
+          "periodType": 2,
+          "startTime": "12:00:00",
+          "endTime": "18:00:00"
+        }
+      ],
+      "exactTimeRanges": [
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ],
+      "timeRanges": [
+        {
+          "text": "8点",
+          "hour": 8,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "9点",
+          "hour": 9,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "dayOfWeek": 1,
+      "matchPeriods": [
+        {
+          "periodType": 0,
+          "startTime": "08:00:00",
+          "endTime": "18:00:00"
+        },
+        {
+          "periodType": 1,
+          "startTime": "08:00:00",
+          "endTime": "12:00:00"
+        },
+        {
+          "periodType": 2,
+          "startTime": "12:00:00",
+          "endTime": "18:00:00"
+        }
+      ],
+      "exactTimeRanges": [
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ],
+      "timeRanges": [
+        {
+          "text": "8点",
+          "hour": 8,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "9点",
+          "hour": 9,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "dayOfWeek": 2,
+      "matchPeriods": [
+        {
+          "periodType": 0,
+          "startTime": "08:00:00",
+          "endTime": "18:00:00"
+        },
+        {
+          "periodType": 1,
+          "startTime": "08:00:00",
+          "endTime": "12:00:00"
+        },
+        {
+          "periodType": 2,
+          "startTime": "12:00:00",
+          "endTime": "18:00:00"
+        }
+      ],
+      "exactTimeRanges": [
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ],
+      "timeRanges": [
+        {
+          "text": "8点",
+          "hour": 8,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "9点",
+          "hour": 9,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "dayOfWeek": 3,
+      "matchPeriods": [
+        {
+          "periodType": 0,
+          "startTime": "08:00:00",
+          "endTime": "18:00:00"
+        },
+        {
+          "periodType": 1,
+          "startTime": "08:00:00",
+          "endTime": "12:00:00"
+        },
+        {
+          "periodType": 2,
+          "startTime": "12:00:00",
+          "endTime": "18:00:00"
+        }
+      ],
+      "exactTimeRanges": [
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ],
+      "timeRanges": [
+        {
+          "text": "8点",
+          "hour": 8,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "9点",
+          "hour": 9,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "dayOfWeek": 4,
+      "matchPeriods": [
+        {
+          "periodType": 0,
+          "startTime": "08:00:00",
+          "endTime": "18:00:00"
+        },
+        {
+          "periodType": 1,
+          "startTime": "08:00:00",
+          "endTime": "12:00:00"
+        },
+        {
+          "periodType": 2,
+          "startTime": "12:00:00",
+          "endTime": "18:00:00"
+        }
+      ],
+      "exactTimeRanges": [
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ],
+      "timeRanges": [
+        {
+          "text": "8点",
+          "hour": 8,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "9点",
+          "hour": 9,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "dayOfWeek": 5,
+      "matchPeriods": [
+        {
+          "periodType": 0,
+          "startTime": "08:00:00",
+          "endTime": "18:00:00"
+        },
+        {
+          "periodType": 1,
+          "startTime": "08:00:00",
+          "endTime": "12:00:00"
+        },
+        {
+          "periodType": 2,
+          "startTime": "12:00:00",
+          "endTime": "18:00:00"
+        }
+      ],
+      "exactTimeRanges": [
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ],
+      "timeRanges": [
+        {
+          "text": "8点",
+          "hour": 8,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "9点",
+          "hour": 9,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "dayOfWeek": 6,
+      "matchPeriods": [
+        {
+          "periodType": 0,
+          "startTime": "08:00:00",
+          "endTime": "18:00:00"
+        },
+        {
+          "periodType": 1,
+          "startTime": "08:00:00",
+          "endTime": "12:00:00"
+        },
+        {
+          "periodType": 2,
+          "startTime": "12:00:00",
+          "endTime": "18:00:00"
+        }
+      ],
+      "exactTimeRanges": [
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ],
+      "timeRanges": [
+        {
+          "text": "8点",
+          "hour": 8,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "9点",
+          "hour": 9,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "10点",
+          "hour": 10,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "11点",
+          "hour": 11,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "12点",
+          "hour": 12,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "13点",
+          "hour": 13,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "14点",
+          "hour": 14,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "15点",
+          "hour": 15,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "16点",
+          "hour": 16,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "17点",
+          "hour": 17,
+          "children": [
+            {
+              "minute": 0
+            },
+            {
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "text": "18点",
+          "hour": 18,
+          "children": [
+            {
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+.address-unfold-delegate-pick {
+  padding-bottom: 24px;
+  padding-top: 0px;
+
+  &-text {
+    height: 82px;
+    padding: 0 24px;
+    font-size: 28px;
+    color: #03050d;
+    background: #f7f8fa;
+    border-radius: 12px;
+    font-weight: 500;
+  }
+
+  .left {
+    &-icon {
+      width: 46px;
+      height: 46px;
+      margin-right: 10px;
+      background: url('https://ic-img.ky-express.com/netc/20250619_44954_!!1750313907466_138_138.png') no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .right {
+    font-size: 28px;
+    color: #888ea6;
+    font-weight: normal;
+    &-icon {
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+      background: url('https://ic-img.ky-express.com/netc/20250619_73499_!!1750301805662_97_97.png') no-repeat;
+      background-size: 100% 100%;
+    }
+    .value {
+      color: $text-color-level1;
+      font-weight: $font-bold;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+:root {
+  --vp-c-brand-1: #7653d6;
+  --vp-c-brand-2: #6b37f9;
+  --vp-c-brand-3: #8365f6;
+  --vp-layout-max-width: 1600px;
+  --vp-sidebar-width: 300px;
+}
+
+/* header */
+
+/* 侧边栏 */
+.custom-aside-before + .VPDocAsideOutline .VPDocOutlineItem {
+  display: flex;
+}
+
+.custom-aside-before + .VPDocAsideOutline .VPDocOutlineItem li {
+  padding: 0 10px;
+}
+
+.custom-aside-before + .VPDocAsideOutline .VPContent.has-sidebar {
+  padding-right: 0 !important;
+}
+
+.aside {
+  max-width: 410px !important;
+}
+
+.aside-container {
+  width: 100% !important;
+  margin-top: -28px;
+  overflow-y: hidden !important;
+}
+
+.custom-aside-before + .VPDocAsideOutline .spacer {
+  flex-grow: 0.2 !important;
+}
+
+/* code */
+.vp-doc div[class*='language-'] {
+  background-color: var(--component-preview-bg);
+  box-shadow: 0 0 10px var(--component-preview-border);
+}
+
+.vp-doc div[class*='language-'].line-numbers-mode {
+  padding-left: 0;
+}
+
+.vp-doc div[class*='language-'] * {
+  font-size: 12px !important;
+}
+
+
+.vp-doc .line-numbers-wrapper {
+  display: none;
+}
+
+.vp-doc [class*='language-'] > button.copy {
+  background-color: var(--vp-code-copy-code-hover-bg);
+  opacity: 1;
+}
+
+.vp-doc [class*='language-'] > button.copied {
+  &:before {
+    color: #8f8f8f !important;
+  }
+}
+
+.vp-doc [class*='language-'] > button.copy {
+  width: 20px;
+  height: 20px;
+  background-size: 14px;
+}
+
+.vp-doc [class*='language-'] > button.copy:before {
+  height: 20px !important;
+}
+
+/* 隐藏preivew预览组件 */
+.vitepress-demo-preview__ant-design__container > .vitepress-demo-preview-preview {
+  display: none;
+}
+
+.vitepress-demo-preview__ant-design__container > .vitepress-demo-preview-description .vitepress-demo-preview-description__title {
+  display: none;
+}
+
+.vitepress-demo-preview-description__content {
+  display: none;
+}
+
+.vp-doc [class*='language-'] > span.lang {
+  display: none;
+}
+
+.vp-doc .demo-preview code{
+  max-width: 100%;
+  overflow: auto;
+}
+
+
+/* 内容区域 */
+@media (min-width: 1280px) {
+  #app .content {
+    min-width: 720px;
+  }
+}
+
+@media (min-width: 960px) {
+  #app .VPDoc {
+    padding: 48px 28px 0;
+  }
+  .container .aside + .content {
+    padding: 0 20px 128px !important;
+  }
+}
+
+@media (min-width: 1441px) {
+  .container .aside + .content {
+    padding: 0 32px 128px !important;
+  }
+}
+
+
+@media (min-width: 1720px) {
+  /*#app .aside {*/
+  /*  padding-left: 140px;*/
+  /*}*/
+  #app .content {
+    min-width: 820px;
+  }
+}
+
+@media (min-width: 1920px) {
+  #app .content {
+    min-width: 1000px;
+  }
+}
+
+
+#app .VPDoc.has-aside .content-container {
+  max-width: 1020px;
+}
+
+/* 滚动条 */
+.VPSidebar, html {
+  overflow: auto; /* 或 scroll */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.VPSidebar::-webkit-scrollbar, html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* 首页处理 */
+.VPHomeHero .heading .text{
+  white-space: nowrap;
+}

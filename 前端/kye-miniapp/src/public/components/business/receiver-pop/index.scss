@@ -1,0 +1,73 @@
+.popup-box-receiver {
+  &-title {
+    padding: 16px 16px 16px 32px;
+    // height: 98px;
+    display: flex;
+    align-items: center;
+    font-size: 34px;
+    font-weight: 600;
+    color: #03050D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #edeef3;
+  }
+
+  .waybill-text {
+    font-size: 24px;
+    line-height: 34px;
+    color: #8C8F99;
+    font-weight: normal;
+    margin-left: 5px;
+  }
+}
+
+.popup-close {
+  width: 32px;
+  height: 32px;
+  background-image: url('https://ic-img.ky-express.com/netc/20250118_42870395139_!!1737186469837_64_64.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.record-box {
+  font-size: 28px;
+  line-height: 40px;
+  color: #8365f6;
+  display: flex;
+  align-items: center;
+
+  image {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+}
+
+.receiver__footer {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.05);
+  padding: 16px 32px;
+
+  .confirm-btn {
+    font-size: 34px;
+    background: #8365F6;
+    border-radius: 16px;
+    border: none;
+    font-weight: 600;
+    width: 100%;
+    height: 88px;
+    border-radius: 12px;
+    position: relative;
+  }
+}
+
+.receiver-form {
+  padding: 16px 32px;
+
+  .ky-popover-container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

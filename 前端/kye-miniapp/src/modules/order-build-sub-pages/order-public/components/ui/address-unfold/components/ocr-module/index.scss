@@ -1,0 +1,47 @@
+.address-unfold-ocr-module {
+  position: relative;
+  margin-bottom: 8px;
+
+  .arrow-icon {
+    position: absolute;
+    top: -8px;
+    right: 170px;
+    z-index: 9;
+    width: 16px;
+    height: 16px;
+    background: #f7f8fa;
+    border-left: 2px solid #ebedf5;
+    border-top: 2px solid #ebedf5;
+    border-top-left-radius: 6px;
+    transform: rotate(45deg);
+
+    &.right-style {
+      right: 50px;
+    }
+    &.header__right__btn__three {
+      right: 310px;
+    }
+  }
+  .address-ocr {
+    .ocr {
+      margin-top: 16px;
+      background: #f7f8fa;
+      border: 2px solid #ebedf5;
+
+      .text-area {
+        .ky-cell {
+          padding: 0;
+        }
+      }
+
+      // .extra {
+      //   .left__img,
+      //   .left__help {
+      //     .van-button {
+      //       background: transparent;
+      //     }
+      //   }
+      // }
+    }
+  }
+}

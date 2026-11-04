@@ -1,0 +1,6 @@
+.list-refresh-load {
+  height: calc(100vh - 114px - 180px - 100px - env(safe-area-inset-bottom));
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+}

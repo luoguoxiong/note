@@ -1,0 +1,53 @@
+.send-info-stand {
+  &-head {
+    height: 100px;
+    padding: 0 24px;
+  }
+  .send-info-stand-body {
+    position: relative;
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 24px;
+      width: 662px;
+      content: '';
+      box-sizing: border-box;
+      pointer-events: none;
+      transform: scaleY(0.5);
+      border-bottom: 2px solid #ebedf5;
+    }
+    &:last-child {
+      overflow: hidden;
+      border-radius: 24px;
+      &::after {
+        border-bottom: none;
+      }
+    }
+
+    :deep(.single-receipt-service) {
+      padding-bottom: 24px;
+      &::after {
+        border-bottom: transparent;
+      }
+
+      .van-cell {
+        padding-top: 24px;
+      }
+    }
+  }
+  .send-info-stand-head {
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 24px;
+      width: 662px;
+      content: '';
+      box-sizing: border-box;
+      pointer-events: none;
+      transform: scaleY(0.5);
+      border-bottom: 2px solid #ebedf5;
+    }
+  }
+}

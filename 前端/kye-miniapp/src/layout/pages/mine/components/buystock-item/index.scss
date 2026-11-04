@@ -1,0 +1,30 @@
+.buystock{
+  width: 343px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  image{
+    width: 100%;
+    height: 100%;
+  }
+  &-name{
+    height: 46px;
+    position: absolute;
+    top: 24px;
+    left: 136px;
+    line-height: 46px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #24262B;
+  }
+  &-desc{
+    position: absolute;
+    top: 78px;
+    left: 136px;
+    height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 34px;
+    color: #4C5970;
+  }
+}

@@ -1,0 +1,152 @@
+@import'./parameter';
+
+.network-pick__body {
+  width: 100%;
+  .address {
+    overflow: hidden;
+    padding: 0 32px;
+    background-color: #1f283b;
+    border-radius: 10px;
+  }
+
+  .phone-label {
+    margin-top: 24px;
+    color: #03050D;
+  }
+
+  .pick-phone {
+    margin: 12px 0 12px;
+
+    .title {
+      margin-bottom: 20px;
+      font-size: 26px;
+      color: #ff9300;
+      font-weight: $font-bold;
+    }
+
+    .phone-input {
+      background: #f7f8fa;
+      box-sizing: border-box;
+      border-radius: 8px;
+      //color: #000;
+      font-weight: 600;
+      font-size: 28px;
+
+      .van-field__control {
+        //color: #000;
+        font-size: 28px;
+      }
+
+      .van-field__right-icon {
+        color: #c6c6d0;
+      }
+    }
+
+    .empty {
+      .h5-input {
+        font-weight: 400;
+        color: #888ea6;
+      }
+    }
+
+    .field-item-error {
+      .van-field__control::placeholder {
+        color: #{$color-error};
+      }
+    }
+
+    &.validate-error {
+      .phone-input {
+        &.empty {
+          .van-field__control {
+            -webkit-text-fill-color: #FF706D !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.network-pick__body-tip {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: normal;
+
+  @include tips;
+
+  span {
+    color: #888EA6;
+  }
+}
+
+.network-pick-label {
+  white-space: nowrap;
+  color: #888ea6;
+  display: inline-block;
+  @include font-normal;
+}
+
+.network-pick-content {
+  color: #03050d;
+
+  @include font-normal;
+}
+
+.address-point {
+  margin: 8px 0 16px;
+
+  @include ellipsis;
+
+  span {
+    font-size: 26px;
+    font-weight: $font-bold;
+    line-height: 36px;
+    color: #03050d;
+  }
+}
+
+.network-pick-address {
+  display: flex;
+  line-height: 36px;
+
+  @include font-normal;
+
+  .network-pick-address_detail {
+    display: flex;
+    align-items: center;
+    max-width: 538px;
+    flex: 1;
+  }
+
+  .divider {
+    width: 1px;
+    min-height: 56px;
+    max-height: 56px;
+    margin: 0 24px;
+    border-left: 2px dashed #ebedf5;
+  }
+
+  .network-copy-address {
+    display: inline;
+    align-items: flex-end;
+  }
+
+  .network-copy-address_divider {
+    display: inline-block;
+    width: 2px;
+    height: 24px;
+    margin-right: 12px;
+    margin-left: 10px;
+    transform: translateY(5px);
+
+    @include bg-divider;
+  }
+
+  .network-copy-address_text {
+    display: inline-block;
+    margin-left: 2px;
+    color: #7556ed;
+    line-height: 24px;
+  }
+}

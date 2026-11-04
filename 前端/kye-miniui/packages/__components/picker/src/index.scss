@@ -1,0 +1,13 @@
+.ky-picker{
+  &__bottom{
+    padding: 16px 32px;
+    border-top: 1px solid #ebedf5;
+    box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.05);
+    margin-top: 2px;
+    &-button{
+      &.ky-button{
+        width: 100%;
+      }
+    }
+  }
+}

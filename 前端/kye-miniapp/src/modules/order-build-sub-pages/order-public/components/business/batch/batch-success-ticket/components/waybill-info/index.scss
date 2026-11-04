@@ -1,0 +1,67 @@
+.batch-success-ticket__cardItem {
+    padding: 24px;
+
+
+    .text-ellipsis {
+        overflow     : hidden;
+        text-overflow: ellipsis;
+        white-space  : nowrap;
+    }
+
+    .cardItem__header {
+        display        : flex;
+        justify-content: space-between;
+
+        &__from,
+        &__to {
+            display       : flex;
+            width         : 194px;
+            flex-direction: column;
+
+            span:first-child {
+                font-size  : 34px;
+                color      : #03050D;
+                font-weight: bold;
+            }
+
+            span:nth-child(2) {
+                font-size: 26px;
+                color    : #888EA6;
+            }
+
+            span:last-child {
+                font-size: 24px;
+                color    : #55596C;
+            }
+        }
+
+        &__to {
+            text-align: right;
+        }
+
+        &__icon {
+            width : 138px;
+            height: 69px;
+        }
+    }
+
+
+
+    .cardItem__footer {
+        display    : flex;
+        align-items: center;
+        margin-top : 40px;
+        font-size  : 24px;
+        color      : #03050D;
+
+        .footer_left {
+            width: 96px;
+            color: #55596C;
+        }
+
+        .footer_right {
+            flex: 1;
+        }
+    }
+
+}

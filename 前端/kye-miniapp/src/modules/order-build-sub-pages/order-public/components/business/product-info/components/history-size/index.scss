@@ -1,0 +1,74 @@
+.history-size-page {
+  overflow-y: scroll;
+  background-color: $bg-page;
+  .history-size-page-content {
+    padding: 32px 20px;
+  }
+  .history-size-title {
+    padding-bottom: 12px;
+  }
+  .history-size-block {
+    padding: 32px 32px 24px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 24px;
+    &-icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .size-no {
+        position: absolute;
+        left: 62px;
+        width: 88%;
+        font-size: 28px;
+        color: #8365f6;
+        flex: 1;
+
+        @include ellipsis;
+      }
+    }
+    &-top {
+      padding-bottom: 6px;
+      .history-size-icon {
+        position: relative;
+        width: 110px;
+        height: 40px;
+        .history-size-icon-class {
+          display: block;
+          // width: 100%;
+          // height: 100%;
+          width: 110px;
+          height: 40px;
+        }
+      }
+      .history-size-delete {
+        width: 36px;
+        height: 36px;
+        .svg-icon {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &-content {
+      flex-wrap: wrap;
+      .history-size-items {
+        width: calc(50% - 12px);
+        padding: 8px 0;
+        &-content {
+          padding: 12px;
+          background-color: $bg-input;
+          border-radius: 12px;
+        }
+      }
+    }
+    &:active {
+      background-color: #f2effe;
+      .history-size-items-content {
+        background-color: #fff;
+      }
+    }
+  }
+}

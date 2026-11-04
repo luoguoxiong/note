@@ -1,0 +1,201 @@
+.IdcardBaseInfo-address-wrap {
+  max-height: calc(100vh - 200px);
+
+  .IdcardBaseInfo-address-wrap-header {
+    width: 750px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    padding: 26px 32px;
+    gap: 16px;
+    border-radius: 24px 24px 0px 0px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #E6E8ED;
+  }
+
+  .IdcardBaseInfo-address-wrap-header-title {
+    width: 638px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .IdcardBaseInfo-address-wrap-header-title-main {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #24262B;
+  }
+
+  .IdcardBaseInfo-address-wrap-header-title-sub {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 34px;
+    color: #8C8F99;
+  }
+
+  .IdcardBaseInfo-address-wrap-header-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .IdcardBaseInfo-address-wrap-body {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    // gap: 24px;
+    // max-height: calc(100vh - 470px);
+    // overflow-y: auto;
+    width: 686px;
+  }
+
+  .IdcardBaseInfo-address-wrap-body-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .last-item {
+    margin-bottom: 0;
+  }
+
+  .IdcardBaseInfo-address-wrap-body-item-img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .IdcardBaseInfo-address-wrap-body-item-text {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #24262B;
+    margin-left: 16px;
+    width: 650px;
+    padding: 16px 0;
+  }
+
+  .IdcardBaseInfo-address-wrap-body-input {
+    position: relative;
+  }
+
+  .IdcardBaseInfo-address-wrap-body-input-textarea {
+    width: 100%;
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border: 2px solid #E6E8ED;
+    padding: 24px 16px;
+    // padding: 0;
+    font-size: 28px;
+    line-height: 40px;
+    // min-height: 176px;
+    padding: 0;
+
+    .ky-textarea {
+      width: 100%;
+      color: #24262B;
+      font-weight: 600;
+      box-sizing: border-box;
+      font-size: 28px;
+      // background-color: #F7F8FA;
+      padding-right: 16px;
+      padding-left: 16px;
+      // padding: 0;
+      // min-height: 176px;
+
+      .content {
+        // background-color: #F7F8FA;
+        padding: 0;
+      }
+    }
+  }
+
+  .IdcardBaseInfo-address-wrap-body-input-textarea-focus {
+    border-color: #8365F6;
+  }
+
+  .IdcardBaseInfo-address-wrap-body-input-tool {
+    position: absolute;
+    left: 16px;
+    bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 654px;
+    height: 40px;
+    z-index: 9;
+  }
+
+  .IdcardBaseInfo-address-wrap-body-input-clear {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 40px;
+    color: #8365F6;
+  }
+
+  .IdcardBaseInfo-address-wrap-body-input-limit {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 40px;
+    color: #8C8F99;
+  }
+
+  .IdcardBaseInfo-address-wrap-body-input-limit-orange {
+    display: inline-block;
+    color: #F57200;
+  }
+
+  .IdcardBaseInfo-address-wrap-body-button {
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .IdcardBaseInfo-address-wrap-body-submit {
+    width: 686px;
+    height: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: #8365F6;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 46px;
+    color: #FFFFFF;
+  }
+
+
+  .no-customer-address {
+    // width: 686px;
+    height: 432px;
+    background-color: #F7F8FA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+
+  .no-customer-address-img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .no-customer-address-text {
+    width: 452px;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 40px;
+    text-align: center;
+    color: #686B75;
+  }
+}

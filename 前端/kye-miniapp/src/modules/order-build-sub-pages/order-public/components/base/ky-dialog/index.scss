@@ -1,0 +1,42 @@
+@import'../../../styles/settings/color';
+.title {
+  position: relative;
+  .title-icon {
+    position: absolute;
+    top: -68px;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+  }
+  .has-title-icon {
+    padding-top: 16px;
+  }
+}
+.content {
+  padding: 0 40px;
+  font-size: 28px;
+  text-align: center;
+  color: $text-color-level2;
+}
+.ky-dialog :deep(.van-button) {
+  font-weight: $font-bold;
+}
+.ky-dialog :deep(.van-dialog__footer) {
+  border-top: 1px solid $bg-input-disable;
+  border-radius: 0 0 24px 24px;
+}
+.ky-dialog :deep(.van-dialog__confirm) {
+  border-left: 1px solid $bg-input-disable;
+  font-weight: normal;
+  font-size: 34px;
+}
+.ky-dialog :deep(.van-dialog__cancel) {
+  font-size: 34px;
+  color: $text-color-level1;
+}
+.ky-dialog :deep(.van-dialog) {
+  overflow: visible;
+}

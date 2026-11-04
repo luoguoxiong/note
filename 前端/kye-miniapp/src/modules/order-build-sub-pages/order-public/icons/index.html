@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG</title>
+    <style>
+      .svgContainer {
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: repeat(8, 1fr);
+        row-gap: 10px;
+        column-gap: 10px;
+      }
+
+      .svg-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .svg-item-name {
+        margin-top: 5px;
+        cursor: pointer;
+        color: #7556ed;
+      }
+    </style>
+    <script type="module">
+      // 导入同目录下的所有svg文件名
+      import svgNames from './svgNames.js'
+      // 创建img标签并设置src属性为svg文件路径
+      for (let name of svgNames) {
+        let img = document.createElement('img')
+        img.src = './svg/' + name
+        img.alt = name
+
+        let div = document.createElement('div'),
+          span = document.createElement('span'),
+          input = document.createElement('input'),
+          iconClass = name.replace(".svg",'')
+
+        div.className = 'svg-item'
+        span.innerHTML = iconClass
+        span.className = 'svg-item-name'
+
+        input.value = `<SvgIcon :name="'${iconClass}'" />`
+        input.style.opacity=0;
+        input.readOnly=true;
+
+        div.appendChild(img)
+        div.appendChild(span)
+        div.appendChild(input)
+
+        span.addEventListener('click',function (e){
+          let order = e.target.nextSibling;
+          
+          order.select();
+          document.execCommand('copy');
+          
+          alert(`${order.value}`)
+        })
+
+        document.querySelector('.svgContainer').appendChild(div);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="svgContainer"></div>
+  </body>
+</html>

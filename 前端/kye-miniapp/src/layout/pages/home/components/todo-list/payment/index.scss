@@ -1,0 +1,74 @@
+@import '../common.scss';
+
+.payment-item {
+  @include card;
+
+  .payment-item__header {
+    @include card-header;
+    .ky-tag {
+      margin: 0;
+      margin-left: 8px;
+    }
+  }
+
+  .payment-item__content {
+    &.payment-item__content--month {
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .payment-item__month_field {
+        display: flex;
+        flex-direction: column;
+        width: 315px;
+
+        & > view:first-child {
+          font-size: 28px;
+          font-weight: normal;
+          line-height: 40px;
+          color: #686b75;
+        }
+
+        & > view:last-child {
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 46px;
+          color: #24262b;
+          margin-top: 8px;
+
+          text {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 34px;
+            color: #24262b;
+          }
+        }
+      }
+    }
+    .payment-item__info {
+      @include express-info;
+    }
+
+    .payment-item__content-form {
+      @include form;
+      padding-bottom: 24px;
+    }
+  }
+
+  .payment-item__footer {
+    @include card-footer;
+    .payment-item__price {
+      font-size: 34px;
+      font-weight: 600;
+      line-height: 48px;
+      color: #ff706d;
+      vertical-align: bottom;
+
+      .payment-item__price-unit {
+        font-size: 28px;
+        line-height: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.goods-popup-bottom .container__body{
+  padding: 0 !important;
+}
+.good-time-header{
+  height: 98px;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.goods-time-header--left{
+  font-size: 34px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.goods-time-header-icon{
+  width: 26px;
+  height: 26px;
+  margin-left: 8px;
+}
+.goods-time-header--right{
+  width: 32px;
+  height: 32px
+}

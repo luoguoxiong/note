@@ -1,0 +1,148 @@
+.address-unfold-person-mobile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  // z-index: 10 !important;
+
+  // @include hairline(after, $border-bottom-color, bottom);
+  .person,
+  .mobile {
+    box-sizing: border-box;
+  }
+
+  .mobile-container {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    .mobile {
+      flex: 2;
+    }
+
+    .extTelphone {
+      flex: 1;
+    }
+
+    .line {
+      width: 12px;
+      height: 2px;
+      background: #24262b;
+      box-sizing: border-box;
+      margin-right: 16px;
+    }
+  }
+
+  .mobile-dashed-box.ky-field-order.required-field::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 16px;
+    bottom: 0;
+    transform: scaleY(0.5);
+    border-bottom: 4px dashed #ebedf5;
+    left: 50px;
+  }
+
+  .mobile-dashed-box.ky-field-order.required-field.is-focus::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 16px;
+    bottom: 0;
+    transform: scaleY(0.5);
+    border-bottom: 5px dashed $primary;
+    left: 50px;
+  }
+
+  .extTelphone.mobile-dashed-box.ky-field-order::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 16px;
+    bottom: 0;
+    transform: scaleY(0.5);
+    border-bottom: 4px dashed #ebedf5;
+  }
+
+  .extTelphone.mobile-dashed-box.ky-field-order.is-focus::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 16px;
+    bottom: 0;
+    transform: scaleY(0.5);
+    border-bottom: 5px dashed $primary;
+  }
+
+  .person {
+    .ky-cell__value {
+      border-right: 1.5px solid $border-bottom-color;
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 1px;
+        height: 28px;
+        background-color: $border-bottom-color;
+        content: '';
+        transform: translateY(-50%);
+      }
+    }
+    // 下划线重合问题
+    .ky-field {
+      &::after {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .mobile.ky-field {
+    flex-shrink: 0;
+    width: 50%;
+    padding-left: 0px;
+    box-sizing: border-box;
+
+    &.required-field {
+      padding-left: 42px;
+      .required {
+        left: 0px;
+      }
+    }
+    .ky-field {
+      // 下划线重合问题
+      &__body {
+        padding-right: 0;
+      }
+      &::after {
+        border-bottom: 0;
+      }
+    }
+  }
+  .mobile {
+    .ky-field--top {
+      width: 100%;
+    }
+  }
+  .ky-field {
+    // .ky-input--bottom {
+    //   padding: 0 10px;
+    // }
+    .required {
+      left: 0;
+      margin-top: -14px;
+    }
+  }
+  .ky-input {
+    border-bottom: 1px solid transparent;
+  }
+  .ky-input--foucus {
+    border-bottom: 1px solid transparent;
+  }
+}

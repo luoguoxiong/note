@@ -1,0 +1,6 @@
+/public
+/node_modules
+/dist
+.eslintrc.js
+/src/utils/iframeBridge/index.ts
+/src/stores/home.ts

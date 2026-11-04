@@ -1,0 +1,116 @@
+.ky-field-order {
+  width: 100%;
+  font-weight: 600;
+  box-sizing: border-box;
+
+  .ky-input--bottom {
+    padding: 0 8px !important;
+  }
+
+  &.required-field {
+    // display: flex;
+    // align-items: center;
+    position: relative;
+    padding-left: 42px;
+    .required {
+      width: 42px;
+      height: 26px;
+      position: absolute;
+      left: 0;
+      top: 26px;
+      padding: 1px;
+      box-sizing: border-box;
+    }
+  }
+  .readonly {
+    min-height: 40px;
+    font-size: 28px;
+    padding: 16px 8px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .placeholder {
+      color: #adb0b8;
+      font-weight: 400;
+    }
+    &.disabled {
+      background-color: #f2f3f7;
+    }
+  }
+  .ky-field--error {
+    color: $error;
+    .placeholder {
+      color: inherit;
+    }
+  }
+  @include hairline(after, $border-bottom-color, bottom) {
+    left: 0px;
+  }
+  .ky-field__control {
+    color: #03050d;
+  }
+
+  &.is-focus {
+    @include hairline(after, $primary, bottom) {
+      border-bottom: 5px solid $primary;
+      z-index: 2;
+      left: 0;
+    }
+  }
+
+  &.required-field {
+    @include hairline(after, $border-bottom-color, bottom) {
+      left: 0px;
+    }
+    &.is-focus {
+      @include hairline(after, $primary, bottom, 0, 0) {
+        border-bottom: 5px solid $primary;
+        z-index: 2;
+        left: 0;
+      }
+    }
+  }
+}
+
+// 禁用样式
+.ky-field-disabled {
+  position: relative;
+
+  .ky-cell {
+    .ky-field {
+      &__body {
+        background-color: #f2f3f7;
+        input {
+          color: #03050d;
+          border-radius: 0;
+        }
+      }
+
+      &__control {
+        // 原生input 禁用状态下的 placeholder 颜色
+        &::placeholder {
+          color: $text-color-level5;
+        }
+      }
+    }
+  }
+
+  .ky-field-disabled-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+}
+
+.ky-field-disabled[data-position='left'] {
+  .ky-cell {
+    .van-field {
+      &__body {
+        background: linear-gradient(to right, #f2f3f7 calc(100% - 24px), transparent 24px);
+      }
+    }
+  }
+}

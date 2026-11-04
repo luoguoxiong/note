@@ -1,0 +1,41 @@
+.update-goods-time-footer {
+  width: 100%;
+  background: #fff;
+  height: calc(120px + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 32px calc(32px + env(safe-area-inset-bottom)) 32px;
+  gap: 16px;
+
+  box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.05);
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border-width: 1px 0px 0px 0px;
+  border-style: solid;
+  border-color: #EBEDF5;
+
+  .ky-radio-content {
+    flex: 1;
+
+    :deep(.radio-content) {
+      margin-top: -2px;
+    }
+
+    .radio-text {
+      display: flex;
+      font-size: 28px;
+      font-weight: normal;
+      line-height: 40px;
+
+      .all-check {
+        color: #24262B;
+      }
+
+      .number-text {
+        color: #686B75;
+        margin-left: 12px;
+      }
+    }
+  }
+}

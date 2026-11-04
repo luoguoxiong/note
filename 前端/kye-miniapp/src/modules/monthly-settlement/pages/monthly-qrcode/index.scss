@@ -1,0 +1,166 @@
+.monthly-qrcode {
+  position: relative;
+  min-height: 100vh;
+  background: #fff;
+
+  // 位于 ky-container__content（flex column）内：flex:1 精确填满导航栏以下区域，
+  // 不再用 100vh（容器内 100vh 会多出导航栏高度，导致缺省页可误滚动）
+  &__loading,
+  &__page-error {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f8fa;
+  }
+
+  &__body {
+    position: relative;
+    // min-height: 100vh;
+    box-sizing: border-box;
+    // 底部不再预留空间：刷新栏在文档流内（sticky 吸底），自身占位
+    padding: 80px 64px 0;
+    // 页面紫色氛围渐变（设计稿 容器49598；Pixso 90° = CSS 180°，自上而下渐隐）
+    background: linear-gradient(180deg, rgba(131, 101, 246, 0.16) 25.4%, rgba(131, 101, 246, 0) 100%);
+  }
+
+  // 顶部装饰底图（设计稿 矩形2：右上紫色光晕）
+  // CDN 图按页面可视区 750×320 @2x 导出（原节点 1080×480，右侧 330px 出血为透明渐变，导出已裁掉）
+  &__bg-decor {
+    position: absolute;
+    left: 0;
+    top: -110px;
+    width: 750px;
+    height: 320px;
+  }
+
+  // 顶部插图：整块切图（渐变底 + 标题 + 水印 + 手机插图），含顶部 44px 留白
+  &__header-img {
+    position: relative;
+    width: 622px;
+    height: 192px;
+    display: block;
+  }
+  // 二维码卡片：设计稿固定 622×700（各状态同高），缺省内容在卡内垂直居中
+  &__qr-card {
+    position: relative;
+    margin-top: -24px;
+    box-sizing: border-box;
+    height: 700px;
+    padding: 48px 24px; // $gap-48 / $gap-24
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 700px; // 固定卡片高度：加载态/缺省态与二维码态同高，避免切换抖动
+    border-radius: 24px; // $radius-24
+    border: 1px solid #e0d6ff; // $border-width-1，设计稿为渐变描边，取端点色
+    background:
+      linear-gradient(225deg, rgba(131, 101, 246, 0.08) 0%, rgba(131, 101, 246, 0) 100%), #ffffff; // $white，设计稿淡紫在右上、向左下渐隐（以截图像素采样为准）
+  }
+
+  // 设计稿展示字体（Alimama Agile VF，字体体系外的品牌展示字），按设计稿取值
+  &__headline {
+    font-size: 44px;
+    line-height: 52px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #5643a2;
+    text-align: center;
+  }
+
+  &__qr-frame {
+    position: relative;
+    margin-top: 32px; // $gap-32
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff; // $white
+    border: 8px solid #e0d6ff;
+    border-radius: 16px; // $radius-16
+    box-sizing: border-box;
+  }
+
+  &__qr-image {
+    width: 380px;
+    height: 380px;
+  }
+
+  // 刷新中加载态：占满卡片并居中（设计稿 31:9565，spinner + 加载中）
+  &__card-loading {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__validity {
+    margin-top: 32px; // $gap-32
+    text-align: center;
+  }
+
+  &__validity-label {
+    font-size: 28px; // $fs-28
+    line-height: 40px; // $lh-40
+    color: #686b75; // $text-color-level2
+  }
+
+  &__validity-value {
+    margin-top: 8px; // $gap-8
+    font-size: 28px; // $fs-28
+    line-height: 40px; // $lh-40
+    color: #24262b; // $text-color-level1
+  }
+}
+
+.refresh-bar {
+  // sticky 吸底：文档流位于 body 末尾，内容超高滚动时吸附视口底部，盖在最上层
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  // 负边距出血抵满页面宽（body 两侧有 64px 内边距），顶部与卡片保持 32px 间距（设计稿 容器49605 底→容器49607 顶）
+  margin: 32px -64px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  // 设计稿 容器49607 高 400px：按钮顶部对齐（上 32px），下方留白渐隐至 Home Indicator
+  height: calc(280px + env(safe-area-inset-bottom));
+  padding: 32px 48px env(safe-area-inset-bottom);
+  // 渐变透明背景（设计稿 容器49607：自上而下透明→白；首色标取全透明避免顶部分界边）
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 20.47%, #ffffff 40%);
+
+  &__btn {
+    width: 140px; // 按钮热区（设计稿 扫码加入/按钮）
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__circle {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff; // $white
+    border: 2px solid #e6e8ed; // $border-width-2 / $border-default-color
+    border-radius: 50%;
+  }
+
+  &__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  &__text {
+    margin-top: 16px; // $gap-16
+    font-size: 28px; // $fs-28
+    line-height: 40px; // $lh-40
+    color: #24262b; // $text-color-level1
+    text-align: center;
+  }
+}

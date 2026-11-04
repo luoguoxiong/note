@@ -1,0 +1,62 @@
+.address-unfold-header {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+      display: flex;
+      align-items: center;
+
+      &__icon {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        line-height: 40px;
+        padding: 7px;
+        background: #03050d;
+        border-radius: 12px;
+        box-sizing: border-box;
+
+        .text {
+          font-size: 26px;
+          font-weight: $font-bold;
+          color: #fff;
+        }
+      }
+
+      &__content {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+        .text {
+          font-size: 32px;
+          font-weight: $font-bold;
+          color: #03050d;
+        }
+
+        .required {
+          width: 42px;
+          margin-left: 8px;
+        }
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+
+      &__btn {
+        display: flex;
+        align-items: center;
+        &:last-child {
+          margin-left: 20px;
+        }
+      }
+      .mr-16 {
+        margin-right: 16px;
+      }
+    }
+  }
+}

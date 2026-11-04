@@ -1,0 +1,105 @@
+@import '@order-global-package-order-sub/styles/index.scss';
+
+.pickup-information-container {
+  background: $bg-page;
+  box-sizing: border-box;
+  overflow-y: auto;
+  min-height: 100vh;
+  padding-bottom: calc(125px + env(safe-area-inset-bottom, 40px));
+
+  &_body {
+    padding: 0 20px;
+  }
+
+  .card-container {
+    margin-top: 20px;
+  }
+
+  .pick-up-card {
+    .tip {
+      margin: 0;
+      background: transparent;
+    }
+
+    // 给取货司机捎句话区块：本区块无内容区，覆盖 CardBlock 默认内边距为设计稿 28px 24px
+    &.driver-message-card {
+      padding: 28px 24px;
+    }
+
+    .driver-message-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1;
+      min-width: 0;
+      margin-left: 16px;
+    }
+
+    .driver-message-text {
+      flex: 1;
+      min-width: 0;
+      // font-weight: 600;
+      font-size: 28px;
+      line-height: 36px;
+      color: #03050d;
+      text-align: right;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .driver-message-placeholder {
+      flex: none;
+      color: #adb0b8;
+    }
+
+    .driver-message-arrow {
+      flex: none;
+      width: 24px;
+      height: 24px;
+      margin-left: 8px;
+    }
+
+    .desc-tip {
+      color: #8365f6;
+      font-size: 24px;
+    }
+
+    .pickup-top-tip {
+      font-size: 24px;
+      line-height: 34px;
+      color: #8c8f99;
+      margin-top: 16px;
+    }
+
+    .pickup-information-file-item {
+      border-top: 0;
+      border-bottom: 1px solid #e6e8ed;
+    }
+  }
+
+  .pickup-up-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 20px calc(20px + env(safe-area-inset-bottom, 20px)) 20px;
+    margin-bottom: 0;
+    background: #fff;
+    box-sizing: border-box;
+  }
+}
+
+/* #ifdef h5 */
+.pickup-information-container {
+  .pickup-up-footer {
+    max-width: 750px !important;
+    margin: 0 auto;
+  }
+}
+/* #endif */
+.pickup-in-c-h {
+  overflow: hidden;
+  height: 100vh;
+}

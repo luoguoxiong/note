@@ -1,0 +1,35 @@
+.splash-ad-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-ad-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.splash-ad-close-btn {
+  position: absolute;
+  top: 152px;
+  right: 30px;
+  width: 140px;
+  height: 68px;
+  border-radius: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  font-weight: normal;
+  font-size: 28px;
+  letter-spacing: normal;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

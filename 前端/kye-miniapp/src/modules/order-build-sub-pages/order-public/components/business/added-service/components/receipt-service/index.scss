@@ -1,0 +1,329 @@
+.receipt-service {
+  // @include atomic;
+  .ky-button--block {
+    flex: 1;
+  }
+  position: relative;
+  .lh20 {
+    line-height: 40px;
+  }
+  .jsx-receipt-check-type {
+    // :deep(.van-checkbox) {
+    //   display: flex;
+    //   align-items: center;
+    //   margin-left: 16px;
+    //   .van-checkbox__label {
+    //     margin-left: 4px;
+    //     line-height: 1;
+    //   }
+    //   .van-checkbox__icon {
+    //     display: flex;
+    //     align-items: center;
+    //   }
+
+    //   font-size: 24px;
+    //   .svg-icon {
+    //     width: 28px;
+    //     height: 28px;
+    //   }
+    // }
+    .item-checked-text {
+      color: #8365f6;
+    }
+  }
+  .radio-item {
+    &.radio-item-two {
+      .ky-radio--horizontal {
+        margin-left: 16px;
+      }
+    }
+    .font-special {
+      font-size: 16px;
+    }
+    .ky-radio--horizontal {
+      margin-right: 0;
+      margin-left: 5px;
+    }
+    .ky-radio__label {
+      margin-left: 4px;
+      line-height: 1;
+      font-size: 24px;
+    }
+    .radio-icon {
+      // margin-top: -4px;
+      font-size: 28px;
+    }
+    .ky-radio {
+      .ky-radio__icon {
+        display: flex;
+        align-items: center;
+        padding-top: 2px;
+      }
+    }
+    .ky-radio__icon {
+      position: relative;
+      top: -1px;
+    }
+  }
+  // .radio-item2 {
+  //   :deep(.font-special) {
+  //     font-size: 16px;
+  //   }
+  //   :deep(.van-radio-group--horizontal) {
+  //     justify-content: end;
+  //   }
+  //   :deep(.van-radio--horizontal) {
+  //     margin-right: 0;
+  //     margin-left: 32px;
+  //   }
+  //   :deep(.van-radio__label) {
+  //     margin-left: 4px;
+  //     line-height: 1px;
+  //     font-size: 24px;
+  //   }
+  //   :deep(.radio-icon) {
+  //     // margin-top: -4px;
+  //     font-size: 28px;
+  //   }
+  //   :deep(.van-radio) {
+  //     .van-radio__icon {
+  //       display: flex;
+  //       align-items: center;
+  //     }
+  //   }
+  //   :deep(.van-radio__icon) {
+  //     position: relative;
+  //     top: -1px;
+  //   }
+  // }
+  .edit-return-waybill {
+    position: absolute;
+    inset: 0;
+    z-index: 12;
+  }
+  .receipt-service-type-title {
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .receipt-fee {
+      /* 移动端/【常规】文本/不加粗/【24】-常规体 */
+      /* 样式描述：字重400，行高34，动态提示文案、气泡、报错、层级较多的正文、提示类 */
+      font-family: PingFang SC;
+      font-size: 24px;
+      font-weight: normal;
+      letter-spacing: normal;
+      /* C4-Red/★05-#FF706D-Nor+文字链接 */
+      color: #ff706d;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+  .receipt-service-type {
+    // padding-bottom: 24px;
+    .receipt-service-type-tag {
+      position: relative;
+      height: 68px;
+      // width: 160px;
+      // width: auto;
+      margin-left: 16px;
+      border: 1.5px solid #cfd2de;
+      border-radius: 12px;
+      &:first-child {
+        margin-left: 0;
+      }
+      .fix-top-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 22px;
+        .svg-icon {
+          width: 52px;
+          height: 22px;
+        }
+      }
+      .urgent {
+        margin-left: 4px;
+        // font-size: 14px;
+      }
+
+      // :deep(.van-button__text) {
+      //   display: flex;
+      //   align-items: center;
+      //   font-size: 28px;
+      //   flex-direction: column;
+      // }
+    }
+    // .single-btn-tag {
+    //   width: 30%;
+    // }
+    .tag-selected {
+      color: $primary;
+      background-color: $selected;
+      border: 2px solid $primary;
+      box-sizing: border-box;
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 74px;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        margin-left: -13px;
+        background-color: #fcfcfc;
+        border: 2px solid $bg-input-disable;
+        content: '';
+        border-right: none;
+        border-bottom: none;
+        transform: rotate(45deg);
+        box-sizing: border-box;
+      }
+    }
+    .tag-not-selected {
+      color: #03050d;
+      background-color: #fff;
+    }
+    .check-result-tips {
+      &::after {
+        bottom: -86px;
+      }
+    }
+    .receipt-ai {
+      &::after {
+        width: 0;
+        height: 0;
+        content: '';
+      }
+    }
+    .tag-disabled {
+      color: $text-color-level5;
+      background: #f2f3f7;
+      border: 1.5px solid #ebedf5;
+    }
+    .tag-unfold {
+      flex: 1;
+    }
+  }
+  .receipt-ai-tips {
+    padding-bottom: 24px;
+    font-size: 24px;
+    color: #ff9300;
+    svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+  .receipt-service-options {
+    padding: 16px;
+    padding-top: 0;
+    // margin-bottom: 36px;
+    background-color: #f7f8fa;
+    border: 2px solid $bg-input-disable;
+    border-radius: 12px;
+    .receipt-service-options-cell {
+      padding: 16px;
+      margin-top: 16px;
+      background-color: #fff;
+      border-radius: 10px;
+      .cell-left {
+        position: relative;
+        font-size: 24px;
+        font-weight: bold;
+        color: #03050d !important;
+      }
+      .cell-right {
+        // :deep(.van-stepper__input) {
+        //   font-weight: 600;
+        // }
+        // :deep(.van-radio__icon) {
+        //   svg {
+        //     box-sizing: border-box;
+        //   }
+        // }
+        .receipt-checkTips {
+          font-size: 24px;
+          font-weight: normal;
+          line-height: 24px;
+          text-align: right;
+          letter-spacing: 0px;
+          color: #ff9300;
+        }
+      }
+      .ky-radio {
+        margin-bottom: -9px;
+        .ky-radio-text {
+          margin-left: 4px;
+        }
+      }
+      .ky-checkbox-group .ky-checkbox {
+        margin-bottom: -6px;
+      }
+      .ky-checkbox-icon {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+  .cell-left-required {
+    width: 40px;
+    margin-left: 8px;
+  }
+  .receipt-service-info {
+    padding: 32px 24px;
+    // margin-bottom: 40px;
+    background-color: #F7F8FA;
+    border: 2px solid $bg-input-disable;
+    border-radius: 12px;
+    .receipt-service-info-cell {
+      .info-cell-left {
+        -webkit-text-fill-color: #03050d !important;
+        .info-cell-left-icon {
+          display: block;
+          width: 44px;
+          height: 44px;
+          margin-right: 12px;
+        }
+      }
+      .info-cell-right {
+        -webkit-text-fill-color: #03050d !important;
+      }
+    }
+    &.kye-pinchhit {
+      margin-top: 16px;
+      height: 108px;
+      box-sizing: border-box;
+      border: 0;
+      background-color: #fff;
+    }
+    .color-assist {
+      color: #888ea6;
+      -webkit-text-fill-color: #888ea6 !important;
+    }
+  }
+  .returnTips {
+    display: flex;
+    font-size: 24px;
+    text-align: right;
+    color: #ff9300;
+    margin-top: 12px;
+    gap: 8px;
+    .icon-tips {
+      display: flex;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+      height: 24px;
+      width: 24px;
+      margin-right: 4px;
+      .icon-item {
+        height: 100%;
+        width: 100%;
+        font-size: unset;
+      }
+    }
+  }
+  .mt--2 {
+    margin-top: -2px;
+  }
+}

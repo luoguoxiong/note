@@ -1,0 +1,40 @@
+.address-book-skeleton {
+  margin: 0 20px;
+
+  :deep(.van-skeleton) {
+    display: flex;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 40px;
+    background: #fff;
+    border-radius: 24px;
+    flex-direction: column;
+
+    .margin {
+      margin-top: 12px;
+    }
+
+    .background {
+      background: linear-gradient(90deg, #f1f3f9 0%, #f8faff 99%);
+    }
+
+    .height {
+      height: 40px;
+      border-radius: 8px;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .width420 {
+      width: 420px;
+    }
+
+    .width144 {
+      width: 144px;
+    }
+  }
+}

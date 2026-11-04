@@ -1,0 +1,32 @@
+.exbition {
+  color: #24262b;
+  box-shadow: none;
+  text-align: right;
+  padding: 14px 0 14px 16px;
+
+  .value-content {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .placeholder-content {
+    color: #adb0b8;
+    font-size: 28px;
+    width: 100%;
+    text-align: right;
+  }
+
+  .value-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &-img {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

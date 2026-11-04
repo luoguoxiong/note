@@ -1,0 +1,176 @@
+.goods-time {
+  width: 100%;
+  position: relative;
+
+  .van-cell::after {
+    // 平板兼容修复
+    border-bottom: 0 !important;
+  }
+
+  .cell-wrapper {
+    .van-cell {
+      &::after {
+        border-bottom: 0 !important;
+      }
+    }
+  }
+
+  .background-transparent {
+    background-color: transparent;
+  }
+
+  .van-cell {
+    padding: 0;
+  }
+
+  .driver {
+    display: none;
+  }
+
+  .goods-time-title {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: $text-color-level1;
+    font-weight: $font-normal;
+    letter-spacing: 0;
+  }
+
+  .title-text {
+    flex: 1;
+    align-items: center;
+
+    @include multi-ellipsis;
+  }
+
+  .required-icon {
+    width: 40px;
+    margin-left: 8px;
+
+    .svg-icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .cell-content {
+    position: relative;
+    box-sizing: border-box;
+
+    &.tips-padding {
+      padding: 0 24px 36px;
+
+      .warn-tips {
+        padding: 0;
+      }
+    }
+
+    .ky-cell__value {
+      width: 400px !important;
+      flex: unset !important;
+    }
+
+    .no-bottom-line {
+      border-bottom: unset !important;
+
+      &::after {
+        border-bottom: 0 !important;
+      }
+    }
+  }
+
+  .value-content {
+    width: 100%;
+    font-weight: 600;
+    font-size: 30px;
+    @include multi-ellipsis;
+
+    .now-goods-time {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .time {
+      font-size: 30px;
+    }
+
+    .now-tips {
+      font-size: 24px;
+      font-weight: normal;
+      line-height: 24px;
+      text-align: right;
+      letter-spacing: 0;
+      color: #55596c;
+    }
+
+    .no-data {
+      display: inline-block;
+      width: 100%;
+      font-size: 28px;
+      text-align: right;
+      font-weight: normal;
+      line-height: 28px;
+    }
+  }
+
+  .warn-tips {
+    position: relative;
+    box-sizing: border-box;
+    font-size: 24px;
+    color: #ff706d;
+    font-weight: normal;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+
+    .err-tip {
+      width: 42px;
+      height: 42px;
+      margin-top: -4px;
+      margin-right: 6px;
+    }
+
+    .goods-time-tips {
+      background-size: calc(100% - 4px), calc(100% - 4px);
+    }
+
+    .tips-text {
+      flex: 1;
+    }
+
+    .warn-tips-icon {
+      align-self: flex-start;
+    }
+
+    .text {
+      color: #ff706d;
+    }
+
+    .night-pickup-fee-icon {
+      width: 24px;
+      height: 24px;
+      margin-top: 6px;
+      margin-right: 4px;
+      line-height: 36px;
+    }
+
+    .no-night-pickup-fee-icon {
+      width: 24px;
+      height: 24px;
+      line-height: 36px;
+      margin-top: 4px;
+      margin-right: 4px;
+    }
+  }
+
+  .van-cell__value {
+    width: 400px;
+    font-size: 30px;
+    flex: unset;
+  }
+
+  .van-cell__title {
+    flex: 1;
+  }
+}

@@ -1,0 +1,131 @@
+.phone-login-page{
+  height: 100%;
+  background-image: url(https://ic-img.ky-express.com/netc/20230913_7305448871_!!1694592778191_1500_960.png);
+  background-size: 100% 480px;
+  background-repeat: no-repeat;
+}
+
+.login-form-wrap{
+  border-radius: 20px;
+  background: white;
+  padding: 52px 40px 0;
+  box-sizing: border-box;
+  .ky-button{
+    width: 100%;
+  }
+}
+.input-wrap{
+  padding-bottom: 32px;
+  .ky-input--wrapper {
+    height: 84px;
+    .ky-input--right-slot {
+      height: 84px;
+      line-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .eye {
+        height: 100%;
+      }
+    }
+  }
+  .ky-input--input-container {
+    //padding: 22px 0;
+    padding: 0;
+    .h5-input, custom-input{
+      height: 84px;
+      line-height: 84px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .ky-input--error {
+    border-color: #FF706D;
+  }
+}
+
+.sms-code{
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: -0.68px;
+  color: #8365F6;
+}
+.sms-code.disabled{
+  color: #CACACA;
+}
+.login-tip{
+  height: 124px;
+  padding-bottom: 96px;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: #888EA6;
+  box-sizing: border-box;
+}
+.login-tip-icon{
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+}
+.error-msg{
+  padding-top: 16px;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: #FF706D;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.eye{
+  width: 48px;
+  height: 48px;
+}
+
+.pwd-login-tip{
+  height: 124px;
+  padding-bottom: 96px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remember-pwd{
+  display: flex;
+  align-items: center;
+  .check-image{
+    width: 32px;
+    height: 32px;
+  }
+  .remember-text{
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #55596C;
+    padding-left: 8px;
+  }
+}
+
+.forget-pwd{
+  display: flex;
+  align-items: center;
+  .forget-image{
+    width: 24px;
+    height: 24px;
+  }
+  .forget-text{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: normal;
+    color: #8365F6;
+    padding-right: 6px;
+  }
+}

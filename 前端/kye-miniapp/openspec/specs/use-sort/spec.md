@@ -1,0 +1,27 @@
+# use-sort Specification
+
+## Purpose
+TBD - created by archiving change waybill-config. Update Purpose after archive.
+## Requirements
+### Requirement: 长按拖拽排序
+`useSort` hook SHALL 提供长按字段行 sort 手柄触发拖拽、随手指/指针移动实时调整列表顺序的能力，松手后固化为新顺序。排序 SHALL 仅在运单信息、功能按钮模块的字段列表上启用。
+
+#### Scenario: 长按拖动调整顺序
+- **WHEN** 用户长按某字段行的 sort 手柄并拖动到目标位置后松手
+- **THEN** 列表顺序更新为拖动后的新顺序
+
+#### Scenario: 拖动过程实时反馈
+- **WHEN** 用户拖动字段行经过其他字段行
+- **THEN** 列表在拖动过程中实时反映临时顺序，被经过的项让位
+
+### Requirement: 排序结果持久化到配置
+拖拽结束 SHALL 将新顺序写回各字段的 `order` 属性（按列表位置从 1 开始递增），并同步至页面配置，使保存时提交的顺序与界面一致。
+
+#### Scenario: 拖拽后 order 重排
+- **WHEN** 用户拖动字段 A 至列表第一位并松手
+- **THEN** 字段 A 的 order 更新为 1，其后各字段 order 按新顺序依次递增
+
+#### Scenario: 排序结果同步页面配置
+- **WHEN** 拖拽结束并关闭弹窗后用户点击保存
+- **THEN** 提交的配置中各字段 order 与弹窗内拖拽后的顺序一致
+

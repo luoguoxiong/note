@@ -1,0 +1,53 @@
+.demo-box{
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box{
+  padding: 20px;
+  background: rgb(179, 47, 255);
+  border-radius: 20px;
+  text-align: center;
+}
+.test-content {
+  width: 200px;
+  height: 200px;
+  background: green;
+  position: relative;
+  display: inline-block;
+}
+
+.inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px; /* 为内容留出内边距 */
+  background: white;
+  width: fit-content; /* 让宽度根据内容自适应 */
+  word-break: keep-all;
+  box-sizing: border-box;
+}
+
+.theme-buttons {
+  width: 100vw;
+  margin-top: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.theme-btn {
+  flex: 1;
+  height: 80px;
+  margin-right: 8px;
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

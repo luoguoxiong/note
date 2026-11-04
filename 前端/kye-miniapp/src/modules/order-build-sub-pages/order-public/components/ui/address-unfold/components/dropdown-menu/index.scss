@@ -1,0 +1,95 @@
+.address-unfold-dropdown-menu {
+  position: absolute;
+  top: 112px;
+  left: -23px;
+  z-index: 30;
+  display: flex;
+  overflow: hidden;
+  width: calc(706px);
+  max-height: 578px;
+  background: #fff;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 8px 15px 0 rgb(0 0 0 / 10%);
+  flex-direction: column;
+  box-sizing: border-box;
+
+  .content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    cursor: pointer;
+
+    @include hairline(after, $border-bottom-color, bottom);
+
+    pointer-events: initial;
+
+    &:active {
+      background: rgb(79 9 217 / 6%);
+    }
+
+    &__connect {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      color: #03050d;
+
+      &__name {
+        overflow: hidden;
+        font-size: 28px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: $font-bold;
+      }
+
+      &__mobile {
+        flex-shrink: 0;
+        margin-left: 12px;
+        font-size: 26px;
+        font-weight: $font-bold;
+      }
+    }
+
+    &__companyName,
+    &__telephone {
+      display: flex;
+      margin-top: 12px;
+      font-size: 26px;
+      font-weight: $font-normal;
+      color: #55596c;
+    }
+
+    &__address {
+      margin-top: 12px;
+      font-size: 26px;
+      text-align: justify;
+      color: #888ea6;
+      font-weight: $font-normal;
+      line-height: 36px;
+      word-break: break-all;
+    }
+  }
+
+  .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
+    box-shadow: 0 -6px 20px 0 rgb(184 171 255 / 10%);
+
+    &__text {
+      font-size: 32px;
+      font-weight: $font-bold;
+      color: #8365f6;
+    }
+  }
+}
+
+.mobile-menu-position {
+  top: 212px;
+}

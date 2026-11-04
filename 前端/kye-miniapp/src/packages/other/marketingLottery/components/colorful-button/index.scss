@@ -1,0 +1,26 @@
+.common-button {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0 20px 0;
+    font-family: "PingFangSC, PingFangSC-Semibold;";
+    font-weight: 600;
+    font-size: 46px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.colorful-button {
+    background-image: url('https://ic-h5.kye-erp.com/intro/miniprogram/marketing-lottery/large-button-bg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #920f05;
+}
+.colorful-button-new {
+    background-image: url('https://ic-img.ky-express.com/default/20230315_57859032911_!!1678887652315_1156_196.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+

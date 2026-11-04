@@ -1,0 +1,118 @@
+<view class="waybill-card">
+  <view class="waybill-card-head" catchtap="noop">
+    <view class="waybill-card-head-left" bindtap="copyText" catchtouchstart="noop">
+      <block>
+        <view class="waybill-card-number">
+          <image wx:if="{{waybillParentIndenDetail}}" src="{{waybillParentIndenDetail}}" />
+          <text>{{baseInfo.waybillNumber || baseInfo.orderNumber || '--'}}</text>
+        </view>
+      </block>
+
+      <view class="waybill-card-copy">
+        <image src="https://ic-img.ky-express.com/netc/20250726_6224_!!1753496748755_56_56.png" />
+      </view>
+    </view>
+
+    <block wx:if="{{baseInfo.waybillNumber}}">
+      <slot name="headRight"></slot>
+    </block>
+  </view>
+
+  <view class="waybill-card-content">
+    <view wx:if="{{functionInfo.storageFeeStatus.showStatus && (functionInfo.storageFeeStatus.operateStatus == 10 || functionInfo.storageFeeStatus.operateStatus == 20)}}" class="waybill-card-absolute">
+      {{functionInfo.storageFeeStatus.showText}}
+    </view>
+
+    <view class="waybill-card-info">
+      <!-- cardInfoLeft slot simplified: cardInfoLeftHtml -->
+      <block wx:if="{{cardInfoLeftHtml}}">
+        <rich-text nodes="{{cardInfoLeftHtml}}"></rich-text>
+      </block>
+
+      <view class="waybill-card-info-right">
+        <view wx:if="{{baseInfo.waybillNumber}}" class="waybill-card-info-head">
+          <view class="send-receive-info">
+            <text class="send-receive-info__city">{{delivery.city || '--'}}</text>
+            <view class="send-receive-info__name">{{delivery.person || '--'}}</view>
+            <view class="send-receive-info__company">{{delivery.customerName || '--'}}</view>
+          </view>
+
+          <view class="send-receive-logistics">
+            <view class="waybill-status {{ waybillErrorStatus ? 'status-error' : '' }}">
+              {{ newExteriorRouteInfo.routeStepDesc || baseInfo.waybillStatusDesc || '--' }}
+            </view>
+            <image src="{{transportImage}}" mode="aspectFit" />
+            <view class="waybill-service">{{ baseInfo.serviceModeDesc || '--' }}</view>
+          </view>
+
+          <view class="send-receive-info send-receive-info-right">
+            <text class="send-receive-info__city">{{(baseInfo.waybillBusinessRange === 10 ? pickup.country : pickup.city) || '--'}}</text>
+            <view class="send-receive-info__name">{{pickup.person || '--'}}</view>
+            <view class="send-receive-info__company">{{pickup.customerName || '--'}}</view>
+          </view>
+
+          <view class="stamp-box">
+            <image wx:if="{{tipsInfo}}" src="{{STAMP_IMAGE_DIC[tipsInfo.sealType]}}" />
+          </view>
+        </view>
+
+        <view wx:else class="waybill-card-info-head">
+          <view class="send-receive-info">
+            <text class="send-receive-info__city">{{delivery.customerName || '--'}}</text>
+            <view class="send-receive-info__company2">{{delivery.address || '--'}}</view>
+          </view>
+          <view class="stamp-box">
+            <image wx:if="{{tipsInfo}}" src="{{STAMP_IMAGE_DIC[tipsInfo.sealType]}}" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- cardContent slot fallback -->
+    <block wx:if="{{cardContentHtml}}">
+      <rich-text nodes="{{cardContentHtml}}"></rich-text>
+    </block>
+
+    <view class="waybill-card-extra">
+      <view wx:if="{{baseInfo.waybillStatus === 40}}" class="waybill-card-extra-status">
+        <view>签收人：</view>
+        <text class="black-color">{{baseInfo.receiver || '--'}}</text>
+      </view>
+
+      <view wx:elif="{{newExteriorRouteInfo.routeStepDesc}}" class="waybill-card-extra-status">
+        <view>{{ newExteriorRouteInfo.routeStepDesc || '--' }}：</view>
+        <text class="black-color">{{ newExteriorRouteInfo.routeDescription || '--' }}</text>
+      </view>
+
+      <view class="waybill-card-extra-info {{(tipsInfo.showLimitTipsStatus && tipsVisible) || (functionInfo.showLabelFlag.showStatus && functionInfo.showLabelFlag.showText) ? 'mb24' : ''}}">
+        <view class="waybill-card-extra-info-label">{{ timeInfo.name }}</view>
+        <view class="waybill-card-extra-info-content">
+          <text class="black-color mr4">{{ timeInfo.time }}</text>
+          <!-- ky-tag 替换为 simple view 标记，父层可传数组 tags -->
+          <block wx:for="{{tags}}" wx:key="index">
+            <view class="ky-tag">{{item.text}}</view>
+          </block>
+        </view>
+      </view>
+
+      <!-- WaybillTips -> 这里通过 visible/tipsContent 与事件回传处理 -->
+      <block wx:if="{{tipsInfo.showLimitTipsStatus && tipsVisible && !isNotshowRestrictTipsVal}}">
+        <!-- minimal tips UI; can be improved -->
+        <view class="waybill-tips-wrap" bindtap="handleTips">
+          {{ tipsInfo.showPaperwork }}
+        </view>
+      </block>
+
+      <view wx:if="{{functionInfo.agingApplyStatus.showStatus}}" class="waybill-card-extra-applyStatus" bindtap="applyStatusClick">
+        <view class="waybill-card-extra-applyStatus-text"> 点击审核“货好时间”变更，超时未审自动同意 </view>
+        <image class="waybill-card-extra-applyStatus-icon" src="https://ic-img.ky-express.com/netc/20250726_3393_!!1753498972424_64_64.png" mode="aspectFit" />
+      </view>
+
+      <view wx:if="{{functionInfo.showLabelFlag.showStatus && functionInfo.showLabelFlag.showText}}" class="waybill-card-extra-label" bindtap="labelClick">
+        <image wx:if="{{isWaybill}}" class="waybill-card-extra-label-icon" src="https://ic-img.ky-express.com/netc/20250603_31972831183_!!1748937025813_81_76.png" mode="aspectFit" />
+        <text class="waybill-card-extra-label-text">标签：{{ functionInfo.showLabelFlag.showText || '--' }}</text>
+      </view>
+    </view>
+  </view>
+  <slot name="cardBottom"></slot>
+</view>

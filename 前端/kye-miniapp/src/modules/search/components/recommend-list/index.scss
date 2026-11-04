@@ -1,0 +1,110 @@
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.recommend-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 48px;
+  .loading-text {
+    height: 40px;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 40px;
+    color: #8C8F99;
+    margin-left: 8px;
+  }
+  .loading-icon {
+    width: 28px;
+    height: 28px;
+    animation: rotate360 2s linear infinite;
+  }
+}
+.search-recommend-list {
+  padding: 0 32px 32px;
+  flex: 1;
+  height: 100%;
+
+  .search-recommend-list__title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #24262b;
+    margin-bottom: 8px;
+  }
+
+  .search-recommend-list__content {
+    height: 100%;
+    flex: 1;
+
+    .search-recommend-list__item {
+      display: flex;
+      align-items: center;
+      padding: 28px 0;
+      border-bottom: 1px solid #e8e9ed;
+      width: 100%; // 确保容器有宽度限制
+      box-sizing: border-box;
+
+      .search-recommend-list__item-icon {
+        flex-shrink: 0; // 禁止图标缩小
+        width: 32px;
+        height: 32px;
+        margin-right: 16px;
+      }
+
+      .search-recommend-list__item-text {
+        // flex: 1; // 占据剩余空间
+        min-width: 0; // 关键属性，允许文本容器缩小
+        font-size: 28px;
+        font-weight: normal;
+        line-height: 40px;
+        color: #24262b;
+        overflow: hidden; // 超出部分隐藏
+        // text-overflow: ellipsis; // 显示省略号
+        // white-space: nowrap; // 不换行
+
+        // .search-recommend-list__item-text-hightlight {
+        //   display: flex;  /* 改用 flex 布局 */
+        //   width: 100%;
+        // }
+      }
+
+      .search-recommend-list__type {
+        flex-shrink: 0; // 禁止类型标签缩小
+        margin-left: 8px;
+        height: 34px;
+        line-height: 34px;
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+        font-size: 24px;
+        font-weight: normal;
+        color: #686b75;
+        border-radius: 4px;
+        box-sizing: border-box;
+        position: relative;
+        // border: 1px solid #d3d5db;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 200%;
+          height: 200%;
+          border: 2px solid #d3d5db;
+          border-radius: 8px;
+          transform: scale(0.5);
+          transform-origin: 0 0;
+          pointer-events: none;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}

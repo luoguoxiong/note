@@ -1,0 +1,102 @@
+.ky-dialog{
+  overflow: visible;
+  .van-dialog__content{
+    overflow: visible;
+  }
+  .van-dialog__message{
+    width: 100%;
+    box-sizing: border-box;
+    //overflow: visible;
+  }
+  .title-container{
+    .title-icon{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      background-size: cover;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+    .title{
+      margin-top: 50px;
+      margin-bottom: 24px;
+      font-size: 34px;
+      color: #03050d;
+      font-weight: bold;
+      text-align: center;
+    }
+    .intro{
+      font-size: 28px;
+      text-align: left;
+      color: #55596c;
+      line-height: 42px;
+      word-break: break-all;
+      p,div{
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .van-button {
+    font-weight: bold;
+  }
+  .van-dialog__footer{
+    border-top: 1px solid #ebedf5;
+    border-radius: 0 0 24px 24px;
+  }
+  .van-dialog__confirm{
+    border-left: 1px solid #ebedf5;
+    font-weight: normal;
+    font-size: 34px;
+  }
+  .van-dialog__cancel{
+    font-size: 34px;
+    font-weight: bold;
+  }
+}
+.ky-title-dialog-call{
+  display: flex;
+  justify-content: center;
+  color: #8365f6;
+  margin: 10px 0 20px;
+  align-items: center;
+  .ky-title-dialog-icon{
+    margin-left: 10px;
+    width: 36px;
+    height: 36px;
+  }
+}
+.message-render {
+  p {
+    display: inline;
+    color: #55596c;
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .picker-limit-contact-phone {
+    vertical-align: text-top;
+    position: relative;
+    display: inline-flex;
+    align-items: flex-end;
+    padding-left: 10px;
+    &-icon-phone {
+      display: inline-block;
+      width: 1.1em;
+      height: 1.1em;
+      margin-right: 10px;
+      background-image: url('https://ic-img.ky-express.com/netc/20250619_6093_!!1750300560568_144_144.png');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    &-tips-text {
+      color: #8365f6;
+      line-height: 1;
+      vertical-align: text-top;
+      font-size: 25px;
+    }
+  }
+}

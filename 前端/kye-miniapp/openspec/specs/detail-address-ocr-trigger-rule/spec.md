@@ -1,0 +1,58 @@
+# detail-address-ocr-trigger-rule Specification
+
+## Purpose
+
+定义「详细地址」输入触发 AI 智能识别的边界：已有任意一级行政区域时不触发识别、保留原始输入；省/市/区三级全空时触发识别。适用于 kye-miniapp-order 与 order-global-package 两处 detail-address 弹窗组件。
+
+## Requirements
+
+### Requirement: 触发边界判断
+
+系统 SHALL 在用户确认详细地址时，依据省/市/区是否已选择来决定是否触发智能识别。
+
+#### Scenario: 已有行政区域不触发识别
+
+- **WHEN** 省/市/区任意一级已选（含半填充）且用户确认详细地址
+- **THEN** 不调用 `aiAddrAnalysis` 识别接口，详细地址保留原始输入（标点、结构、字符均不修改），不校验省市区一致性、不提示
+
+#### Scenario: 三级全空触发识别
+
+- **WHEN** 省/市/区三级均为空且用户确认详细地址
+- **THEN** 调用 `aiAddrAnalysis` 识别，成功时回填省市区 + 详细地址
+
+### Requirement: 回填后再编辑
+
+系统 SHALL 在识别回填省市区后，再次编辑详细地址时按「已有行政区域」规则跳过识别。
+
+#### Scenario: 回填后再编辑不识别
+
+- **WHEN** 无行政区域识别回填省市区后，用户再次编辑详细地址并确认
+- **THEN** 判定已有行政区域，不触发识别，保留新输入
+
+#### Scenario: 清空省市区恢复识别
+
+- **WHEN** 用户清空省/市/区（三级均为空）后再次编辑详细地址并确认
+- **THEN** 恢复触发机制，按无行政区域规则触发识别
+
+### Requirement: 触发机制不变
+
+本次改动 SHALL 仅调整触发边界，不改变触发时机与防抖。
+
+#### Scenario: 触发时机
+
+- **WHEN** 用户点击「确定」
+- **THEN** 触发边界判断（保持现有 debounce 800ms leading）
+
+#### Scenario: formatter 不变
+
+- **WHEN** 用户输入含 emoji 或首尾空格
+- **THEN** 先按既有 `filterEmojis` + `trim` 处理，再执行边界判断
+
+### Requirement: 异常不覆盖输入
+
+无论识别成功与否，系统 SHALL 不破坏用户原始输入。
+
+#### Scenario: 识别失败/超时
+
+- **WHEN** 无行政区域路径下识别接口失败、超时或返回无效
+- **THEN** 不修改用户输入、不提示

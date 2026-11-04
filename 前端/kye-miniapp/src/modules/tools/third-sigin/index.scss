@@ -1,0 +1,46 @@
+.third-signIn-page {
+  min-height: 100vh;
+  background: white;
+  padding: 308px 127px 0;
+  box-sizing: border-box;
+  font-family: PingFang SC;
+  .img {
+    width: 280px;
+    height: 280px;
+    display: block;
+    margin: 0 auto;
+  }
+  .title {
+    margin-top: 24px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: #03050d;
+  }
+  .desc {
+    margin: 8px 0 40px;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 34px;
+    text-align: center;
+    color: #888ea6;
+  }
+  .btn {
+    width: 256px;
+    height: 68px;
+    border-radius: 16px;
+    opacity: 1;
+    box-sizing: border-box;
+    border: 2px solid #8365f6;
+    margin: 40px auto 0;
+    font-size: 32px;
+    font-weight: 500;
+    color: #8365f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

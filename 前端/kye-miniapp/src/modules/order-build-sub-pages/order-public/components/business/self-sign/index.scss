@@ -1,0 +1,61 @@
+.self-sign {
+  &-content {
+    padding: 0 24px;
+    @include hairline(after, $border-bottom-color, bottom);
+  }
+  .cell-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: #fefeff;
+    border-radius: 24px;
+    box-sizing: border-box;
+
+    .label {
+      font-size: 28px;
+      font-weight: $font-normal;
+      line-height: 28px;
+      color: #03050d;
+    }
+
+    .product-spec-required {
+      width: 40px;
+    }
+  }
+
+  &.self-sign-content-flag {
+    .cell-content {
+      height: 124px;
+      padding-bottom: 24px
+    }
+  }
+
+  .self-sign-content-tips {
+    position: absolute;
+    bottom: 10px;
+    // margin-top: -20px;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 34px;
+    letter-spacing: 0;
+    color: #888ea6;
+  }
+
+  &.show-border {
+    position: relative;
+    @include hairline(after, $border-bottom-color, bottom);
+  }
+}
+
+.self-sign-content {
+  &.disabled {
+    pointer-events: none;
+    .cell-content {
+      .label {
+        color: $text-color-disabled !important;
+      }
+    }
+  }
+}

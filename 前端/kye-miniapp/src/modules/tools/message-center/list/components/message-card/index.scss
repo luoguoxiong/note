@@ -1,0 +1,113 @@
+.message-card {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  &:first-child {
+    margin-top: 0;
+  }
+  .max-height {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  &--wrapper{
+    width: 710px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    padding: 24px;
+    &--check{
+      margin-top: 24px;
+      image{
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+      }
+    }
+    &--icon{
+      width: 108px;
+      height: 108px;
+      image {
+        width: 108px;
+        height: 108px;
+        border-radius: 8px;
+      }
+    }
+    &--content{
+      flex: 1;
+      margin-left: 20px;
+      overflow: hidden;
+      &--head{
+        font-size: 27px;
+        display: flex;
+        justify-content: space-between;
+        .title {
+          max-width: 355px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: block;
+        }
+      }
+      &--detail{
+        font-size: 27px;
+        text-align: justify;
+        color: #888ea6;
+        line-height: 36px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* autoprefixer: ignore next */
+        -webkit-box-orient: vertical;
+        margin-top: 12px;
+      }
+      .show-all {
+        -webkit-line-clamp: unset;
+      }
+      &--more {
+        display: flex;
+        align-items: center;
+        width: 76px;
+        margin-top: 8px;
+        margin-left: 178px;
+        view {
+          width: 58px;
+          height: 34px;
+          font-size: 24px;
+          font-weight: normal;
+          line-height: 34px;
+          text-align: right;
+          letter-spacing: normal;
+          color: #8365F6;
+        }
+        image {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  &--del {
+    width: 128px;
+    height: 100%;
+    background: #ff706d;
+    border-radius: 0px 12px 12px 0px;
+    font-size: 24px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &--img {
+      width: 42px;
+      height: 42px;
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+}

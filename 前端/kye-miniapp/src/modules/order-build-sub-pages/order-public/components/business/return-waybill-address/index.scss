@@ -1,0 +1,52 @@
+.return-waybill-address {
+  position: relative;
+  width: 750px;
+  height: 222px;
+  margin: -20px -20px -222px -20px ;
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+  .address-info {
+    position: absolute;
+    top: 36px;
+    left: 64px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 128px);
+    .from {
+      width: 230px;
+      text-align: left;
+    }
+    .to {
+      width: 230px;
+      text-align: right;
+    }
+    .arrow {
+      flex: 1;
+      margin: 0 7px;
+      .return-arrow {
+        width: 100%;
+      }
+    }
+    .title {
+      overflow: hidden;
+      padding-top: 4px;
+      font-size: 36px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #111;
+      font-weight: 500;
+      line-height: 32px;
+    }
+    .name {
+      overflow: hidden;
+      margin-top: 16px;
+      font-size: 24px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #55596C;
+      font-weight: normal;
+    }
+  }
+}

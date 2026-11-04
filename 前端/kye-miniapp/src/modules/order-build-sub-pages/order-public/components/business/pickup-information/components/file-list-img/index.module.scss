@@ -1,0 +1,138 @@
+@import '@order-global-package-order-sub/styles/index.scss';
+
+.file-img-list-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  padding: 24px 0;
+
+  .image-box {
+    border-radius: 8px;
+    position: relative;
+
+    .image-delete-icon {
+      position: absolute;
+      right: -12px;
+      top: -12px;
+      width: 32px;
+      height: 32px;
+    }
+
+    .image-item {
+      width: 144px;
+      height: 144px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e6e8ed;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-item-default {
+      width: 80px;
+      height: 80px;
+    }
+
+    .file-title {
+      display: flex;
+      font-size: 24px;
+      font-weight: normal;
+      margin-top: 5px;
+
+      .name {
+        max-width: 96px;
+
+        @include ellipsis;
+      }
+
+      .type {
+        flex: 1;
+        flex-shrink: 0;
+      }
+    }
+
+    .image-content {
+      position: relative;
+      width: 144px;
+      height: 144px;
+
+      .common-position {
+        position: absolute;
+        background: rgb(0 0 0 / 60%);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .loading-box {
+        .progress {
+          position: relative;
+          width: 70px;
+          height: 5px;
+          background: #af8685;
+          border-radius: 5px;
+
+          .progress__bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-flex;
+            border-radius: 5px;
+            width: 0%;
+            height: 100%;
+            background-color: #fff;
+            opacity: 1;
+            animation-name: fill-bar;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+          }
+
+          @keyframes fill-bar {
+            from {
+              width: 0%;
+            }
+
+            to {
+              width: 90%;
+            }
+          }
+        }
+      }
+
+      .fail-box {
+        position: absolute;
+        background: rgb(0 0 0 / 60%);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .fail-tip {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          font-size: 24px;
+          color: #f5644e;
+          text-align: center;
+          height: 40px;
+          line-height: 40px;
+          background: #feeeec;
+          border-radius: 0 0 8px 8px;
+        }
+      }
+    }
+  }
+}

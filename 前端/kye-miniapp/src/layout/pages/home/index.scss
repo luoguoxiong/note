@@ -1,0 +1,52 @@
+.home-page {
+  height: 100vh;
+  background: white;
+  box-sizing: border-box;
+  background-size: 100% 406px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.layout-pad24 {
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.home-page-banner {
+  height: 250px !important;
+  border-radius: 16px !important;
+}
+
+.notice-wrap {
+  margin: 24px 0 0;
+}
+
+#ky-list-container-scroll-view {
+  .bg-content:nth-last-of-type(2) {
+    border-bottom: none;
+  }
+}
+
+.bg-content {
+  border-bottom: 16px solid #f1f2f7;
+  background: white;
+}
+
+.ad-place {
+  height: 194px;
+  background-color: #f1f2f7;
+}
+
+.home-logo {
+  width: 189px;
+  height: 40px;
+  position: fixed;
+  left: 32px;
+}
+
+.home-page-content {
+  flex: 1;
+  min-height: 0;
+}

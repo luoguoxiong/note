@@ -1,0 +1,12 @@
+.ky-iframe{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  border: none;
+}
+.ky-iframe.ky-iframe-pc{
+  left: 50%;
+  transform: translateX(-50%);
+}

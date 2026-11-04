@@ -1,0 +1,28 @@
+/**
+ * 绑定标签样式
+ */
+.bind-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 24px;
+  height: 34px;
+
+  &--default {
+    background-color: #f0f0f0;
+    color: #666666;
+  }
+
+  &--primary {
+    background-color: #FFF3E5;
+    color: #FF9300;
+    border: 1px solid #FFD194;
+  }
+
+  &--warning {
+    background-color: #ffe6e6;
+    color: #e13c39;
+  }
+}

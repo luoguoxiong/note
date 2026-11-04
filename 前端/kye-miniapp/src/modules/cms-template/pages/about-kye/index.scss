@@ -1,0 +1,67 @@
+.about-kye-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+
+  .about-kye-page{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .ky-tabs::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  .ky-tab-item:first-child {
+    padding-left: 32px;
+  }
+
+  .ky-tab-item:first-child {
+    padding-left: 32px;
+  }
+
+  .about-kye__scroll-view {
+    flex: 1;
+    height: 0;
+    padding-top: 8px;
+    box-sizing: border-box;
+  }
+
+  .about-kye__cover-image {
+    width: 100%;
+    height: 320px;
+  }
+  .about-kye__content {
+    padding: 32px;
+  }
+
+  .about-kye__footer {
+    display: flex;
+    padding: 16px 32px;
+    padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 16px);
+
+    background: #ffffff;
+    box-sizing: border-box;
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: #ebedf5;
+    box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.05);
+  }
+  .about-kye__footer-button {
+    flex: 1;
+    margin-right: 12px;
+    font-weight: 600;
+    border-width: 2px;
+    &:not(:first-child) {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+
+  .ky-tab-item-active .ky-tab-name {
+    color: #24262b;
+  }
+}

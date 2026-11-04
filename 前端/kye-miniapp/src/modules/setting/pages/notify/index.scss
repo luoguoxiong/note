@@ -1,0 +1,25 @@
+.notify-setting {
+  .ky-cell {
+    padding: 32px 0;
+    width: 686px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ebedf5;
+  }
+  .notify-title {
+    view {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 28px;
+      color: #03050d;
+      white-space: nowrap;
+
+      &:last-child {
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 24px;
+        color: #6e6d72;
+        margin-top: 24px;
+      }
+    }
+  }
+}

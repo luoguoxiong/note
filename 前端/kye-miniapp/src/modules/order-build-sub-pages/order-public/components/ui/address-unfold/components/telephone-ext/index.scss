@@ -1,0 +1,82 @@
+.address-unfold-telephone-ext {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+
+  .telephone {
+    // flex: 1;
+
+    .ky-field__body {
+      padding-right: 0;
+    }
+
+    .ky-field__clear {
+      padding-right: 50px;
+    }
+    .ky-field {
+      &::after {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .ky-field.ext {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    .ky-field {
+      &::after {
+        border-bottom: 0;
+      }
+    }
+    &.ky-field-disabled {
+      padding-left: 0;
+    }
+    .ky-field--top {
+      width: 100%;
+    }
+  }
+  .line {
+    width: 12px;
+    height: 2px;
+    margin-left: 16px;
+    margin-right: 20px;
+    background: #888ea6;
+    box-sizing: border-box;
+  }
+
+  .ky-input {
+    border-bottom: 1px solid transparent;
+  }
+  .ky-input--foucus {
+    border-bottom: 1px solid transparent;
+  }
+  .ext {
+    flex: 1;
+  }
+}
+
+.telephone-container {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  .line {
+    width: 12px;
+    height: 2px;
+    background: #24262b;
+    box-sizing: border-box;
+    margin: 0 8px;
+  }
+  .telephone {
+    flex: 1.5;
+    .ky-input--bottom--input-container {
+      width: 100% !important;
+    }
+  }
+  .fiexdPhone {
+    flex: 3;
+    .ky-input--bottom--input-container {
+      width: 100% !important;
+    }
+  }
+}

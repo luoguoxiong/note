@@ -1,0 +1,48 @@
+.select-button {
+    &-label {
+        padding: 24px 0;
+        font-size: 26px;
+        color: #03050D;
+        font-weight: 500;
+        line-height: 26px;
+    }
+
+    &-option {
+        display: flex;
+
+        .item {
+            position: relative;
+            padding: 18px;
+            margin-right: 22px;
+            font-size: 24px;
+            text-align: center;
+            color: #03050D;
+            flex: 1;
+            font-weight: normal;
+            line-height: 24px;
+            letter-spacing: 0;
+
+            @include hairline(before, #c6c6c8, border, 10px);
+
+            &:last-child {
+                margin-right: 0;
+
+            }
+
+            :deep(.select-button-active) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 28px;
+                height: 20px;
+            }
+        }
+
+        .active {
+            @include hairline(before, #8365F6, border, 10px);
+
+            color: #8365F6;
+            background: #F5F3FE;
+        }
+    }
+}

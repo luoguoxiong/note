@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "noEmitOnError": false,
+    "strict": false,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "lib",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "rootDir": ".",
+    "jsx": "preserve",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "./types"
+    ],
+    // 确保 Taro 的类型被包含
+    "types": ["@tarojs/taro", "@tarojs/components"],
+    "paths": {
+      // TS5090 leading './'
+      "@/*": ["./src/*"],
+      "@packages/*": ["../../packages/*"]
+    }
+  },
+  "include": ["./src", "./types", "./config", "node_modules/@tarojs/components/types/**/*.d.ts"],
+  "compileOnSave": false
+}

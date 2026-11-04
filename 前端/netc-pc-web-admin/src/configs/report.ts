@@ -1,0 +1,32 @@
+// 来源字段上报
+export const sourcePageReportMap = {
+  menu: '菜单栏',
+  'batch-page': '批量发货',
+  'waybill-table-empty': '查件缺省页',
+  'waybill-table-row-10': '待通知取货列表',
+  'waybill-table-row-20': '待揽件列表',
+  'waybill-table-row-30': '待签收列表',
+  'waybill-table-row-40': '已签收列表',
+  'waybill-table-row-all': '全部运单列表',
+  'waybill-details': '运单详情',
+  'batch-fill': '批量填写',
+  'batch-import': '批量导入',
+  'waybill-price-approve': '调价审核详情页',
+  'waybill-order-approve': '运单审核详情页',
+  'freight-time': '运费时效查询',
+  'order-success': '下单成功',
+}
+export const sourceActionReportMap = {
+  routeLink: '下单寄件',
+  'single-order-tab': '单票发货',
+  'go-delivery': '去寄件',
+  'row-again': '再来一单（运单）',
+  'toolbar-again': '再来一单（全局）',
+  'details-again': '再来一单',
+  'recover-order': '恢复下单',
+  'edit-order': '修改运单',
+  'row-edit': '修改',
+  retry: '重新下单',
+  'new-add': '新增',
+  continue: '继续下单',
+}

@@ -1,0 +1,137 @@
+@import '@order-global-package-order-sub/styles/index.scss';
+
+.dispatch-form-org {
+  .ky-popover-container {
+    width: 100%;
+  }
+
+  .ky-input {
+    color: #03050d;
+    font-weight: 400;
+    border-width: 0;
+    background: #fff;
+
+    &.ky-input--right {
+      .ky-input--clear {
+        right: 0;
+      }
+    }
+
+    .h5-input {
+      background: #fff;
+      text-align: right;
+      padding: 0;
+
+      &::placeholder {
+        font-size: 28px;
+        font-weight: $font-normal;
+        color: red;
+      }
+    }
+  }
+
+  .value-item {
+    .ky-field {
+      display: flex;
+      padding: 16px 0;
+      border-bottom: 2px solid $border-bottom-color;
+      box-sizing: border-box;
+
+      .ky-field--top--error-text {
+        height: 0;
+      }
+    }
+
+    .ky-field--top--label {
+      width: 150px;
+    }
+
+    .ky-field--top--content {
+      width: 100%;
+    }
+
+    .ky-field.is-focus-value {
+      border-bottom: 2px solid $primary;
+    }
+
+    .ky-field.last-item {
+      border-bottom: none !important;
+    }
+
+    .disabled {
+      .h5-input {
+        background-color: #f2f3f7;
+        border-radius: 0;
+
+        // 原生input 禁用状态下的 placeholder 颜色
+        &::placeholder {
+          color: $text-color-level5;
+        }
+      }
+    }
+
+    .ky-input--wrapper {
+      padding-right: 0;
+
+      .input-clear-icon-hidden {
+        .ky-input--clear-icon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // 预约时间自定义字段样式
+  .appoint-date-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    box-sizing: border-box;
+    min-height: 96px;
+
+    .appoint-date-label {
+      font-size: 28px;
+      color: $text-color-level1;
+      font-weight: $font-normal;
+      width: 150px;
+      display: flex;
+      align-items: center;
+
+      .appoint-date-question-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .appoint-date-question {
+        width: 26px;
+        height: 26px;
+        margin-left: 8px;
+      }
+    }
+
+    .appoint-date-remark {
+      font-size: 28px;
+      color: $text-color-level5;
+      font-weight: $font-normal;
+      flex: 1;
+      text-align: right;
+    }
+
+    .appoint-date-value {
+      font-size: 28px;
+      color: #03050d;
+      font-weight: 600;
+      flex: 1;
+      text-align: right;
+    }
+
+    .appoint-date-placeholder {
+      font-size: 28px;
+      color: $text-color-level5;
+      font-weight: $font-normal;
+      flex: 1;
+      text-align: right;
+    }
+  }
+}

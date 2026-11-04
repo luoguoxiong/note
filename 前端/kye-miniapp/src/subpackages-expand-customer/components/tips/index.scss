@@ -1,0 +1,50 @@
+.tips {
+    &__item {
+        position: relative;
+        display: block;
+        width: 648rpx;
+        height: 214rpx;
+        background-repeat: no-repeat;
+        background-image: url('https://ic-h5.kye-erp.com/intro/miniprogram/expand-customer/bg-tips.png');
+        background-size: 100%;
+        margin: 0 auto;
+        padding: 0 70rpx 0 20rpx;
+        box-sizing: border-box;
+        text-align: left;
+        &--title {
+            height: 65rpx;
+            line-height: 65rpx;
+            font-size: 30rpx;
+            color: #fff;
+        }
+        &--desc {
+            display: flex;
+            align-items: center;
+            height: 125rpx;
+            font-size: 22rpx;
+            color: #000;
+        }
+    }
+    &__divider {
+        display: flex;
+        justify-content: space-evenly;
+        height: 55rpx;
+        &--line {
+            display: flex;
+            justify-content: space-between;
+            width: 14rpx;
+            height: 55rpx;
+            &::before,
+            &::after {
+                display: inline-block;
+                content: '';
+                width: 4rpx;
+                height: 55rpx;
+                border-left: 1rpx solid #f6ab00;
+                border-right: 1rpx solid #f6ab00;
+                background-color: #f6ab00;
+                box-sizing: border-box;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.ky-input-content {
+  width: 100%;
+}
+// 气泡飘红样式强制去掉
+#app {
+  .ky-input-content {
+    :deep() {
+      .van-field__word-limit {
+        .van-field__word-num {
+          color: #888ea6 !important;
+        }
+      }
+    }
+  }
+}

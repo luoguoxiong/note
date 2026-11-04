@@ -1,0 +1,92 @@
+.invited-success {
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  .icon-wrap {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 90px;
+    .icon {
+      width: 240px;
+      height: 198px;
+    }
+  }
+  .text {
+    width: 100%;
+    text-align: center;
+    margin-top: 48px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #24262b;
+  }
+  .msg-container {
+    margin: 0 32px;
+    margin-top: 32px;
+    padding: 52px 32px;
+    background: #f7f8fa;
+    border-radius: 16px;
+    display: flex;
+    .left {
+      margin-right: 24px;
+      .icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .name-mobile {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color: #24262b;
+      .name {
+        font-size: 34px;
+        display: inline-block;
+        margin-right: 16px;
+        line-height: 48px;
+        max-width: 320px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .mobile {
+        font-size: 24px;
+      }
+    }
+    .tele {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 8px;
+      color: #24262b;
+      display: flex;
+    }
+    .com-name {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 16px;
+      color: #24262b;
+    }
+    .detail {
+      color: #24262b;
+      font-size: 24px;
+      font-weight: normal;
+      margin-top: 12px;
+      line-height: 34px;
+    }
+  }
+  .btn {
+    position: absolute;
+    margin: 0 auto;
+    bottom: calc(192px + env(safe-area-inset-bottom));
+    width: 452px;
+    left: 50%;
+    margin-left: -226px;
+    height: 88px;
+    box-sizing: border-box;
+    .button-footer {
+      height: 100%;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.ky-radio-group {
+  display: inline-block;
+  .ky-radio {
+    margin-bottom: 5px;
+  }
+  &--horizontal {
+    .ky-radio {
+      display: inline-flex;
+      margin-right: 16px;
+      &--round {
+        .ky-radio__label {
+          margin: 0 6px;
+        }
+      }
+    }
+  }
+}

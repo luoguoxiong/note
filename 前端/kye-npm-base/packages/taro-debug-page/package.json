@@ -1,0 +1,26 @@
+{
+  "name": "@kye-netc/taro-debug-page",
+  "version": "0.0.2",
+  "description": "Taro 小程序按需调试页面过滤插件",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "dev": "father dev",
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "publish": "father build && npm publish --ignore-scripts"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://nexus.ky-tech.com.cn:8081/repository/npmjs-hosted"
+  },
+  "devDependencies": {
+    "@tarojs/service": "^4.0.8",
+    "@types/node": "^18.19.130",
+    "father": "^4.5.3",
+    "typescript": "^5.8.2"
+  },
+  "author": "",
+  "license": "ISC"
+}

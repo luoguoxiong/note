@@ -1,0 +1,113 @@
+.urge-dialog-overlay {
+  z-index: 1000 !important;
+}
+
+/* 外层容器：居中 */
+.urge-dialog-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* 卡片主体 */
+.urge-dialog-box {
+  width: 80%;
+  position: relative;
+
+  /* #ifdef h5 */
+  width: 600px;
+  /* #endif */
+}
+
+/* 顶部图标 */
+.urge-dialog-icon {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, -50%);
+  top: 0;
+}
+
+/* 渐变头部区域 */
+.urge-dialog-header {
+  height: 176px;
+  border-radius: 24px 24px 0px 0px;
+  background: linear-gradient(360deg, #ffffff 0%, #fff5e8 80%);
+  background-image: url('https://ic-img.ky-express.com/netc/20260603_50296_!!1780476547594_590_176.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* 内容区 */
+.urge-dialog-content {
+  background: #ffffff;
+  padding: 16px 32px 32px;
+
+  .urge-dialog-title {
+    font-size: 34rpx;
+    font-weight: 600;
+    color: #24262b;
+    margin-bottom: 16rpx;
+    text-align: center;
+  }
+
+  .urge-dialog-message {
+    font-size: 28rpx;
+    color: #686b75;
+    line-height: 40rpx;
+    text-align: center;
+  }
+}
+
+/* 底部按钮区容器 */
+.urge-dialog-footer {
+  padding: 0 32px 24px;
+  background: #ffffff;
+  border-radius: 0 0 24px 24px;
+}
+
+/* 按钮通用样式：圆角胶囊 */
+.urge-dialog-btn-box {
+  border-radius: 16px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+/* 双按钮组 */
+.urge-dialog-btn-group {
+  display: flex;
+  align-items: center;
+
+  .urge-dialog-btn-left,
+  .urge-dialog-btn-right {
+    width: 50%;
+  }
+
+  .urge-dialog-btn-left {
+    margin-right: 24px;
+    border: 2px solid #8365f6;
+    background: #ffffff;
+    color: #8365f6;
+  }
+
+  .urge-dialog-btn-right {
+    background: #8365f6;
+    color: #ffffff;
+  }
+}
+
+/* 单按钮：通栏实心紫色（与双按钮右侧样式一致） */
+.urge-dialog-btn-single {
+  width: 100%;
+  background: #8365f6;
+  color: #ffffff;
+}

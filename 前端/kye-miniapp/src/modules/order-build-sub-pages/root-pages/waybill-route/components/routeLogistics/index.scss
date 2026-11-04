@@ -1,0 +1,68 @@
+.logistics {
+  padding: 24px 0;
+  overflow-y: scroll;
+  height: 410px;
+  &-item {
+    display: flex;
+    align-items: center;
+
+    &-state {
+      position: relative;
+      width: 148px;
+      flex-shrink: 0;
+      padding-right: 32px;
+      font-size: 28px;
+      line-height: 40px;
+      font-weight: 600;
+
+      color: #24262b;
+      align-self: flex-start;
+      text-align: right;
+      box-sizing: border-box;
+
+      .state-image {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        right: -17px;
+      }
+    }
+
+    &-info {
+      padding-left: 32px;
+      flex: 1;
+      border-left: 2px dashed #e6e8ed;
+      padding-bottom: 32px;
+    }
+
+    .time {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      &-text {
+        font-size: 26px;
+        line-height: 36px;
+        color: #24262b;
+      }
+
+      .city {
+        padding: 0 8px;
+        height: 34px;
+        font-size: 24px;
+        color: #686b75;
+        line-height: 34px;
+        border-radius: 4px;
+        background: #f7f8fa;
+        box-sizing: border-box;
+        border: 1px solid #d3d5db;
+        margin-left: 8px;
+      }
+    }
+
+    .desc {
+      font-size: 28px;
+      color: #24262b;
+      line-height: 40px;
+    }
+  }
+}

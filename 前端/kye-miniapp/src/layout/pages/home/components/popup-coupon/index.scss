@@ -1,0 +1,72 @@
+.ord {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+/* 弹窗容器 */
+.ord__warpper {
+  width: 514px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 弹窗内容背景 */
+.ord__content {
+  width: 100%;
+  height: 603px;
+  background: url("https://ic-h5.kye-erp.com/intro/miniprogram/coupon-popup-new.png");
+  background-size: 100% 100%;
+}
+
+/* 标题 */
+.ord__title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #03050d;
+  padding-top: 245px;
+}
+
+/* 查看图片 */
+.ord__img-look {
+  position: relative;
+  width: 304px;
+  height: 106px;
+  display: block;
+  margin: 36px auto 0;
+}
+
+/* 文本 */
+.ord__text {
+  font-size: 28px;
+  text-align: center;
+  color: #03050d;
+  width: 354px;
+  margin: 60px auto 0;
+  line-height: 40px;
+}
+
+.ord__text text {
+  color: #fd4948;
+  font-weight: bold;
+  padding: 0 8px;
+}
+
+/* 关闭按钮 */
+.ord__close {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.ord__close image {
+  width: 74px;
+  height: 74px;
+  display: inline-block;
+}

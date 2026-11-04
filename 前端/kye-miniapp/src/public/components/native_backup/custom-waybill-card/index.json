@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {},
+  "slots": [
+    { "name": "headRight" },
+    { "name": "cardBottom" }
+  ]
+}

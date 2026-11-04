@@ -1,0 +1,66 @@
+.select-size-page {
+  background-color: $bg-page;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  &.has-footer {
+    padding-bottom: 119px;
+    box-sizing: border-box;
+  }
+
+  .list-refresh-load {
+    height: 100%;
+  }
+
+  .select-size-list-load {
+    height: calc(100vh - 210px);
+  }
+
+  .select-size-tabs {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    font-size: 30px;
+    color: #6e6d72;
+    background-color: #fff;
+
+    .tabs-items {
+      width: 50%;
+      height: 100%;
+      text-align: center;
+      line-height: 70px;
+    }
+
+    .selected {
+      position: relative;
+      color: #8365f6;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 38px;
+        height: 5px;
+        margin-left: -16px;
+        background-color: #8365f6;
+        border-radius: 2.5px;
+        content: '';
+      }
+    }
+  }
+
+  .select-size-search {
+    background-color: #fff;
+  }
+
+  .select-size-content {
+    padding: 0 20px;
+    padding-bottom: 20px;
+  }
+
+  // 空态：整体下移留白
+  .select-size-empty {
+    margin-top: 300px;
+  }
+}

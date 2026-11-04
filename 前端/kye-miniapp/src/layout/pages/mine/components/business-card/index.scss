@@ -1,0 +1,104 @@
+.business-card {
+  width: 702px;
+  height: 132px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px;
+  background: linear-gradient(270deg, #F6F5FE 0%, #F2EFFE 100%);
+  box-sizing: border-box;
+  border: 2px solid #FFFFFF;
+  position: relative;
+
+  .bg-icon {
+    width: 289px;
+    height: 132px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  &-info {
+    width: 318px;
+    height: 84px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .avatar {
+      width: 64px;
+      height: 64px;
+    }
+
+    .info-content {
+      width: 238px;
+      height: 84px;
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      margin-left: 16px;
+
+      .name {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 46px;
+        color: #24262B;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-bottom: 4px;
+      }
+
+      .text {
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 34px;
+        color: #686B75;
+      }
+    }
+  }
+
+  &-btns {
+    width: 312px;
+    height: 48px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 16px;
+    position: relative;
+
+    .btn {
+      width: 140px;
+      height: 48px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 7px 8px;
+      box-sizing: border-box;
+
+      .text {
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 34px;
+        color: #8365F6;
+        margin-right: 4px;
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .line {
+      position: absolute;
+      height: 24px;
+      width: 1px;
+      background: #C4B2FF;
+      left: 50%;
+      top: 12px;
+    }
+  }
+}

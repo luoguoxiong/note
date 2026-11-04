@@ -1,0 +1,59 @@
+@import '../common.scss';
+
+.third-order-item {
+  @include card;
+
+  .third-order-item__header {
+
+    text {
+      flex-shrink: 0;
+    }
+
+    @include card-header;
+
+    .third-order-item__tag {
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 4px;
+      gap: 2px;
+      height: 34px;
+      color: #ff9300;
+      box-sizing: border-box;
+      border: 2px solid #ffd194;
+    }
+  }
+
+  .third-order-item__content {
+    display: flex;
+    align-items: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 48px 24px;
+
+    .third-order-item__customer {
+      @include express-customer;
+    }
+
+    .third-order-item__type {
+      width: 64px;
+      height: 12px;
+      flex-shrink: 0;
+    }
+  }
+
+  .third-order-item__footer {
+    @include card-footer;
+    justify-content: space-between;
+
+    &>text {
+      font-size: 24px;
+      color: #686b75;
+      font-weight: 400;
+    }
+  }
+}

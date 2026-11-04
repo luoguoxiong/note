@@ -1,0 +1,15 @@
+.svg-icon {
+  display: inline-block;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  fill: currentcolor;
+  cursor: pointer;
+  /* #ifdef h5 */
+  cursor: default;
+  /* #endif */
+}

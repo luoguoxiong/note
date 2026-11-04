@@ -1,0 +1,5 @@
+review:
+  skill_dir: /skills/department/netc/netc-frontend-code-review/taro-miniapp
+  skill_repository: git@gitlab.ky-tech.com.cn:erp-frontend/ai-code-review.git
+openspec:
+  openspec_dir: '/openspec/taro'

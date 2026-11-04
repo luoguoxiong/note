@@ -1,0 +1,18 @@
+.network-pick-address_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .navigation-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .distance {
+    margin: 4px 0;
+    margin-top: 12px;
+    font-size: 24px;
+    white-space: nowrap;
+    color: #03050d;
+    line-height: 24px;
+  }
+}

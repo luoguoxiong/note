@@ -1,0 +1,64 @@
+.address-batch-ocr {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  background: $bg-page;
+  .header {
+    font-size: 28px;
+    font-weight: 500;
+    color: #03050D;
+    .header-title {
+      font-size: 34px;
+      font-weight: 600;
+    }
+    .header-num {
+      color: #FF9300;
+    }
+  }
+  .sub-title {
+    font-size: 26px;
+    line-height: 36px;
+    color: #888EA6;
+    margin: 20px 0 24px;
+  }
+  :deep(.ky-textarea) {
+    .van-cell {
+      padding: 0;
+    }
+
+    .van-cell__value {
+      border: 0;
+      border-radius: initial;
+    }
+  }
+
+  .container {
+    flex: 1;
+    overflow-y: auto;
+    .container-body {
+      background: #fff;
+      padding: 24px;
+    }
+    .container-body-ocr {
+      border: 1px solid #EBEDF5;
+    }
+  }
+
+  :deep(.ocr) {
+    border-radius: 24px;
+  }
+  .footer {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+    background: #fff;
+    box-shadow: 0 -6px 20px 0 rgb(184 171 255 / 10%);
+
+    &__wrap {
+      padding: 20px 24px;
+    }
+  }
+  .container-pointer-events {
+    pointer-events: none;
+  }
+}

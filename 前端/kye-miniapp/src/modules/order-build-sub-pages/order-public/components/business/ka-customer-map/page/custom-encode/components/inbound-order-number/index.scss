@@ -1,0 +1,25 @@
+.inbound-order-number {
+  padding: 24px 0;
+  .inbound-order-number-title {
+    padding-bottom: 12px;
+    font-size: 28px;
+    color: #03050d;
+    font-weight: 600;
+    .required {
+      width: 42px;
+      margin-left: 8px;
+    }
+    &-tips {
+      height: 24px;
+      margin-bottom: 12px;
+      font-size: 24px;
+      color: #ff9300;
+      line-height: 24px;
+      letter-spacing: 0;
+    }
+  }
+}
+.inbound-order-number-page {
+  margin-right: 32px;
+  margin-left: 32px;
+}

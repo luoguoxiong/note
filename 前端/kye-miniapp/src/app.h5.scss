@@ -1,0 +1,90 @@
+// H5端系统title-隐藏
+#taro-navigation-bar.taro-navigation-bar-show {
+  display: none;
+}
+
+.h5-tab-page-layout{
+  height: 100% !important;
+}
+
+/* Chrome / Safari / Edge */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none; /* 隐藏滚动条 */
+}
+
+.pc-width{
+  width: 375PX !important;
+}
+
+/* IE / 老 Edge（基本可忽略） */
+body.isPc {
+  -ms-overflow-style: none;
+  max-width: 375PX !important;
+  margin: 0 auto !important;
+}
+
+// 定义全局tabbar高度
+:root {
+  --kye-tabbar-height: 50PX;
+}
+
+.ky-input--wrapper {
+  & > .ky-input--input-container {
+    & > taro-input-core {
+      width: 100% !important;
+    }
+  }
+}
+
+.isPc {
+  .calendar-box {
+    .ky-popup-content {
+      width: 752px !important;
+    }
+  }
+}
+
+
+.web-scrollbar::-webkit-scrollbar {
+  height: 12px !important;
+  width: 12px !important;
+  display: block !important;
+}
+
+.web-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+}
+
+.web-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+img{
+  -webkit-user-drag: none;
+}
+
+// 尽可能和自定义的toast样式靠齐
+.taro__toast {
+  & > div {
+    & > p:nth-last-child(1) {
+      font-size: 28px !important;
+    }
+
+    &:nth-last-child(1) {
+      max-width: 550px !important;
+      min-width: 200px !important;
+      background: rgba(0, 0, 0, 0.75) !important;
+      border-radius: 16px !important;
+      padding: 15px 25px !important;
+      width: max-content;
+    }
+  }
+}

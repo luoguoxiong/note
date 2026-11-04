@@ -1,0 +1,10 @@
+[submodule "src/modules/kye-miniapp-waybill"]
+	path = src/modules/kye-miniapp-waybill
+	url = git@gitlab.ky-tech.com.cn:KYE-NETC-FRONTEND/kye-miniapp-waybill.git
+  
+[submodule "src/modules/kye-miniapp-order"]
+	path = src/modules/kye-miniapp-order
+	url = git@gitlab.ky-tech.com.cn:KYE-NETC-FRONTEND/kye-miniapp-order.git
+[submodule "src/modules/fms-parkpay-corp"]
+	path = src/modules/fms-parkpay-corp
+	url = git@gitlab.ky-tech.com.cn:KYE-FMS-FRONTEND/fms-parkpay-corp.git

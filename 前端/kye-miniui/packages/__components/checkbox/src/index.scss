@@ -1,0 +1,137 @@
+.ky-checkbox {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  //display: table;
+  &-type{
+    &--round{
+
+    }
+    &--button, &--buttonCheck, &--buttonSelect{
+      border: 2px solid $border-default-color;
+      background-color: #ffffff;
+      border-radius: 12rpx;
+      padding: 12px 16px;
+    }
+    &--buttonSelect{
+      position: relative;
+    }
+  }
+  &-direction{
+    &--vertical{
+      & + .ky-checkbox{
+        margin-top: 20px;
+      }
+    }
+  }
+  &-icon{
+    width: 28px;
+    height: 28px;
+  }
+  &--large{
+    .ky-checkbox-icon{
+      width: 40px;
+      height: 40px;
+    }
+    .ky-checkbox-text{
+      font-size: 28px;
+    }
+  }
+  &--medium{
+    .ky-checkbox-icon{
+      width: 32px;
+      height: 32px;
+    }
+    .ky-checkbox-text{
+      font-size: 28px;
+    }
+  }
+  &--normal{
+
+  }
+  &--small{
+    .ky-checkbox-icon{
+      width: 24px;
+      height: 24px;
+    }
+    .ky-checkbox-text{
+      font-size: 24px;
+    }
+  }
+  &--mini{
+    .ky-checkbox-icon{
+      width: 20px;
+      height: 20px;
+    }
+    .ky-checkbox-text{
+      font-size: 24px;
+    }
+  }
+  &-icon{
+    margin-right: 4px;
+  }
+  &-text{
+    font-size: 28px;
+    flex:1;
+    line-height: 1.6;
+    //display:table-cell;
+    //vertical-align: middle;
+  }
+  &-select-icon{
+    width:28px;
+    height: 24px;
+    position: absolute;
+    right: -2px;
+    top: -1px;
+  }
+  &--unchecked{
+    color: $button-default-color;
+    &.ky-checkbox-type--button{
+      border-color: $border-default-color;
+    }
+  }
+  &--active{
+    .ky-radio-text{
+      color: $primary;
+    }
+    &.ky-checkbox-type--button, &.ky-checkbox-type--buttonCheck, &.ky-checkbox-type--buttonSelect{
+      border-color: $border-selected-color;
+      background: #F2EFFE;
+      .ky-checkbox-text{
+        color: $primary;
+      }
+    }
+  }
+  &--disabled{
+    color: $disabled-color;
+    .ky-checkbox-text{
+      color: $disabled-color;
+    }
+    &.ky-checkbox-type--button, &.ky-checkbox-type--buttonCheck{
+      border-color: $border-disabled-color;
+      background-color: #F1F2F7;
+    }
+  }
+  &--isError{
+    &.ky-checkbox-type--button, &.ky-checkbox-type--buttonCheck{
+      border-color: #FF706D;
+    }
+  }
+  &--reverse{
+    flex-direction: row-reverse;
+    .ky-checkbox-text{
+      margin-right: 4px;
+      margin-left: 0;
+    }
+  }
+  &--highlight {
+    .ky-checkbox-text{
+      color: $primary;
+    }
+  }
+}
+@import './index.native.scss';
+/* #ifdef h5 */
+@import './index.h5.scss';
+/* #endif */

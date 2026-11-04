@@ -1,0 +1,30 @@
+.check-delivery-phone {
+  padding: 32px;
+  height: 100vw;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .check-delivery-phone__description {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #686b75;
+
+    .description_bold {
+      color: #24262b;
+      font-weight: 600;
+    }
+  }
+
+  .check-delivery-phone__countdown {
+    text-align: right;
+    z-index: 1;
+    font-size: 24px;
+    font-weight: normal;
+    color: #8c8f99;
+  }
+
+  .check-delivery-phone__countdown--link {
+    color: #8365f6;
+  }
+}

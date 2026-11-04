@@ -1,0 +1,90 @@
+@import '@order-global-package-order-sub/styles/index.scss';
+
+.pickup-information-file-item {
+  display: flex;
+  padding: 24px 0;
+  box-sizing: border-box;
+  border-top: 1px solid $border-bottom-color;
+
+  .right {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .status {
+    height: 36px;
+    line-height: 36px;
+    font-size: 28px !important;
+  }
+
+  .success {
+    color: $success;
+  }
+
+  .fail {
+    display: flex;
+    align-items: center;
+    color: #ff706d;
+
+    .svg-icon {
+      margin-right: 6px;
+    }
+  }
+
+  .delete-icon {
+    margin-left: 16px;
+    line-height: 36px;
+
+    .delete {
+      font-size: 36px;
+    }
+  }
+
+  .field_container {
+    display: flex;
+    align-items: center;
+  }
+
+  .thumbnail_img {
+    display: flex;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    margin-right: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+
+  .card_container_thumbnail_img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .message {
+    .file-name {
+      overflow: hidden;
+      margin-bottom: 8px;
+      font-size: 24px;
+      text-overflow: ellipsis;
+      color: #333;
+      line-height: 34px;
+      max-width: 430px;
+      word-break: break-all;
+
+      @include multi-ellipsis(5);
+    }
+
+    .message_bottom {
+      display: flex;
+      font-size: 22px;
+      color: $text-color-level3;
+
+      .update_time {
+        flex-shrink: 0;
+        margin-right: 20px;
+      }
+    }
+  }
+}

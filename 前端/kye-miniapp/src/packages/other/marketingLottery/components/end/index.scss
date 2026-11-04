@@ -1,0 +1,14 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: 100% auto;
+    .text-logo-box { width: 100%; display: flex; justify-content: center; position: absolute; bottom: 65px; }
+    .text-logo { width: 352px; height: 29px; }
+}
+.button { position: absolute; top: 971px; }
+.logo { position: absolute; top: 1228px; width: 186px; height: 46px; }
+
+

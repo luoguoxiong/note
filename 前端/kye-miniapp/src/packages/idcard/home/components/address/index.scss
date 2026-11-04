@@ -1,0 +1,133 @@
+.idcard-address {
+
+    .form-item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1rpx solid #e8e8e8;
+
+        &__label {
+            flex-shrink: 0;
+            width: 180rpx;
+            font-size: 28px;
+            color: #333;
+            text-align: left;
+            padding-left: 12rpx;
+
+            display: flex;
+            align-items: center;
+
+            .require-img {
+                width: 40px;
+                height: 24px;
+                margin-left: 8px;
+            }
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            height: 100rpx;
+            line-height: 100rpx;
+            padding: 0 18rpx 0 0;
+            overflow: hidden;
+
+            .icon-arrow {
+                width: 34rpx;
+                height: 34rpx;
+                margin-top: 2rpx;
+                margin-left: 12rpx;
+            }
+        }
+
+        &__position {
+            font-size: 32rpx;
+            color: #8365F6;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 56rpx;
+            height: 100%;
+
+            .position-icon {
+                flex-shrink: 0;
+                width: 30rpx;
+                height: 30rpx;
+            }
+
+            .position-text {
+                font-size: 24rpx;
+            }
+        }
+
+        &__input {
+            flex: 1;
+            font-weight: 600;
+            width: 100rpx;
+            height: 100rpx;
+            line-height: 100rpx;
+            font-size: 28rpx;
+            // line-height: 1.5;
+            text-transform: none;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        &__input-rightText {
+            text-align: right;
+        }
+
+        .icon-arrow {
+            flex-shrink: 0;
+            width: 34rpx;
+            height: 34rpx;
+        }
+    }
+}
+
+
+.idcard-address__address-popup {
+    position: relative;
+    z-index: 999;
+
+    .ky-popup-content {
+        max-height: 80vh;
+
+        .title-wrap {
+            padding: 26px 32px;
+            border-bottom: 1px solid #E6E8ED;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .big-title {
+                font-size: 34px;
+                font-weight: 600;
+                color: #24262B;
+                display: flex;
+                align-items: center;
+                padding-bottom: 8px;
+            }
+
+            .close-img {
+                width: 32px;
+                height: 32px;
+
+                .imgs {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
+
+.holder {
+    font-weight: normal;
+    color: #ADB0BB;
+    text-align: right;
+}

@@ -1,0 +1,163 @@
+.card-video-introduce__warp {
+  .components-page {
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  .video-wrap {
+    height: 394px;
+    overflow: hidden;
+  }
+
+  .video-box {
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .video-info {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .video-star {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+  }
+
+  .video-title {
+    font-size: 28px;
+    color: #686B75;
+  }
+
+  .video-icon {
+    font-size: 32px;
+    color: #24262B;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .padding24 {
+    padding-bottom: 24px;
+  }
+
+  .upload-content {
+    box-sizing: border-box;
+    padding: 16px 24px 24px;
+  }
+
+  .upload-watting {
+    border-radius: 8px;
+    padding-top: 141px;
+    height: 394px;
+    border-bottom: 8px;
+    border: 2px dashed #E6E8ED;
+    box-sizing: border-box;
+    background: #F7F8FA;
+  }
+
+  .upload-watting:active {
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .upload-watting.fail {
+    .upload-text {
+      color: #FF706d;
+    }
+  }
+
+  .upload-icon {
+    width: 56px;
+    height: 56px;
+    display: block;
+    margin: 0 auto
+  }
+
+  .upload-text {
+    margin-top: 16px;
+    font-size: 28px;
+    line-height: 40px;
+    color: #686B75;
+    text-align: center;
+  }
+
+  .upload-desc {
+    margin: 32px auto 0;
+    width: 622px;
+    text-align: center;
+    font-size: 24px;
+    color: #ADb0B8;
+  }
+
+  .upload-isUploading {
+    border-radius: 8px;
+    padding-top: 140px;
+    height: 394px;
+    border-bottom: 8px;
+    border: 2px dashed #E6E8ED;
+    box-sizing: border-box;
+    background: #F7F8FA;
+  }
+
+  .progress {
+    box-sizing: border-box;
+    width: 374px;
+    height: 12px;
+    background: #E6E8ED;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .progress-val {
+    height: 100%;
+    background: #8365f6;
+    border-radius: 12px;
+    transition: all .5s;
+  }
+
+  .progess-desc {
+    padding-top: 20px;
+    font-size: 24px;
+    color: #24262B;
+    text-align: center;
+    line-height: 34px;
+  }
+
+  .cancel-upload {
+    padding-top: 24px;
+    font-size: 24px;
+    color: #8365f6;
+    line-height: 34px;
+    text-align: center;
+  }
+
+  .reject-wrap {
+    padding: 0 24px;
+    margin-bottom: 8px;
+  }
+
+  .reject-content {
+    padding: 16px;
+    border-radius: 8px;
+    background: #F7F8FA;
+    display: flex;
+  }
+
+  .reject-label {
+    width: 80px;
+    font-size: 26px;
+    color: #686B75;
+    line-height: 36px;
+  }
+
+  .reject-text {
+    flex: 1;
+    font-size: 26px;
+    line-height: 36px;
+    color: #24262B;
+  }
+}

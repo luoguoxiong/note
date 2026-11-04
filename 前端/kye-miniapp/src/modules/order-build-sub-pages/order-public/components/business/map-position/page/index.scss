@@ -1,0 +1,33 @@
+.map-position {
+  // :deep(.kyemap) {
+  //   position: fixed;
+  //   bottom: 0;
+  //   width: 100%;
+
+  //   .bottom-search {
+  //     .list {
+  //       padding-bottom: 100px;
+  //     }
+  //   }
+  // }
+
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+    background: #fff;
+    box-shadow: 0 -6px 20px 0 rgb(184 171 255 / 10%);
+
+    .wrap {
+      padding: 20px 24px;
+
+      // :deep(.ky-button) {
+      //   .van-button {
+      //     border-radius: 20px;
+      //   }
+      // }
+    }
+  }
+}

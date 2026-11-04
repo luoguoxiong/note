@@ -1,0 +1,33 @@
+@use "sass:map";
+
+$tag-sizes: (
+  1: (height: 30px, font-size: 20px, radius: 2px),
+  2: (height: 32px, font-size: 22px, radius: 4px),
+  3: (height: 34px, font-size: 24px, radius: 4px),
+  4: (height: 36px, font-size: 26px, radius: 4px),
+  5: (height: 38px, font-size: 28px, radius: 6px)
+);
+
+.ky-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  background: #8365f6;
+  color: white;
+  border: 1px solid #8365f6;
+  box-sizing: border-box;
+
+  &+&{
+    margin-left: 4px;
+    margin-bottom: 4px;
+  }
+
+  @each $size, $attributes in $tag-sizes {
+    &-size--#{$size} {
+      height: map.get($attributes, height);
+      font-size: map.get($attributes, font-size);
+      border-radius: map.get($attributes, radius);
+    }
+  }
+}

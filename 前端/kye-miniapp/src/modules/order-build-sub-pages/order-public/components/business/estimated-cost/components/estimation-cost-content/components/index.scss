@@ -1,0 +1,131 @@
+.example {
+  position: relative;
+  z-index: 100;
+  // width: 630px;
+  padding: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+
+  &-dialog {
+    width: 630px;
+    margin: 0 auto;
+  }
+
+  > div:last-child {
+    margin-bottom: 0;
+  }
+  .example-chargeType-fill-item {
+    display: flex;
+  }
+  .example-chargeType-fill-item-line {
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 32px;
+      display: block;
+      width: 517px;
+      height: 1px;
+      content: '';
+      border-bottom: 0.5px solid #ebedf5;
+    }
+  }
+  // &::after {
+  //   position: absolute;
+  //   right: 50px;
+  //   bottom: -16px;
+  //   width: 0;
+  //   height: 0;
+  //   content: '';
+  //   border-left: 16px solid transparent;
+  //   border-right: 16px solid transparent;
+  //   border-top: 16px solid #fff;
+  // }
+
+  &-deleted {
+    width: 24px;
+    height: 24px;
+  }
+  .modal-content {
+    padding: 24px 24px 26px;
+  }
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 32px 32px 26px;
+    // padding-bottom: 32px;
+    height: 96px;
+    padding: 0 32px;
+    border-bottom: 1px solid #ebedf5;
+
+    &-left {
+      margin-right: 12px;
+      font-size: 32px;
+      font-weight: 600;
+      color: #333;
+      text-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
+    }
+    &-right {
+      font-size: 22px;
+      color: #ff7374;
+      text-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
+    }
+  }
+
+  &-method {
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: #03050d;
+    line-height: 30px;
+    font-weight: $font-bold;
+  }
+  &-desc {
+    font-size: 24px;
+    color: #888ea6;
+    text-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
+  }
+
+  &-chargeType {
+    &-title {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      font-size: 24px;
+      color: #888ea6;
+      text-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
+      line-height: 30px;
+    }
+
+    &-fill {
+      overflow: hidden;
+      color: #03050d;
+      border: 1px solid #ebedf5;
+      border-radius: 8px;
+      > div {
+        height: 56px;
+        padding: 0 32px;
+        font-size: 22px;
+        color: #55596c;
+        line-height: 56px;
+
+        &:first-child {
+          background: #ebedf5;
+        }
+        .h5-span:first-child {
+          display: inline-block;
+          min-width: 300px;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    margin-top: 16px;
+    font-size: 24px;
+    color: #888ea6;
+    text-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
+    line-height: 36px;
+  }
+}

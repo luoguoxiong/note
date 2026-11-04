@@ -1,0 +1,85 @@
+.address-book-skeleton {
+  margin: 0 20px;
+
+  :deep(.van-skeleton) {
+    display: flex;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 24px;
+    flex-direction: column;
+
+    .margin {
+      margin-top: 12px;
+    }
+
+    .background {
+      background: linear-gradient(90deg, #f1f3f9 0%, #f8faff 99%);
+      border-radius: 8px;
+    }
+    .background-left {
+      background: linear-gradient(90deg, #f8faff 0%, #f1f3f9 99%);
+      border-radius: 8px;
+    }
+
+    .height {
+      height: 28px;
+      border-radius: 8px;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .flex1 {
+      flex: 1;
+    }
+    .flex9 {
+      flex: 15;
+      margin-left: 10px;
+    }
+    .flex-between {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .width394 {
+      width: 394px;
+    }
+
+    .width228 {
+      width: 228px;
+    }
+
+    .width100 {
+      width: 100%;
+    }
+
+    .width115 {
+      width: 115px;
+    }
+    .width190 {
+      width: 190px;
+    }
+
+    .width268 {
+      width: 268px;
+    }
+    .height52 {
+      height: 52px;
+    }
+    .height92 {
+      height: 92px;
+    }
+    .height40 {
+      height: 40px;
+    }
+    .height20 {
+      height: 20px;
+    }
+    .mt-48 {
+      margin-top: 48px;
+    }
+  }
+}

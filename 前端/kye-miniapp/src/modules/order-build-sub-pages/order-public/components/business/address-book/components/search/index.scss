@@ -1,0 +1,11 @@
+.address-book-page-search {
+  padding: 16px;
+  background: #fff;
+  // :deep(.van-search) {
+  //   padding-top: 8px;
+  // }
+  .address-book-list-search-icon {
+    padding-right: 30px;
+    flex-shrink: 0;
+  }
+}

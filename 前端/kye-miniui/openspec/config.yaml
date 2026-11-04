@@ -1,0 +1,160 @@
+schema: spec-driven
+
+context: |
+  # 项目概览
+  kye-miniui 是一个基于 Taro 4.x 的企业级小程序跨端 UI 组件库，提供 40+ 高质量组件，
+  支持微信小程序、支付宝小程序、H5 等多端运行。
+
+  ## 技术栈
+  - **核心语言**: TypeScript 4.9.x（严格模式）
+  - **UI 框架**: Vue 3.5.x（Composition API + <script setup>）
+  - **跨端框架**: Taro 4.0.x
+  - **包管理**: pnpm workspace（monorepo）
+  - **构建工具**: Vite 4.5.x
+  - **CSS 预处理器**: SCSS（Sass 1.62.x）
+  - **文档框架**: VitePress
+  - **发布管理**: Verdaccio（私有 npm 仓库）
+
+  ## 代码质量
+  - **ESLint**（+ Prettier 集成）
+  - **Prettier** 统一代码风格
+  - **Husky** + **lint-staged** 提交前检查
+  - **Commitlint** + Commitizen（Conventional Commits）
+  - **vue-tsc** 类型检查
+
+  ## 命名规范
+  - **组件前缀**: `ky-`（如 `ky-button`、`ky-input`）
+  - **组件目录**: kebab-case（如 `action-sheet`、`floating-bubble`）
+  - **SCSS**: BEM 命名规范
+  - **提交信息**: Conventional Commits（feat/fix/chore/docs 等）
+
+  ## 项目结构
+  ```
+  kye-miniui/
+  ├── packages/
+  │   ├── __components/          # UI 组件源码（每个组件独立 workspace package）
+  │   │   ├── action-sheet/      # 动作面板
+  │   │   ├── auto-complete/     # 自动完成
+  │   │   ├── button/            # 按钮（含 weapp 专属样式）
+  │   │   ├── calendar/          # 日历选择器
+  │   │   ├── cell/              # 列表项
+  │   │   ├── cell-group/        # 列表项组
+  │   │   ├── checkbox/          # 复选框（h5/native 双版本）
+  │   │   ├── checkboxgroup/     # 复选框组（provide/inject 联动）
+  │   │   ├── circle/            # 环形进度条（Canvas 实现）
+  │   │   ├── container/         # 页面容器（滚动、分享、网络状态）
+  │   │   ├── cropper-image/     # 图片裁剪
+  │   │   ├── dialog/            # 对话框（含命令式调用）
+  │   │   ├── empty/             # 空状态占位
+  │   │   ├── field/             # 表单字段
+  │   │   ├── float-pagination/  # 浮动分页器
+  │   │   ├── floating-bubble/   # 浮动气泡
+  │   │   ├── floating-panel/    # 浮动面板（h5/wx 双版本）
+  │   │   ├── form/              # 表单容器
+  │   │   ├── image-preview/     # 图片预览（含预加载）
+  │   │   ├── input/             # 输入框（h5/native 双版本）
+  │   │   ├── list/              # 长列表（wx/alipay 双版本）
+  │   │   ├── list-standard/     # 标准列表
+  │   │   ├── list-virtual/      # 虚拟列表
+  │   │   ├── loading/           # 加载中
+  │   │   ├── navbar/            # 导航栏（wx/alipay 双版本）
+  │   │   ├── overlay/           # 遮罩层
+  │   │   ├── picker/            # 选择器（含联动、加载状态）
+  │   │   ├── popover/           # 弹出框
+  │   │   ├── popover-menu/      # 弹出菜单
+  │   │   ├── popup/             # 弹出层
+  │   │   ├── popup-simple/      # 简单弹出层
+  │   │   ├── radio/             # 单选框（h5/native 双版本）
+  │   │   ├── radiogroup/        # 单选框组
+  │   │   ├── swipe-cell/        # 滑动单元格
+  │   │   ├── swipe-group/       # 滑动组
+  │   │   ├── swiper/            # 轮播（含自定义动画 hooks）
+  │   │   ├── swiper-item/       # 轮播项
+  │   │   ├── switch/            # 开关
+  │   │   ├── tab/               # 标签页
+  │   │   ├── tag/               # 标签
+  │   │   ├── text/              # 文本（h5 专属样式）
+  │   │   ├── textarea/          # 多行输入（含 iOS 适配）
+  │   │   ├── timepicker/        # 时间选择器
+  │   │   ├── transition/        # 过渡动画
+  │   │   └── upload/            # 文件上传
+  │   ├── __native/              # 微信原生自定义组件
+  │   │   ├── custom-input/      # 原生输入框组件
+  │   │   ├── custom-textarea/   # 原生多行输入组件
+  │   │   └── utils/             # 原生组件工具函数
+  │   ├── ky-miniui-lib/         # 组件库主入口，统一导出 + Vite 构建配置
+  │   ├── node/                  # Node.js 端 Taro 插件
+  │   │   └── taro-plugin-miniui-native/  # 原生组件注册插件
+  │   ├── scss/                  # 全局样式系统
+  │   │   ├── base/              # 基础变量、颜色主题、normalize
+  │   │   ├── tools/             # SCSS 工具函数 & mixins（BEM、布局、动画等）
+  │   │   ├── components/        # 组件级全局样式
+  │   │   └── acss/              # 原子化 CSS 工具类
+  │   ├── types/                 # 公共类型定义（通用类型、尺寸类型）
+  │   └── utils/                 # 工具函数包
+  │       ├── src/               # 工具函数（平台检测、DOM 操作、事件总线等）
+  │       └── hooks/             # 复合 hooks（children 联动、外部点击、环境配置）
+  ├── cli/                       # 自定义 CLI 工具（组件脚手架生成）
+  ├── docs/                      # VitePress 文档站点
+  │   ├── components/            # 各组件使用文档
+  │   ├── guide/                 # 快速开始、更新日志、FAQ
+  │   ├── demos/                 # 在线演示代码
+  │   └── .vitepress/            # VitePress 主题和配置
+  ├── example/                   # Vue 3 示例项目（H5 演示）
+  ├── preview/
+  │   └── taro-demo/             # Taro 多端预览项目（微信/支付宝/H5）
+  ├── lib/                       # 构建产物输出目录
+  └── config.ts                  # 组件库全局配置（组件前缀等）
+  ```
+
+  ## 组件架构约定
+  - **每个组件独立为一个 workspace package**，命名 `@ky-miniui-lib/<component-name>`
+  - **组件目录结构**: `src/` 下包含 `index.scss`、`types.ts`、`<component-name>.vue`
+  - **多端适配**: 通过文件名后缀区分平台，如 `index.h5.scss`、`index.native.scss`、`native.vue`、`alipay.vue`
+  - **命令式组件**: Dialog、ImagePreview 等组件支持通过函数式调用（`showDialog`、`showImagePreview`）
+  - **组件联动**: 使用 provide/inject 实现父子组件通信（如 CheckboxGroup、RadioGroup、SwipeGroup）
+  - **原生组件**: 通过小程序原生自定义组件（custom-input、custom-textarea）提升输入体验
+
+  ## 发布管理
+  - 私有 npm registry: `http://nexus.ky-tech.com.cn:8081/repository/npmjs-hosted`
+  - 组件库包名: `@kye-netc/kye-miniui`
+  - Node 插件包名: `@kye-netc/taro-plugin-miniui-native`
+  - 版本号: `0.2.37-beta.11`（beta 阶段）
+
+  ## 开发命令
+  - `pnpm dev:wx` — 微信小程序预览
+  - `pnpm dev:alipay` — 支付宝小程序预览
+  - `pnpm dev:h5` — H5 预览
+  - `pnpm build:lib` — 构建组件库（含类型检查）
+  - `pnpm build:lib:ignore` — 构建组件库（跳过类型检查）
+  - `pnpm docs:dev` — 启动文档站点
+  - `pnpm lint` — ESLint 代码检查
+  - `pnpm gen:cli` — 通过 CLI 脚手架创建新组件
+
+rules:
+  proposal:
+    - 包含清晰的目标和非目标说明
+    - 说明对现有组件的影响
+    - 提供实现方案概述
+    - 涉及多端适配需说明各平台差异
+
+  tasks:
+    - 任务粒度控制在 2 小时以内
+    - 每个任务有明确的验收标准
+    - 涉及组件修改的任务需同步更新文档
+    - 涉及多端组件需分别验证各平台
+
+  components:
+    - 新组件必须在 packages/__components/ 目录下创建独立的 workspace package
+    - 必须包含类型定义文件（types.ts）
+    - 必须提供文档示例（docs/components/*.md）
+    - 必须有平台适配方案（h5/native/weapp/alipay）
+    - 组件命名使用 kebab-case，文件命名保持一致
+    - SCSS 使用 BEM 命名规范
+    - 跨组件通信优先使用 provide/inject
+    - 涉及原生能力需评估 __native/ 自定义组件方案
+
+  specs:
+    - 每个 spec 需包含精确的 API 定义（Props/Events/Slots/Methods）
+    - 需包含交互说明和边界情况处理
+    - 多端组件需分别说明各平台实现差异

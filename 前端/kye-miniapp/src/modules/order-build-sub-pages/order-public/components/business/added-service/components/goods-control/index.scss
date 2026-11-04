@@ -1,0 +1,71 @@
+.goods-control {
+  .goods-control-title-box {
+    margin-bottom: 28px;
+  }
+  .goods-control-title-label {
+    margin-top: 10px;
+    font-size: 24px;
+  }
+  .goods-control-title {
+    position: relative;
+
+    &.fontBold {
+      font-weight: 600;
+    }
+    .error-tip-box {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      color: #ff706d;
+      transform: translateY(-50%);
+      line-height: 24px;
+      font-weight: normal;
+      .svg-icon {
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+        margin-right: 4px;
+      }
+    }
+  }
+  .goods-control-content {
+    gap: 40px;
+    position: relative;
+    .goods-control-content-item {
+      padding-bottom: 24px;
+      &-circle {
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+        background-color: #cacedb;
+        border-radius: 50%;
+      }
+      &-desc {
+        margin-left: 8px;
+        color: #8c8f99;
+        font-size: 24px;
+        line-height: 34px;
+      }
+      &-icon {
+        width: auto;
+        height: 34px;
+        flex: 1;
+        .svg-icon {
+          display: block;
+          float: right;
+          overflow: hidden;
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+    .edit-return-waybill {
+      position: absolute;
+      inset: 0;
+      z-index: 12;
+    }
+  }
+}

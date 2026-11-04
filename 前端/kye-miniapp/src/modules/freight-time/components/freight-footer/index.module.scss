@@ -1,0 +1,83 @@
+.freight-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 24px 32px;
+  padding-bottom: calc(24px + env(safe-area-inset-bottom, 20px));
+  z-index: 100;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    .footer-text-wrap {
+      flex: 1;
+      display: flex;
+      padding-right: 24px;
+    }
+
+    .footer-tip-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .footer-text {
+      font-size: 24px;
+      color: #6e6d72;
+      line-height: 33px;
+    }
+  }
+
+  .footer-inner--new-auth {
+    :global(.ky-button) {
+      flex: 1;
+    }
+  }
+
+  // 对齐 H5 freight-time__new-auth-keep：单按钮面板（解锁企业专属价）
+  .footer-inner--unlock {
+    position: relative;
+
+    :global(.ky-button) {
+      flex: 1;
+    }
+  }
+
+  .footer-inner--send {
+    .footer-text {
+      flex: none;
+    }
+
+    .btn-send {
+      width: 192rpx;
+      height: 88rpx;
+    }
+  }
+
+  .auth-coupon-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    border-radius: 20px 20px 20px 0;
+    background: linear-gradient(281deg, #FF144F -3%, #FF6767 67%, #FF0C49 100%);
+    font-size: 24px;
+    color: #FFF3F3;
+    white-space: nowrap;
+    z-index: 2;
+  }
+}

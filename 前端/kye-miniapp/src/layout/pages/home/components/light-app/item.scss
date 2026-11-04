@@ -1,0 +1,158 @@
+/* ================= item ================= */
+
+.lat {
+  position: relative;
+  width: 20%;
+  height: 128px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= basic ================= */
+
+.lat__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.lat__label {
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  color: #24262b;
+}
+
+/* ================= corn icon ================= */
+
+.lat__corn-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  width: 100%;
+  height: 112px;
+  transform: translate(-48%, -68%);
+  img{
+    width: 100%;
+  }
+}
+
+/* ================= popover ================= */
+
+.lat_p {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+
+  display: flex;
+  width: 452px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+
+  font-size: 24px;
+  line-height: 34px;
+  color: #fff;
+
+  background: linear-gradient(106deg, #a48bf9 2%, #8365f6 99%);
+  border-radius: 8px;
+  transform: translateY(-100%);
+}
+
+.lat_p::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+
+  border: 10px solid transparent;
+  border-top-color: #a48bf9;
+}
+
+/* popover close */
+.lat_p-close {
+  width: 48px;
+  height: 48px;
+  margin-left: 8px;
+}
+
+/* ================= popover position ================= */
+
+.lat_p--left {
+  left: 0;
+}
+
+.lat_p--left::after {
+  left: 60px;
+}
+
+.lat_p--right {
+  right: 0;
+}
+
+.lat_p--right::after {
+  right: 60px;
+}
+
+.lat_p--center {
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.lat_p--center::after {
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+
+/* ================= badge ================= */
+
+.at-badge {
+  position: absolute;
+  top: 24px;
+  right: 40px;
+
+  width: 16px;
+  height: 16px;
+
+  background: #ff706d;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+/* ================= text / tag ================= */
+
+.at-text {
+  position: absolute;
+  top: 2px;
+  left: 75px;
+
+  min-width: 40px;
+  height: 28px;
+  padding: 0 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  color: #fff;
+  white-space: nowrap;
+
+  background: #ff706d;
+  border: 1px solid #fff;
+  border-radius: 14px 14px 14px 0;
+  box-sizing: border-box;
+}
+
+.at-tag {
+  position: absolute;
+  top: 2px;
+  left: 75px;
+  width: 56px;
+  height: 28px;
+}

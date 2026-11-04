@@ -1,0 +1,402 @@
+.weui-input::placeholder {
+  font-weight: lighter;
+}
+
+.ky-input--focus{
+  border:2px solid #8365F6;
+  &-value {
+    .ky-input--input-container, .ky-input--bottom--input-container{
+      width: calc(100% - 56px);
+      flex: initial;
+    }
+  }
+}
+
+.ky-input--wrapper input::placeholder {
+  color: #ADB0B8;
+  font-size: 28px;
+}
+
+.ky-input--wrapper input ::placeholder {
+  color: #ADB0B8;
+  font-size: 28px;
+}
+
+.ky-input--error input::placeholder {
+  color: #FF706D !important;
+}
+
+.ky-input--error input ::placeholder {
+  color: #FF706D !important;
+}
+
+.ky-input--error{
+  &:not(.ky-input--bottom){
+    //border-color: #FF706D;
+  }
+  color: #FF706D !important;
+  .ky-input--input-container, .ky-input--bottom--input-container {
+    input{
+      color: #FF706D;
+    }
+  }
+}
+.ky-input--bottom--clear, .ky-input--clear {
+  &.input-clear-icon-hidden{
+    opacity: 0;
+    width: 0;
+    /* 14pro以上高度变化存在明显抖动 */
+    padding: 20px 0;
+    pointer-events: none;
+  }
+}
+
+.ky-input--wrapper{
+  position: relative;
+  input {
+    font-weight: bold;
+  }
+  &.ky-input--right {
+    .h5-input, .ky-input-placeholder {
+      text-align: right;
+    }
+  }
+  .ky-input-native{
+    width: 100%;
+  }
+  &.ky-input--clear-reserve{
+    .ky-input--input-container, .ky-input--bottom--input-container{
+      width: calc(100% - 56px);
+      flex: initial;
+    }
+    /* 高德小程序抖动处理 */
+    .input-clear-icon-hidden{
+      padding: 20px;
+    }
+  }
+}
+.ky-input--none-value{
+  input {
+    font-weight: normal;
+  }
+  &.ky-input--bottom--disabled, &.ky-input--disabled{
+    input {
+      font-weight: normal;
+    }
+  }
+}
+.ky-input-placeholder {
+  position: absolute;
+  line-height: 1;
+  width: calc(100% - 16px);
+  max-width: 100%;
+  word-break: break-all;
+  box-sizing: border-box;
+  padding-right: 16px;
+  z-index: 1;
+  font-weight: initial;
+  pointer-events: none;
+  color: #ADB0B8;
+  font-size: 28px;
+  &-text{
+    font-size: 28px;
+  }
+}
+.ky-input--bottom{
+  padding: 0 16px;
+  border: 2px solid #E6E8ED;
+  font-size: 28px;
+  width: auto;
+  color: #24262B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-radius: 0;
+  background: #fff;
+  &--input-container{
+    padding: 12px 0;
+    flex: 1;
+    display: flex;
+    align-content: center;
+    position: relative;
+  }
+  &--disabled-masker{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+  &--focus{
+    border-color: #8365F6;
+  }
+  &--right-slot{
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+  &--bottom{
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-radius: 0;
+  }
+  &--error{
+    color: #FF706D !important;
+    input{
+      color: #FF706D;
+    }
+  }
+  &--clear{
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background: transparent;
+  }
+  &--clear-icon{
+    width: 28px;
+    height: 28px;
+    background: url("https://ic-img.ky-express.com/netc/20250107_33663189543_!!1736218731185_64_64.png") no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+  }
+  input{
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    height: 40px;
+    font-size: 28px;
+    padding: 0;
+  }
+  .flex{
+    display: flex;
+    align-items: center;
+  }
+  &--disabled {
+    background: #F2F3F7;
+    input{
+      background: #F2F3F7;
+      //color: #8C8F99;
+      color: #000;
+      font-weight: bold;
+    }
+    &.WEAPP input{
+      color: #8C8F99;
+    }
+  }
+}
+.ky-input {
+  position: relative;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: #F7F8FA;
+  border: 2px solid #E6E8ED;
+  font-size: 28px;
+  width: auto;
+  color: #24262B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &--input-container{
+    padding: 12px 0;
+    flex: 1;
+    display: flex;
+    align-content: center;
+    position: relative;
+  }
+  &--disabled-masker{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+  &--focus{
+    border-color: #8365F6;
+  }
+  &--right-slot{
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+  &--bottom{
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-radius: 0;
+  }
+  &--error{
+    //border-color: #FF706D;
+    color: #FF706D !important;
+    input{
+      color: #FF706D;
+    }
+  }
+  &--clear{
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background: transparent;
+  }
+  &--clear-icon{
+    width: 28px;
+    height: 28px;
+    background: url("https://ic-img.ky-express.com/netc/20250107_33663189543_!!1736218731185_64_64.png") no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+  }
+  input{
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    height: 40px;
+    font-size: 28px;
+    padding: 0;
+  }
+  .flex{
+    display: flex;
+    align-items: center;
+  }
+    &--disabled {
+    background: #F2F3F7;
+    input{
+      background: #F2F3F7;
+      //color: #8C8F99;
+      color: #000;
+      font-weight: bold;
+    }
+    &.WEAPP input, custom-input{
+      color: #8C8F99;
+    }
+  }
+}
+.ky-input--none{
+  padding: 0 16px;
+  border: none;
+  font-size: 28px;
+  width: auto;
+  color: #24262B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0;
+  background: #fff;
+  &--input-container{
+    padding: 12px 0;
+    flex: 1;
+    display: flex;
+    align-content: center;
+    position: relative;
+  }
+  &--disabled-masker{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+  &--right-slot{
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+  &--bottom{
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-radius: 0;
+  }
+  &--error{
+    color: #FF706D !important;
+    input, custom-input{
+      color: #FF706D;
+    }
+  }
+  &--clear{
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background: transparent;
+  }
+  &--clear-icon{
+    width: 28px;
+    height: 28px;
+    background: url("https://ic-img.ky-express.com/netc/20250107_33663189543_!!1736218731185_64_64.png") no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+  }
+  input{
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    height: 40px;
+    font-size: 28px;
+    padding: 0;
+  }
+  .flex{
+    display: flex;
+    align-items: center;
+  }
+  &--disabled {
+    background: #F2F3F7;
+    input{
+      background: #F2F3F7;
+      color: #000;
+      font-weight: bold;
+    }
+  }
+}
+
+/* 靠右样式 */
+.ky-input--right {
+  text-align: right;
+  .ky-input-box--container {
+    .h5-input {
+      z-index: 0;
+    }
+  }
+  .ky-input--clear,.ky-input-bottom--clear {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  .ky-input--clear {
+    right: 10px;
+  }
+  .ky-input--bottom--clear{
+    right: 0;
+  }
+
+  .ky-input--clear-mask {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 68px;
+    background: linear-gradient(to right, transparent, #fff);
+    z-index: 1; /* 覆盖文字，但在按钮下方 */
+    border-radius: 12px;
+  }
+}
+
+.ky-input-box--container{
+  custom-wrapper{
+    width: 100%;
+  }
+}

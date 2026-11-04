@@ -1,0 +1,111 @@
+.app-entry{
+  height: 132px;
+  margin-top: 40px;
+  margin-bottom: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-sizing: border-box;
+
+  &-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 208px;
+    position: relative;
+
+    .act-icon {
+      position: absolute;
+      width: 56px;
+      height: 28px;
+      top: -12px;
+      right: 35px;
+    }
+
+    &__icon {
+      width: 76px;
+      height: 76px;
+    }
+
+    &__text {
+      width: 188px;
+      height: 48px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 7px 8px;
+      margin-left: 12px;
+      margin-top: 8px;
+
+      &__left {
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 34px;
+        margin-right: 4px;
+      }
+
+      &__right {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &-item-h5 {
+    width: 670px;
+    height: 72px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #F7F8FA;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    margin-top: 16px;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      position: relative;
+
+      &__icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      &__text {
+        font-size: 28px;
+        font-weight: normal;
+        line-height: 40px;
+        color: #24262B;
+        margin-left: 16px;
+      }
+
+      .act-icon {
+        position: absolute;
+        width: 56px;
+        height: 28px;
+        top: -12px;
+        right: -60px;
+      }
+    }
+
+    &-right {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+.app-entry-h5 {
+  flex-direction: column;
+  height: auto;
+  margin-top: 8px !important;
+}

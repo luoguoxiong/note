@@ -1,0 +1,44 @@
+.message-to-driver {
+  // :deep(.tag-container) {
+  //   margin-top: 16px;
+  // }
+  &.no-border-bottom {
+    overflow: hidden;
+    border-radius: 24px;
+    ::after {
+      border: 0 !important;
+    }
+  }
+  &.hasValue {
+    // :deep(.cell-wrapper) {
+    //   .van-cell__value {
+    //     flex: 1 !important;
+    //     min-width: 60%;
+    //   }
+    // }
+  }
+  // :deep(.cell-wrapper) {
+  //   .van-cell__value {
+  //     flex: none;
+  //   }
+  // }
+
+  // :deep(.cell-wrapper .van-cell) {
+  //   &::after {
+  //     position: absolute;
+  //     right: 0;
+  //     left: 24px;
+  //     width: 662px;
+  //     content: '';
+  //     box-sizing: border-box;
+  //     pointer-events: none;
+  //     transform: scaleY(0.5);
+  //     border-bottom: 2px solid #ebedf5;
+  //   }
+  // }
+}
+// .none-border-bottom {
+//   :deep .cell-wrapper .van-cell::after {
+//     border: 0 none;
+//   }
+// }

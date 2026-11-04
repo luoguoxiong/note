@@ -1,0 +1,91 @@
+.add-popup__header {
+  height: 96px;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 48px;
+  padding: 24px 32px;
+  color: #24262b;
+  box-sizing: border-box;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #e6e8ed;
+  display: flex;
+  align-items: center;
+}
+
+.add-popup__header-close {
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+}
+
+.add-popup__body {
+  min-height: 360px;
+  padding: 32px;
+  box-sizing: border-box;
+
+  .ky-popover-container {
+    width: 100%;
+  }
+
+  .add-popup__input-wrap {
+    position: relative;
+  }
+
+  .input-popover {
+    position: absolute;
+    top: -76px;
+    left: 0;
+    border-radius: 8px;
+    opacity: 1;
+    padding: 16px 20px;
+    background: rgba(36, 38, 43, 0.9);
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #ffffff;
+  }
+
+  .input-popover-arrow {
+    position: absolute;
+    bottom: -11.8px;
+    left: 24px;
+    width: 24px;
+    height: 16px;
+  }
+}
+
+.add-popup__footer {
+  padding: 16px 32px;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 32px);
+  border-width: 1px 0px 0px 0px;
+  border-style: solid;
+  border-color: #e6e8ed;
+  box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  .ky-button {
+    flex: 1;
+  }
+}
+
+.add-popup__label {
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 40px;
+  color: #24262b;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+
+  .add-popup__label--required {
+    background: url('https://ic-img.ky-express.com/netc/20250110_99963189533_!!1736495331383_160_160.png');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+  }
+}
+.add-popup__form-item {
+  margin-bottom: 24px;
+}

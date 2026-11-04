@@ -1,0 +1,221 @@
+html,
+body,
+#app {
+  height: 100%;
+
+  /* 去掉font-family: -apple-system; 处理html2canvas在IOS系统生成图片的问题 */
+  font-family: 'Microsoft Yahei',BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, Roboto, 'PingFang SC', miui,
+    'Hiragino Sans GB', sans-serif !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px; /* 滚动条宽度 */
+  height: 6px; /* 滚动条高度 */
+}
+
+/* 定义滚动条轨道 内阴影+圆角 */
+::-webkit-scrollbar-track {
+  background: #fff; /* 滚动条的背景颜色 */
+  border-radius: 10px; /* 滚动条的背景区域的圆角 */
+}
+
+/* 定义滑块 内阴影+圆角 */
+::-webkit-scrollbar-thumb {
+  background: rgb(36 38 43 / 16%); /* 滚动条的背景颜色 */
+  border-radius: 3px; /* 滚动条的圆角 */
+}
+
+// 选择打印机下拉选项
+.select-printer-popper.el-popper {
+  .el-select-dropdown__wrap {
+    padding: 8px;
+    .el-select-dropdown__list {
+      padding: 0;
+      .el-select-dropdown__item {
+        height: 48px;
+        padding: 0;
+        margin-bottom: 2px;
+
+        &:last-child() {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// 完善取货信息
+.el-overlay .el-drawer.perfect-order .el-drawer__body {
+  background: #f7f8fa;
+}
+
+// 打印组件打印面单
+.el-popper.select-express-sheet-popper {
+  .el-select-dropdown.select-express-sheet-popper {
+    .el-scrollbar {
+      .el-select-dropdown__wrap {
+        .el-select-group__wrap {
+          padding-bottom: 8px;
+
+          &::after {
+            display: none;
+          }
+
+          li {
+            &.el-select-group__title {
+              height: 20px;
+              padding-left: 8px;
+              font-size: $font-size-small;
+              color: #24262b;
+              font-weight: normal;
+              line-height: 20px;
+            }
+
+            .el-select-group {
+              padding: 0 8px;
+              .el-select-dropdown__item {
+                width: 100%;
+                height: 58px;
+                padding: 5px 16px;
+                margin-top: 8px;
+                background: #f7f8fa;
+                box-sizing: border-box;
+
+                &:hover {
+                  background: rgb(36 38 43 / 5%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ky_custom_loading {
+  background-color: rgb(255 255 255 / 100%) !important;
+  .el-loading-spinner .circular {
+    display: none;
+  }
+}
+
+.el-loading-spinner {
+  position: absolute;
+  top: 40%;
+  left: calc(50% - 60px);
+  width: 120px;
+  height: 60px;
+  background: url('../assets/car-loading.gif') no-repeat !important;
+  background-size: 48px 48px;
+  .el-loading-text {
+    position: absolute;
+    bottom: -26px;
+    width: 100%;
+    font-size: $font-size-xs;
+    text-align: center;
+    color: #999;
+  }
+}
+
+svg:focus {
+  outline: 0 none; // 解决svg图标点击出现黑色边框
+}
+
+//修复 批量表格提示 无法展示 的问题
+.vxe-table--render-default .vxe-header--column.col--ellipsis:not(.col--actived) > .vxe-cell,
+.vxe-table--render-default .vxe-body--column.col--ellipsis:not(.col--actived) > .vxe-cell,
+.vxe-table--render-default .vxe-footer--column.col--ellipsis:not(.col--actived) > .vxe-cell {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  & > div {
+    flex: 1;
+  }
+  .over-area-delivery-wrapper {
+    max-width: 100%;
+    &.table-scene {
+      .ky-form-item {
+        .content {
+          .error_component_container {
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
+
+// .vxe-table--render-default .vxe-table--header-wrapper.fixed-right--wrapper,
+// .vxe-table--render-default .vxe-table--body-wrapper.fixed-right--wrapper,
+// .vxe-table--render-default .vxe-table--footer-wrapper.fixed-right--wrapper {
+//   background-color: #fff;
+// }
+
+// .vxe-table--render-default .vxe-table--header-wrapper.fixed-left--wrapper,
+// .vxe-table--render-default .vxe-table--body-wrapper.fixed-left--wrapper,
+// .vxe-table--render-default .vxe-table--footer-wrapper.fixed-left--wrapper {
+//   background-color: #fff;
+// }
+
+.col--checkbox .vxe-cell {
+  display: flex;
+  justify-content: center;
+}
+
+.vxe-table--render-default .vxe-body--column.overflow-visible.col--ellipsis:not(.col--actived) > .vxe-cell {
+  overflow: visible;
+}
+
+.vxe-table--body-wrapper.body--wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.vxe-table .vxe-table--header-wrapper .vxe-table--header-border-line {
+  border-bottom: none;
+}
+
+.svg-icon-default {
+  width: 14px;
+  // height: 16px;
+}
+.grid-list{
+  display: grid;
+  gap: 24px 16px;
+  grid-template-columns: repeat(auto-fill, minmax(184px, 1fr));
+  grid-template-rows: 54px;
+}
+
+.block-header {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  margin-bottom: 16px;
+  &-title {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 18px;
+    color: #24262b;
+    font-weight: 600;
+  }
+  &-title::after {
+    position: absolute;
+    bottom: -4px;
+    left: 16px;
+    z-index: -1;
+    width: 64px;
+    height: 9px;
+    background: url('@/assets/title-bg.png') no-repeat;
+    background-size: 100%;
+    content: '';
+  }
+}
+
+@media (width <= 1280px) {
+  .limitScreen{
+    overflow-x: scroll;
+    min-width: 1280px;
+  }
+}

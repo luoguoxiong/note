@@ -1,0 +1,100 @@
+.sign-in-page {
+  min-height: 100vh;
+  .loading {
+    width: 100%;
+    background: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-img {
+      width: 164px;
+      height: 82px;
+    }
+    &-text {
+      margin-top: 24px;
+      font-size: 28px;
+      font-weight: normal;
+      text-align: center;
+      color: #55596c;
+    }
+  }
+  .content {
+    width: 100%;
+    background: #bbd5ff;
+    font-family: PingFang SC;
+    min-height: 100vh;
+    text-size-adjust: 100% !important;
+    &-bg {
+      width: 100%;
+      height: 1448px;
+      background: url(../assets/sigin.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      box-sizing: border-box;
+      padding-top: 426px;
+    }
+    &-qrcode {
+      display: block;
+      width: 360px;
+      height: 360px;
+      margin: 0 auto 42px;
+      border-radius: 22.98px;
+      border: 12px solid #dee8fc;
+      overflow: hidden;
+      padding: 16px;
+      background: white;
+      box-sizing: border-box;
+      .qrcode-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-desc {
+      font-size: 28px;
+      font-weight: normal;
+      line-height: 28px;
+      text-align: center;
+      color: #03050d;
+    }
+  }
+  .employer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &-img {
+      display: block;
+      width: 280px;
+      height: 280px;
+      margin-top: -180px;
+    }
+    &-title {
+      color: #03050d;
+      margin: 8px 0;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 34px;
+    }
+    &-desc {
+      font-size: 28px;
+      color: #6e6d72;
+    }
+    &-btn {
+      width: 224px;
+      height: 68px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      border: 1px solid #8365f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: 500;
+      color: #8365f6;
+      margin-top: 41px;
+    }
+  }
+}

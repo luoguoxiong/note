@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+    }
+  },
+  "include": [".dumirc.ts", "./src/", "packages/native/src/alipay.ts", "packages/native/src/app.ts", "packages/native/src/config.ts", "packages/native/src/device.ts", "packages/native/src/index.ts", "packages/native/src/type.d.ts", "packages/native/src/utils.ts", "packages/native/src/wx.ts"]
+}

@@ -1,0 +1,19 @@
+.ky-autocomplete {
+  width: 340px;
+  .flex{
+    display: flex;
+    align-items: center;
+  }
+  .popover{
+    width: 340px;
+    box-sizing: border-box;
+  }
+}
+.ky-autocomplete-popover-item{
+  padding: 4px 0;
+  display: flex;
+  font-size: 26px;
+}
+.ky-autocomplete--content{
+  width: 370px;
+}

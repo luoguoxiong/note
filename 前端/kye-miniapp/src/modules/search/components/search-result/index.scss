@@ -1,0 +1,51 @@
+.search-result-list {
+  background: #f1f2f7;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+
+  .ky-list-loading-tip {
+    display: none;
+  }
+  .search-result-list__empty {
+    height: calc(100% - 60px);
+  }
+  .ky-tab-underline {
+    transform: translateY(-50%);
+  }
+}
+
+.search-result-list__content {
+  display: flex;
+  flex-direction: column;
+  // padding: 16px 24px;
+  box-sizing: border-box;
+  background: #f1f2f7;
+  height: 100%;
+  // padding-top: 24px;
+
+  // .ky-popup-content {
+  //   transform: scale(0.9) !important;
+  // }
+}
+
+.search-result-list__content-1 {
+  .waybill-search-item__Warp {
+    .btn-box {
+      min-height: 230px;
+    }
+
+    .waybill-barcode-popup-box {
+      .ky-popup-content {
+        transform: scale(0.95);
+        margin-top: -64rpx;
+      }
+    }
+  }
+}
+
+.search-result-list__content-2 {
+  padding: 16px 24px;
+}

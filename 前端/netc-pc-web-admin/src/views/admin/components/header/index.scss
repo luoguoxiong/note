@@ -1,0 +1,185 @@
+// 来源: netc-pc-web/src/views/layout/header-new.vue 样式 (UI 完全一致)
+.web-mode {
+  .logo {
+    cursor: pointer;
+  }
+}
+
+// 修改header的高度要注意，预估运费的抽屉距离这个顶部的间距
+.header {
+  position: relative;
+  height: 46px;
+  padding: 0 20px;
+  background-position: 50px center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #7143f0;
+  background-image: url('https://ic-img.ky-express.com/netc/20240910_86158405370_!!1725950605573_3840_96.png');
+  &.header-modal-show {
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      width: 100%;
+      height: 74px;
+      background: #000;
+      opacity: 0.5;
+      content: '';
+    }
+  }
+
+  .window {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+
+    > i {
+      margin-left: 16px;
+      font-size: 12px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    > img {
+      width: 12px;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 186px;
+    height: 46px;
+    -webkit-app-region: drag;
+  }
+
+  .plane {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 45px;
+
+    > div {
+      -webkit-app-region: no-drag;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: var(--k-spacing-4);
+
+      /* 老仓库中父级规则 .header .items .menu .el-button[data-v] 因 scope id 落在
+         .el-button 上, 对子组件内的按钮并不命中(死规则), 实际生效的是各子组件自己的
+         margin-left: 4px / padding: 8px; 新项目 :deep() 使命中范围扩大到子组件,
+         因此这里不得定义 margin/padding, 否则会覆盖子组件, 布局与老仓库不一致 */
+      :deep(.el-button.el-button) {
+        /* element-plus 按钮为 inline-flex, 固定 16px 宽会使文字溢出重叠, 用 min-width 等价 */
+        min-width: 16px;
+        background: none;
+        border: none;
+
+        /* 本规则编译为 .header .items .menu[data-v] .el-button.el-button(6 级),
+           会压过子组件 hover 规则(5 级), 因此交互态必须挂在本规则上(7 级):
+           老项目交互: hover 深色半透明底 / focus、active 无背景且无轮廓 */
+        &:hover {
+          background: rgb(36 38 43 / 16%);
+        }
+        &:focus,
+        &:active {
+          background: none;
+          outline: none;
+        }
+
+        span .svg-icon {
+          font-size: 13px;
+          color: #fff;
+          fill: #fff;
+        }
+      }
+
+      .btn-preview-version {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 65px;
+        height: 18px;
+        padding: 0;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 10px;
+      }
+
+      i {
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .helpDoc {
+        font-size: 16px;
+      }
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      width: 380px;
+      height: 45px;
+      padding: 0 15px;
+      margin-left: 30px;
+      font-size: 14px;
+      color: #999;
+      background-color: #fff;
+      border-radius: 22px;
+      cursor: pointer;
+
+      .title {
+        overflow: hidden;
+        width: 270px;
+        text-overflow: ellipsis;
+        line-height: 30px;
+      }
+
+      .line {
+        margin: 0 15px;
+      }
+
+      .btn {
+        &:hover {
+          color: #8365f6;
+        }
+
+        .icon-search {
+          margin-right: 5px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .drag-container {
+      z-index: 3;
+      height: 100%;
+      flex: 1;
+      user-select: none;
+    }
+  }
+}
+
+.drag-header {
+  -webkit-app-region: drag;
+}
+
+.no-drag-header {
+  -webkit-app-region: no-drag;
+}

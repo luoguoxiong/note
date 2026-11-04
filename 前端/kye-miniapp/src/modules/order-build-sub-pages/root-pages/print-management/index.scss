@@ -1,0 +1,45 @@
+.print-management {
+  display: flex;
+  padding: 22px 20px;
+  flex-direction: column;
+  box-sizing: border-box;
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px 50px 24px;
+    margin-bottom: 20px;
+    border: 2px solid #EBEDF5;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px 0 rgb(19 47 79 / 7%);
+  }
+  .left-connect {
+    display: flex;
+    align-items: center;
+    &-icon {
+      width: 54px;
+      height: 54px;
+      margin-right: 24px;
+    }
+    .title {
+      font-size: 32px;
+      color: #03050d;
+      font-weight: 600;
+    }
+    .describe {
+      margin-top: 12px;
+      font-size: 24px;
+      color: #888ea6;
+    }
+  }
+  .right-arrow-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .item:last-child {
+    .left-connect-icon {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}

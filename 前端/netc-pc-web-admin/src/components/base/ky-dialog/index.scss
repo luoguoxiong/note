@@ -1,0 +1,63 @@
+:deep(.el-dialog__header) {
+  padding: 16px 0 16px 24px;
+  margin-right: 0;
+  font-size: $fs-title;
+  color: #24262b;
+  // box-shadow: 0 0.5px 0.5px #e6e8ed;
+  border-bottom: 1px solid #e6e8ed;
+  font-weight: $font-bold;
+  line-height: $line-height-normal;
+  letter-spacing: 0;
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 24px;
+  }
+  .header-wrapper>.text{
+    font-weight: bold;
+  }
+  .close-div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 48px;
+    .svg-icon {
+      font-size: $font-size-xs;
+      fill: #26242b;
+    }
+
+    cursor: pointer;
+  }
+}
+:deep(.el-dialog__headerbtn) {
+  top: -3px;
+  .el-dialog__close {
+    color: #24262b;
+  }
+}
+:deep .el-dialog__headerbtn:focus .el-dialog__close,
+:deep .el-dialog__headerbtn:hover .el-dialog__close {
+  color: #9f5ef6;
+}
+:deep(.el-dialog__body) {
+  padding: 24px;
+}
+:deep(.el-dialog__footer) {
+  padding: 12px 24px;
+  border-top: 1px solid #e6e8ed;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+:deep(.el-dialog) {
+  border-radius: 8px;
+  box-shadow: 0 6px 18px 0 rgb(0 0 0 / 12%);
+}
+
+:deep(.el-overlay) {
+  background-color: rgba($color: #24262b, $alpha: 60%);
+}

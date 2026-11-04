@@ -1,0 +1,207 @@
+.add-my-size-page {
+  height: 100vh;
+  background-color: $bg-page;
+
+  // 内容滚动容器：scroll-into-view 滚动定位
+  .add-my-size-scroll {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px 20px calc(140px + env(safe-area-inset-bottom));
+  }
+
+  .add-my-size-section {
+    padding: 24px 32px 24px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 24px;
+
+    .section-title {
+      font-weight: 500;
+      color: #03050d;
+      display: flex;
+      align-items: center;
+
+      .required-tag {
+        margin-left: 4px;
+        padding: 2px 10px;
+        color: #ff706d;
+        font-size: 16px;
+        font-weight: 400;
+        border: 2px solid #fde1e0;
+        border-radius: 6px;
+        padding: 4px 5px;
+        box-sizing: border-box;
+      }
+    }
+
+    .size-title {
+      margin-top: 40px;
+    }
+
+    // 尺寸说明 tips：橙色提示文案
+    .size-tip {
+      padding: 12px 0 16px;
+      color: #ff9300;
+      font-size: 24px;
+    }
+  }
+
+  .goods-name-input {
+    margin-top: 20px;
+
+    .word-count {
+      font-size: 24px;
+      color: #c8c9cc;
+      white-space: nowrap;
+    }
+
+    &.is-error {
+      // miniui isError 仅置红文字/placeholder，红框由业务侧补充
+      .ky-input {
+        border-color: #ff706d;
+        border-radius: 12px;
+      }
+    }
+  }
+
+  .size-row {
+    align-items: center;
+    width: 100%;
+
+    // 五个输入框等宽（span 为长宽高的报错边框容器，.ky-input-content 为 KyInput 根节点）
+    span,
+    .ky-input-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    // 长宽高报错容器：常驻 2px 透明边框占位，报错时仅变色，避免边框出现/消失导致跳动
+    span {
+      border: 2px solid transparent;
+      border-radius: 12px;
+    }
+
+    span.is-error {
+      border-color: #ee0a24;
+
+      // 报错时去掉 ky-input 自身边框（置透明保持布局），避免与 span 红框叠成双框
+      .ky-input {
+        border-color: transparent;
+      }
+    }
+
+    // 同 product-size：聚焦时输入容器占满整行，避免聚焦后宽度变化导致文字偏移
+    .ky-input--focus {
+      .ky-input--input-container {
+        width: 100%;
+      }
+    }
+
+    .ky-input {
+      padding: 0 !important;
+    }
+
+    // 同 product-size：原生输入域左右留白
+    .van-field__body {
+      padding: 0 16px;
+    }
+
+    .product-size-join-icon {
+      flex-shrink: 0;
+      width: 13px;
+      height: 13px;
+      margin: 0 8px;
+    }
+  }
+
+  // 卡片删除：右下角 垃圾桶icon + 删除文案
+  .card-delete {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 2px solid #f5f6f7;
+    color: #24262b;
+    justify-content: flex-end;
+    height: 38px;
+    line-height: 38px;
+
+    font-size: 26px;
+
+    .card-delete-icon {
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+
+      // 仅剩一组时置灰
+      &.card-delete-icon-disabled {
+        filter: grayscale(100%);
+        opacity: 0.5;
+      }
+    }
+
+    // 仅剩一组时置灰
+    &.disabled {
+      color: #c8c9cc;
+    }
+  }
+
+  .add-my-size-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 16px 32px calc(16px + env(safe-area-inset-bottom));
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.04);
+    gap: 24px;
+
+    // 添加尺寸：白底紫边紫字描边按钮
+    .footer-add-btn.ky-button {
+      flex-shrink: 0;
+      width: 200px;
+      background-color: #fff;
+      border: 2px solid #8365f6;
+      color: #8365f6;
+
+      &.disabled {
+        opacity: 0.4;
+      }
+    }
+
+    .footer-save-btn.ky-button {
+      flex: 1;
+    }
+  }
+  
+  /* #ifdef h5 */
+  .add-my-size-footer {
+    max-width: 750px !important;
+    margin: 0 auto;
+    right: 0;
+  }
+  /* #endif */
+}
+
+/* #ifdef h5 */
+  .add-my-size-page {
+    .add-my-size-scroll {
+      padding: 20px 20px calc(240px + env(safe-area-inset-bottom));
+    }
+  }
+  /* #endif */
+// 尺寸输入框：文字居中 + 有值时文字颜色（同 product-size，需穿透 KyInput 内部 input）
+#app {
+  .add-my-size-page {
+    .text-center {
+      // border: 1px solid red;
+      input {
+        text-align: center;
+      }
+    }
+
+    .color-black input {
+      color: $text-color-level1 !important;
+    }
+  }
+}

@@ -1,0 +1,221 @@
+.festival {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    padding-top: 330px;
+    box-sizing: border-box;
+    background: #9870e9;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1161px;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+
+        .content {
+            width: 690px;
+            padding: 40px;
+            background: linear-gradient(180deg, #faf1ff 1%, #ffffff 12%);
+            border-radius: 16px;
+            box-sizing: border-box;
+
+            .title {
+                margin-bottom: 40px;
+                font-size: 32px;
+                font-weight: 500;
+                color: #03050d;
+                line-height: 36px;
+            }
+
+            .fill-single-margin {
+                padding-bottom: 40px;
+            }
+
+            .fill-single {
+                position: relative;
+                display: flex;
+
+                .require {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 10px;
+                    font-size: 28px;
+                    color: #f62341;
+                }
+
+                .inputText {
+                    flex: 1;
+                    border-bottom: 1rpx solid #eceff6;
+                    padding: 20rpx 0;
+                    font-size: 28px;
+                    color: #03050d;
+                }
+
+                .error {
+                    position: absolute;
+                    bottom: 0;
+                    left: 18px;
+                    color: #f62341;
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .submit {
+            width: 598px;
+            height: 98px;
+            margin: 38rpx auto 0;
+
+            .img {
+                width: 598px;
+                height: 98px;
+            }
+        }
+
+        .text {
+            font-size: 24px;
+            color: #ffffff;
+            line-height: 36px;
+            text-align: center;
+        }
+
+        .prize-show {
+            position: relative;
+            width: 590px;
+            height: 491px;
+            margin-bottom: 17px;
+
+            .prize-show-bg {
+                position: absolute;
+                width: 590px;
+                height: 491px;
+                top: 0;
+                left: 0;
+            }
+
+            .prize-right {
+                position: absolute;
+                right: -55px;
+                top: 95px;
+                width: 82px;
+                height: 94px;
+            }
+
+            .content {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding-top: 51px;
+                width: 100%;
+                z-index: 1;
+                background: transparent;
+
+                .title {
+                    position: relative;
+                    font-size: 48px;
+                    font-weight: 500;
+                    color: #832d21;
+                    margin-bottom: 0;
+
+                    .title-bg {
+                        position: absolute;
+                        top: 30px;
+                        width: 249px;
+                        height: 20px;
+                        background: #ffeee0;
+                        border-radius: 4px;
+                        z-index: -1;
+                    }
+                }
+
+                .prize-name {
+                    position: relative;
+                    width: 210px;
+                    height: 210px;
+                    margin-bottom: 14px;
+                    margin-top: 29px;
+                    background: #ffffff;
+                    border: 1px solid #ffedd2;
+                    border-radius: 16px;
+
+                    .prize-name-img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 180px;
+                        height: 189px;
+                    }
+                }
+
+                .name {
+                    margin-bottom: 11px;
+                    font-size: 28px;
+                    font-weight: 500;
+                    color: #ed6500;
+                }
+
+                .desc {
+                    line-height: 32px;
+                    font-size: 24px;
+                    color: #832d21;
+                }
+            }
+        }
+
+        .prize-relation {
+            position: relative;
+            width: 590px;
+            height: 176px;
+
+            .prize-left {
+                position: absolute;
+                left: -50px;
+                top: 107px;
+                width: 97px;
+                height: 93px;
+            }
+
+            .prize-relation-bg {
+                position: absolute;
+                width: 590px;
+                height: 176px;
+                top: 0;
+                left: 0;
+            }
+
+            .content {
+                position: relative;
+                padding-top: 40px;
+                width: 100%;
+                background: transparent;
+                z-index: 1;
+
+                .desc {
+                    margin-bottom: 22px;
+                    line-height: 28px;
+                    text-align: center;
+                    font-size: 28px;
+                    font-weight: 500;
+                    color: #832d21;
+                }
+
+                .relation {
+                    text-align: center;
+                    font-size: 24px;
+                    color: #832d21;
+                }
+            }
+        }
+    }
+}
+

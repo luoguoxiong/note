@@ -1,0 +1,72 @@
+.address-unfold-save-address-book {
+  margin-top: 22px;
+  padding-bottom: 24px;
+
+  // 内部元素均不展示时隐藏整个容器
+  &.is-hidden {
+    display: none;
+  }
+  .block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // height: 88px;
+    margin: 0;
+  }
+  .radio-mr {
+    .ky-radio-text {
+      margin-left: 6px;
+      font-size: 25px;
+    }
+  }
+
+  // &.border-style {
+  //   @include hairline(after, $border-bottom-color, top);
+  // }
+
+  // .left {
+  //   .ky-radio {
+  //     .van-radio {
+  //       &__icon {
+  //         height: auto;
+  //       }
+
+  //       .radio-icon {
+  //         font-size: 25px;
+  //         margin-bottom: 5px;
+  //       }
+
+  //       &__label {
+  //         margin-left: 4px;
+  //         font-size: 26px;
+  //       }
+  //     }
+  //   }
+  // }
+
+  .right {
+    &__clear1 {
+      display: flex;
+      align-items: center;
+
+      .text {
+        font-size: 26px;
+        color: #8365f6;
+        cursor: pointer;
+      }
+    }
+
+    &__clear2 {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1;
+
+      .text {
+        font-size: 26px;
+        color: #8365f6;
+        cursor: pointer;
+      }
+    }
+  }
+}

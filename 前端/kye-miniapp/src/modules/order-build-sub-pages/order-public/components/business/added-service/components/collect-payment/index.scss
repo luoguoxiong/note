@@ -1,0 +1,59 @@
+.collect-payment {
+  // @include atomic;
+  padding-bottom: 40px;
+  .collect-payment-title {
+    padding-bottom: 16px;
+    .color-sub-title {
+      font-size: 24px;
+    }
+  }
+  .collect-payment-conent {
+    position: relative;
+    .collect-payment-fee-label {
+      color: $text-color-level1;
+    }
+    .no-auth-fee-icon {
+      display: block;
+      .svg-icon {
+        width: 38px;
+        height: 28px;
+      }
+    }
+    .collect-payment-conent-overlayer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 5;
+    }
+    .collect-payment-fee-extra {
+      position: absolute;
+      top: 50%;
+      height: 30px;
+      padding: 0 0 0 16px;
+      line-height: 30px;
+      transform: translateY(-50%);
+      border-left: 2px solid #cfd2de;
+    }
+    .edit-return-waybill {
+      position: absolute;
+      inset: 0;
+      z-index: 12;
+    }
+  }
+}
+
+.container {
+  .collect-payment-title {
+    .left {
+      font-weight: 600;
+    }
+  }
+}
+
+.collect-payment-unfold {
+  position: relative;
+  padding: 28px 24px;
+  @include hairline(after, $border-bottom-color, bottom);
+}

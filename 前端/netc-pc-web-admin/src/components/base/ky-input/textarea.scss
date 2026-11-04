@@ -1,0 +1,154 @@
+.ky-textarea {
+  position: relative;
+  padding: 8px;
+  border: 1px solid #e6e8ed;
+  border-radius: 4px;
+  &.one-row {
+    padding: 6px 2px 6px 8px;
+  }
+
+  > .limit-wrapper {
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 150px;
+    height: 24px;
+    font-size: $font-size-xs;
+    text-align: right;
+    background-color: #fff;
+
+    .limit {
+      padding-top: 3px;
+      color: #686b75;
+      font-weight: 400;
+
+      > .warn {
+        margin-right: 8px;
+        color: $red-color-text;
+      }
+    }
+    > .clear-btn {
+      position: relative;
+      top: 1px;
+      margin-left: 12px;
+    }
+  }
+
+  > aside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 18px;
+    padding-right: 0;
+    margin-top: 4px;
+    font-size: $font-size-xs;
+    // gap: 14px;
+
+     .limit {
+      padding-top: 3px;
+      color: #686b75;
+      font-weight: 400;
+
+      > .warn {
+        //margin-right: 8px;
+        color: $warning;
+      }
+    }
+  }
+  .aside-right {
+    display: flex;
+    align-items: center;
+  }
+  &:hover {
+    border-color: $text-color-level4;
+  }
+  &__focus {
+    border-color: $primary;
+    &:hover {
+      border-color: $primary;
+    }
+  }
+}
+
+:deep(.el-textarea) {
+  // overflow: hidden;
+  // overflow-y: scroll;
+  // width: 100%;
+  // min-height: 51px;
+  // max-height: 102px;
+  textarea {
+    font-size: $font-size-small;
+    color: #24262b;
+    font-weight: $font-bold;
+    resize: none;
+    caret-color: #7143f0;
+
+    &:focus {
+      box-shadow: 0 0 0 1px #7143f0 inset;
+    }
+
+    &::placeholder {
+      color: #adb0b8;
+      font-weight: 400;
+    }
+  }
+
+  &.is-error {
+    textarea {
+      box-shadow: 0 0 0 1px $red-color-text inset;
+    }
+  }
+
+  &.is-disabled {
+    textarea {
+      color: #b0adb8;
+    }
+  }
+
+  &.clearable {
+    .el-input__count {
+      right: 40px;
+    }
+  }
+  .el-textarea__inner {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: 0 0 0 0 transparent;
+    font-weight: $font-bold;
+    &::placeholder {
+      color: #adb0b8;
+      font-weight: 400;
+    }
+  }
+  .el-textarea__inner:hover {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  .el-textarea__inner:focus {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.ky-textarea-max_tips {
+  color: $red-color-text;
+}
+
+.clear-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-right: -5px;
+  margin-left: 3px;
+  &:hover {
+    background: rgb(36 38 43 / 5%);
+    border-radius: 4px;
+  }
+  &:active {
+    background: rgb(36 38 43 / 8%);
+    border-radius: 4px;
+  }
+}

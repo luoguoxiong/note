@@ -1,0 +1,58 @@
+.ky-adhesive-bandage {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 24px;
+  text-align: left;
+  color: #fff;
+  background: #5a5a5a;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-weight: $font-normal;
+  line-height: 30px;
+  &.dark {
+    color: #fff;
+    background: #5a5a5a;
+  }
+  &.warning {
+    color: #f05a05;
+    background: #fffaf3;
+  }
+  &.directivity {
+    padding: 12px 16px;
+    margin-top: 20px;
+    color: $warning;
+    background: #fff4e5;
+    border-radius: 8px;
+  }
+  :deep(.svg-icon) {
+    width: 26px;
+    height: 26px;
+  }
+  .text-content {
+    padding-left: 10px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 28px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background: #cacad2;
+    border-radius: 0 16px 0 32px;
+    line-height: 28px;
+  }
+  .directivity-row {
+    position: absolute;
+    top: -28px;
+    left: 60px;
+    width: 0;
+    height: 0;
+    border: 15px solid;
+    border-color: transparent transparent #fff4e5;
+  }
+}

@@ -1,0 +1,198 @@
+#logstics-content{
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: 140px;
+  background: #FFF;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  &::after{
+    position: absolute;
+    z-index: 30;
+    border: 1px solid #E6E8ED;
+    border-radius: 4px;
+    content: '';
+    inset: 0;
+    pointer-events: none;
+  }
+}
+
+
+.overview{
+  min-width: 0;
+  flex: 1 1 0;
+}
+
+.today-info{
+  display: flex;
+  min-width: 300px;
+  height: 140px;
+  flex: 0 0 28.62%;
+}
+
+.overview-title{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 24px;
+  font-size: 13px;
+  color: #24262B;
+  background: linear-gradient(90deg, rgb(241 240 255 / 70%) 0%, rgb(255 255 255 / 20%) 100%);
+  font-weight: 600;
+}
+.today-title{
+  width: 100%;
+  height: 36px;
+}
+.title-border{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 13px;
+  color: #24262B;
+  border-bottom: 1px dashed #E6E8ED;
+  font-weight: 600;
+}
+
+#overview-content{
+  display: grid;
+  width: 100%;
+  height: 104px;
+  padding: 16px 0 8px 24px;
+  font-size: 13px;
+  color: #24262B;
+  box-sizing: border-box;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 一行三列 */
+  column-gap: 8px;
+  font-weight: normal;
+  line-height: 20px;
+}
+.overview-item{
+  display: flex;
+  min-width: 0;
+  height: 80px;
+  padding: 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  flex-direction: column;
+  transition: background-color 0.12s ease;
+  &:hover{
+    background: #F2F3F7;
+  }
+  &:active{
+    background: #E6E8ED;
+  }
+}
+.overview-count{
+  width: 100%;
+  height: 34px;
+  margin-top: 4px;
+}
+.overview-item-title{
+  display: flex;
+  align-items: center;
+  height: 20px;
+  // 尺寸由 KIcon 的 size prop（font-size: 8px）提供；这里只管与文字的间距
+  .title-arrow {
+    margin-left: 2px;
+  }
+}
+
+.today-path{
+  overflow: hidden;
+  width: 10px;
+  height: 140px;
+  flex: 0 0 10px;
+}
+
+.today-path-image{
+  display: block;
+  width: 10px;
+  height: 140px;
+  object-fit: fill;
+}
+
+.today-container{
+  display: flex;
+  width: calc(100% - 10px);
+  height: 140px;
+  padding: 0 24px;
+  background: linear-gradient(90deg, rgb(241 240 255) 0.253%, rgb(241 240 255 / 0%) 107.143%);
+  flex: 1 1 auto;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.today-content{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 104px;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.today-item{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  width: 194px;
+  height: 34px;
+  gap: 4px;
+}
+.totay-item-title{
+  font-size: 13px;
+  color: #24262B;
+  line-height: 20px;
+}
+
+
+
+.today-count{
+  /* 宽度随数字内容收缩，避免个位数时与右侧“查看”之间出现大片留白；
+     仍保留 54px 上限，多位数超出时 viewport 触发 adaptive-number 的缩字号/省略号逻辑 */
+  width: auto;
+  min-width: 0;
+  max-width: 54px;
+  height: 24px;
+  flex: 0 1 auto;
+}
+
+
+.to-look{
+  display: flex;
+  align-items: center;
+  height: 20px;
+  gap: 1px;
+  font-size: 13px;
+  line-height: 20px;
+  white-space: nowrap;
+  color: #7143F0;
+  cursor: pointer;
+  &:hover {
+    color: #8a61f2;
+  }
+  &:active {
+    color: #5230ec;
+  }
+}
+
+.package-image{
+  position: absolute;
+  right: -1px;
+  bottom: 18px;
+  z-index: 1;
+  display: block;
+  width: 90.5px;
+  height: 62px;
+  object-fit: contain;
+  pointer-events: none;
+}

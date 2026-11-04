@@ -1,0 +1,137 @@
+schema: netc-spec-driven
+
+context: |
+  语言：中文（简体）
+  禁用词：
+    - "可能"、"大概"、"一般来说"、"等等"、"及其他"、"提升用户体验"（需替换为具体内容或场景）
+  全局阻塞规则：
+    创建 proposal 前，AI MUST STOP 并执行判断：
+    - 用户已明确提供禅道链接（URL格式，非纯数字ID）→ 直接使用，链接仅记录在 proposal.md 的 Why 章节中，design.md/tasks.md 等其余 artifact 禁止重复写入禅道链接。
+    - 禁止根据禅道ID（纯数字）自行拼接链接。
+    - 纯技术任务（bug修复/重构/配置等，无业务需求）→ 跳过本规则。
+    - 有业务需求但无禅道链接 → 询问："请提供禅道需求链接（URL格式），无外部来源请说明原因。"
+    - 用户仅提供禅道ID（数字，如543211）→ 不可自行拼接链接，必须询问用户提供完整禅道URL。
+    未满足上述任一条件前，禁止生成 proposal。
+
+  # 项目概述
+  - 项目名称: 跨越速运小程序 (kye-miniapp)
+  - 项目描述: 跨越速运官方多端小程序，涵盖下单、查件、寄件、地址管理、支付等核心物流业务
+
+  # 多端支持
+  | 平台 | TARO_ENV | 配置文件 | 渲染模式 |
+  |------|----------|----------|----------|
+  | 微信小程序 | weapp | wx.config.ts | webview + glass-easel |
+  | 支付宝小程序 | alipay | alipay.config.ts | skyline + glass-easel |
+  | H5 | h5 | - | 浏览器 |
+
+  # 技术栈
+  ## 核心框架
+  - 跨端框架: Taro 4.1.2
+  - 前端框架: Vue 3.5.13 (Composition API + `<script setup lang="ts">`)
+  - 开发语言: TypeScript 5.4.5 (target ES2017, strictNullChecks)
+  - 构建工具: Webpack 5.91.0 (Taro Webpack5 Runner)
+  - 状态管理: Pinia 3.0.2 (defineStore 模式)
+
+  ## UI 与样式
+  - UI 组件库: @kye-netc/kye-miniui (自研)
+  - 样式预处理器: Sass 1.75.0 (SCSS)
+  - 单位规范: 编写时使用 px，postcss-pxtransform 自动转换为 rpx
+  - **禁止使用原生表单元素** (input/textarea/button)，必须使用 ky-field/ky-upload/ky-button
+  - **禁止使用** Element Plus / Ant Design Vue 等 PC 端 UI 库
+
+  ## HTTP 请求
+  - 统一使用 http() from `@public/utils/request` (基于 Axios 1.7.8 + taro-axios 1.1.1)
+  - 自动携带 token/sign/灰度头
+  - **禁止直接使用 axios**
+
+  # 项目架构
+  ## 子应用体系 (Monorepo)
+  主应用通过 `@kye-netc/miniapp-plugins` 插件在构建时拼装子应用：
+  - 子应用源码位于 `src/modules/{git仓库名}/src/`
+  - 构建时复制到 `src/modules/{buildName}/`（如 order-build、waybill-build）
+  - **查找源码时跳过 `-build` 副本目录**，改到对应 `kye-miniapp-{name}/src/` 目录
+  - 嵌套子包（如 order-build-sub-pages、freight-time）同理
+
+  | 子应用 | 仓库名 | buildName | 功能 |
+  |--------|--------|-----------|------|
+  | 下单 | kye-miniapp-order | order-build | 寄件下单、地址管理、费用估算、支付 |
+  | 查件 | kye-miniapp-waybill | waybill-build | 运单查询、运单配置、卡片管理 |
+
+  ## order-global-package 公共模块
+  - 源目录: `src/modules/order-global-package/`
+  - 构建时自动复制到 `order-build/`、`order-build-sub-pages/`、`freight-time/` 下的 `order-global-package/`
+  - 修改公共模块代码应改源目录，副本会被覆盖
+
+  ## 路径别名 (tsconfig.json)
+  | 别名 | 实际路径 |
+  |------|----------|
+  | @/* | ./src/* |
+  | @public/* | ./src/public/* |
+  | @modules/* | ./src/modules/* |
+  | @layout/* | ./src/layout/* |
+  | @order-public/* | ./src/modules/order-build/order-public/* |
+  | @packages/* | ./node_modules/@kye-netc/kye-miniui/packages/* |
+  | @order-global-package-* | ./src/modules/{buildName}/order-global-package/* |
+
+  # 代码规范
+  ## 函数声明
+  - **必须**使用箭头函数 + const 声明，**禁止** function 关键字
+  - 正确: `const handleSubmit = async () => { }`
+  - 错误: `async function handleSubmit() { }`
+
+  ## 命名约定
+  | 类型 | 规范 | 示例 |
+  |------|------|------|
+  | Vue 组件文件 | PascalCase.vue | WaybillCard.vue |
+  | 组件/页面目录 | kebab-case | waybill-card/, order-detail/ |
+  | TS 工具/Hooks | camelCase | useLogin.ts, formatDate.ts |
+  | Store | use + PascalCase + Store | useUserGlobalStore |
+  | 常量 | UPPER_SNAKE_CASE | DEFAULT_APP_KEY |
+  | 事件处理函数 | handle/on 前缀 | handleClick, onSubmit |
+  | 布尔变量 | is/has/can 前缀 | isLogin, hasSale |
+  | CSS 类名 | kebab-case (BEM) | `.block__element--modifier` |
+
+  ## 通用约束
+  - 函数不超过 50 行，参数不超过 3 个
+  - 组件 .vue 文件不超过 300 行
+  - 禁止魔法数字，必须提取为具名常量
+  - 异步统一使用 async/await，禁止 .then() 混用
+  - 优先使用 const，禁止 var
+  - 废弃代码直接删除，不允许注释保留
+
+  # 组件与技能参考
+    - MiniUI 公共组件：见 skills/ky-miniui 和 skills/kye-mini-css
+    - 编写规范：见 rules/
+
+rules:
+  proposal:
+    - "必须包含 Capabilities 章节，列出所有新功能和修改的功能，使用 kebab-case 命名规范"
+    - "新功能需考虑多端兼容性 (微信/支付宝/H5)"
+  specs:
+    - MODIFIED 必须包含完整更新内容，不能只写差异
+  design:
+    - "必须包含以下 13 个章节：Context、Terminology、Goals / Non-Goals、Decisions、Risks / Trade-offs、Architecture、Data Model、API Design、User Interface Design、Security & Performance、Module Dependencies、Compatibility、Deliverables"
+    - "Context：3句话内交代业务场景和设计前提，明确对应 proposal 中的哪个能力"
+    - "Terminology：附带「术语表」子节，列出需求里面的业务术语及定义，格式：**术语**：定义"
+    - "Goals / Non-Goals：分别列出 Goals 和 Non-Goals，各至少 1 条。Goals 聚焦可交付功能，Non-Goals 明确不做的事（防范围蔓延）"
+    - "Decisions：逐条记录关键设计决策，每条包含：决策标题、决策内容 + 理由、备选方案（无则写'无其他可行方案'）。必须覆盖：组件选型、状态管理、路由、数据获取、表单校验"
+    - "Risks / Trade-offs：每个设计决策若带来权衡（性能 vs 可维护性等），需明确写出"
+    - "Architecture：必须包含目录结构图（标注文件路径）、框架层级关系图（组件/模块间依赖）、核心业务流程图。路由规划（新路由/参数/守卫）。数据流向（父→子 props、子→父 emit、Pinia store、EventBus）。若页面使用通用查询配置（genericCode），须标注编码。框架图和流程图必须使用 Mermaid，禁止纯文字描述"
+    - "Data Model：定义所有核心实体（字段名/类型/必填/默认值/枚举/示例）。若用 Pinia，定义 state/getters/actions。若涉及表单，定义字段及校验规则（required/maxlength/pattern）。枚举字段须标注 lookupCode（数据字典编码）。涉及通用查询配置时，列出字段的 propertyName / columnName / columnType / lookupCode"
+    - "API Design：用表格展示所有 API（方法/路径/描述）。每个 API 需有：请求参数表、响应结构表、调用时机、Loading 处理、错误处理策略。必须使用 http() 方法，禁止直接使用 axios"
+    - "User Interface Design：页面布局（栅格/组件位置关系/响应式断点）。每个交互行为：触发条件 → 结果。必须描述 Loading / Empty / Error 三种状态。表单提交后反馈（成功/失败文案，是否关闭弹窗等）。列表需说明分页方式、排序、列宽策略。关键交互链路必须附带伪代码或组件调用序列，禁止只写'点击按钮触发提交'这种无信息量描述"
+    - "Security & Performance：安全：敏感字段脱敏、前端加密、权限控制粒度（页面/按钮/数据）。页面级权限：列出菜单ID及路由守卫。按钮级权限：列出 authCode 编码。性能：缓存策略、懒加载路由/组件、分页方式（前端/后端）。注意小程序分包 2MB 限制和总包 30MB 限制"
+    - "Module Dependencies：分三个子节，缺一不可：受影响的模块（列出哪些已有模块会因本改动受到影响，说明影响范围和应对方式，注意区分 -build 副本和源码目录）、依赖的工具/组件（列出本模块直接依赖的公共组件、工具方法、npm 包，含版本号）、依赖的后端服务（列出所有后端接口，包含出入参字段）"
+    - "Compatibility：必须覆盖以下场景，任一项不适用写'不涉及'并说明原因：新旧数据兼容（页面改版后，历史数据如何展示、如何处理字段缺失）、接口版本兼容（API 变更时前端如何处理新旧接口返回格式差异）、路由兼容（URL 变更后的旧链接重定向策略）"
+    - "Deliverables：列出本次设计可抽离为公共能力的产出：公共组件（组件名、用途、所在路径）、公共方法/工具函数（方法名、用途、所在路径）、公共配置（constant/enum/js 等，标注文件路径）。无产出写'本次无公共产出'，禁止留空"
+    - "禁止写业务需求（那是 proposal.md 的职责）"
+    - "禁止写具体实施步骤（那是 tasks.md 的职责）"
+    - "禁止重复造轮子（优先使用 @kye-netc/kye-miniui 组件和 @public/ 下的已有工具）"
+    - "禁止使用'合适的组件'等无信息量表述"
+    - "禁止安装第三方依赖包（优先使用已有的第三方库）"
+    - "禁止写'参见原型图'——文档必须自包含"
+    - "13 个章节缺一不可，空章节写'暂无'"
+  tasks:
+    - 任务粒度控制在 2 小时以内
+    - 任务按依赖排序，先做基础再叠加功能
+    - 涉及 order-public 或 order-global-package 公共模块修改需注明影响范围

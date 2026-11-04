@@ -1,0 +1,105 @@
+.search-overlay {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+    :deep(.select-button-label) {
+        font-size: 28px;
+        color: #03050D;
+        font-weight: 600;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        height: 100%;
+        border-radius: 0 0 12px 12px;
+        flex-direction: column;
+
+        &-all {
+            overflow: auto;
+            padding: 32px;
+            padding-bottom: calc(32px + constant(safe-area-inset-bottom)); /* 兼容 iOS < 11.2 */
+            padding-bottom: calc(32px + env(safe-area-inset-bottom)); /* 兼容 iOS >= 11.2 */
+            flex: 1;
+        }
+
+        .screen-popup {
+            &__form {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+
+                ::v-deep input::-webkit-input-placeholder {
+                    color: #888ea6;
+                    font-size: 24px;
+                }
+
+                :deep(.screen-overlay__input) {
+                    padding: 0 24px;
+                    background: #F7F8FA;
+                    border-radius: 10px;
+
+                    .van-field__control,
+                    .van-field__body {
+                        height: 70px;
+                        line-height: 70px;
+                        font-size: 28px;
+
+                        i {
+                            font-size: 36px;
+                        }
+                    }
+                }
+            }
+
+            &__item {
+                &.addr-input {
+                    margin-top: 20px;
+
+                    ::v-deep .van-popover__wrapper {
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+
+        :deep(.label) {
+            margin: 32px 0;
+            font-size: 28px;
+            color: #03050D;
+            font-weight: 600;
+            line-height: 26px;
+        }
+
+        &-footer {
+            box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.05);
+            display: flex;
+            padding: 20px;
+            padding-bottom: calc(20px + constant(safe-area-inset-bottom)); /* 兼容 iOS < 11.2 */
+            padding-bottom: calc(20px + env(safe-area-inset-bottom)); /* 兼容 iOS >= 11.2 */
+            background-color: #fff;
+
+            .reset {
+                margin-right: 24px;
+            }
+        }
+    }
+
+    &-gray {
+        width: 100%;
+        height: 20%;
+    }
+
+    :deep(.date-range) {
+        .date-range__time {
+            color: #03050D;
+        }
+    }
+}

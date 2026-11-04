@@ -1,0 +1,135 @@
+// 固定电话，错误边框矫正
+.error_component_container {
+  .svg-icon {
+    width: 14px !important;
+  }
+}
+.validate-error,
+.validate_error_pc:not(.validate_notice_pc) {
+  .el-input__wrapper {
+    box-shadow: 0 0 0 1px $red-color-text inset;
+  }
+  .error-border {
+    //  important 解决部分场景error层级不够样式被覆盖
+    box-shadow: 0 0 0 1px $red-color-text inset !important;
+  }
+  .el-radio__inner {
+    border-color: $red-color-text;
+  }
+  .ky-input-temp,
+  .ky-select-temp,
+  .ky-textarea {
+    border-color: $red-color-text !important;
+  }
+  .error_text {
+    color: $red-color-text;
+  }
+
+  // 固定电话，错误边框矫正
+  .address-telephone-ext {
+    &__left {
+      .el-input .el-input__wrapper {
+        border: 1px solid $red-color-text;
+        border-right: none;
+      }
+    }
+    &__right {
+      .el-input .el-input__wrapper {
+        border: 1px solid $red-color-text;
+        border-left: none;
+      }
+    }
+  }
+}
+.order-table {
+  .validate-waring-popover{
+    transform:translateY(6px);
+  }
+  .tippy-box[data-theme^=light-border]{
+    top: 6px;
+  }
+  .validate_error_pc {
+    .error_text {
+      color: $red-color-text !important;
+    }
+  }
+}
+.error-tip-popper {
+  span {
+    color: #fff !important;
+  }
+}
+
+// 地址选择的异常样式展示
+.validate_error_pc {
+  .address-unfold-area__left,
+  .address-unfold-area__right {
+    .ky-input-wrap {
+      .el-input {
+        .el-input__wrapper {
+          border-color: #ff706d;
+          // box-shadow: none;
+        }
+      }
+    }
+  }
+}
+.tippy-box{
+  pointer-events: auto;
+}
+
+.tippy-box[data-placement^=top-start]>.tippy-arrow::before,.tippy-box[data-placement^=top-start]>.tippy-arrow::after{
+  transform:translate(-76px,0);
+}
+.tippy-box[data-placement^=bottom-start]>.tippy-arrow::before,.tippy-box[data-placement^=bottom-start]>.tippy-arrow::after{
+  transform:translate(-76px,0);
+}
+.tippy-box[data-theme^=light-border] {
+  color: #FE743C;
+  background: #FFF2E6;
+  border: 1px solid #FE743C;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 12%),0 4px 5px 0 rgb(0 0 0 / 8%),0 1px 10px 0 rgb(0 0 0 / 5%);
+}
+.tippy-box[data-theme^=info] {
+  font-size: 12px;
+  background: #24262B;
+  opacity: 0.9;
+  .tippy-content{
+    padding: 4px 8px;
+  }
+}
+.tippy-box[data-theme^=info][data-placement^=bottom-start]>.tippy-arrow{
+  transform:translateX(10px)!important;
+  color: #24262B;
+}
+.tippy-box[data-theme^=info][data-placement^=bottom-start]>.tippy-arrow::before{
+  transform:translate(0,0);
+}
+.validate-waring-popover{
+  z-index: 2 !important;
+  background: #FFF2E6 !important;
+  border-color: #FE743C !important;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 12%),0 4px 5px 0 rgb(0 0 0 / 8%),0 1px 10px 0 rgb(0 0 0 / 5%);
+  .content{
+    color: #F57200;
+  }
+  .el-popper__arrow::before{
+    background: #FFF2E6 !important;
+    border-color: #FE743C !important;
+  }
+}
+.validate-waring-popover[data-popper-placement=top-start]>.el-popper__arrow{
+  transform:translateX(-76px);
+}
+.tippy-box[data-theme~=light-border][data-placement^=top]>.tippy-arrow::before{
+  border-top-color: #FFF2E6;
+}
+.tippy-box[data-theme~=light-border][data-placement^=top]>.tippy-arrow::after{
+  border-top-color:#FE743C;
+}
+.tippy-box[data-theme~=light-border][data-placement^=bottom]>.tippy-arrow::before{
+  border-bottom-color: #FFF2E6;
+}
+.tippy-box[data-theme~=light-border][data-placement^=bottom]>.tippy-arrow::after{
+  border-bottom-color:#FE743C;
+}

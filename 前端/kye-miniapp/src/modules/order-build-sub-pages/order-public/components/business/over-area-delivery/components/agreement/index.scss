@@ -1,0 +1,126 @@
+.over-area-delivery-agreement {
+  z-index: 300;
+  padding-top: 4px;
+  // .container {
+  //   padding: 32px !important;
+  // }
+  &_icon{
+    width: 28px;
+    height: 28px;
+    margin-top: 2px;
+  }
+  &-content {
+    padding-right: 8px;
+  }
+  &-checkbox-text {
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+    font-size: 24px;
+    color: #55596C;
+    font-weight: $font-normal;
+    .over-area-delivery-agreement__item {
+      color: #8365f6;
+    }
+  }
+
+  &__popup {
+    // &--body {
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    //   max-height: 60vh;
+    //   padding: 0;
+
+      .delivery-agreement__popup--body {
+        font-size: 26px;
+        text-align: justify;
+        color: #03050d;
+        line-height: 56px;
+
+        .detail {
+          >div {
+            display: flex;
+            margin-bottom: 20px;
+
+            >div {
+              flex: 1;
+            }
+
+            .index {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 30px;
+              height: 30px;
+              margin-top: 14px;
+              color: #fff;
+              background-color: #bdc1d5;
+              border-radius: 15px;
+            }
+          }
+        }
+
+        .red_color {
+          margin: 0 3px;
+          color: #ff706d;
+        }
+
+        .gray_color {
+          color: #55596C;
+        }
+
+        .font_bold {
+          font-weight: $font-bold;
+        }
+
+        .marg_left {
+          margin-left: 10px;
+        }
+      }
+      .h5-span {
+        display: inline-block;
+      }
+    // }
+
+    &--footer {
+      padding-bottom: 0;
+      box-shadow: 0 -0.08rem 0.2666rem 0 rgb(184 171 255 / 10%);
+      width: 100%;
+      box-sizing: border-box;
+
+      .cancel-button {
+        width: 240px;
+        color: #8365f6;
+        border: 1px solid #8365f6;
+      }
+
+      // .confirm-button {
+      //   color: #fff;
+      //   background: #8365f6;
+      //   border: 0;
+      //   border-radius: 20px;
+      //   flex: 1 1 auto;
+      // }
+
+      // .van-button--disabled {
+      //   background: #cacedb !important;
+      // }
+    }
+
+    :deep(.van-loading__spinner) {
+      display: none;
+    }
+
+    .van-loading__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      img {
+        width: 120px;
+      }
+    }
+  }
+}

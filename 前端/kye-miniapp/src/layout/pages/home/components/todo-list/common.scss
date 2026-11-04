@@ -1,0 +1,236 @@
+@mixin card {
+  border-radius: 16px;
+  background: #ffffff;
+  box-sizing: border-box;
+  border: 2px solid #e6e8ed;
+  overflow: hidden;
+}
+
+@mixin card-header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  background: linear-gradient(180deg, rgba(164, 144, 255, 0) 66%, rgba(155, 155, 255, 0.1) 100%), #ffffff;
+  box-sizing: border-box;
+
+  font-size: 24px;
+  font-weight: normal;
+  color: #24262b;
+
+  &__order {
+    font-size: 28px;
+    font-weight: 600;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 400px;
+  }
+
+  &__copy {
+    width: 28px;
+    height: 28px;
+    margin-left: 4px;
+  }
+
+  &__right {
+    margin-left: auto;
+    font-size: 24px;
+    font-weight: normal;
+    color: #8365f6;
+    display: flex;
+    align-items: center;
+
+    image {
+      width: 24px;
+      height: 24px;
+      margin-right: 4px;
+      display: block;
+    }
+  }
+}
+
+@mixin approval-card-header {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #24262b;
+  box-sizing: border-box;
+
+  border-width: 0px 0px 2px 0px;
+  border-style: solid;
+  border-color: #e6e8ed;
+
+  &>image {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+
+  &__sub {
+    font-size: 24px;
+    font-weight: normal;
+    color: #8c8f99;
+    margin-left: 4px;
+  }
+
+  &__right {
+    margin-left: auto;
+    font-size: 24px;
+    font-weight: normal;
+    color: #686b75;
+  }
+}
+
+@mixin card-footer {
+  display: flex;
+  align-items: center;
+  padding: 20px 24px;
+  border-width: 2px 0px 0px 0px;
+  border-style: solid;
+  border-color: #e6e8ed;
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 36px;
+  color: #24262b;
+}
+
+@mixin card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin form-item {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #24262b;
+  display: flex;
+  align-items: flex-start;
+  line-height: 34px;
+  // height: 34px;
+
+  &>view {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    image {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+  }
+
+  &>text:first-child,
+  &>view:first-child {
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    color: #8c8f99;
+    // min-width: 120px;
+    text-align: justify;
+    flex-shrink: 0;
+  }
+
+  &.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    text,
+    view {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin form {
+  padding: 0 24px;
+
+  &__item {
+    @include form-item;
+  }
+}
+
+@mixin express-customer {
+  width: 234px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &>text {
+    line-height: 34px;
+    display: block;
+    font-size: 24px;
+    font-weight: normal;
+    color: #8c8f99;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+  }
+
+  &>text:first-child {
+    font-size: 34px;
+    font-weight: 600;
+    color: #24262b;
+    line-height: 48px;
+  }
+
+  &>text:last-child {
+    margin-bottom: 0px;
+  }
+
+  &:last-child {
+    &>text {
+      text-align: right;
+    }
+  }
+}
+
+@mixin express-type {
+  display: flex;
+  flex-direction: column;
+  width: 138px;
+
+  &>image {
+    width: 138px;
+    height: 12px;
+    margin: 8px 0;
+  }
+
+  &>view {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 34px;
+    height: 34px;
+    text-align: center;
+    color: #24262b;
+  }
+}
+
+@mixin express-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  flex-wrap: nowrap;
+
+  &__customer {
+    @include express-customer;
+  }
+
+  &__type {
+    @include express-type;
+  }
+}

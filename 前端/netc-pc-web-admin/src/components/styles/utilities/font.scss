@@ -1,0 +1,51 @@
+/* 字体原子CSS */
+@import '../settings/font';
+
+/* 一级文字/36px 适用场景：一级标题 导航栏标题 */
+.font-level1 {
+  @include font-level1;
+}
+
+/* 特殊/34px 适用场景：/大按钮/弹窗标题/公共大按钮文本  */
+.font-special-big {
+  @include font-special-big;
+}
+
+.font-address-title {
+  @include font-special-big;
+
+  font-weight: $font-bold;
+}
+
+/* 二级文字/32px 二级标题/表单列表标题/卡片标题/  */
+.font-level2 {
+  @include font-special-big;
+}
+
+/* 三级文字/28px 正文/输入框标题、静默文案（已录入使用加粗）/公共中按钮文本 */
+.font-level3 {
+  @include font-level3;
+}
+
+/* 特殊/26px 用于信息层级较多时/特殊场景使用 */
+.font-special {
+  @include font-special;
+}
+
+/* 四级文字/24px 注释/备注/辅助信息/提示文本/公共小按钮文本 */
+.font-level4 {
+  @include font-level4;
+}
+
+/* 五级文字/22px 标签/角标/徽标 */
+.font-level5 {
+  @include font-level5;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}

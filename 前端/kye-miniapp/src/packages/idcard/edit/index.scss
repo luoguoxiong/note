@@ -1,0 +1,405 @@
+.id-card-page-edit {
+  padding-bottom: 148px;
+  height: 100vh;
+  box-sizing: border-box;
+
+  ::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background-color: transparent !important;
+  }
+
+  .content {
+    background-color: #fff;
+    padding: 24px;
+  }
+
+  .flex-item-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex-item-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .address-label {
+    margin-right: 24rpx;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24rpx;
+
+    .pre-title-line {
+      margin-right: 0rpx;
+      width: 6px;
+      height: 34rpx;
+      background: #8365F6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mingpian-info {
+      font-size: 32px;
+      font-weight: 600;
+      color: #24262B;
+      margin-left: 16px;
+    }
+
+  }
+
+  .preview {
+    display: flex;
+    align-items: center;
+    color: #8365F6;
+    font-size: 28px;
+
+    image {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+    }
+  }
+
+  .mb-24 {
+    margin-bottom: 24px;
+  }
+
+  .pb-28 {
+    padding-bottom: 28px;
+  }
+
+  .border-top {
+    border-top: 2px solid #E6E8ED;
+  }
+
+  .border-bottom {
+    border-bottom: 2px solid #E6E8ED;
+  }
+
+  .label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #24262B;
+  }
+
+  .template-list {
+    display: flex;
+
+    image {
+      display: inline-block;
+      width: 134px;
+      height: 104px;
+      padding: 8px;
+      margin-right: 24px;
+      border: 2px solid #fff;
+      border-radius: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .border {
+      border-color: #8365F6;
+    }
+  }
+
+  .upload-head {
+    display: flex;
+    align-items: center;
+
+    .head {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      border: 2px solid #E6E8ED;
+      box-sizing: border-box;
+    }
+  }
+
+  .form-item {
+    padding: 28px 0;
+    border-bottom: 2px solid #E6E8ED;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .share-recommend {
+    padding: 14px 0;
+  }
+
+  .icon-require {
+    display: block;
+    width: 40px;
+    height: 24px;
+    margin-left: 4px;
+  }
+
+  .icon-right {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-left: 24px;
+  }
+
+  .input-text {
+    flex: 1;
+    text-align: right;
+    font-size: 28px;
+    color: #24262B;
+    font-weight: 600;
+
+    background-color: #ffffff;
+    border: none;
+  }
+
+  .job-tip {
+    font-size: 24px;
+    color: #686B75;
+    line-height: 34px;
+    margin-top: 28px;
+
+    text {
+      color: #8365F6;
+      margin-left: 8px;
+    }
+  }
+
+  .select-value {
+    font-size: 28px;
+    color: #24262B;
+    font-weight: 600;
+  }
+
+  .input-email {
+    position: relative;
+    // background-color: #F7F8FA;
+    // border: 2px solid #E6E8ED;
+    // border-radius: 12px;
+    margin-top: 28px;
+    // padding: 0 16px;
+
+    .ky-input {
+      flex: 1;
+      height: 88px;
+      font-size: 28px;
+      color: #24262B;
+      font-weight: 600;
+      width: 100%;
+    }
+
+    .after-tips {
+      font-size: 28px;
+      color: #8C8F99;
+    }
+  }
+
+  .textarea-wrapper {
+    position: relative;
+  }
+
+  .input-address {
+    background-color: #F7F8FA;
+    border: 2px solid #E6E8ED;
+    border-radius: 12px;
+    margin-top: 28px;
+    padding: 24px 56px 24px 16px;
+    width: 100%;
+    min-height: 128px;
+    font-size: 28px;
+    color: #24262B;
+    font-weight: 600;
+    box-sizing: border-box;
+    line-height: 40px;
+  }
+
+  .input-address-disable {
+    color: #8C8F99 !important;
+  }
+
+  .input-address-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+  }
+
+  .input-address-empty {
+    height: 88px;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 24px 32px;
+    box-sizing: border-box;
+    z-index: 99;
+    padding-bottom: 40rpx;
+
+    .button {
+      width: 100%;
+      height: 88px;
+      font-size: 32px;
+      border-radius: 16px;
+    }
+
+    .button-default {
+      color: #7972fe;
+      border-color: #7972fe;
+    }
+
+    .button-primary {
+      font-weight: 600;
+      color: #ffffff;
+      border: none;
+      background: #8365F6;
+    }
+  }
+
+
+
+  .disableContent {
+    .flex-item-between {
+      .title {
+        color: #8C8F99;
+      }
+
+      .label {
+        color: #8C8F99;
+      }
+    }
+
+    .title {
+      color: #8C8F99;
+    }
+
+    .label {
+      color: #8C8F99;
+    }
+
+    .select-value {
+      color: #8C8F99;
+      font-weight: normal;
+    }
+
+    .input-text {
+      color: #8C8F99;
+    }
+
+    .input-email {
+      .ky-input {
+        color: #8C8F99;
+      }
+    }
+
+    .input-address {
+      .ky-textarea {
+        color: #8C8F99;
+      }
+    }
+  }
+
+  .disablefooter {
+    .button {
+      background-color: #d3d5db !important;
+      border: none !important;
+    }
+  }
+}
+
+.id-card-page-edit__footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 24px 32px;
+  box-sizing: border-box;
+  z-index: 99;
+  padding-bottom: 40rpx;
+
+  .button {
+    width: 100%;
+    height: 88px;
+    font-size: 32px;
+    border-radius: 16px;
+  }
+
+  .button-default {
+    color: #7972fe;
+    border-color: #7972fe;
+  }
+
+  .button-primary {
+    font-weight: 600;
+    color: #ffffff;
+    border: none;
+    background: #8365F6;
+  }
+}
+
+.id-card-page-edit__disablefooter {
+  .button {
+    background-color: #d3d5db !important;
+    border: none !important;
+  }
+}
+
+.label-text {
+  padding-right: 16px;
+}
+
+.label-tip {
+  font-size: 24px;
+  color: #FF9300;
+  padding-left: 8px;
+}
+
+.label-right {
+  font-size: 28px;
+  color: #8365F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-arrow {
+  width: 28px;
+  height: 28px;
+  margin-left: 4px;
+}
+
+.receive-btn {
+  font-size: 24px;
+  color: #8365F6;
+}
+
+.receive-btn.disabled {
+  color: #8C8F99;
+}
+
+.receive-img {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  margin-left: 8px;
+}

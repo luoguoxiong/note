@@ -1,0 +1,46 @@
+.order_batch_success-print {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  &-content {
+    overflow: auto;
+    padding-top: 32px;
+    flex: 1;
+  }
+  :deep(.card) {
+    // height: 226px;
+    min-height: 226px;
+  }
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 24px;
+    padding-bottom: calc(20px + env(safe-area-inset-bottom, 20px));
+    box-shadow: 0 -6px 20px 0 rgb(184 171 255 / 10.2%);
+    box-sizing: border-box;
+  }
+  .batch_order-footer-text {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: #888EA6;
+  }
+  .batch_order-footer-btn {
+    width: 232px;
+    padding: 0;
+    font-size: 34px;
+  }
+  .batch_order-footer-text-all {
+    display: inline-block;
+    margin-right: 40px;
+    color: #03050D;
+    .batch_order-footer-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.receive-unfold {
+  .address-unfold-dropdown-menu {
+    left: -86px;
+    width: 703px;
+  }
+
+  .address-unfold-companyName {
+    &::after {
+      border-bottom: 0;
+    }
+  }
+
+  .address-unfold-save-address-book {
+    &::after {
+      border-top: 0;
+    }
+  }
+
+  .info-container {
+    padding-bottom: 0px;
+  }
+}

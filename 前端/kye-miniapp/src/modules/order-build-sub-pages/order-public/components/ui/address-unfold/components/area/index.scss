@@ -1,0 +1,114 @@
+.address-unfold-area {
+  cursor: pointer;
+
+  &.required-field {
+    position: relative;
+
+    // padding-left: 48px;
+    .required {
+      width: 42px;
+      height: 26px;
+      padding: 1px;
+      box-sizing: border-box;
+    }
+  }
+
+  // @include hairline(after, $border-bottom-color, bottom);
+
+  .content {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: #03050d;
+    font-weight: $font-bold;
+    flex-wrap: wrap;
+    margin-left: 8px;
+
+    .err {
+      color: #ff7373;
+    }
+
+    &__value {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__line {
+      margin: 0 10px;
+    }
+  }
+
+  .ky-cell {
+    .placeholder-text {
+      color: $text-color-level3;
+      padding: 0 16px;
+    }
+
+    .validate-error {
+      color: #ff706d;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      color: #03050d;
+      font-weight: $font-bold;
+      flex-wrap: wrap;
+
+      .err {
+        color: #ff7373;
+      }
+
+      &__value {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &__line {
+        margin: 0 10px;
+      }
+    }
+
+    .ky-cell {
+      &__title {
+        overflow: hidden;
+      }
+
+      &__label {
+        // overflow: hidden;
+        margin-top: 0;
+      }
+
+      &__value {
+        flex: 0;
+      }
+    }
+  }
+
+  .ky-wrapper .driver {
+    &::after {
+      display: none;
+    }
+  }
+
+  &.disabled {
+    background: #f2f3f7;
+    box-shadow:
+      inset 0 16px 0 0 #fff,
+      /* 底部白色阴影 */
+      inset 0 -16px 0 0 #fff;
+
+    /* 顶部白色阴影 */
+    .ky-cell {
+      background: #f2f3f7;
+      background-clip: content-box;
+    }
+
+    .content {
+      color: #8C8F99;
+    }
+  }
+}

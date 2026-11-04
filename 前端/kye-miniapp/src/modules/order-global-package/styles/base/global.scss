@@ -1,0 +1,102 @@
+@import '../settings/variable.scss';
+
+html,
+body,
+#app {
+  overflow: hidden;
+  height: 100%;
+  background: #f1f2f7;
+
+  /* 去掉font-family: -apple-system; 处理html2canvas在IOS系统生成图片的问题 */
+  font-family: BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, Roboto, 'PingFang SC', miui,
+    'Hiragino Sans GB', 'Microsoft Yahei', sans-serif !important;
+
+  .validate-error {
+    color: #ff706d !important;
+    .placeholder-text,
+    .placeholder,
+    .need_error {
+      color: #ff706d !important;
+    }
+    .error_border {
+      border-color: #ff706d;
+    }
+    .error-checked-red {
+      background-image: url('https://ic-img.ky-express.com/netc/20250619_15526_!!1750300796505_48_48.png') !important;
+    }
+  }
+}
+// bugfix#583545 为了文案超出省略表现跟 h5 一致
+view {
+  font-family: BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, Roboto, 'PingFang SC', miui,
+    'Hiragino Sans GB', 'Microsoft Yahei', sans-serif !important;
+}
+// 预览页面用
+#app.autoHeight {
+  overflow: auto;
+  background-color: #f1f2f7;
+}
+// .van-popup {
+//   transition-duration: 0.1s;
+// }
+.flex {
+  display: flex;
+}
+.ky-title-bg {
+  position: relative;
+  .ky-dialog-content {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 112px;
+    background-image: url('https://ic-img.ky-express.com/netc/20250619_79792_!!1750313557543_1180_174.png');
+
+    // .van-dialog__message {
+    //   overflow: visible;
+    //   width: 100%;
+    //   box-sizing: border-box;
+    // }
+  }
+  .h5-span {
+    display: inline;
+  }
+}
+// .show-toast-custom .van-toast__text {
+//   width: 100%;
+//   word-wrap: break-word;
+// }
+// .order-content .need-short-bottom-line .cell-wrapper .van-cell {
+//   flex-wrap: wrap;
+//   height: auto;
+//   &::after {
+//     position: absolute;
+//     right: 0;
+//     left: 24px;
+//     width: calc(100% - 48px);
+//     content: '';
+//     box-sizing: border-box;
+//     pointer-events: none;
+//     transform: scaleY(0.5);
+//     border-bottom: 2px solid #ebedf5;
+//   }
+// }
+
+.project-location-area-floor-popup {
+  .content__title {
+    width: 622px;
+    text-align: left;
+    display: block !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+// .ky-input--focus {
+//   border-color: transparent;
+// }
+.ky-input--bottom {
+  border-bottom: transparent;
+}
+// 解决滚动穿透，需要把page页顶层设置100vh
+.order-common-page-100-vh {
+  height: 100vh !important;
+}

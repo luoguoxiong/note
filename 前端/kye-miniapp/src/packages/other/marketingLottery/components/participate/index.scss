@@ -1,0 +1,91 @@
+.participate-box {
+    position: absolute;
+    top: 980px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+
+    &.height {
+        padding-bottom: 650px;
+    }
+
+    .company-text-wrapper {
+        width: 568px;
+        height: 78px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 39px;
+        opacity: 0.99;
+        background: #FFFFFF;
+        box-sizing: border-box;
+        border: 1px solid #B89098;
+        text-align: center;
+        margin-bottom: 20px;
+
+        &.all {
+            margin-bottom: 10px;
+        }
+
+        input {
+            height: 78px;
+            font-size: 32px;
+            font-weight: normal;
+            letter-spacing: 0px;
+            color: #3C2429;
+        }
+    }
+
+    .text-list {
+        font-size: 28px;
+        width: 584px;
+        height: 228px;
+        overflow: auto;
+        margin: 20px 0 20px 0;
+
+        &.all {
+            margin: 16px 0 16px 0;
+        }
+
+        .item {
+            margin-top: 14px;
+            margin-bottom: 10px;
+            padding-left: 40px;
+
+            .label {
+                color: #ffffff;
+                font-weight: 500;
+            }
+
+            .value {
+                color: #ffffff;
+                font-weight: 300;
+            }
+
+            .label-new {
+                color: #3C2429;
+                font-weight: 500;
+            }
+
+            .value-new {
+                color: #3C2429;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .no-companyname {
+        position: relative;
+        top: 58px;
+    }
+
+    .center-btn {
+        width: 584px;
+    }
+}
+
+

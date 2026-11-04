@@ -1,0 +1,172 @@
+#menu{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#menu-content{
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 4px;
+  flex: 1;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    opacity: 0;
+
+    &:hover {
+      width: 4px;
+      opacity: 1;
+      transition: opacity 0.1s;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(36 38 43 / 16%);
+    background-clip: padding-box;
+    border-radius: 4px;
+
+    &:hover {
+      background: rgb(36 38 43 / 60%);
+      background-clip: border-box;
+    }
+  }
+}
+
+#menu-handle-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  border-top: 1px solid #e6e8ed;
+  box-sizing: border-box;
+
+  .icon-content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    .fold-icon{
+      width: 16px;
+      height: 16px;
+      color: #686b75;
+    }
+
+    &:hover{
+      background: rgb(36 38 43 / 6%);
+
+      .fold-icon{
+        color: #8a61f2;
+      }
+
+      .fold-tooltip{
+        display: flex;
+      }
+    }
+
+    &:active{
+      background: rgb(36 38 43 / 6%);
+
+      .fold-icon{
+        color: #3e25e9;
+      }
+    }
+
+    .fold-tooltip{
+      position: absolute;
+      top: -34px;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 26px;
+      font-size: 12px;
+      color: #fff;
+      background: #24262b;
+      border-radius: 4px;
+      opacity: 0.9;
+      flex-direction: row;
+      font-weight: normal;
+
+      &::after{
+        position: absolute;
+        right: 0;
+        bottom: -6px;
+        left: 0;
+        display: block;
+        width: 0;
+        height: 0;
+        margin: 0 auto;
+        opacity: 0.9;
+        content: '';
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 7px solid #24262b;
+      }
+    }
+  }
+}
+
+.menu-text{
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.menu-icon{
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.menu-skeleton{
+  padding: 8px 14px;
+
+  .skeleton-item{
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+
+  .skeleton-icon{
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  .skeleton-text{
+    width: 90px;
+    height: 13px;
+    margin-left: 10px;
+  }
+}
+
+.menu-error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  flex-direction: column;
+}
+
+.menu-error-text{
+  font-size: 13px;
+  color: #686b75;
+}
+
+.menu-error-btn{
+  width: 76px;
+  height: 24px;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+// 菜单角标样式已移至 el-reset.scss（全局）：
+// 锚点小红点渲染在子组件 corner-bubble 内部，多根组件不继承父级 scoped 属性，
+// scoped 样式无法命中，会导致锚点 0×0、气泡永不展示
+

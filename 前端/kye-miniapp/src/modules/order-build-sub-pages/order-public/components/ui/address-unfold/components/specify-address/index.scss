@@ -1,0 +1,66 @@
+.address-unfold-specify-address {
+  padding: 36px 0;
+  cursor: pointer;
+
+  @include hairline(after, $border-bottom-color, bottom);
+
+  .placeholder-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+    color: #888ea6;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        font-size: 28px;
+        font-weight: $font-bold;
+      }
+    }
+
+    &__des {
+      padding-right: 16px;
+      margin-top: 8px;
+      font-size: 24px;
+      text-align: justify;
+      color: #888ea6;
+      line-height: 32px;
+    }
+  }
+
+  .address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+
+    &.address-arrow-style {
+      align-items: initial;
+    }
+
+    .des {
+      font-size: 28px;
+      font-weight: $font-bold;
+    }
+  }
+
+  .arrow-r {
+    flex-shrink: 0;
+    margin-right: -10px;
+    font-size: 30px;
+  }
+
+  &[data-disabled='address'] {
+    background: #eee;
+  }
+}

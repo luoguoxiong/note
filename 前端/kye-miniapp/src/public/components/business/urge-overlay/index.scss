@@ -1,0 +1,151 @@
+.van-overlay {
+  z-index: 100;
+}
+
+.urge-overlay {
+  z-index: 100 !important;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  .box {
+    width: 80%;
+    position: relative;
+
+    /* #ifdef h5 */
+    width: 600px;
+    /* #endif */
+  }
+
+  &-img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, -50%);
+    top: 0;
+  }
+
+  &-header {
+    height: 176px;
+    border-radius: 24px 24px 0px 0px;
+    background: linear-gradient(360deg, #ffffff 0%, #fff5e8 80%);
+    background-image: url('https://ic-img.ky-express.com/netc/20260603_8919_!!1780476135778_590_176.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  &-header-guide {
+    background-image: url('https://ic-img.ky-express.com/netc/20260603_50296_!!1780476547594_590_176.png');
+  }
+
+  &-content {
+    background: #ffffff;
+    padding: 16px 32px 32px;
+
+    &-success {
+      font-size: 34px;
+      font-weight: 600;
+      color: #24262b;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    &-tip {
+      font-size: 28px;
+      color: #686b75;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    &-time {
+      border-radius: 8px;
+      background: #fff3e5;
+      height: 66px;
+      line-height: 66px;
+      text-align: center;
+      color: #ff9300;
+      font-size: 24px;
+      margin-top: 16px;
+    }
+  }
+
+  &-footer {
+    border-radius: 0px 0px 24px 24px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #8365f6;
+    box-sizing: border-box;
+    background: #ffffff;
+
+    &-box1 {
+      padding: 0 32px 32px;
+    }
+
+    &-box2 {
+      padding: 0 32px 24px;
+      margin-top: -1px;
+    }
+
+    &-btton {
+      display: flex;
+      align-items: center;
+
+      &-box {
+        width: 50%;
+        border-radius: 16px;
+        height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        box-sizing: border-box;
+      }
+
+      &-left {
+        margin-right: 24px;
+        border: 2px solid #8365f6;
+        background: #ffffff;
+        color: #8365f6;
+      }
+
+      &-right {
+        background: #8365f6;
+        color: #ffffff;
+      }
+    }
+
+    /* 单按钮：通栏实心紫色 */
+    &-btn-single {
+      width: 100%;
+      background: #8365f6;
+      color: #ffffff;
+    }
+
+    &-jump {
+      color: #8365f6;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 0;
+
+      &-img {
+        height: 28px;
+        width: 28px;
+        margin-left: 3px;
+        transform: translateY(1px);
+      }
+    }
+  }
+}
+
+.wrapper-footer-btton-padding {
+  padding-bottom: 24px;
+}

@@ -1,0 +1,190 @@
+page {
+  height: 100vh;
+}
+
+.freight-time-page-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+
+  /* #ifdef h5 */
+  height: 100vh !important;
+  /* #endif */
+}
+
+.freight-time-content {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $bg-page;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.freight-time-container {
+  position: relative;
+}
+
+.block {
+  position: relative;
+  margin: $common-gap-top $common-gap-right;
+  background: #fff;
+  border-radius: $card-radius;
+  box-sizing: border-box;
+
+  &.block-template-list {
+    background-color: #f8f8fc;
+  }
+
+  &.block-sender-receive-list {
+    z-index: 13; //修复bug589127，要比热区的高
+  }
+
+  &.block-estimated-cost {
+    // bug#590861 .order-content的padding-bottom失效 使用最后一个block的间距
+    margin-bottom: $common-gap;
+    box-sizing: border-box;
+    height: 0.01px;
+    background-color: transparent;
+  }
+
+  .row {
+    :deep(.ky-cell) {
+      border-radius: $card-radius;
+    }
+
+    // 处理最后一个区块边框线为空
+    // &:last-child {
+    //   :deep(.cell-wrapper) {
+    //     .van-cell {
+    //       &::after {
+    //         border: 0;
+    //       }
+    //     }
+    //   }
+    // }
+
+    & > div:first-child {
+      &.row-item {
+        .ky-cell {
+          border-top-left-radius: $card-radius;
+          border-top-right-radius: $card-radius;
+        }
+      }
+    }
+
+    & > div:last-child {
+      &.row-item {
+        .ky-cell {
+          border-bottom-right-radius: $card-radius;
+          border-bottom-left-radius: $card-radius;
+
+          &::after {
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.block-last-child-empty-template {
+    height: 10px;
+    background-color: transparent;
+  }
+}
+
+.freight-time-product-name {
+  padding: 28px 24px;
+  background-color: transparent;
+}
+
+.freight-time-product-info-tip {
+  padding: 24px 24px 0 24px;
+  color: #686b75;
+}
+
+.illustrate {
+  padding: 24px;
+  position: relative;
+  &::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 16px;
+    bottom: 0;
+    left: 16px;
+    transform: scaleY(0.5);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+  .illustrate-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #8c8f99;
+    .icon-item {
+      width: 24px;
+      height: 24px;
+      margin-left: 4px;
+    }
+  }
+}
+
+// ========== 重置 & 查询按钮 ==========
+.clear__info {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+  padding: 0 64px 32px;
+  position: relative;
+
+  :deep(.ky-button) {
+    flex: 1;
+  }
+
+  .search-badge {
+    position: absolute;
+    right: 64rpx;
+    top: -20px;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 20px 20px 20px 0;
+    background: linear-gradient(281deg, #ff144f -3%, #ff6767 67%, #ff0c49 100%);
+    font-size: 24px;
+    color: #fff3f3;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    z-index: 2;
+  }
+
+  .clear {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 88px;
+    margin-right: 24px;
+    flex-shrink: 0;
+
+    .clear-icon {
+      width: 28px;
+      height: 28px;
+      margin-bottom: 8px;
+    }
+    > span {
+      font-size: 20px;
+      color: #24262b;
+      line-height: 28px;
+    }
+  }
+  .search-btn {
+    flex: 1;
+  }
+}
+
+// Footer 占位
+.footer-placeholder {
+  height: calc(120px + env(safe-area-inset-bottom, 20px));
+}

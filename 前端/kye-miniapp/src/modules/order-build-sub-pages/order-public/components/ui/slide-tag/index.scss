@@ -1,0 +1,147 @@
+.slide-tag {
+  position: relative;
+
+  .edit_tag {
+    background: #f4f5f6;
+  }
+
+  .slide-tag-product {
+    flex-shrink: 1;
+    flex-grow: 1;
+    height: 100%;
+    min-height: 58px;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .slide-tag-content {
+      padding-left: 1px;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      height: 100%;
+
+      .tag-content {
+        display: block;
+        flex-shrink: 0;
+        height: 52px;
+        padding: 0 16px;
+        margin-right: 12px;
+        border: 1.5px solid #e6e8ed;
+        border-radius: 12px;
+        color: #686B75;
+      }
+
+      button {
+        z-index: 1;
+      }
+    }
+  }
+
+  .slide-tag-warp {
+    overflow-y: hidden;
+    flex-wrap: wrap;
+
+    .tag-content {
+      margin-bottom: 12px;
+    }
+  }
+
+  .slide-tag-contain-clear {
+    width: calc(100% - 70px);
+  }
+
+  .slide-tag-clear {
+    height: 54px;
+    position: absolute;
+    top: 50%;
+    margin-top: 6px;
+    transform: translateY(-50%);
+    right: -1px;
+    z-index: 2;
+    background: #fff;
+    opacity: 1;
+
+    .clear-icon {
+      width: 32px;
+      height: 52px;
+      margin-right: 14px;
+      // margin: 0 0 12px 32px;
+      background: url('https://ic-img.ky-express.com/netc/20250619_76547_!!1750313538735_64_66.png') no-repeat center;
+      background-size: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .edit_status {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn {
+    color: #8365f6;
+    font-size: 24px;
+    padding: 0 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.tag-contain-clear_edit {
+  .slide-tag-contain-clear {
+    width: calc(100% - 172px);
+  }
+}
+
+.color-sub-title-span {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+
+  .close-tinge-svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+  }
+}
+
+.slide-tag-content[data-show-scroll-bar='false']::-webkit-scrollbar {
+  display: none;
+  opacity: 0;
+}
+
+.slide-tag-content[data-show-scroll-bar='true'] {
+  overflow-x: auto;
+  padding-bottom: 8px;
+
+  &::-webkit-scrollbar {
+    display: initial;
+    height: 10px;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: transparent;
+    transition: background-color 1s linear;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
+}

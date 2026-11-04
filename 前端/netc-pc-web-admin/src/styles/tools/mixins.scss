@@ -1,0 +1,130 @@
+// stylelint ignore
+@mixin scroll-bar {
+  &::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    // background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #dde1e7;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    &:hover {
+      background-color: #dde1e7;
+    }
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}
+
+@mixin scroll-bar-global {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    // background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #dde1e7;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    &:hover {
+      background-color: #dde1e7;
+    }
+  }
+}
+
+// 不能开启styleslint 格式化代码 因为格式化会把下面的代码max- min-去掉，壳内不支持
+@mixin respond-less-1162 {
+  @media (max-width: 1162px) {
+    @content;
+  }
+}
+
+@mixin respond-1162-to-1280 {
+  @media (min-width: 1162px) and (max-width: 1280px) {
+      @content;
+  }
+}
+
+@mixin respond-more-1280{
+  @media (min-width: 1280.1px) {
+    @content;
+  }
+}
+
+
+@mixin respond-less-1280 {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin respond-1280-to-1440 {
+  @media (min-width: 1280.1px) and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin respond-1440-to-1550 {
+  @media (min-width: 1440.1px) and (max-width: 1550px) {
+    @content;
+  }
+}
+
+@mixin respond-1550-to-1650 {
+  @media (min-width: 1550.1px) and (max-width: 1650px) {
+    @content;
+  }
+}
+
+@mixin respond-more-1650{
+  @media (min-width: 1650.1px) {
+    @content;
+  }
+}
+
+
+@mixin respond-less-1440 {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin respond-more-1440{
+  @media (min-width: 1440.1px) {
+    @content;
+  }
+}
+
+@mixin respond-1280-to-1760 {
+  @media (min-width: 1280.1px) and (max-width: 1760px) {
+    @content;
+  }
+}
+
+@mixin respond-more-1760{
+  @media (min-width: 1760px) {
+    @content;
+  }
+}
+
+@mixin respond-more-1380{
+  @media (min-width: 1380.1px) {
+    @content;
+  }
+}
+
+
+@mixin respond-less-1380 {
+  @media (max-width: 1380px) {
+    @content;
+  }
+}

@@ -1,0 +1,122 @@
+.virtual-mode {
+  &:deep(.container__body) {
+    padding-bottom: 0;
+  }
+  .main-content {
+    width: 100%;
+    height: 355px;
+    padding: 16px;
+    box-sizing: border-box;
+    background: #FFF;
+    :deep(.van-cell) {
+      padding: 0;
+    }
+    .empty {
+      padding-bottom: 20px;
+    }
+    .tip-text {
+      margin-top: 72px;
+      font-size: 36px;
+      font-weight: $font-bold;
+      line-height: 36px;
+      text-align: center;
+      letter-spacing: -0.82px;
+      color: #03050D;
+    }
+    .phone {
+      margin-top: 48px;
+      font-size: 48px;
+      text-align: center;
+      color: #8365F6;
+      font-weight: $font-bold;
+      line-height: 48px;
+      letter-spacing: 0;
+      .icon-edit-content {
+        margin-left: 53px;
+      }
+    }
+    .input-content {
+      padding: 0 16px;
+      margin-top: 48px;
+      :deep(.highlight) {
+        .van-field__body {
+          border: 3px solid #8365f6;
+        }
+      }
+      :deep(.van-field__body) {
+        height: 88px;
+      }
+      :deep(.van-field__control) {
+        height: 100%;
+        font-size: 32px !important;
+        &::placeholder {
+          font-size: 32px;
+        }
+      }
+      &.validate-error {
+        :deep(.van-field__control) {
+          color: #ff706d !important;
+        }
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    height: 128px;
+    padding: 20px 24px;
+    box-shadow: 0 -6px 20px 0 rgb(184 171 255 / 10%);
+    .btn-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 339px;
+      height: 88px;
+      font-size: 34px;
+      color: #8365F6;
+      background: #FFF;
+      border: 2px solid #8365F6;
+      border-radius: 20px;
+      box-sizing: border-box;
+      font-weight: $font-bold;
+      line-height: 34px;
+      cursor: pointer;
+      &.call {
+        margin-left: 24px;
+        color: #FFF;
+        background: #8365F6;
+      }
+      &.single {
+        width: 100%;
+        color: #FFF;
+        background: #8365F6;
+      }
+      &.independent {
+        width: 100%;
+      }
+    }
+  }
+
+  .wachat-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    flex-direction: column;
+    .tip {
+      font-size: 28px;
+      font-weight: normal;
+      line-height: 34px;
+      text-align: center;
+      color: #55596C;
+    }
+    img {
+      width: 182px;
+      height: 178px;
+      margin-top: 30px;
+    }
+  }
+}

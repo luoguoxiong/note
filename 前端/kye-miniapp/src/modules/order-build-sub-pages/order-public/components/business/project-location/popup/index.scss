@@ -1,0 +1,96 @@
+.project-location {
+  position: relative;
+  top: 1px;
+  display: flex;
+  flex-direction: column;
+  // margin-top: 24px;
+
+  .hasTip {
+    &::after {
+      border-bottom: 0;
+    }
+  }
+
+  .padding-style {
+    .exhibition-tooltip-error {
+      padding-bottom: 0;
+    }
+  }
+
+  .project-location-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    .ky-field-order  {
+      &::after {
+        left: 0;
+      }
+    }
+  }
+
+  .left {
+    width: 50%;
+    height: 96px;
+    padding-right: 12px;
+    cursor: pointer;
+    position: relative;
+    bottom: 2px;
+
+    .area-number {
+      font-size: 28px;
+      color: #03050d;
+    }
+
+    .ky-cell {
+      .ky-cell__title {
+        flex: 1;
+        margin-top: 0;
+        color:#ADB0B8;
+        font-weight: 600;
+        display: flex;
+
+        .placeholder {
+          width: 1px;
+          flex: 1;
+          font-weight: 400;
+          padding-bottom: 0;
+          @include ellipsis;
+        }
+
+        .area-number {
+          width: 1px;
+          flex: 1;
+          font-weight: 600;
+          padding-bottom: 0;
+          @include ellipsis;
+        }
+      }
+
+      &__value {
+        flex: 0;
+      }
+    }
+  }
+
+  .line {
+    height: 32px;
+
+    @include hairline(after, $border-bottom-color, right);
+  }
+
+  .project-location-right {
+    position: relative;
+    bottom: -3px;
+    width: 50%;
+  }
+
+  .cell-wrapper {
+    .driver {
+      &::after {
+        border: 0;
+      }
+    }
+  }
+}

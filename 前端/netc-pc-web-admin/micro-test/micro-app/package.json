@@ -1,0 +1,20 @@
+{
+  "name": "micro-app",
+  "version": "1.0.0",
+  "description": "子应用4 - MicroApp(京东) 接入",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "core-js": "^3.30.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.8",
+    "@kye-netc/micro-native": "0.0.12",
+    "@vue/cli-service": "~5.0.8"
+  }
+}

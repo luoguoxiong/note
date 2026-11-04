@@ -1,0 +1,232 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+span {
+  font-weight: unset;
+}
+
+b {
+  font-weight: bold;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background-color: #f4f4f4;
+  text-size-adjust: none;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom */
+a {
+  text-decoration: none;
+  color: #409eff;
+}
+
+li {
+  list-style: none;
+}
+
+#app {
+  position: relative;
+  overflow: auto;
+  height: 100%;
+  background-color: #fff;
+
+  @include scroll-bar;
+}
+
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
+  font-weight: 400;
+
+  @include scroll-bar;
+
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  &.is-component {
+    overflow: hidden;
+  }
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+//css去掉ie10，11中input[type="password"]中的眼睛图标
+input[type='password']::-ms-reveal {
+  display: none;
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content: '';
+  line-height: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+
+.wh-full iframe{
+  width: 100%;
+  height: 100%;
+}
+
+/* Quill 富文本内容展示覆盖（迁移自老项目 bass.scss 的 .ql-editor 块） */
+.ql-editor {
+  display: block;
+  padding: 0 !important;
+  margin-bottom: 12px;
+  em {
+    font-weight: unset !important;
+    font-size: unset !important;
+  }
+  u {
+    font-weight: unset !important;
+    font-size: unset !important;
+  }
+  strong {
+    font-weight: bold !important;
+  }
+  ol,
+  ul {
+    padding-left: 0 !important;
+  }
+  ul li::before {
+    font-size: 16px;
+    transform: translateX(-4px);
+  }
+}

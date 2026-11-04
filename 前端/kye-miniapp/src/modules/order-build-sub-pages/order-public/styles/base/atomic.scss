@@ -1,0 +1,170 @@
+@import '../tools/mixins.scss';
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  @include items-center;
+}
+
+.justify-center {
+  @include justify-center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.column {
+  @include column;
+}
+
+.flex-items-center {
+  @include flex-items-center;
+}
+
+.flex-justify-center {
+  @include flex;
+  @include justify-center;
+}
+
+.flex-center {
+  @include flex;
+  @include justify-center;
+  @include items-center;
+}
+
+.flex-column {
+  @include flex;
+  @include column;
+}
+
+/* 一级文字 适用场景：一级标题 导航栏标题 */
+.font-level1 {
+  @include font-level1;
+}
+
+/* 大按钮/弹窗标题/公共大按钮文本 */
+.font-special-big {
+  @include font-special-big;
+}
+
+/* 二级标题/表单列表标题/卡片标题/ */
+.font-level2 {
+  @include font-level2;
+}
+
+/* 正文/输入框标题、静默文案（已录入使用加粗）/公共中按钮文本 */
+.font-level3 {
+  @include font-level3;
+}
+
+/* 用于信息层级较多时/特殊场景使用 */
+.font-special {
+  @include font-special;
+}
+
+/* 用于信息层级较多时/特殊场景使用 */
+.font-level4 {
+  @include font-level4;
+}
+
+/* 标签/角标/徽标 */
+.font-level5 {
+  @include font-level5;
+}
+
+/* 单行文本溢出 */
+.ellipsis {
+  @include ellipsis;
+}
+
+.multi-screen-max-width {
+  @include multi-screen-max-width;
+}
+
+.multi-screen-max-small-width {
+  @include multi-screen-max-small-width;
+}
+
+.color-warning,
+.color-error {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: 1.6;
+  color: #ff9300;
+}
+
+.color-error {
+  color: #ff706d;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@for $i from 1 through 16 {
+  .m-#{$i * 4} {
+    margin: $i * 4px;
+  }
+  .my-#{$i * 4} {
+    margin-top: $i * 4px;
+    margin-bottom: $i * 4px;
+  }
+  .mx-#{$i * 4} {
+    margin-left: $i * 4px;
+    margin-right: $i * 4px;
+  }
+  .mt-#{$i * 4} {
+    margin-top: $i * 4px;
+  }
+  .mb-#{$i * 4} {
+    margin-bottom: $i * 4px;
+  }
+  .ml-#{$i * 4} {
+    margin-left: $i * 4px;
+  }
+  .mr-#{$i * 4} {
+    margin-right: $i * 4px;
+  }
+
+  .p-#{$i * 4} {
+    padding: $i * 4px;
+  }
+  .px-#{$i * 4} {
+    padding-left: $i * 4px;
+    padding-right: $i * 4px;
+  }
+  .py-#{$i * 4} {
+    padding-top: $i * 4px;
+    padding-bottom: $i * 4px;
+  }
+  .pt-#{$i * 4} {
+    padding-top: $i * 4px;
+  }
+  .pb-#{$i * 4} {
+    padding-bottom: $i * 4px;
+  }
+  .pl-#{$i * 4} {
+    padding-left: $i * 4px;
+  }
+  .pr-#{$i * 4} {
+    padding-right: $i * 4px;
+  }
+}
+
+.h-full {
+  height: 100%;
+}
+.h-screen {
+  height: 100vh;
+}
+
+.w-full {
+  width: 100%;
+}
+.w-screen {
+  width: 100vw;
+}

@@ -1,0 +1,26 @@
+.address-unfold-companyName {
+  // @include hairline(after, $border-bottom-color, bottom);
+  &.border-style {
+    &::after {
+      border: 0;
+    }
+  }
+
+  .companyName-name,
+  .ky-field {
+    box-sizing: border-box;
+  }
+  .companyName-name {
+    .ky-field {
+      &::after {
+        border-bottom: 0;
+      }
+    }
+    .ky-field--top--label {
+      margin-bottom: 15px;
+    }
+    /* #ifdef h5 */
+    width: 100%;
+    /* #endif */
+  }
+}

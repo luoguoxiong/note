@@ -1,0 +1,29 @@
+$title-sizes: (36px 52px, 34px 48px, 32px 46px, 28px 40px, 24px 34px);
+$main-sizes: (32px 46px, 28px 40px, 26px 38px, 24px 34px, 20px 28px);
+
+.ky-text{
+  &--title{
+    font-weight: 600;
+    @for $i from 1 through length($title-sizes) {
+      &.ky-text-size--#{$i} {
+        $pair: nth($title-sizes, $i); // 获取当前子列表
+        font-size: nth($pair, 1);
+        line-height: nth($pair, 2);
+      }
+    }
+  }
+  &--main{
+    font-weight: 400;
+    @for $i from 1 through length($main-sizes) {
+      &.ky-text-size--#{$i} {
+        $pair: nth($main-sizes, $i); // 获取当前子列表
+        font-size: nth($pair, 1);
+        line-height: nth($pair, 2);
+      }
+    }
+  }
+}
+
+/* #ifdef h5 */
+@import './index.h5.scss';
+/* #endif */

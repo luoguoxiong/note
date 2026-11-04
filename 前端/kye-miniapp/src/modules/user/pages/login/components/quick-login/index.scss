@@ -1,0 +1,65 @@
+.loginContainer {
+  .login-header {
+    text-align: center;
+    margin-bottom: 72px;
+    &-top{
+      padding-top: 160px;
+      display: flex;
+      justify-content: center;
+    }
+    &-logo {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 50px;
+    }
+    &-text {
+      font-size: 36px;
+      font-weight: 500;
+      color: #03050d;
+    }
+  }
+  .login-form {
+    wx-button[disabled][type=primary] {
+      background-color: #8365f6e0;
+    }
+    &-button.disabled{
+      background-color: #8365f6e0 !important;
+    }
+    &-button {
+      height: 88px;
+      width: 560px;
+      margin: 0 auto;
+      background-color: #8365f6;
+      font-size: 32px;
+      border-radius: 16px;
+      border-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      &:active {
+        background-color: #8356f6;
+      }
+      .icon-loading{
+        width:32px;
+        height: 32px;
+        margin-right: 4px;
+        animation-duration: 2s;
+        animation: icon-rotate .8s linear infinite;
+      }
+      view {
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+@keyframes icon-rotate {
+  0% {
+    transform: rotate(0)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}

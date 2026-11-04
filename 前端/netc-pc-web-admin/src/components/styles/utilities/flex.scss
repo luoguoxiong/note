@@ -1,0 +1,50 @@
+/* flex布局相关 */
+@import '../tools/flex';
+
+.flex {
+  @include flex;
+}
+
+.items-center {
+  @include items-center;
+}
+
+.justify-center {
+  @include justify-center;
+}
+
+.column {
+  @include column;
+}
+
+.flex-items-center {
+  @include flex-items-center;
+}
+
+.flex-justify-center {
+  @include flex-justify-center;
+}
+
+.flex-center {
+  @include flex-center;
+}
+
+.flex-column {
+  @include flex-column;
+}
+
+.justify-end {
+  justify-self: flex-end;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.items-start {
+  align-items: flex-start;
+}

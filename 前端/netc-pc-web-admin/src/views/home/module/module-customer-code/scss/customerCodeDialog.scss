@@ -1,0 +1,30 @@
+// 来源: customer-code/scss/customerCodeDialog.scss (忘记密码入口按钮 mixin)
+@mixin customerForgetPassword {
+  .forget-password__box {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    line-height: 1;
+    span {
+      font-size: 12px;
+    }
+  }
+  .forget-password__btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    img {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      padding: 0 4px;
+    }
+    .el-button {
+      padding: 0;
+      border: 0;
+      :deep(span) {
+        font-size: 12px;
+      }
+    }
+  }
+}

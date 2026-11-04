@@ -1,0 +1,21 @@
+// ESLint 检查 .vue 文件需要单独配置编辑器：
+// https://eslint.vuejs.org/user-guide/#editor-integrations
+{
+  "parser": "vue-eslint-parser", // 必须使用 vue 专用解析器
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser", // TS 解析器
+  },
+  "extends": ["taro/vue3", "eslint:recommended", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "no-async-promise-executor": "off",
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "vue/multi-word-component-names": "off",
+  },
+  "globals": {
+    "wx": "readonly",
+    "tt": "readonly",
+    "process": "readonly",
+    "__non_webpack_require__": "readonly",
+  },
+}

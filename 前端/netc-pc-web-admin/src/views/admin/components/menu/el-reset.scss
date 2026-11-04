@@ -1,0 +1,274 @@
+// 侧边栏 el-menu 样式覆盖（对齐 netc-pc-web 侧边栏 UI）
+// 注意：本文件为非 scoped 全局样式，同时覆盖折叠态 teleport 到 body 的弹出菜单
+.el-menu {
+  min-width: 100%;
+
+  .el-menu-item {
+    height: 44px;
+    line-height: 44px;
+
+    &:hover {
+      background: rgb(36 38 43 / 6%);
+    }
+  }
+
+  // 新框架 svg 菜单图标：默认色与激活色对齐 netc-pc-web（svg 使用 currentColor）
+  .menu-icon.svg-icon {
+    color: #686b75;
+  }
+
+  .el-menu-item.is-active .menu-icon.svg-icon,
+  .el-sub-menu.is-active:not(.is-opened) .menu-icon.svg-icon {
+    color: #7143f0;
+  }
+}
+
+// 角标气泡（style=40）：紫色渐变浮层，Teleport 挂 body + fixed 定位，样式需全局（对齐老项目 menu-popover）
+.menu-corner-bubble{
+  position: fixed;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  max-width: 400px;
+  height: 38px;
+  padding: 0 10px;
+  background: linear-gradient(186deg, #ba85ff, #8f73ff 100%);
+  border-radius: 6px;
+  box-shadow:
+    0 9px 28px 8px rgb(0 0 0 / 5%),
+    0 6px 16px 0 rgb(0 0 0 / 8%),
+    0 3px 6px -4px rgb(0 0 0 / 12%);
+  box-sizing: border-box;
+
+  .menu-corner-bubble__arrow{
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid #8f73ff;
+    transform: translateY(-50%);
+  }
+
+  .menu-corner-bubble__text{
+    overflow: hidden;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+    flex: 1;
+    font-weight: 600;
+    line-height: 38px;
+  }
+
+  .menu-corner-bubble__close{
+    flex-shrink: 0;
+    margin-left: 8px;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+// 菜单角标（红点/数字/图片），绝对定位于菜单项右上角
+// 注意：必须全局——锚点小红点渲染在子组件 corner-bubble 内部，多根组件不继承父级 scoped 属性
+.menu-corner{
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+
+  .menu-corner__dot{
+    width: 8px;
+    height: 8px;
+    background: #ff706d;
+    border-radius: 50%;
+  }
+
+  .menu-corner__num{
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    color: #fff;
+    background: #ff706d;
+    border-radius: 8px;
+  }
+
+  .menu-corner__img{
+    max-width: 28px;
+    max-height: 16px;
+  }
+}
+
+// 折叠态：角标定位到图标右上角
+// （气泡 style=40 折叠时浮层不渲染，仅锚点降级为红点）
+#menu .el-menu--collapse{
+  .el-menu-item .menu-corner,
+  .el-sub-menu__title .menu-corner{
+    top: 7px;
+    right: 22px;
+  }
+}
+
+// 气泡（style=40）锚点仅用于定位，红点不可见——气泡浮层本身即指示
+.menu-corner--40{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu {
+  .el-sub-menu__title {
+    position: relative; // 角标 .menu-corner 绝对定位于标题右上角（EP 未给 title 设 relative）
+    height: 44px;
+    color: #24262b;
+
+    &:hover {
+      background: rgb(36 38 43 / 6%);
+    }
+  }
+
+  .el-menu {
+    min-width: 100%;
+    max-width: 152px;
+    background: transparent;
+    border-right: 0 !important;
+
+    .el-menu-item {
+      height: 44px;
+      line-height: 44px;
+      padding: 0 20px;
+      box-sizing: border-box;
+      color: #24262b;
+
+      &:hover {
+        background: rgb(36 38 43 / 6%);
+      }
+
+      &.is-active {
+        color: #7143f0;
+        background: linear-gradient(90deg, #dddeff 0%, rgb(221 222 255 / 0%) 100%);
+
+        &::before {
+          position: absolute;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background: #7556ed;
+          content: '';
+        }
+      }
+
+      .notice-dot {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          top: -1px;
+          right: -6px;
+          display: block;
+          width: 5px;
+          height: 5px;
+          background: #ff706d;
+          border-radius: 50%;
+          content: '';
+        }
+      }
+
+      .notice-badge {
+        position: absolute;
+        top: 2px;
+        left: 110px;
+        display: flex;
+      }
+    }
+
+    // 二级菜单缩进（覆盖 EP 内联 padding 计算）
+    .el-sub-menu > .el-menu-item {
+      min-width: auto;
+      padding-left: 40px !important;
+    }
+
+    // 父级菜单激活且未展开：渐变背景 + 左侧竖条 + 文字高亮
+    .el-sub-menu.is-active:not(.is-opened) {
+      position: relative;
+      background: linear-gradient(90deg, #dddeff 0%, rgb(221 222 255 / 0%) 100%);
+
+      > .el-sub-menu__title {
+        color: #7143f0;
+      }
+
+      &::before {
+        position: absolute;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: #7556ed;
+        content: '';
+      }
+    }
+
+    .new_version_flag {
+      position: absolute;
+      top: 13px;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 16px;
+      padding: 2px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #fff;
+      background: #ff706d;
+      border-radius: 2px;
+    }
+  }
+}
+
+// 二级子菜单项：常规字重（对齐参考项目：一级文字 600，二级项不加粗）
+.el-sub-menu .el-menu-item > .menu-text,
+.menu-submenu--main .el-menu-item > .menu-text {
+  font-weight: 400;
+}
+
+// 折叠态子菜单弹出层（popper 挂载于 body）
+.menu-submenu--main {
+  .el-menu--popup {
+    min-width: 180px;
+
+    .el-menu-item {
+      height: 32px;
+      line-height: 32px;
+      // 覆盖 EP 内联缩进，对齐参考项目弹出菜单的左内边距
+      padding-left: 20px !important;
+
+      &:hover {
+        background: rgb(36 38 43 / 6%);
+      }
+
+      &.is-active {
+        color: #7143f0;
+        background: linear-gradient(90deg, #dddeff 0%, rgb(221 222 255 / 0%) 100%);
+
+        &::before {
+          position: absolute;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background: #7556ed;
+          content: '';
+        }
+      }
+    }
+  }
+}

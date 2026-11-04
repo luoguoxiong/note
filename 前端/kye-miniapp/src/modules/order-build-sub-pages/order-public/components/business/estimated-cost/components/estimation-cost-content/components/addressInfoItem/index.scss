@@ -1,0 +1,159 @@
+.address-info-item {
+  width: 686px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  background: #fff;
+  border: 1px solid #edf0f6;
+  border-radius: 12px;
+  box-shadow: 0 10px 16px 0 rgb(204 208 255 / 16%);
+  box-sizing: border-box;
+  cursor: pointer;
+
+  .row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 124px;
+    padding: 0 24px 0 48px;
+    margin: 0 auto;
+    &.is-detail {
+      padding: 0 48px;
+    }
+    .left-content {
+      .shape-img {
+        display: inline-block;
+        width: 150px;
+        height: 10px;
+      }
+    }
+    .bg-index {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 38px;
+      height: 38px;
+      font-size: 24px;
+      text-align: center;
+      color: #fff;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('https://ic-img.ky-express.com/netc/20250619_60334_!!1750300362086_76_76.png');
+      line-height: 38px;
+    }
+    .left-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 412px;
+      &.is-detail {
+        width: 100%;
+      }
+      .shape-img {
+        width: 100px;
+      }
+      .show-text {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        .name-text {
+          @include multi-ellipsis;
+
+          margin-bottom: 16px;
+          font-size: 34px;
+          font-weight: 500;
+          letter-spacing: -1px;
+          color: #03050d;
+        }
+        .city-text {
+          @include multi-ellipsis;
+
+          font-size: 26px;
+          font-weight: normal;
+          line-height: 26px;
+          letter-spacing: 0;
+          color: #888ea6;
+        }
+      }
+      .show-text-left {
+        text-align: left;
+      }
+      .show-text-right {
+        text-align: right;
+      }
+    }
+    .right {
+      .amount {
+        @include multi-ellipsis;
+
+        display: inline-block;
+        max-width: 200px;
+        margin-bottom: 20px;
+        font-size: 30px;
+        text-align: right;
+        color: #ff706d;
+        font-weight: normal;
+        letter-spacing: 0;
+      }
+      .view-detail {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 24px;
+        text-align: right;
+        color: #8365f6;
+        font-weight: normal;
+        .action {
+          font-size: 20px;
+        }
+      }
+      .look-detail {
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+        text-align: right;
+      }
+      .special-text {
+        font-size: 28px;
+        color: #ff706d;
+        font-weight: $font-bold;
+        margin-bottom: 20px;
+      }
+    }
+    .no-price {
+      .text-color-red-warn {
+        margin-right: 4px;
+        font-size: 30px;
+        color: #ff706d;
+      }
+      .icon-tip-error {
+        width: 30px;
+        height: 30px;
+        margin-left: 2px;
+        font-size: 24px;
+      }
+      .address-info-item-tips {
+        width: 28px;
+        height: 28px;
+        margin-left: 2px;
+        font-size: 28px;
+      }
+      // :deep(.van-popover__wrapper) {
+      //   display: flex;
+      //   align-items: center;
+      // }
+    }
+  }
+  .tip-container {
+    display: flex;
+    align-items: center;
+    min-height: 64px;
+    padding-left: 48px;
+    border-top: 1px dashed #ebedf5;
+
+    .error-tips {
+      font-size: 24px;
+      color: #ff706d;
+    }
+  }
+}

@@ -1,0 +1,403 @@
+<template>
+  <ky-popup
+    className="questionnaire-dialog-webview"
+    position="bottom"
+    :offset-bottom="isH5Env ? 50 : 0"
+    :safeAreaInsetBottom="isH5Env"
+    catchtouchmove
+    :show="showQuestion"
+  >
+    <Question :alertData="alertData" :closeDialog="handleClose" v-if="showQuestion" />
+  </ky-popup>
+</template>
+
+<script lang="ts" setup>
+import './index.scss'
+import { isH5Env } from '@/public/utils'
+import { useQuestionShow } from './hooks'
+import { createAsyncComp } from '@/public/utils/createAsyncComponent'
+const Question = createAsyncComp(() => import('./question.vue'))
+
+const { showQuestion, handleClose, alertData } = useQuestionShow()
+
+// const showQuestion = true
+// const alertData = {
+//   title: '您下单时在哪个模块遇到了问题呢？',
+//   moduleList: [
+//     {
+//       moduleName: '寄收信息',
+//       moduleType: 'sender',
+//       optionList: [
+//         {
+//           optionName: '智能识别内容不准',
+//           optionType: 'sender-10',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '寄件人需填写真实姓名',
+//           optionType: 'sender-20',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '详细地址推荐内容没有我想要的',
+//           optionType: 'sender-30',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '定位不准',
+//           optionType: 'sender-40',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '历史地址太多',
+//           optionType: 'sender-50',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '乱补充/乱改地址',
+//           optionType: 'sender-60',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '其他',
+//           optionType: 'sender-other',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~(必填)',
+//           needInput: true,
+//           inputRequire: true,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//       ],
+//     },
+//     {
+//       moduleName: '付款方式',
+//       moduleType: 'payment',
+//       optionList: [
+//         {
+//           optionName: '不知道收方付/第三方付公司信息',
+//           optionType: 'payment-10',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '收方付/第三方付公司信息异常，无法填写',
+//           optionType: 'payment-20',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '其他',
+//           optionType: 'payment-other',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~(必填)',
+//           needInput: true,
+//           inputRequire: true,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//       ],
+//     },
+//     {
+//       moduleName: '货物信息',
+//       moduleType: 'goods',
+//       optionList: [
+//         {
+//           optionName: '托寄物无法承运',
+//           optionType: 'goods-10',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '不知道重量体积',
+//           optionType: 'goods-20',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '没有自己要发的货物名称选项',
+//           optionType: 'goods-30',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '其他',
+//           optionType: 'goods-other',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~(必填)',
+//           needInput: true,
+//           inputRequire: true,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//       ],
+//     },
+//     {
+//       moduleName: '服务方式',
+//       moduleType: 'serviceMode',
+//       optionList: [
+//         {
+//           optionName: '服务方式没有想要的（没有或禁用不能选择）',
+//           optionType: 'serviceMode-30',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '服务方式没报价',
+//           optionType: 'serviceMode-10',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '服务方式价格不满意',
+//           optionType: 'serviceMode-20',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '其他',
+//           optionType: 'serviceMode-other',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~(必填)',
+//           needInput: true,
+//           inputRequire: true,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//       ],
+//     },
+//     {
+//       moduleName: '增值服务',
+//       moduleType: 'valueAddedServices',
+//       optionList: [
+//         {
+//           optionName: '强制保价',
+//           optionType: 'valueAddedServices-10',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '服务费用高',
+//           optionType: 'valueAddedServices-20',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '没有想要的服务',
+//           optionType: 'valueAddedServices-30',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '其他',
+//           optionType: 'valueAddedServices-other',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~(必填)',
+//           needInput: true,
+//           inputRequire: true,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//       ],
+//     },
+//     {
+//       moduleName: '价格',
+//       moduleType: 'price',
+//       optionList: [
+//         {
+//           optionName: '价格贵',
+//           optionType: 'price-10',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '二次寄件价格不一致',
+//           optionType: 'price-30',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '费用标准看不懂',
+//           optionType: 'price-40',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '费用不符合预期，和销售报价差异较大',
+//           optionType: 'price-50',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '其他',
+//           optionType: 'price-other',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~(必填)',
+//           needInput: true,
+//           inputRequire: true,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//       ],
+//     },
+//     {
+//       moduleName: '客户编码',
+//       moduleType: 'costomerCode',
+//       optionList: [
+//         {
+//           optionName: '我是个人寄件',
+//           optionType: 'costomerCode-10',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '客户编码异常',
+//           optionType: 'costomerCode-20',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '没有客户编码',
+//           optionType: 'costomerCode-30',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '提交了客户编码申请',
+//           optionType: 'costomerCode-40',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '不知道客户编码是什么',
+//           optionType: 'costomerCode-50',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//       ],
+//     },
+//     {
+//       moduleName: '其他问题',
+//       moduleType: 'other',
+//       optionList: [
+//         {
+//           optionName: '下单步骤操作复杂，填单字段多',
+//           optionType: 'other-50',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '选不了我需要的货好时间',
+//           optionType: 'other-20',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '使用卡顿',
+//           optionType: 'other-10',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~',
+//           needInput: true,
+//           inputRequire: false,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//         {
+//           optionName: '其他',
+//           optionType: 'other-other',
+//           placeHolder: '还有其他要反馈的内容可以写到这里~(必填)',
+//           needInput: true,
+//           inputRequire: true,
+//           showOption: true,
+//           defaultSelected: false,
+//         },
+//       ],
+//     },
+//   ],
+//   orderId: 'orderId-1772415878531',
+//   batchId: '157362581552905269',
+// }
+</script>

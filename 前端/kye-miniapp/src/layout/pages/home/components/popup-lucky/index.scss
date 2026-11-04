@@ -1,0 +1,97 @@
+.lpp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10001;
+}
+
+.lpp__warpper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lpp__box {
+  width: 560px;
+}
+
+.lpp__head image {
+  width: 560px;
+  height: 214px;
+  display: block;
+}
+
+.lpp__content {
+  height: 459px;
+  background: #ffffff;
+  border-radius: 0 0 16px 16px;
+}
+
+.lpp__p2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+
+.lpp__p2 text:first-child {
+  font-size: 48px;
+  font-weight: bold;
+  color: #732a00;
+  margin-right: 8px;
+  margin-top: -9px;
+}
+
+.lpp__p2 text:last-child {
+  font-size: 48px;
+  font-weight: 500;
+  color: #732a00;
+}
+
+.lpp__p3 {
+  width: 430px;
+  margin: 0 auto;
+  font-size: 28px;
+  font-weight: 400;
+  color: #732a00;
+  text-align: justify;
+  line-height: 44px;
+}
+
+.lpp__btn {
+  width: 240px;
+  height: 64px;
+  margin: 30px auto 0;
+  background: url('https://ic-img.ky-express.com/netc/20250702_26676_!!1751447863992_480_128.png') no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 28px;
+  color: #c93501;
+  text-align: center;
+}
+
+.lpp__sm {
+  font-size: 24px;
+  font-weight: 400;
+  color: #732a00;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.lpp__close {
+  text-align: center;
+  margin-top: 54px;
+}
+
+.lpp__close image {
+  width: 90px;
+  height: 90px;
+}

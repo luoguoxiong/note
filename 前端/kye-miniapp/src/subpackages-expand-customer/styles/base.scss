@@ -1,0 +1,82 @@
+.page {
+    background-color: #5d1882;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        width: 690rpx;
+        margin: 20rpx auto;
+        padding: 40rpx;
+        background-color: #fff;
+        border-radius: 16rpx;
+        box-sizing: border-box;
+        overflow: hidden;
+        .new-p1,
+        .new-p2,
+        .new-p3 {
+            font-size: 32rpx;
+            color: #333;
+            text-align: center;
+            margin-top: 28rpx;
+        }
+        .new-p2 {
+            font-size: 30rpx;
+            margin-top: 22rpx;
+            color: #666;
+        }
+        .new-p3 {
+            display: flex;
+            justify-content: center;
+            margin-top: 36rpx;
+            &__name {
+                max-width: 200rpx;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            &__phone {
+                color: #5716c3;
+            }
+            &__text {
+                margin: 0 15rpx;
+            }
+            &__icon {
+                display: inline-block;
+                width: 23rpx;
+                height: 23rpx;
+            }
+        }
+        .old-p {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 90rpx;
+            &__line {
+                position: absolute;
+                top: 75rpx;
+                left: 15rpx;
+                width: 10rpx;
+                height: 30rpx;
+                border-left: 2rpx dashed #5716c3;
+                // overflow: hidden;
+                transform: rotateZ(360deg);
+            }
+            &__no {
+                width: 30rpx;
+                height: 30rpx;
+                line-height: 30rpx;
+                font-size: 24rpx;
+                color: #fff;
+                text-align: center;
+                border-radius: 50%;
+                background-color: #5716c3;
+                margin-right: 16rpx;
+            }
+            &__text {
+                font-size: 30rpx;
+                color: #333;
+            }
+        }
+    }
+}
+

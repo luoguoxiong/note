@@ -1,0 +1,20 @@
+.empty-content {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  display: flex;
+
+  // .go-order-button {
+  //   height: 56px;
+  //   font-size: 24px;
+  //   font-weight: normal;
+  //   line-height: 34px;
+  //   text-align: center;
+  //   color: #FFFFFF;
+  //   border-radius: 8px;
+  // }
+
+  :deep(.van-empty__bottom) {
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,56 @@
+.ky-action-sheet {
+  display: block;
+  &__title {
+    display: block;
+    padding: 16px 32px;
+    margin: 0;
+    text-align: center;
+    background-color: $white;
+    border-bottom: 1px solid $border-default-color;
+    font-size: 28px;
+    line-height: 36px;
+    color: #686b75;
+  }
+  &__menu {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__cancel,
+  &__item {
+    display: block;
+    padding: 25px 32px;
+    line-height: 56px;
+    font-size: 32px;
+    font-weight: 600;
+    color: $text-default-color;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid $border-default-color;
+    cursor: pointer;
+  }
+
+  &__desc {
+    font-size: 36px;
+    color: $text-color-level2;
+    cursor: default;
+  }
+
+  &__sub-tag {
+    display: block;
+    font-size: 24px;
+    color: $text-color-level2;
+  }
+
+  &__item--disabled {
+    color: $disabled-color !important;
+    cursor: not-allowed;
+  }
+
+  &__cancel {
+    border-bottom: none;
+    border-top: 15px solid $border-default-color;
+  }
+}

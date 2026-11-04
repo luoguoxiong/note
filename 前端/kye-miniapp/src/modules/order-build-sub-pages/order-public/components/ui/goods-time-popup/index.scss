@@ -1,0 +1,32 @@
+.popup-bottom {
+  :deep(.header) {
+    border-bottom: 1px solid #ebedf5;
+  }
+  .top-tip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    min-height: 64px;
+    padding: 0 32px;
+    font-size: 24px;
+    box-sizing: border-box;
+    text-align: left;
+    background: #FFF4E5;
+    font-weight: normal;
+    span {
+      display: inline-block;
+      width: 100%;
+      color: #FF9300;
+    }
+    :deep(.ql-align-center) {
+      text-align: center;
+    }
+    :deep(.ql-align-right) {
+      text-align: right;
+    }
+  }
+}
+:deep(.container__body) {
+  padding: 0;
+}

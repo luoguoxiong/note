@@ -1,0 +1,14 @@
+.cropper-image{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.cropper-content{
+  flex: 1;
+}
+.footer{
+  height: auto;
+  .ky-button{
+    width: 100%;
+  }
+}

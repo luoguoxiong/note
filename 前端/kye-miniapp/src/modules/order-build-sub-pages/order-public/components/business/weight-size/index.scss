@@ -1,0 +1,160 @@
+.weight-size {
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  .tips {
+    position: relative;
+    padding-left: 30px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fe743c;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 26px;
+      height: 26px;
+      background-size: cover;
+      content: '';
+      transform: translateY(-50%);
+    }
+  }
+  .limit__weight {
+    &-title {
+      position: relative;
+      padding-left: 50px;
+      margin: 38px 0 26px;
+      font-size: 28px;
+      font-weight: $font-bold;
+      color: #03050d;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background: url('https://ic-img.ky-express.com/netc/20250619_46387_!!1750314390860_80_80.png') no-repeat;
+        background-size: cover;
+        content: '';
+        transform: translateY(-50%);
+      }
+    }
+    &__table {
+      border: 2px solid #ebedf5;
+      border-radius: 2px;
+      &-column {
+        display: flex;
+        align-items: center;
+
+        &:first-child {
+          border-bottom: 2px solid #ebedf5;
+        }
+
+        div {
+          padding-left: 24px;
+          font-size: 22px;
+          font-weight: 400;
+          color: #03050d;
+          box-sizing: border-box;
+          &:first-child {
+            width: 260px;
+            height: 60px;
+            line-height: 60px;
+            border-right: 2px solid #ebedf5;
+          }
+        }
+      }
+    }
+  }
+
+  .text__block {
+    position: relative;
+    display: flex;
+    padding-left: 26px;
+    margin-top: 32px;
+    flex-direction: column;
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: 8px;
+      width: 8px;
+      height: 8px;
+      background: #afb5cb;
+      border-radius: 4px;
+      content: '';
+    }
+
+    span {
+      &:first-child {
+        font-size: 26px;
+        font-weight: $font-bold;
+        color: #03050d;
+      }
+
+      &:last-child {
+        margin-top: 13px;
+        font-size: 22px;
+        font-weight: 400;
+        text-align: justify;
+        color: #55596C;
+        line-height: 36px;
+      }
+    }
+  }
+
+  .limit__size {
+    &-title {
+      position: relative;
+      padding-left: 50px;
+      margin: 78px 0 26px;
+      font-size: 28px;
+      font-weight: $font-bold;
+      color: #03050d;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background: url('https://ic-img.ky-express.com/netc/20250619_50085_!!1750314199915_80_80.png') no-repeat;
+        background-size: cover;
+        content: '';
+        transform: translateY(-50%);
+      }
+    }
+
+    &__table {
+      border: 2px solid #ebedf5;
+      border-radius: 2px;
+      &-column {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #ebedf5;
+        div {
+          width: 166px;
+          height: 60px;
+          line-height: 60px;
+          padding-left: 24px;
+          font-size: 22px;
+          font-weight: 400;
+          color: #03050d;
+          box-sizing: border-box;
+          border-right: 2px solid #ebedf5;
+          &:last-child {
+            border-right: none;
+          }
+        }
+
+        &:first-child {
+          background: #f7f8fa;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

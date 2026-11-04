@@ -1,0 +1,284 @@
+page {
+  height: 100vh;
+  overflow: hidden;
+}
+.receipt-resources {
+  background-color: $bg-page;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .flex {
+    display: flex;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .ml-24 {
+    margin-left: 24px;
+  }
+  .font-level2 {
+    font-size: 32px;
+  }
+  .font-level4 {
+    font-size: 24px;
+  }
+  .font-level5 {
+    font-size: 22px;
+  }
+  .template {
+    margin-bottom: 18px;
+    .templateUrlContent {
+      position: relative;
+      width: 100%;
+      padding: 0 20px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      img {
+        width: 100%;
+        height: 342px;
+        border-radius: 8px;
+      }
+      .tipstext {
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        width: calc(100% - 40px);
+        height: 64px;
+        font-size: 24px;
+        text-align: center;
+        color: #fff;
+
+        /* 色彩库/C9-交互状态色/60% 遮罩蒙版-P1 */
+        background: rgb(36 38 43 / 60%);
+        border-radius: 0 0 8px 8px;
+        opacity: 1;
+        line-height: 64px;
+      }
+    }
+  }
+  .angletext {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #ff9300;
+  }
+  .receipt-resources-block {
+    overflow: scroll;
+    padding: 18px 20px;
+    flex: 1;
+    // height: calc(100vh - 230px);
+    padding-bottom: 200px;
+    background: #f1f2f7;
+    .ky-empty {
+      // padding-top: 160px;
+      background: #f1f2f7;
+      box-sizing: border-box;
+      .ky-empty__description {
+        font-size: 24px;
+        font-weight: normal;
+        line-height: normal;
+        text-align: center;
+        color: #888ea6;
+        padding: 0 30px;
+        box-sizing: border-box;
+      }
+    }
+    .receipt-resources-content {
+      overflow: hidden;
+      background-color: #fff;
+      border-radius: 24px;
+      .receipt-resources-content-top {
+        position: relative;
+        height: 80px;
+        padding: 0 24px;
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 8px;
+          height: 32px;
+          margin-top: -16px;
+          background-color: #0070ff;
+          border-radius: 0 10px 10px 0;
+          content: '';
+        }
+        .receipt-resources-content-top-right {
+          color: #888ea6;
+        }
+      }
+    }
+    .receipt-resources-body {
+      position: relative;
+      height: 135px;
+      .receipt-resources-body-tabs {
+        flex: 1;
+        .receipt-resources-body-tabs-img {
+          width: 88px;
+          height: 88px;
+        }
+        .tabs-text {
+          font-size: 32px;
+        }
+      }
+      .center-line {
+        width: 2px;
+        height: 48px;
+        background: $border-bottom-color;
+      }
+      .submit-loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .receipt-resources-upload-content {
+      .receipt-resources-upload-list {
+        .upload-list-cell-content {
+          &::after {
+            display: block;
+            height: 2px;
+            margin: 0 24px;
+            content: '';
+            // border-bottom: 2px solid $bg-input-disable;
+            box-sizing: border-box;
+          }
+          .upload-list-cell {
+            height: auto;
+            .upload-list-img {
+              display: block;
+              width: 56px;
+              height: 56px;
+            }
+            .title-wrap {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              .time-wrap {
+                color: #969799;
+                display: flex;
+                justify-content: flex-start;
+                font-size: 23px;
+              }
+            }
+            .upload-list-title {
+              word-break: break-all;
+              // max-width: 438px;
+              @include multi-ellipsis(5);
+            }
+            .upload-list-del-icon {
+              display: inline-block;
+              width: 36px;
+              height: 36px;
+            }
+            .ky-cell__title {
+              flex: auto;
+              width: 350px;
+            }
+            .flex-align {
+              display: flex;
+              align-items: center;
+            }
+            .flex-end {
+              justify-content: flex-end;
+            }
+          }
+          .uploadfailwidth {
+            .ky-cell__title {
+              flex: auto;
+              width: 185px;
+            }
+          }
+        }
+        &:last-child {
+          .ky-cell::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .receipt-resources-bottom {
+    flex-shrink: 0;
+    overflow: hidden;
+    // height: 150px;
+    padding: 0 32px;
+    /* #ifdef h5 */
+    padding: 0 28px;
+    /* #endif */
+    padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 20px);
+    padding-top: 16px;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    .receipt-resources-bottom-agreement {
+      color: $primary;
+      flex: 1;
+    }
+    .receipt-resources-bottom-btn {
+      flex-shrink: 0;
+      width: 212px;
+      /* #ifdef h5 */
+      width: 200px;
+      /* #endif */
+      &.width-100 {
+        width: 100%;
+      }
+    }
+    .ky-radio {
+      .ky-radio-text {
+        margin-left: 8px;
+        font-size: 24px;
+        color: #323233;
+      }
+      .ky-radio__icon {
+        // width: 32px;
+        // height: 32px;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  :deep(.ky-popup) {
+    .container__body {
+      padding-top: 0;
+    }
+  }
+}
+
+.receipt-resources-bottom-popup {
+  .netc-agreement__popup--body {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    height: 700px;
+    padding: 0;
+    flex-direction: column;
+  }
+  .netc-agreement__popup--footer {
+    width: 100%;
+  }
+}
+
+/* #ifdef h5 */
+.receipt-resources-bottom-popup {
+  position: fixed;
+}
+.receipt-resources {
+  .receipt-resources-bottom {
+    max-width: 750px !important;
+    margin: 0 auto;
+  }
+}
+/* #endif */

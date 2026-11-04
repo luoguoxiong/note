@@ -1,0 +1,40 @@
+@import '@order-global-package-order-sub/styles/index.scss';
+
+.dispatch-form {
+  padding: 32px 24px;
+  padding-bottom: 0 !important;
+  background: #fff;
+  border-radius: 24px;
+  box-sizing: border-box;
+
+  .form-value {
+    margin-top: 20px;
+  }
+
+  .form-item {
+    position: relative;
+  }
+
+  .clear {
+    font-size: 26px;
+    line-height: 32px;
+    color: #8365f6;
+  }
+
+  .form-title {
+    position: relative;
+  }
+}
+
+.input-placeholder {
+  // 原生input 禁用状态下的 placeholder 颜色
+  &:disabled::placeholder {
+    color: $text-color-level5;
+  }
+
+  &::placeholder {
+    font-size: 28px;
+    font-weight: $font-normal;
+    color: $text-color-level3;
+  }
+}

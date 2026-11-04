@@ -1,0 +1,69 @@
+.idcard-cropper-content-warp {
+    .complete {
+        padding: 10rpx 20rpx;
+        border-radius: 4rpx;
+        background-color: #8d6cff;
+    }
+
+    .reset {
+        padding: 10rpx 20rpx;
+        border-radius: 4rpx;
+    }
+
+    .cropper_top {
+        z-index: 100000;
+        height: 200rpx;
+        background-color: rgba(0, 0, 0, .4)
+    }
+
+    .cropper-btn {
+        z-index: 100000;
+        box-sizing: border-box;
+        height: 200rpx;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 0 36px;
+        width: 100%;
+        background: rgba(0, 0, 0, .45);
+
+        display: flex;
+        color: #fff;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cropper-btn image {
+        display: block;
+        width: 48px;
+        height: 48px;
+    }
+
+    .cropper-btn .confirm {
+        display: block;
+        width: 132px;
+        height: 64px;
+        line-height: 64px;
+        background-color: #8365F6;
+        font-size: 28px;
+        text-align: center;
+        border-radius: 12px;
+    }
+
+    .cropper_wrap {
+        position: relative;
+        z-index: 10;
+    }
+
+    .cropper_wrap canvas {
+        background: rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .idcard-cropper-content {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+    }
+}

@@ -1,0 +1,152 @@
+.intergral-authorization-warp {
+    height    : 100%;
+    background: #fff;
+
+    .intergral-authorization__navbar {
+        padding   : 16px 24px;
+        height    : 64px;
+        background: #FFF2E6;
+        box-sizing: border-box;
+
+        display    : flex;
+        align-items: center;
+
+        .navbar-tip {
+            width       : 32px;
+            margin-right: 8px;
+        }
+
+        .navbar-text {
+            font-size  : 24px;
+            line-height: 32px;
+            color      : #FE743C;
+        }
+    }
+
+
+    .intergral-authorization__bottomBtn {
+        position: fixed;
+        bottom  : 0;
+
+        opacity   : 1;
+        background: #FFFFFF;
+
+        /* APP/通用/按钮/投影 */
+        box-shadow: 0px -6px 20px 0px rgba(184, 171, 255, 0.1);
+
+        .bottom-checkbox {
+            padding-top    : 18px;
+            font-size      : 24px;
+            line-height    : 24px;
+            height         : 64px;
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            width          : 100vw;
+
+            .checkbox1 {
+                // width    : 32px;
+                // height   : 32px;
+                transform       : scale(0.8);
+                background-color: transparent;
+            }
+
+            .text1 {
+                margin-left: 8px;
+                color      : #55596C;
+            }
+
+            .text2 {
+                color: #8365F6;
+            }
+
+        }
+
+        .bottom-btns {
+            box-sizing: border-box;
+            padding   : 20px 24px;
+
+            .btn {
+                width        : calc(100vw - 48px);
+                color        : #fff;
+                border-radius: 20px;
+                /* 主色渐变 */
+                background   : linear-gradient(98deg, #AC97FF 7%, #8365F6 95%);
+            }
+        }
+
+    }
+
+    .form-warp {
+        padding   : 0 32px;
+        margin-top: 48px;
+
+        .form-warp-cellGroup {
+            background: transparent;
+        }
+
+        .form-item {
+            background: transparent;
+            height    : 100%;
+            padding   : 36px 0;
+            padding   : 24px 0;
+
+            .form-label {
+                width        : 100%;
+                font-size    : 28px;
+                line-height  : 28px;
+                color        : #03050D;
+                margin-bottom: 12px;
+            }
+
+            .form-input {
+                height      : 66px;
+                line-height : 34px;
+                padding-left: 20px;
+
+                border-radius: 20px;
+                background   : #F7F8FA;
+                box-sizing   : border-box;
+                border       : 1px solid #8365F6;
+            }
+
+            .form-input-placeholder {
+                font-size     : 28px;
+                line-height   : 34px;
+                height        : 40px;
+                display       : flex;
+                align-items   : center;
+                letter-spacing: 0px;
+                color         : #888EA6;
+            }
+
+            .form-input-error {
+                text {
+                    color      : #F73F31;
+                    font-size  : 28px;
+                    line-height: 28px;
+                }
+            }
+        }
+
+
+        .getPhone {
+            position: relative;
+
+            .getPhone-content {
+                position : absolute;
+                top      : 24px;
+                right    : 0;
+                font-size: 26px;
+                color    : #8365F6;
+            }
+
+            .phone-icon {
+                width      : 24px;
+                height     : 24px;
+                margin-left: 6px;
+                margin-top : 2px;
+            }
+        }
+    }
+}

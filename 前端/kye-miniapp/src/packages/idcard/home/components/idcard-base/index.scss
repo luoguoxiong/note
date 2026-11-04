@@ -1,0 +1,185 @@
+.IdcardBaseInfo-warp {
+    padding: 40rpx 64rpx;
+    font-size: 24px;
+
+    background-size: 100% 100%;
+    &.popup {
+        width: 100vw;
+        box-sizing: border-box;
+    }
+
+    .IdcardBaseInfo-header-wrap {
+        display: flex;
+        .IdcardBaseInfo-header-content {
+            .IdcardBaseInfo-header-title {
+                color: #fff;
+                font-size: 34px;
+                font-weight: 600;
+                line-height: 48px;
+                .IdcardBaseInfo-header-title-name {
+                    font-size: 48px;
+                    font-weight: 600;
+                    line-height: 56px;
+                }
+            }
+            .IdcardBaseInfo-header-title-company {
+                font-size: 28px;
+                font-weight: 600;
+                line-height: 40px;
+                color: #fff;
+                margin-top: 8px;
+            }
+        }
+
+        .IdcardBaseInfo-header-headerImg {
+            .IdcardBaseInfo-header-img {
+                background-size: cover;
+                width: 152px;
+                height: 152px;
+                border-radius: 12px;
+            }
+        }
+    }
+
+    .IdcardBaseInfo-header-wrap-mode1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: relative;
+        padding-right: 152rpx;
+        margin-bottom: 10rpx;
+
+        .IdcardBaseInfo-header-headerImg {
+            position: absolute;
+            right: 0;
+        }
+
+        .IdcardBaseInfo-header-content {
+            margin: 22rpx 0;
+        }
+    }
+
+    .IdcardBaseInfo-header-wrap-mode3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .IdcardBaseInfo-header-content {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .IdcardBaseInfo-header-title {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .IdcardBaseInfo-header-wrap-mode2 {
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+
+        .IdcardBaseInfo-header-headerImg {
+            margin-right: 30px;
+            .IdcardBaseInfo-header-img {
+                background-size: cover;
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .IdcardBaseInfo-line {
+        margin-top: 46px;
+        // border-top: 1px solid #D8D8D8;
+        border-top:1px solid #d8d8d866;
+    }
+
+
+    .IdcardBaseInfo-content-item{
+        color: #fff;
+        display: flex;
+        margin-top: 16px;
+    }
+
+    .item-img {
+        width: 34px;
+        height: 34px;
+        margin-right: 12px;
+        display: block;
+    }
+
+    .IdcardBaseInfo-content-item-text {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    .IdcardBaseInfo-content-item-text-eamil {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        .eamil-text {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .renzhenContent {
+        .IdcardBaseInfo-content-item-text-highlight {
+            margin-left: 12px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            border-radius: 4px;
+            opacity: 1;
+            background: #F2EFFE;
+            box-sizing: border-box;
+            border: 1px solid #C4B2FF;
+            color: #C4B2FF;
+            padding: 0 4px;
+        }
+
+        .pipurText {
+            color: #8365F6;
+        }
+
+        .greenText {
+            border-radius: 4px;
+            opacity: 1;
+            background: #F0FFF7;
+            box-sizing: border-box;
+            border: 1px solid #7DE3B7;
+            color: #00C58C;
+        }
+    }
+
+    .text-ellipsis {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}
+.IdcardBaseInfo-header-wrap-mode1-content {
+    .IdcardBaseInfo-content {
+        margin-top: -8px;
+    }
+}
+
+.IdcardBaseInfo-header-wrap-mode2-content {
+
+}
+
+.IdcardBaseInfo-header-wrap-mode3-content {
+    
+}

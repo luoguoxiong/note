@@ -1,0 +1,123 @@
+/* ================= market area ================= */
+
+.ma {
+  display: flex;
+  padding: 0 24px 20px;
+  background: #fff;
+}
+
+.ma__item {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 142px;
+  padding: 16px 16px 0;
+  border-radius: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.ma__item:not(:last-child) {
+  margin-right: 12px;
+}
+
+/* ================= item content ================= */
+
+.ma__item__icon {
+  position: absolute;
+  right: 8px;
+  bottom: -8px;
+}
+
+.ma__item__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.ma__item__title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40px;
+  color: #24262b;
+  margin-bottom: 4px;
+}
+
+.ma__item__desc {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  color: #8c8f99;
+}
+
+.ma__item__text--highlight {
+  color: #ff9300;
+  font-weight: 500;
+}
+
+.ma__item__button {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  font-size: 24px;
+  line-height: 34px;
+  color: #8365f6;
+}
+
+.ma__item__button-arrow {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+}
+
+.ma__item__button-arrow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  border-top-right-radius: 2px;
+  transform: translate(-60%, -50%) rotate(45deg);
+}
+
+/* ================= animation ================= */
+
+.animation-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.animation-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750px;
+  height: 110vh;
+  background: #2d2d2d;
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+.sign-text {
+  position: fixed;
+  top: 32.5%;
+  width: 750px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: rgb(254, 229, 110);
+}
+
+.moving-image {
+  width: 750px;
+  height: 110vh;
+}

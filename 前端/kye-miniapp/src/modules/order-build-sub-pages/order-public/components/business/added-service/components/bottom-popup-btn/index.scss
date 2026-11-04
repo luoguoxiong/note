@@ -1,0 +1,120 @@
+.added-service-bottom {
+  align-items: flex-start;
+  .added-service-bottom-content {
+    flex: 1;
+    padding-right: 24px;
+    .added-service-bottom-fee {
+      font-size: 38px;
+      font-weight: $font-bold;
+      &.data-small-size {
+        font-size: 30px;
+      }
+    }
+    .added-service-bottom-detail {
+      color: $primary;
+      font-size: 24px;
+      font-weight: 600;
+      position: relative;
+      margin-left: 15px;
+      line-height: 42px;
+      &::after {
+        position: absolute;
+        top: 6px;
+        left: -8px;
+        width: 2px;
+        height: 30px;
+        background: #ebedf5;
+        content: '';
+      }
+    }
+    .fee-expand-icon {
+      width: 20px;
+      height: 20px;
+      margin-left: 4px;
+      transition: transform 0.3s;
+    }
+    .expand {
+      transform: rotate(180deg);
+    }
+    .loading-img-content {
+      height: 36px;
+      .loading-img {
+        display: block;
+        width: 36px;
+        height: 36px;
+        margin-left: 4px;
+        animation: trans360 0.8s linear infinite;
+      }
+    }
+
+    @keyframes trans360 {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .added-service-bottom-btn {
+    width: 196px;
+  }
+  .single-btn {
+    flex: 1;
+    width: 100%;
+  }
+  .added-service-bottom-fee-content {
+    height: 40px;
+  }
+  .fee-content-label {
+    font-size: 28px;
+    font-weight: $font-bold;
+  }
+  .fee-content-unit {
+    font-weight: $font-bold;
+  }
+}
+
+.added-service-bottom-wrapper-popup {
+  width: 100%;
+}
+
+.added-service-bottom-wrapper-page {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: #fff;
+  box-shadow: 0 -6px 20px 0 rgb(184 171 255 / 10%);
+  .added-service-bottom-padding {
+    padding: 20px 32px;
+  }
+}
+.added-service-bottom-wrapper- {
+  width: 100%;
+}
+// .added-service-bottom-wrapper {
+//   position: fixed;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 100;
+//   padding: 20px 32px;
+//   padding-bottom: env(safe-area-inset-bottom);
+//   background-color: $white;
+//   box-shadow: 0 -6px 20px 0 rgb(184 171 255 / 10%);
+// }
+.added-service-unfold-popup {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 20px 32px;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+  background-color: $white;
+  box-shadow: 0 -6px 20px 0 rgb(184 171 255 / 10%);
+  box-sizing: border-box;
+}

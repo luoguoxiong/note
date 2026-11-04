@@ -1,0 +1,50 @@
+.ky-textarea {
+  overflow: auto;
+  width: 100%;
+  padding: 16px 24px;
+  color: #323233;
+  background-color: #f7f8fa;
+  border: 1.5px solid #ebedf5;
+  border-radius: 24px;
+  box-sizing: border-box;
+  .h5-textarea::placeholder {
+    font-size: 28px;
+    font-weight: 400;
+    color: #888ea6;
+  }
+  .textarea-placeholder {
+    color: #ADB0B8;
+  }
+}
+.order-custom-textarea {
+  padding-bottom: 8px;
+  position: relative;
+  .h5-textarea {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+    word-break: break-all;
+    padding-top: 8px;
+    line-height: 40px;
+  }
+  &.ky-textarea .bottom {
+    //position: absolute;
+    left: 24px;
+    bottom: 16px;
+    z-index: 2;
+    .h5-view.clear{
+      padding: 12px 0 0 0;
+    }
+    .limit {
+      padding-top: 24px;
+      justify-content: flex-end;
+    }
+  }
+  @for $i from 1 through 16 {
+    .textarea-#{$i} {
+      overflow: auto !important;
+      height: $i * 40px;
+      min-height: $i * 40px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.more-container{
+  color: #686B75;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $bg-page;
+  .more-button{
+    color: #8365F6;
+    margin-left: 8px;
+  }
+  .more-expand{
+    margin-left: 4px;
+    transform: rotate(90deg);
+    margin-top: -4px;
+  }
+  .expand-icon{
+    transform: rotate(270deg);
+  }
+  .content{
+    width: 240px;
+    padding: 10px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+  .line{
+    background: #E6E8ED;
+    height: 2px;
+    width: 100%;
+  }
+}

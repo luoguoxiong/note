@@ -1,0 +1,206 @@
+/* 认证卡片组件样式 */
+
+.auth-card {
+  position: relative;
+  display: flex;
+  min-width: 694px;
+  min-height: 348px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 48px 40px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  &--start {
+    background: linear-gradient(90deg, #c3c5d6 1%, #acb0cd 98%);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after {
+      position: absolute;
+      top: 35px;
+      right: -6px;
+      content: '';
+      width: 94px;
+      height: 42px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &.auth-card--personal::after {
+      background-image: url('https://ic-img.ky-express.com/netc/20221124_57611160548_!!1669284143182_204_96.png');
+    }
+
+    &.auth-card--enterprise::after {
+      background-image: url('https://ic-img.ky-express.com/netc/20221124_57611160548_!!1669284143182_204_96.png');
+    }
+
+    &.reward-integral {
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 344px;
+        height: 44px;
+        background: url('https://ic-img.ky-express.com/netc/20250422_19562366165_!!1745325023007_688_88.png') no-repeat;
+        background-size: 344px 44px;
+      }
+    }
+
+    &.item-disabled {
+      background: rgb(241, 242, 247);
+
+      .name,
+      .cardtip {
+        color: #888ea6;
+      }
+
+      .tooltip {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        width: 634px;
+        height: 80px;
+        margin-left: -317px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #ffffff;
+        font-size: 28px;
+        border-radius: 16px;
+        line-height: 80px;
+        text-align: center;
+      }
+    }
+  }
+
+  &--finish {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.auth-card--personal {
+      background-image: url('https://ic-img.ky-express.com/netc/20250603_11375182087_!!1748955243504_1388_660.png');
+    }
+
+    &.auth-card--enterprise {
+      background-image: url('https://ic-img.ky-express.com/netc/20250603_31175182091_!!1748955243506_1388_660.png');
+    }
+
+    &::after {
+      position: absolute;
+      top: 35px;
+      right: -6px;
+      content: '';
+      width: 94px;
+      height: 42px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &.auth-card--personal::after {
+      background-image: url('https://ic-img.ky-express.com/netc/20221124_35911160534_!!1669283490213_204_96.png');
+    }
+
+    &.auth-card--enterprise::after {
+      background-image: url('https://ic-img.ky-express.com/netc/20221124_35911160534_!!1669283490213_204_96.png');
+    }
+  }
+
+  &__left {
+    flex: 1;
+    margin-right: 10px;
+    flex-direction: column;
+
+    .title {
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 58px;
+      color: #FFFFFF;
+      margin-top: 28px;
+      margin-bottom: 16px;
+    }
+
+    .name {
+      margin-top: 8px;
+      line-height: 68px;
+      font-size: 26px;
+      font-weight: 500;
+      color: #ffffff;
+      word-break: break-all;
+    }
+
+    .code {
+      line-height: 68px;
+      font-size: 26px;
+      font-weight: 500;
+      color: #ffffff;
+      word-break: break-all;
+    }
+
+    .cardtip {
+      font-size: 26px;
+      font-weight: normal;
+      line-height: 40px;
+      color: #FFFFFF;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .img {
+      display: block;
+      width: 126px;
+      height: 126px;
+      margin-bottom: 20px;
+    }
+
+    .label {
+      font-size: 24px;
+      color: #8365f6;
+      background-color: white;
+      border-radius: 12px;
+      padding: 12px 24px;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+
+      .go-img {
+        width: auto;
+        height: 20px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  /* 认证完成状态样式 */
+  &--finish {
+    .title {
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 48px;
+      color: #FFFFFF;
+      margin-top: 28px;
+      margin-bottom: 32px;
+    }
+
+    .name,
+    .code {
+      font-size: 26px;
+      font-weight: normal;
+      line-height: 40px;
+      color: #FFFFFF;
+      margin-top: 10px;
+      word-break: break-all;
+    }
+
+    .name {
+      margin-top: 0px;
+    }
+  }
+}

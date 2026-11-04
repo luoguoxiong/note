@@ -1,0 +1,185 @@
+.user-invite{
+  margin: 40px;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  background: #F7F6FC;
+  box-sizing: border-box;
+  border: 1px solid #F2F1F9;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  padding: 32px 40px;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-title {
+    height: 52px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 52px;
+    text-align: center;
+    color: #24262B;
+    margin-bottom: 4px;
+  }
+
+  &-desc {
+    height: 36px;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 36px;
+    text-align: center;
+    color: #686B75;
+  }
+
+  &-desc-wrap {
+    display: flex;
+    height: 36px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-item {
+    flex: 1;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 36px;
+    text-align: center;
+    color: #686B75;
+  }
+
+  .mid-item {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 16px;
+      background: #D3D5DB;
+      left: 1px;
+      top: 10px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 16px;
+      background: #D3D5DB;
+      right: 1px;
+      top: 10px;
+    }
+  }
+
+  &-btn {
+    position: relative;
+    height: 88px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background: linear-gradient(270deg, #8365F6 0%, #6C54F4 100%);
+    border-radius: 52px;
+    margin-top: 24px;
+    overflow: visible;
+    border: none !important;
+
+    &:active {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)), linear-gradient(270deg, #8365F6 0%, #6C54F4 100%);
+    }
+    
+    .ky-button__text {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hb-icon {
+      position: absolute;
+      width: 145px;
+      height: 107px;
+      left: 0px;
+      bottom: -1px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .bottom-0 {
+      bottom: 0px !important;
+    }
+
+    .flag-icon {
+      position: absolute;
+      width: 176px;
+      height: 40px;
+      right: -10px;
+      top: -20px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .arrow-icon {
+      width: 18px;
+      height: 14px;
+      margin-left: 8px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &-btn-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 24px;
+
+    .half-btn {
+      flex: 1;
+      height: 88px;
+      border-radius: 52px;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    .contact-btn {
+      background-color: transparent;
+      color: #8365F6;
+      border-color: #8365F6;
+
+      &:active {
+        background: rgba(131, 101, 246, 0.08);
+        color: #8365F6;
+        border-color: #8365F6;
+      }
+    }
+  }
+  
+  &-btn-contact {
+    margin-right: 16px;
+    color: #8365F6;
+    border: 2px solid #8365F6;
+  }
+
+  &-btn-add {
+    background: linear-gradient(270deg, #8365F6 0%, #6C54F4 100%);
+    color: #FFFFFF;
+    border: none;
+
+    &:active {
+      color: #fff !important;
+    }
+  }
+}
+
+.user-invite-bg {
+  background: url('https://ic-img.ky-express.com/netc/20260424_691_!!1777010855164_670_266.png') no-repeat -2px;
+}

@@ -1,0 +1,49 @@
+.ky-loading{
+  display: inline-flex;
+  align-items: center;
+  &-img{
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    animation: ky-button-rotate 1.5s linear infinite;
+  }
+  &-text{
+    font-family: PingFang SC;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 40px;
+  }
+  &--vertical{
+    display: inline-grid;
+  }
+  &.ky-loading--large{
+    &-img{
+      width: 48px;
+      height: 48px;
+    }
+  }
+  &.ky-loading--medium{
+    &-img{
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &.ky-loading--normal{
+
+  }
+  &.ky-loading--small,.ky-loading--mini{
+    &-img{
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+@keyframes ky-transform-rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,145 @@
+.stepper {
+  position: relative;
+
+  .ky-button {
+    width: 60px;
+    height: 60px;
+    background-color: #E6E8ED;
+
+    &--disabled {
+      background: #E6E8ED !important;
+      .stepper-minus,
+      .stepper-plus {
+        opacity: 0.2;
+      }
+    }
+
+    &:nth-child(1) {
+      border: 0;
+      border-radius: 8px 0 0 8px;
+    }
+    &:nth-child(n + 2) {
+      border: 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .van-icon-minus {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: -10px;
+        width: 22px;
+        height: 4px;
+        background: #283044;
+        border-radius: 2px;
+        content: '';
+      }
+    }
+    .van-icon-plus {
+      position: relative;
+      &::before {
+        position: absolute;
+        left: -11px;
+        width: 22px;
+        height: 4px;
+        background: #283044;
+        border-radius: 2px;
+        content: '';
+      }
+      &::after {
+        position: absolute;
+        left: -11px;
+        width: 22px;
+        height: 4px;
+        background: #283044;
+        border-radius: 2px;
+        content: '';
+        transform: rotate(90deg);
+      }
+    }
+
+    .ky-button__wrap {
+      .ky-button__text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .stepper-form-content {
+    position: relative;
+    width: 208px;
+    height: 60px;
+    margin: 0 2px;
+    background: #f7f8fa;
+    box-sizing: border-box;
+    .van-cell {
+      padding: 0;
+      background: #f7f8fa;
+      border: none;
+      &::after {
+        border: none;
+      }
+      .van-field__control {
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+    .form-tips-des {
+      color: #888ea6;
+    }
+  }
+
+  .stepper-form-content-focus {
+    border-bottom: 2px solid $primary;
+  }
+
+  .ky-input--input-container,
+  .stepper-input {
+    padding: 0;
+    border: 0;
+    text-align: center;
+  }
+  .empty {
+    // placeholder 非禁用
+    .stepper-input input {
+      -webkit-text-fill-color: $text-color-level3 !important;
+    }
+    // placeholder 禁用
+    .stepper-input input:disabled {
+      -webkit-text-fill-color: $text-color-level5 !important;
+    }
+  }
+
+  .validate-error {
+    .stepper-input input {
+      -webkit-text-fill-color: #ff706d !important;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 1;
+    pointer-events: auto;
+  }
+
+  .ky-input--focus .ky-input--input-container {
+    width: 100%;
+  }
+
+  .stepper-plus__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .stepper-minus__icon {
+    width: 60px;
+    height: 60px;
+  }
+}

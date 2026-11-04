@@ -1,0 +1,87 @@
+#admin{
+  position: relative;
+  // 小屏时头部固定不横向滚动, 横向滚动收敛到 #layout-content(侧边栏+内容区)内部
+  overflow: hidden;
+  height: 100%;
+  background: #eff1fd;
+}
+#layout-content{
+  position: absolute;
+  top: 46px;
+  bottom: 0;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  // background: #fff;
+
+  @include scroll-bar;
+}
+
+#page-wrap{
+  position: relative;
+  flex: 1;
+  // 1280 - 侧边栏 160, 保证小屏时内容区最小宽度与原 min-width:1280px 等效
+  min-width: 1120px;
+  box-sizing: border-box;
+  #tab-wrap{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 36px;
+    // background: #fff;
+    // border-bottom: 1px solid #eef0f4;
+    box-sizing: border-box;
+  }
+  #page-content{
+    position: absolute;
+    top: 36px;
+    bottom: 0;
+    overflow: auto;
+    width: 100%;
+    // padding: 0 14px;
+    // background: white;
+    box-sizing: border-box;
+
+    @include scroll-bar;
+  }
+}
+#menu-wrap{
+  position: relative;
+  // z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 160px;
+  height: 100%;
+  padding-top: 8px;
+  background: linear-gradient(180deg, #eff1fd 0%, #fff 100%);
+  border-radius: 0 4px 0 0;
+  box-sizing: border-box;
+
+  // 侧边栏头像区域: 用户信息(老基座 avatar 头像区, 组件自带 width:144px + 底部留白)
+  .menu-user-info {
+    padding: 0 8px;
+  }
+
+  // 侧边栏头像区域: 添加/切换客户编码按钮(老基座 avatar 业务块)
+  .menu-customer-code {
+    padding: 0 8px;
+  }
+
+  // 侧边栏头像区域: 切换部门
+  .menu-dept {
+    padding: 0 8px;
+  }
+
+  // customer-code 区域接入后, 菜单由 height:100% 改为弹性占满剩余高度
+  > #menu {
+    flex: 1;
+    height: auto;
+    min-height: 0;
+  }
+}
+
+#menu-wrap.collapse{
+  width: 64px;
+}

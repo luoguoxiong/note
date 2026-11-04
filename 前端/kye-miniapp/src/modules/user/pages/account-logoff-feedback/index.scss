@@ -1,0 +1,34 @@
+.account-cancellation__feedback-footer--holder {
+  height: calc(env(safe-area-inset-bottom) + 152px);
+}
+.account-cancellation__feedback-reason {
+  .ky-cell__value {
+    flex: unset;
+    width: unset;
+  }
+  .ky-radio-group {
+    display: block;
+  }
+  .ky-cell-group__wrap {
+    margin: 0;
+  }
+}
+
+.account-cancellation__feedback-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+  background: #fff;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 32px);
+  display: flex;
+
+  .ky-button {
+    height: 88px;
+    flex: 1;
+  }
+}
+.account-cancellation__feedback {
+  background: #fff;
+}

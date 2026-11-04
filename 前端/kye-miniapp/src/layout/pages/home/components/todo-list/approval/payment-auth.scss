@@ -1,0 +1,95 @@
+@import '../common.scss';
+
+.todo-payment-auth {
+  @include card;
+
+  .todo-payment-auth__header {
+    @include approval-card-header;
+    border-color: transparent;
+  }
+
+  .todo-payment-auth__content {
+    padding: 24px;
+    padding-top: 0;
+
+    .todo-payment-auth__info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      gap: 16px;
+
+      border-radius: 8px;
+      background: #f7f8fa;
+
+      .todo-payment-auth__info__flow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        & > text {
+          width: 218px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          font-size: 28px;
+          font-weight: 600;
+          color: #24262b;
+
+          &:last-child {
+            text-align: right;
+          }
+        }
+
+        image {
+          width: 138px;
+          height: 12px;
+        }
+      }
+
+      .todo-payment-auth__info__desc {
+        font-size: 26px;
+        font-weight: normal;
+        text-align: justify;
+        color: #24262b;
+        line-height: 36px;
+      }
+    }
+
+    .todo-payment-auth__form {
+      @include form;
+      padding: 24px 0 0;
+    }
+
+    .todo-payment-auth__alert {
+      border-radius: 8px;
+      background: #fff3f3;
+
+      font-size: 24px;
+      font-weight: normal;
+      line-height: 34px;
+      display: flex;
+      align-items: center;
+      color: #ff706d;
+      margin: 24px 0 0;
+      height: 64px;
+      padding: 0 16px;
+    }
+  }
+
+  .todo-payment-auth__footer {
+    @include card-footer;
+    height: 96px;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    // gap: 16px;
+    .mr-16 {
+      margin-right: 16px;
+    }
+  }
+}

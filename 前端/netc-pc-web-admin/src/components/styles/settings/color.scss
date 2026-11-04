@@ -1,0 +1,128 @@
+/* 颜色规范 */
+
+/* 主色/品牌色 */
+
+/* 主色调 */
+$primary: #7143f0;
+$white: #fff;
+
+/* 标签选中背景色 场景：选中标签/卡片选中 */
+
+$selected: #f2effe;
+
+/* 辅助色 */
+$blue: #1972f7;
+
+/* 一级文本色/重要文本色 */
+$text-color-level1: #24262b;
+
+/* 二级文本色 禁用文本色 */
+
+$text-color-level2: #686b75;
+
+/* 三级辅助文本色 */
+$text-color-level3: #8c8f99;
+
+/* 输入框静默文案/幽灵按钮边框色 */
+$text-color-level4: #adb0b8;
+
+/* 边框色 */
+$color-border: #e6e8ed;
+
+/* 三级遮罩背景色 */
+$mask-bg-level1: rgba(#24262b, 60%);
+$mask-bg-level2: rgba(#24262b, 16%);
+$mask-bg-level3: rgba(#24262b, 8%);
+
+/* 禁用背景色 */
+$bg-disabled: #f2f3f7;
+
+/* 页面背景色 */
+$bg-page: #f7f8fa;
+
+/* 下单首页页面背景色 */
+$main-bg-page: #f6f7fd;
+
+/* 输入框背景色/文本域背景色 */
+$bg-input: #f7f8fa;
+
+/* 系统功能色 */
+
+/* 场景：用于成功状态提示 主要用于系统成功类提示/操作成功反馈提示 成功类的弹窗内容/限制类的提示等 */
+$success: #3ac203;
+
+/* 背景色，文本使用#00C58C */
+$bg-success: #f2fcf9;
+
+/* 场景：通告警告/重点突出信息提示 主要用于系统警告提示/需要特别突出的文本 警告类的弹窗内容/限制类的提示等 */
+$warning: #f57200;
+
+/* 背景色，文本使用#FF9300 */
+$bg-warning: #fff5e8;
+
+/* 场景：错误状态提示/金额 */
+$error: #f73822;
+
+/* 背景色，文本使用#FF706D */
+$bg-error: #fff3f3;
+
+/* 点击色 */
+
+/* 卡片-大面积使用场景 */
+$click-big: rgba(#7143f0, 6%);
+
+/* 小面积/功能容器 如：按钮、标签、图标等 */
+$click-small: rgba(#000, 6%);
+
+/* 下边框线颜色 */
+$border-bottom-color: #ebedf5;
+
+// 品牌色-紫-Purple 主色
+$primary-color: #7143f0;
+$primary-color-bg: #f0ecfd;
+$primary-color-text: #7143f0;
+$primary-color-hover: #8a61f2;
+$primary-color-active: #3e25e9;
+$primary-color-disabled: #bda5f8;
+// 功能色-橙-Orange
+$orange: #f57200;
+$orange-color-bg: #fff3e5;
+$orange-color-text: #fa7d00;
+$orange-color-hover: #ffa13d;
+$orange-color-active: #e66a05;
+$orange-color-disabled: #ffbc70;
+// 功能色-绿-Green
+$green: #3ac203;
+$green-color-bg: #ebf8e5;
+$green-color-text: #2ab002;
+$green-color-hover: #63cc39;
+$green-color-active: #20a602;
+$green-color-disabled: #a5e87b;
+// 功能色-红-Red
+$red: #f22517;
+$red-color-bg: #feeeec;
+$red-color-text: #f73f31;
+$red-color-hover: #f5644e;
+$red-color-active: #e00b00;
+$red-color-disabled: #fba292;
+// 拓展色-蓝-Blue
+// $blue: #1251f5;
+// $blue-color-bg: #e7f0fe;
+// $red-color-text: #1972f7;
+// $red-color-hover: #3986f8;
+// $red-color-active: #0e3ff3;
+// $red-color-disabled: #8abdfc;
+// 拓展色-湖蓝-Lake blue
+$lakeBlue: #25c4aa;
+$lakeBlue-color-bg: #e9f9f6;
+$lakeBlue-color-text: #1bb396;
+$lakeBlue-color-hover: #42cfb7;
+$lakeBlue-color-active: #14a984;
+$lakeBlue-color-disabled: #8be0d1;
+// 拓展色-品红-Magenta
+$lakeBlue: #25c4aa;
+$lakeBlue-color-bg: #faf0fc;
+$lakeBlue-color-text: #ba2fe0;
+$lakeBlue-color-hover: #c550e5;
+$lakeBlue-color-active: #950ccf;
+$lakeBlue-color-disabled: #e099f1;

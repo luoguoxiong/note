@@ -1,0 +1,398 @@
+{
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "kye-minapp-app",
+  "setting": {
+    "compileHotReLoad": false,
+    "urlCheck": false,
+    "coverView": false,
+    "lazyloadPlaceholderEnable": false,
+    "preloadBackgroundData": false,
+    "autoAudits": false,
+    "useApiHook": true,
+    "showShadowRootInWxmlPanel": false,
+    "useStaticServer": false,
+    "useLanDebug": false,
+    "showES6CompileOption": false,
+    "checkInvalidKey": true,
+    "ignoreDevUnusedFiles": true,
+    "useApiHostProcess": true
+  },
+  "libVersion": "3.16.1",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "邀请寄",
+          "pathName": "modules/order-build-sub-pages/order-public/components/business/address-book/share-page/index",
+          "query": "inviteCode=7db970416fe345dd8b5b57f1c13424bf",
+          "scene": null,
+          "launchMode": "default"
+        },
+        {
+          "name": "中间页",
+          "pathName": "modules/order-build-sub-pages/pages/share-send/share/index",
+          "query": "inviteCode=39bbd22594ac472caa327b6352cf467e",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/order-build/pages/order/index",
+          "pathName": "modules/order-build/pages/order/index",
+          "query": "sourceAction=jiFen",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/tools/third-sigin/index",
+          "pathName": "modules/tools/third-sigin/index",
+          "query": "scene=u%253D1991795835267350528%2526f%253Dcrms",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/order-build/pages/order/index",
+          "pathName": "modules/order-build/pages/order/index",
+          "query": "channel=190&textCode=ff37382b388140e99ba97f223c828819",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/order-build/order-public/components/business/receive/page/address-page/index",
+          "pathName": "modules/order-build/order-public/components/business/receive/page/address-page/index",
+          "query": "addressType=20&pageSource=page",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "邀请人提交成功",
+          "pathName": "modules/order-build-sub-pages/pages/share-send/invite-success/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "被邀请人提交成功",
+          "pathName": "modules/order-build-sub-pages/pages/share-send/invited-success/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/tools/third-sigin/index",
+          "pathName": "modules/tools/third-sigin/index",
+          "query": "scene=u%253D1991795835267350528%2526f%253Dcrms",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/native/pages/base/index",
+          "pathName": "modules/native/pages/base/index",
+          "query": "taskKey=openFile-bbd03542-9e45-4261-8515-4d04902a101f&taskMethod=openFile&data=%257B%2522url%2522%253A%2522https%253A%252F%252Fers-uat.kyslb.com%252Ffile%252FFLOW%252FyDtzrUUckpfl23e7UkBIYcu0wvQdMhv8%252F0%252F0.PDF%253Fhkey%253D51578aedd8687fdcb7bb7fd7e2ab7409cb569f40c99dcbf3575c619391335eb4931d61b4a2c2c9f47545a0930f08431cf0b8d7a3eaee3a4be266c5d32058645927788b07df54010a3a4bdcc9883443bddb3b7b622764a4810de604216d5d4677855391f2718468090435a44db3e4be0dad13358c1f2f65e9cd3f9f7be7256155b3daad6f7d0cac388c5f502ed808c0ffec20d53a54a9f9043b33cc7961cdb9c02fa34e1aa11ae32755fa720f06b2dc986af14c7d4f851edbb0d08d1cd694eaed%2522%257D",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/other/crmEsig/index",
+          "pathName": "packages/other/crmEsig/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "layout/pages/home/index",
+          "pathName": "layout/pages/home/index",
+          "query": "miniappDebugId=log_17262206244967_33d2aefc259d4d009bb004fb9554ef81_log20251110092153",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "layout/pages/home/index",
+          "pathName": "layout/pages/home/index",
+          "query": "miniappDebugId=log_17262206244967_695645d8e7d743c5a071d0206c087fd9_log20251107113454",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/other/qrcodeScan/index",
+          "pathName": "packages/other/qrcodeScan/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "layout/pages/mine/index",
+          "pathName": "layout/pages/mine/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "layout/pages/order/index",
+          "pathName": "layout/pages/order/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/order/index",
+          "pathName": "pages/entry/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/webview/pages/webview/index",
+          "pathName": "modules/webview/pages/webview/index",
+          "query": "needLogin=true&url=https%3A%2F%2Fopen-h5-uat.ky-express.com%2Fcrm%2Fcrm-marketing-open%2Flottery-new.html%23%2Flist%3FactivityId%3D471807",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/other/qrcode/index",
+          "pathName": "packages/other/qrcode/index",
+          "query": "scene=6120201",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/webview/message-center",
+          "pathName": "packages/webview/message-center",
+          "query": "modelRoute=signature",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/webview/pages/webview/index",
+          "pathName": "modules/webview/pages/webview/index",
+          "query": "url=https%253A%252F%252Fic-h5.kye-erp.com%252Fh5-offline%252Fnetc-h5-order-offline%252Findex.html%2523%252Fwaybill-detail&needLogin=true",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/search/index",
+          "pathName": "pages/search/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/webview/pages/webview/index",
+          "pathName": "modules/webview/pages/webview/index",
+          "query": "url=https%3A%2F%2Fic-h5-uat.kye-erp.com%2Fbuy-stock.html%23%2F&customParams=%7B%22needOpenid%22%3A%22true%22%2C%22needLogin%22%3A%22true%22%7D",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/id-card/home/index",
+          "pathName": "packages/idcard/home/index",
+          "query": "id=90263473ac224e0488ce6ec05ec59846&bcSource=1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/webview/pages/webview/index",
+          "pathName": "modules/webview/pages/webview/index",
+          "query": "$taroTimestamp=1760175213439&needLogin=true&url=https%253A%252F%252Finvoice-manager-dev.ky-express.com%252Ffms-online-settlement-h5%252Fpay-for-another%252Fdetail%253FpageType%253D1%2526shareInfo%253Dc380018eae466c69204ff254755408370f9d9e4d986a92e48f27d59fa92f045c9ee1fc3be9b12af1de903bb1e7c7c49a1f236fcf37d5a0e47d650b8b02791099f4f0278224a2619ed8ef0a4389f5d4a41be53b507f500d9e683810268d03664090c44f6a5bfcb4859c4a4fb8d7a30f47496e965faee6b68fbf09a4cf177d9e98f505e5f233dc4360fc7a84c473df570a63869a53a225f911b50b053fce142c02%2526sign%253DwCB1GkOGKSS9qPAj70NfXUK2wQ2HbK02YRdhaJwSmZHNAQKXzERmBgFzQ8q14Uhi",
+          "launchMode": "default",
+          "scene": 1179
+        },
+        {
+          "name": "subpackages/common-page/scan/index",
+          "pathName": "subpackages/common-page/scan/index",
+          "query": "scene=156970818454664120",
+          "launchMode": "default",
+          "scene": 1047
+        },
+        {
+          "name": "packages/webview/scanQrCode",
+          "pathName": "packages/webview/scanQrCode",
+          "query": "scene=u%3D1976470192047697920%26f%3Dcrms",
+          "launchMode": "default",
+          "scene": 1047
+        },
+        {
+          "name": "modules/webview/pages/webview/index",
+          "pathName": "modules/webview/pages/webview/index",
+          "query": "url=http://localhost:8080/function-feedback.html&needLogin=true&unDecodeUrl=true",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/native/pages/test/index",
+          "pathName": "modules/native/pages/test/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/other/scanSurvey/index",
+          "pathName": "packages/other/scanSurvey/index",
+          "query": "scene=2",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "modules/webview/pages/webview/index",
+          "pathName": "modules/webview/pages/webview/index",
+          "query": "url=https://localhost/#/&needLogin=true&unDecodeUrl=true",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "layout/pages/home/index",
+          "pathName": "layout/pages/home/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/other/marketingLottery/index",
+          "pathName": "packages/other/marketingLottery/index",
+          "query": "scene=id%253D470616",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/other/marketingLottery/index",
+          "pathName": "packages/other/marketingLottery/index",
+          "query": "scene=id%25253D470701",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/other/marketingLottery/index",
+          "pathName": "packages/other/marketingLottery/index",
+          "query": "scene=id%253D470701",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/other/marketingLottery/index",
+          "pathName": "packages/other/marketingLottery/index",
+          "query": "scene=id%253D470616",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/other/marketingLottery/index",
+          "pathName": "packages/other/marketingLottery/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/other/marketingLottery/index",
+          "pathName": "packages/other/marketingLottery/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/webview/openWebview",
+          "pathName": "packages/webview/openWebview",
+          "query": "__key_=17588010057608&form=mine&iconfrom=highest&menuCode=M2095&menuCustomParam=&needLogin=true&shellVersion=v1.1.0&url=https%253A%252F%252Finvoice-manager.ky-express.com%252Ffms-online-settlement-h5%252F%253FminiUserInfo%253DN4IgxgrgzgLg9gWwKYCcDCcAmSQC4QgA0408yKAygBZwowByAhsngcZLIqgCoCeADjlwA7CABsxxfjWFCQARgCsAZgBMygBwAGAOzL5GoiGiomLfCAC%252BQA%2526buriedPointUserInfo%253DN4IgrgzgpgTgkgExALhARjQVgOwA4DMAbGiADQgDGkALgPYC2sAwrQlCiGSAB4XcDyABygA7RB1oAmANYAVAI4AGJgEEAIgGkAchoASwgF4BOAAoBFOAHEAlnEyz8AK2ldRFGAE9B1EwAtaIuyoAEIAokYALGrYeFiYahEAYoRMaJLBRon4iiqSmJhGoZhooSAAvkA",
+          "launchMode": "default",
+          "scene": 1179
+        },
+        {
+          "name": "packages/other/share/index",
+          "pathName": "packages/other/share/index",
+          "query": "appId=wxb1503f29025cc7aa",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/other/qrcodeJump/index",
+          "pathName": "packages/other/qrcodeJump/index",
+          "query": "scene=156912046797065556%2C6e109868b",
+          "launchMode": "default",
+          "scene": 1047
+        },
+        {
+          "name": "layout/pages/mine/index",
+          "pathName": "layout/pages/mine/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/webview/scanQrCode",
+          "pathName": "packages/webview/scanQrCode",
+          "query": "scene=u%3D1970014370639818752%26f%3Dcrms",
+          "launchMode": "default",
+          "scene": 1047
+        },
+        {
+          "name": "packages/webview/scanQrCode",
+          "pathName": "packages/webview/scanQrCode",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/webview/minprogram-code",
+          "pathName": "packages/webview/minprogram-code",
+          "query": "scene=156881535899752863%2C0cb0a7b43",
+          "launchMode": "default",
+          "scene": 1047
+        },
+        {
+          "name": "packages/webview/openWebview",
+          "pathName": "packages/webview/openWebview",
+          "query": "url=https://baidu.com&needLogin=true",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/webview/index",
+          "pathName": "packages/webview/index",
+          "query": "type=crabFeedBack&src=https://baidu.com",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/webview/applyAuth",
+          "pathName": "packages/webview/applyAuth",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/webview/applet-sms",
+          "pathName": "packages/webview/applet-sms",
+          "query": "url=https://baidu.com",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/webview/h5",
+          "pathName": "packages/webview/h5",
+          "query": "type=welfare",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/webview/barcode",
+          "pathName": "packages/webview/barcode",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/webview/message-center",
+          "pathName": "packages/webview/message-center",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "packages/test/index",
+          "pathName": "packages/test/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

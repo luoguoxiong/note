@@ -1,0 +1,99 @@
+@mixin PopupTitle {
+  color: #03050D;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+.version-manage-popup{
+  :deep(.ky-popup-content) {
+    width: 590px !important;
+  }
+  &--wrapper{
+    width: 590px;
+    //height: 650px;
+  }
+  &--header{
+    &-img{
+      width: 100%;
+      height: 226px;
+    }
+  }
+  &--bottom{
+    background-color: #ffffff;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    margin-top: -12px;
+  }
+  &--content{
+    min-height: 240px;
+    padding: 0 40px 60px;
+    line-height: 28px;
+    color: #55596C;
+    font-size: 28px;
+    text-align: center;
+    &-install-title{
+      @include PopupTitle;
+      padding-top: 30px
+    }
+  }
+  &--title{
+    text-align: center;
+    .name{
+      @include PopupTitle;
+    }
+    .version{
+      font-size: 28px;
+      font-weight: 600;
+      color: #8365F6;
+      margin-bottom: 30px;
+    }
+  }
+  &--list {
+    line-height: 42px;
+    max-height: 40vh;
+    text-align: left;
+    //max-height: 124px;
+  }
+  &--footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px 40px;
+    .ky-button{
+      flex:1;
+      height: 80px;
+      line-height: 80px;
+      white-space: nowrap;
+    }
+    .ky-button + .ky-button{
+      margin-left: 20px;
+    }
+  }
+  &--progress-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #55596C;
+    font-size: 26px;
+    margin-top: 20px;
+  }
+  &--close{
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 40px;
+    image {
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.kye-overlay.version-manage-popup--body{
+  .ky-overlay-body, .ky-popup-content, .ky-popup-body{
+    background: transparent !important;
+  }
+}

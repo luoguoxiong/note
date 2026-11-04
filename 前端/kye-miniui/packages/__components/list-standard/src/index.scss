@@ -1,0 +1,20 @@
+.list-item {
+  padding: 12px;
+  margin-bottom: 8px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-empty, .list-load-fail {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.load-fail-btn {
+  margin-top: 24px;
+}

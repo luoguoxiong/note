@@ -1,0 +1,6 @@
+{
+  "identityServiceConfig": {
+    "authorizeMiniprogramType": 1,
+    "miniprogramLoginPath": "/modules/user/pages/login/index"
+  }
+}

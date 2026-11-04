@@ -1,0 +1,98 @@
+.exhibition-page {
+  min-height: 100vh;
+  padding: 0 0 32px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+// 实名横幅
+.real-banner {
+  display: flex;
+  align-items: center;
+  padding: 16px 16px 16px 24px;
+  border-radius: 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 243, 229, 0.5) 0%,
+    rgba(255, 243, 229, 1) 100%,
+  );
+  .real-banner-text {
+    flex: 1;
+    font-size: 24px;
+    color: #FF9300;
+    line-height: 32px;
+  }
+
+  .real-banner-btn {
+    flex-shrink: 0;
+    margin-left: 8px;
+    padding: 0 28px;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 8px;
+    background: #ff9300;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+// 入口卡片
+.entry-list {
+  padding: 24px 32px 64px;
+  box-sizing: border-box;
+}
+
+.entry-card {
+  display: flex;
+  align-items: center;
+  padding: 48px 32px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  // 背景渐变由行内样式按入口下发（撤展紫 / 来展蓝）
+
+  .entry-icon {
+    width: 112px;
+    height: 112px;
+    flex-shrink: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .entry-info {
+    flex: 1;
+    margin-left: 28px;
+  }
+
+  .entry-title {
+    font-size: 34px;
+    font-weight: 600;
+    color: #24262B;
+    line-height: 48px;
+  }
+
+  .entry-desc {
+    margin-top: 8px;
+    font-size: 26px;
+    color: #686B75;
+    line-height: 36px;
+  }
+
+  .entry-arrow {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin-left: 12px;
+  }
+}
+
+// 5大核心优势长图
+.advantage-img {
+  display: block;
+  width: 100%;
+  border-radius: 24px;
+  padding: 0 32px;
+  height: auto;
+  box-sizing: border-box;
+}

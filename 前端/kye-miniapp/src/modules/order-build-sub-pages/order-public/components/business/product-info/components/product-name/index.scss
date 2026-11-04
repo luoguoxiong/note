@@ -1,0 +1,224 @@
+.product-name {
+  padding: 28px 0;
+  background: #fff;
+  // border-bottom: 1.5px solid $bg-input-disable;
+  @include hairline(after, $border-bottom-color, bottom);
+
+  .product-name-title {
+    padding-bottom: 12px;
+
+    .product-name-title-required {
+      width: 40px;
+      margin-left: 8px;
+    }
+  }
+
+  .tip-icon {
+    margin-left: 8px;
+  }
+
+  .product-name-desc {
+    padding-bottom: 12px;
+
+    .h5-p {
+      .h5-span {
+        margin: 0;
+        line-height: 28px;
+        color: #686b75 !important;
+      }
+    }
+  }
+
+  .product-name-title-desc {
+    color: #55596c;
+  }
+
+  .product-name-input {
+    position: relative;
+
+    // padding-bottom: 16px;
+    .product-name-link-content {
+      position: absolute;
+      top: 80px;
+      z-index: 20;
+      width: 100%;
+      max-height: 554px;
+      background-color: $text-color-button;
+      border: 2px solid $bg-input-disable;
+      border-radius: $card-radius;
+      box-shadow: 0 6px 15px 0 rgb(0 0 0 / 10%);
+
+      .product-name-link-content-tag {
+        overflow-y: scroll;
+        padding: 0 24px;
+
+        .product-name-link-name {
+          width: 100%;
+          height: 100px;
+          box-sizing: border-box;
+          border-bottom: 2px solid #ebedf5;
+
+          &:last-child {
+            border: none;
+          }
+
+          .color-assist {
+            display: inline-block;
+            width: 160px;
+            height: 40px;
+            padding: 2px 0;
+            margin-left: 32px;
+            font-size: 24px;
+            text-align: right;
+            color: #888ea6;
+            line-height: 40px;
+
+            @include multi-ellipsis;
+          }
+
+          .second_category {
+            width: 194px;
+          }
+
+          .product-name-link-content-tag-name {
+            flex: 1;
+
+            @include multi-ellipsis;
+
+            .h5-span {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .product-name-link-content-close {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100px;
+        color: $primary;
+        border-top: 2px solid $bg-input-disable;
+        font-weight: 600;
+      }
+    }
+    .ky-input--disabled {
+      .ky-input--input-container {
+        .h5-input {
+          color: #000 !important;
+          font-weight: 600 !important;
+        }
+      }
+    }
+
+    :deep(.highlight) {
+      .van-field__word-limit {
+        padding-left: 44px;
+      }
+    }
+
+    :deep(.van-field__word-limit) {
+      padding-left: 8px;
+    }
+  }
+
+  .product-name-package {
+    padding-top: 16px;
+
+    .product-name-package-title {
+      .product-name-package-title-required {
+        // font-size: $line-level4;
+        width: 40px;
+        margin-left: 8px;
+      }
+    }
+
+    .product-name-package-content {
+      padding-top: 16px;
+      gap: 16px;
+
+      .product-name-package-content-tag {
+        padding: 15px 8px 15px 0;
+        box-sizing: border-box;
+        border: 1.5px solid $bg-input-disable;
+        border-radius: 10px;
+
+        .product-name-package-radio {
+          width: 32px;
+          height: 32px;
+
+          svg {
+            font-size: 32px;
+          }
+        }
+
+        .radio-checked-text {
+          color: $primary;
+        }
+      }
+
+      .auto-width-tag {
+        flex: 1;
+      }
+
+      .min-width-tag {
+        min-width: 200px;
+      }
+
+      .product-name-package-selected {
+        background-color: #f5f3fe;
+        border: 2px solid $primary;
+
+        .ky-radio {
+          .radio-item {
+            .van-radio {
+              &__label {
+                color: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .product-info-restric-tips {
+    display: flex;
+    padding-top: 8px;
+    + .product-info-restric-tips {
+      padding-top: 0;
+    }
+    .tips {
+      color: #55596c;
+    }
+
+    .icon-content {
+      height: 100%;
+      margin-right: 8px;
+      margin-top: 4px;
+    }
+
+    .tips-icon {
+      width: 24px;
+      height: 24px;
+      margin-top: -6px;
+    }
+  }
+
+  .slide-tag {
+    padding-top: 8px;
+  }
+}
+
+.product-name-popup {
+  padding-top: 0;
+}
+
+.home-warn-tips {
+  padding: 0;
+  margin-top: 16px;
+}
+.product-name-ext {
+  font-size: 24px;
+  text-align: right;
+  color: #8C8F99;
+}

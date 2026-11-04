@@ -1,0 +1,25 @@
+.ky-checkbox{
+  /* 小程序端 radio 适配 */
+  checkbox.ky-checkbox-item,
+  checkbox.ky-checkbox-item .wx-radio-input,.weui-icon-checked,.weui-cells_checkbox {
+    width: 0;
+    height: 0;
+    border: 0 solid transparent !important;
+    visibility: hidden;
+  }
+  checkbox.ky-checkbox-item .wx-radio-input.wx-radio-input-checked::before,
+  checkbox.ky-checkbox-item.a-radio-checked::after,
+  radio-checked::after,
+  .weui-icon-checked::after {
+    content: none;
+    border: 0 solid transparent !important;
+    width: 0 !important;
+    height: 0 !important;
+    font-size: 0 !important;
+  }
+  /*  #ifdef  alipay  */
+  checkbox.ky-checkbox-item{
+    position: absolute;
+  }
+  /*  #endif  */
+}

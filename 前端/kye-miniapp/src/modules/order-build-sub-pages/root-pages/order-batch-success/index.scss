@@ -1,0 +1,598 @@
+.order_batch_success {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  .go_real_auth{
+    background: #FF9300;
+    width: 104px;
+    height: 48px;
+    color: #FFFFFF;
+    font-size: 24px;
+    border-radius: 8px;
+    line-height: 48px;
+    text-align: center;
+  }
+  // 转发他人实名
+  .go_real_auth_share {
+    width: 160px;
+  }
+  .order-loading {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+  }
+  .content {
+    // display: flex;
+    // flex-direction: column;
+    overflow: auto;
+    flex: 1;
+  }
+  &-footer {
+    display: flex;
+  }
+  &-content {
+    // flex: 1;
+    overflow: auto;
+    .content_box {
+      margin-bottom: 20px;
+    }
+  }
+  .content_tabs {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &-tabs-content {
+    &.box-shadow {
+      border-radius: 24px 24px 0 0;
+      box-shadow: 0 3px 10px 0 rgb(0 0 0 / 10%);
+    }
+    .tab-title {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      font-size: 26px;
+      color: #55596c;
+
+      .svg-icon {
+        margin-right: 8px;
+      }
+    }
+    :deep .van-tabs {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      .van-tabs__content {
+        display: flex;
+        flex: 1;
+        overflow: auto;
+      }
+    }
+    :deep .van-tabs__wrap {
+      display: flex;
+      flex-direction: column;
+      border-radius: 24px 24px 0 0;
+      .van-tabs__line {
+        top: 81px;
+        background-color: #8365f6;
+      }
+
+      .van-tab--active {
+        color: #8365f6;
+      }
+
+      [aria-checked='true'] {
+        .van-tab__text {
+          color: #8365f6;
+        }
+      }
+      .van-tabs__nav--line {
+        padding-bottom: 0px;
+      }
+    }
+  }
+
+  &-failContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    margin: 0 32px;
+    font-size: 24px;
+    color: #ff706d;
+    background-color: #fff3f3;
+    border-radius: 20px;
+
+    .flex-center {
+      display: flex;
+      align-items: center;
+
+      .left-icon {
+        margin-right: 8px;
+      }
+
+      .right-icon {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+.order-status {
+  position: relative;
+  background: linear-gradient(180deg, #F0EDFF 0%, #F8F8FC 100%);
+
+  @include flex-column;
+  @include flex-items-center;
+}
+.order-status-failed {
+  width: 260px;
+  height: 196px;
+  margin-top: 40%;
+  background: url('https://ic-img.ky-express.com/netc/20250619_4098_!!1750300184827_520_392.png') no-repeat center;
+  background-size: 100%;
+}
+
+.icon-status {
+  width: 260px;
+  height: 196px;
+  margin-top: 64px;
+}
+.icon-all-failed {
+  @include flex-column;
+  @include flex-items-center;
+  img {
+    width: 260px;
+    height: 196px;
+    margin-top: 300px;
+  }
+
+  .fail-number {
+    font-size: 36px;
+    height: 52px;
+    line-height: 52px;
+    color: #03050D;
+    font-weight: 600;
+  }
+  .retry-order {
+    font-size: 26px;
+    height: 36px;
+    line-height: 36px;
+    color: #55596c;
+    margin-bottom: 72px;
+  }
+}
+
+// .order-status-tips {
+//   .icon-tips {
+//     top: 168px;
+//   }
+// }
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.order-status-icon-tips {
+  position: relative;
+  margin-top: 36px;
+  width: 206px;
+  height: 44px;
+  font-size: 44px;
+  background-size: cover;
+  flex-shrink: 0;
+  left: 20%;
+}
+
+.icon-and-text {
+  display: flex;
+  height: 52px;
+  align-items: center;
+
+  .icon-success-waybill2 {
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+  }
+
+  :deep(.sub-title) {
+    line-height: 52px;
+    font-size: 36px;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  :deep(.color-sub-title) {
+    color: #03050D;
+  }
+}
+
+:deep(.main-title-241106) {
+  height: 52px;
+  line-height: 52px;
+  font-size: 28px;
+  color: #03050D;
+  font-weight: 400;
+
+  .time-highlight {
+    font-size: 36px;
+    color: #FF9300;
+    font-weight: 600;
+  }
+}
+
+:deep(.main-title-241111) {
+  line-height: 36px;
+  font-size: 26px;
+  color: #55596C;
+  font-weight: 400;
+  padding: 0 32px;
+  text-align: center;
+}
+
+.visible-hidden {
+  visibility: hidden;
+}
+.mt-64 {
+  margin-top: 64px;
+}
+
+.first-no-mt {
+  .card:nth-child(1) {
+    margin-top: 0px;
+  }
+}
+
+.card {
+  position: relative;
+  min-height: 291px;
+  background-color: #fff;
+  border: 1px solid #d6d8e7;
+  border-radius: $card-radius;
+  &.card-radio {
+    .content {
+      padding-left: 72px;
+    }
+  }
+  .items-check {
+    // position: absolute;
+    // left: 24px;
+    display: flex;
+    margin-right: 16px;
+    .items-check-icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.waybill {
+  position: relative;
+  height: 60px;
+  font-size: $fs-level4;
+  color: $text-color-level2;
+  background: linear-gradient(180deg, rgb(216 226 255 / 30%) 0%, white 99%);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(180deg, rgb(164 144 255 / 0%) 2%, #9b9bff);
+    opacity: 0.1;
+    content: '';
+  }
+}
+
+.address {
+  width: 194px;
+  height: 100%;
+}
+
+.items-end {
+  align-items: flex-end;
+  .address-detail {
+    text-align: end;
+  }
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.person {
+  font-size: 26px;
+  line-height: 26px;
+  color: #686B75;
+
+  @include ellipsis;
+}
+
+.person[data-type='pickup'] {
+  text-align: right;
+}
+
+.address-detail {
+  font-size: 24px;
+  line-height: 28px;
+  color: #686B75;
+
+  @include ellipsis;
+}
+
+.icon-arrow {
+  width: 137.34px;
+  height: 14px;
+  margin-bottom: 8.72px;
+}
+
+.goods-container {
+  width: 100%;
+  white-space: nowrap;
+
+  @include font-level4;
+}
+
+.goods {
+  color: $text-color-level1;
+
+  @include ellipsis;
+}
+
+.waybill-number {
+  color: $text-color-level1;
+}
+
+.goods-type {
+  @include ellipsis;
+}
+
+.button-normal {
+  width: 144px;
+  height: 60px;
+  padding: 18px 12px;
+  font-size: 24px;
+  white-space: nowrap;
+  color: $primary;
+  border: 1px solid $primary;
+  border-radius: $skeleton-radius;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+.color-purple {
+  color: #8365F6;
+}
+
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.qrcode-container {
+  width: 590px;
+  height: 755px;
+  margin-top: 227px;
+  background-color: #fff;
+  border-radius: 16px;
+}
+
+.img-qrcode {
+  width: 590px;
+  height: 320px;
+  background: url('https://ic-img.ky-express.com/netc/20250619_62564_!!1750313986700_1166_869.png') no-repeat;
+  background-size: contain;
+}
+
+.img-ad {
+  width: 100%;
+  height: 160px;
+  margin-top: 24px;
+}
+
+.qr-code-icon-close {
+  width: 60px;
+  height: 60px;
+}
+
+.batch_order-footer {
+  padding: 20px 24px;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom, 20px));
+}
+
+:deep(.button-footer) {
+  width: 339px;
+  height: 88px;
+  font-size: $fs-spcecial-big;
+  font-weight: $font-bold;
+
+  .all-failed-buton {
+    width: 428px;
+  }
+}
+
+:deep(.button-left) {
+  color: $primary;
+}
+
+.h-140 {
+  min-height: 140px;
+}
+
+:deep(.share-guide-overlay) {
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+}
+
+.share-guide {
+  position: absolute;
+  top: 22px;
+  right: 64px;
+  &__card {
+    img {
+      width: 481px;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 192px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 60px;
+    font-size: 24px;
+    color: #fff;
+    background: rgb(255 255 255 / 10%);
+    border: 2px solid #fff;
+    border-radius: 32px;
+    font-weight: 400;
+  }
+}
+
+:deep(.van-divider) {
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+.advertisement {
+  border-radius: 24px;
+}
+
+.van-notice-bar--wrapable {
+  padding: 20px 24px;
+  font-size: 24px;
+  color: $warning;
+  background: $bg-warning;
+  line-height: 34px;
+}
+
+.gobi-barcode {
+  height: 320px;
+}
+
+.img-gobi {
+  pointer-events: none;
+}
+
+.city {
+  max-width: 210px;
+  font-size: 34px;
+  line-height: 48px;
+  height: 48px;
+  font-weight: 600;
+
+  @include ellipsis;
+}
+
+.waybill-tab-prompt {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  color: #55596c;
+  line-height: 36px;
+  &-icon {
+    display: block;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+}
+
+.order-failed-content {
+  height: 74px;
+  padding: 0 32px;
+  padding-bottom: 20px;
+  padding-top: 40px;
+  background-color: #F8F8FC;
+  .order-failed-wrapper {
+    padding: 25px;
+    color: #ff706d;
+    background-color: #fff3f3;
+    border-radius: 16px;
+  }
+  .order-failed-text {
+    flex: 1;
+    padding-left: 5px;
+  }
+  .order-failed-save {
+    padding-right: 18px;
+  }
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+.h-40 {
+  height: 40px;
+}
+.bg1 {
+  background-color: #F8F8FC;
+}
+.line-bg {
+  background: linear-gradient(180deg, #F8F8FC 0%, #FFF 100%);
+}
+.waybill-info-card-wrap {
+
+  .card {
+    margin-top: 24px;
+
+    &:nth-child(1) {
+      // margin-top: 0px;
+    }
+
+    .service-mode-text {
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      height: 34px;
+      color: #03050D;
+    }
+  }
+}
+
+:deep(.van-tab) {
+  &.van-tab--active {
+    .van-tab__text {
+      color: #8365F6;
+    }
+  }
+  .van-tab__text {
+    display: inline-block;
+    font-size: 32px;
+    line-height: 46px;
+    color: #686B75;
+  }
+}
+:deep(.van-tabs__line) {
+  background-color: #8365F6;
+  width: 80px;
+}
+:deep(.van-tabs__nav) {
+  border-bottom: 1px solid #E6E8ED;
+}
+
+.notice-bar-icon-tips {
+  width: 32px;
+  height: 32px;
+  left: 0px;
+  margin-top: 2px;
+  margin-right: 8px;
+  align-self: flex-start;
+}

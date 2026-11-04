@@ -1,0 +1,37 @@
+export const baseCheckData = {
+  code: 0,
+  msg: 'OK',
+  data: {
+    status: false,
+    checkResultList: [
+      {
+        sort: 16,
+        key: '',
+        showType: 4,
+        content: null,
+        blockedFlag: false,
+        preLimitType: 'tellClipBoard',
+        preLimitDetailType: null,
+        mask: null,
+        defer: false,
+        extraData: null,
+        cacheFlag: null,
+      },
+      {
+        sort: 18,
+        key: '',
+        showType: 4,
+        content: '尊敬的客户，您有运单暂未付款，请及时付款。',
+        blockedFlag: false,
+        preLimitType: 'noPay',
+        preLimitDetailType: null,
+        mask: null,
+        defer: false,
+        extraData: null,
+        cacheFlag: null,
+      },
+    ],
+  },
+  traceId: '82482edbdd9e5ea07ecd6167265506ee',
+  success: true,
+}

@@ -1,0 +1,186 @@
+.order-service-introduction {
+  height: 100%;
+  // background-color: #f3f4f6;
+  :deep(.shadow) {
+    .van-sticky {
+      &::after {
+        display: block;
+        // width: 100%;
+        height: 10px;
+        background: #fff;
+        box-shadow: 0 2px 4px 0 rgb(122 87 87 / 10%);
+        content: '';
+      }
+    }
+  }
+  &-content {
+    padding: 32px 40px;
+    margin-top: 20px;
+    background-color: #fff;
+
+    &-title {
+      display: flex;
+      align-items: center;
+      height: 45px;
+      font-size: 32px;
+      color: #333;
+      font-weight: bold;
+      line-height: 45px;
+      &::before {
+        display: inline-block;
+        width: 5px;
+        height: 29px;
+        margin-right: 10px;
+        background: #8d6cff;
+        border-radius: 7px;
+        content: '';
+        line-height: 29px;
+      }
+    }
+    &-tips {
+      margin: 10px 0 60px;
+      font-size: 30px;
+      font-weight: normal;
+      text-align: justify;
+      color: #333;
+      line-height: 60px;
+      &-bigimg {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0 20px;
+        img {
+          width: 331px;
+          height: 150px;
+        }
+      }
+      &-message {
+        display: flex;
+        align-items: center;
+        img {
+          width: 32px;
+          margin-right: 10px;
+        }
+        span {
+          font-size: 20px;
+          color: #333;
+          line-height: 28px;
+        }
+      }
+      &-goods,
+      &-good {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        div {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+          img {
+            width: 106px;
+          }
+          span {
+            display: block;
+            margin: 20px 0;
+            font-size: 22px;
+            color: #333;
+            line-height: 32px;
+            // width: 132px;
+          }
+        }
+      }
+      &-goods {
+        justify-content: space-around;
+      }
+      // &-phone {
+      //   color: #8d6cff;
+      // }
+      &-ad {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 325px;
+          height: 332px;
+          text-align: center;
+          background: #f7f8fa;
+          border-radius: 4px;
+          flex-direction: column;
+          &:nth-child(1),
+          &:nth-child(2) {
+            margin: 20px 0;
+          }
+          &:nth-child(5) {
+            margin-top: 20px;
+          }
+          &:nth-child(6) {
+            margin-top: 20px;
+          }
+          img {
+            width: 140px;
+            height: 140px;
+          }
+          span:first-child {
+            display: block;
+            width: 256px;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: left;
+            color: #333;
+            // line-height: 40px;
+          }
+          span:last-child {
+            display: block;
+            max-width: 265px;
+            font-size: 22px;
+            font-weight: normal;
+            text-align: justify;
+            color: #666;
+            line-height: 30px;
+          }
+        }
+        &-special {
+          max-width: 290px !important;
+        }
+        .fixheight {
+          height: 277px;
+        }
+      }
+      &-marker {
+        &::marker {
+          color: #cfd2de;
+        }
+      }
+      &-info {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 18px;
+        img {
+          width: 32px;
+          height: 32px;
+          margin-right: 12px;
+        }
+        li {
+          font-size: 22px;
+          color: #333;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+.iframe--item {
+  overflow: hidden;
+  margin-top: 20px;
+}
+iframe {
+  position: relative;
+  // top: -28px;
+  width: 100%;
+  height: calc(100vh - 100px);
+  border: medium none;
+}

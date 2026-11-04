@@ -1,0 +1,41 @@
+.package-service {
+  // @include atomic;
+
+  .desctitle {
+    margin-top: -4px;
+    .font-level5 {
+      display: flex;
+      align-items: center;
+      // font-size: 24px;
+      color: #888ea6;
+      line-height: 34px;
+    }
+
+    .color-sub-title {
+      display: flex;
+      align-items: center;
+      color: #ff706d;
+      margin-bottom: 8px;
+      padding-top: 10px;
+      .reminder-icon {
+        margin-right: 4px;
+        // margin-top: -2px;
+      }
+    }
+  }
+
+  .package-service-title {
+    padding-bottom: 8px;
+    font-weight: 600;
+    justify-content: flex-start;
+
+    .desctitle {
+      margin-bottom: 0;
+      margin-left: 8px;
+    }
+  }
+
+  .mt--2 {
+    margin-top: -2px;
+  }
+}

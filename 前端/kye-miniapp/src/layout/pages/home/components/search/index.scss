@@ -1,0 +1,53 @@
+.search-content {
+  height: 88px;
+  .message {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.search-wrap {
+  height: 88px;
+  width: 100%;
+  padding: 0 22px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  height: 64px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 2px solid #e6e8ed;
+  padding: 0 24px 0 16px;
+  margin-right: 24px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box; // 保留一次即可
+}
+
+.scan {
+  width: 40px;
+  height: 40px;
+}
+
+.search-item {
+  margin-right: 24px;
+}
+.search-item:last-child {
+  margin-right: 0;
+}
+
+.search-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.search-input {
+  flex: 1;
+  padding-left: 16px;
+  font-size: 28px;
+  color: #adb0b8;
+}

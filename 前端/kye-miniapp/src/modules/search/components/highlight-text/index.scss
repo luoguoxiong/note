@@ -1,0 +1,27 @@
+.serach-highlight-text {
+  /* 基础样式 */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; // 禁止片段内换行
+
+  .text-container {
+    display: flex; // 横向排列文本片段
+    min-width: 0; // 允许压缩
+    overflow: hidden; // 隐藏溢出
+  }
+
+  .text-warp {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; // 禁止片段内换行
+
+  }
+
+  .text-part {
+    white-space: nowrap; // 禁止片段内换行
+    // flex-shrink: 0; // 默认不允许缩小
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; // 禁止片段内换行
+  }
+}

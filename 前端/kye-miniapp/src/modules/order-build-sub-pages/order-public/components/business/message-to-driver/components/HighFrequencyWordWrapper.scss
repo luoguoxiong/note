@@ -1,0 +1,45 @@
+.high-frequency-word-Wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .high-frequency-title {
+    margin-bottom: 24px;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .mt-32 {
+    margin-top: 32px;
+  }
+
+  .high-frequency-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .high-frequency-item {
+      &.selected {
+        color: #7143f0;
+        background: #f2effe;
+        border: 1px solid #8365f6;
+      }
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 16px;
+      margin-right: 16px;
+      margin-bottom: 16px;
+      font-size: 28px;
+      background: #fff;
+      border: 1px solid #E6E8ED;
+      border-radius: 10px;
+
+      .icon {
+        margin-right: 4px;
+        width: 30px;
+        height: 30px;
+        background-size: calc(100% - 4px), calc(100% - 4px);
+      }
+    }
+  }
+}

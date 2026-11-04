@@ -1,0 +1,18 @@
+{
+  "name": "@ky-miniui-lib/list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@tarojs/taro": "4.0.7",
+    "@ky-miniui-lib/utils": "workspace:^",
+    "@ky-miniui-lib/circle":"workspace:^",
+    "@ky-miniui-lib/loading":"workspace:^"
+  }
+}

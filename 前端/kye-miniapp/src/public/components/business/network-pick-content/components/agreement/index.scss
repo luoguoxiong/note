@@ -1,0 +1,150 @@
+.agreement {
+    padding-top: 4px;
+    position: relative;
+    .ky-checkbox-item-icon {
+        display: flex;
+    }
+
+    .popup-box {
+        &-title {
+            padding: 0 32px;
+            height: 98px;
+            display: flex;
+            align-items: center;
+            font-size: 34px;
+            font-weight: 600;
+            color: #03050D;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #edeef3;
+        }
+    }
+
+    .popup-close {
+        width: 32px;
+        height: 32px;
+        background-image: url('https://ic-img.ky-express.com/netc/20250118_42870395139_!!1737186469837_64_64.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .ky-checkbox-text {
+        font-size: 24px;
+        color: #686b75;
+        line-height: 34px;
+        margin-left: 4px;
+        /* #ifdef h5 */
+        display: flex;
+        /* #endif */
+
+        .agreement__item {
+            color: #8365f6;
+            display: inline;
+        }
+    }
+
+    .agreement_icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 4px;
+    }
+
+    .goodsControlDisabled {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        background: #ebedf5;
+        box-sizing: border-box;
+        border: 2px solid #b0b3bf;
+        border-radius: 50%;
+        z-index: 999;
+    }
+
+    &__popup {
+        z-index: 1000 !important;
+
+        &--body {
+            max-height: 50vh;
+            font-size: 28px;
+            font-weight: 400;
+            color: #03050d;
+            line-height: 56px;
+            box-sizing: border-box;
+
+            .agreement-content {
+                padding: 40px 32px;
+                font-size: 26px;
+                color: #03050d;
+                line-height: 56px;
+
+                .detail {
+                    >view {
+                        margin-bottom: 20px;
+                        display: flex;
+
+                        >view {
+                            flex: 1;
+                        }
+
+                        .index {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #bdc1d5;
+                            height: 30px;
+                            width: 30px;
+                            border-radius: 15px;
+                            color: #ffffff;
+                            margin-top: 14px;
+                        }
+                    }
+                }
+
+                .red_color {
+                    color: #ff706d;
+                    margin: 0 6px;
+                }
+
+                .gray_color {
+                    color: #6e6d72;
+                }
+
+                .font_bold {
+                    font-weight: bold;
+                }
+
+                .marg_left {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        &--footer {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px 32px;
+            box-sizing: border-box;
+            background: #ffffff;
+            box-shadow: 0px -6px 20px 0px rgba(184, 171, 255, 0.1);
+
+            .confirm-button {
+                width: 238px;
+                height: 88px;
+                border-radius: 12px;
+                font-size: 32px;
+                font-weight: 400;
+                text-align: center;
+                flex: 1 1 auto;
+                background: #8365F6;
+                border: 0;
+                color: #ffffff;
+            }
+
+            .ky-button--disabled {
+                background: #dcdee5 !important;
+            }
+        }
+    }
+}

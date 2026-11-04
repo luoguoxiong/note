@@ -1,0 +1,49 @@
+/* 主要信息高亮填充色 次要按钮边框色(需要搭配#FFFFFF背景填充色使用) 图标辅助填充色 */
+$primary: #8365f6;
+
+/* 标签选中背景色 场景：选中标签/卡片选中 */
+$selected: #f2effe;
+
+/* 中性色 */
+
+/* 文本色 */
+$text-default-color: #24262B;
+/* 一级文本色/重要文本色（如：标题/文本录入/正文/输入文本填充色/次要按钮文本/列表主要文本 */
+$text-color-level1: #03050d;
+
+/* 二级文本色（用于系统二级文本/推荐标签文本/副标题文本/弹窗文本/说明示例文案等) */
+$text-color-level2: #55596c;
+
+/* 三级辅助文本色（用于静默文案/注释文本/缺省图文本/) */
+$text-color-level3: #888ea6;
+
+/* 四级辅助文本色（置灰文本） */
+$text-color-level4: #a1a8c2;
+
+// 全局禁用样式（用于静默文案/注释文本/缺省图文本/) */
+$text-color-level5: #adb0b8;
+
+/* 按钮颜色 */
+$text-color-button: #fff;
+
+$white: #fff;
+$black: #000;
+
+/* navbar 颜色 */
+$navbar-title-color: #333333;
+
+
+/* button */
+$button-default-color: #24262B;
+
+
+/* border */
+$border-default-color: #E6E8ED;
+$border-selected-color: #8365F6;
+$border-disabled-color: $border-default-color;
+
+/* disabled */
+$disabled-color: #8C8F99;
+
+/* error */
+$error-text-color: #FF706D;

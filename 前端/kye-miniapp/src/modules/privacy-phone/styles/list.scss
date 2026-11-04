@@ -1,0 +1,68 @@
+.phone-list__total {
+  font-size: 24px;
+  color: #686b75;
+  padding: 12px 24px;
+}
+
+.phone-list__wrapper {
+  padding: 0 24px 24px;
+}
+.phone-list__item {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 16px;
+  overflow: hidden;
+
+  background: #ffffff;
+  .phone-list-item__delete-icon {
+    width: 28px;
+    height: 28px;
+    margin-left: auto;
+  }
+
+  .phone-list-item__phone {
+    display: flex;
+    align-items: center;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #24262b;
+    gap: 16px;
+  }
+
+  .phone-list-item__updated-at {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 36px;
+    color: #8c8f99;
+
+    text:nth-child(2) {
+      color: #24262b;
+    }
+  }
+}
+
+.phone-list__empty {
+  margin: auto;
+}
+
+.phone-list-item__tag {
+  font-size: 24px;
+  font-weight: normal;
+  color: #57a8f9;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0px 8px;
+  border: 2px solid #add9ff;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  &.phone-list-item__tag--sms {
+    color: #00c58c;
+    border: 2px solid #7de3b7;
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,295 @@
+.order-footer-left {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+
+  &-mask {
+    position: absolute;
+    inset: 0;
+    z-index: 1000;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-estimation-looks {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  &-desc {
+    margin-right: 8px;
+    margin-left: 1px;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 30px;
+    color: #03050D;
+  }
+
+  .normal {
+    font-weight: 400 !important;
+  }
+
+  @keyframes trans360 {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .freight-title-animation {
+    animation: freight-title-scale 2.5s 3;
+  }
+
+  @keyframes freight-title-scale {
+    0% {
+      transform: scale(1, 1);
+    }
+
+    50% {
+      transform: scale(0.9, 0.9);
+    }
+
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+  .loading-img {
+    width: 36px;
+    height: 36px;
+    margin-left: 4px;
+    animation: trans360 0.8s linear infinite;
+  }
+
+  .order-footer-left-desc-not {
+    font-size: 30px;
+    color: #ff706d;
+    font-weight: $font-bold;
+  }
+
+  .special-text {
+    font-size: 28px;
+  }
+
+  .text-color-red-warn {
+    color: #ff706d;
+  }
+
+  &-detail {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    margin-bottom: 6px;
+    font-size: 24px;
+    color: #ff706d;
+  }
+
+  .default-color {
+    color: #55596c;
+  }
+
+  &-money {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: #ff706d;
+    font-weight: $font-bold;
+    line-height: 42px;
+
+    &-count {
+      font-size: 40px;
+
+      &.data-small {
+        font-size: 30px;
+      }
+    }
+
+    .money {
+      position: relative;
+      top: 1px;
+      font-size: 28px;
+    }
+  }
+
+  &-hidden {
+    width: 61px;
+    height: 16px;
+  }
+
+  .arrow_estimation-svg {
+    position: relative;
+    width: 8px;
+    height: 100%;
+    margin-left: 8px;
+  }
+
+  .looks-content {
+    display: flex;
+    align-items: center;
+
+    .icon-content {
+      height: 24px;
+      width: 24px;
+      display: flex;
+      align-items: center;
+      margin-left: 4px;
+
+      .arrow-right {
+        flex: 1;
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+
+  &-looks {
+    margin-left: 4px;
+    font-size: 28px;
+    color: #8365f6;
+    font-weight: $font-bold;
+    line-height: unset;
+  }
+
+  .no-fee-auth-tips {
+    font-size: 28px;
+    font-weight: $font-bold;
+    line-height: unset;
+    color: #FF706D;
+    box-sizing: border-box;
+  }
+
+  .estimation-flex {
+    display: flex;
+    // align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  &-text {
+    position: relative;
+    margin-left: 15px;
+    font-size: 24px;
+    text-align: right;
+    color: #8365f6;
+    font-weight: $font-bold;
+    line-height: 42px;
+
+    &::after {
+      position: absolute;
+      top: 6px;
+      left: -8px;
+      width: 2px;
+      height: 30px;
+      background: #ebedf5;
+      content: '';
+    }
+  }
+
+  .order-footer-left-forbidden-svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    // padding-bottom: 6px;
+    transition: transform 0.3s;
+
+    &.expand {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-agreement {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  &-agree {
+    font-size: 24px;
+    color: #888ea6;
+  }
+
+  &-agree-text {
+    font-size: 24px;
+    color: #8365f6;
+  }
+
+  &-send-not-select {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+  }
+
+  &-send-select {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+  }
+
+  &-btn-wd {
+    width: 222px;
+  }
+
+  &-btn-pickup-wd {
+    width: 100%;
+  }
+
+  &-btn {
+    height: 88px;
+    padding: 28px 34px;
+    font-size: 32px;
+    color: #fff;
+    background: linear-gradient(138deg, #ac97ff 3%, #8365f6 98%);
+    border: 0;
+    border-radius: 12px;
+    font-weight: $font-bold;
+    line-height: 32px;
+    box-sizing: border-box;
+
+    &.van-button--disabled {
+      background: #dcdee5 !important;
+    }
+  }
+
+  .left-estimation-has-looks {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  /* 定义关键帧 */
+  @keyframes breathEffect {
+    0% {
+      transform: scale(1);
+      /* 开始时原始大小 */
+      opacity: 1;
+    }
+
+    50% {
+      transform: scale(1.05);
+      /* 中间放大到1.2倍 */
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1);
+      /* 结束时回到原始大小 */
+      opacity: 1;
+    }
+  }
+
+  /* 应用于目标元素 */
+  .breath {
+    animation: breathEffect 1s ease-in-out 5;
+  }
+}

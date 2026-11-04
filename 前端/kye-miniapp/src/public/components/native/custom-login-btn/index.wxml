@@ -1,0 +1,12 @@
+<view class="native-login">
+  <image
+    wx:if="{{loginLoading}}"
+    class="icon-loading"
+    src="https://ic-img.ky-express.com/netc/20251209_60327_!!1765263254913_60_60.png"
+  ></image>
+  <button
+    class="btn"
+    bindphoneoneclicklogin="onHandleLogin"
+    open-type="phoneOneClickLogin"
+  >本机号码一键登录</button>
+</view>

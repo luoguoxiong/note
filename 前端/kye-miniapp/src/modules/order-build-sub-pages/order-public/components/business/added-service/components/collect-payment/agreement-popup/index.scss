@@ -1,0 +1,171 @@
+
+.agreement-popup-desc-wrapper {
+  .agreement-popup-desc {
+    width: 100%;
+    // height: 450px;
+    height: 65vh;
+    padding: 32px 32px 0;
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    .font-special {
+      height: 500px;
+      flex: 1;
+      // background: #fff;
+      overflow-y: auto;
+    }
+    .special-span {
+      .h5-span {
+        display: inline;
+      }
+    }
+    .protect-price-input-title {
+      .left-title {
+        font-weight: 600;
+      }
+      .right-title {
+        font-weight: 600;
+      }
+      .four-star-tips {
+        width: 38px;
+        height: 28px;
+      }
+    }
+    .protect-price-input-wrapper {
+      margin: 12px 0 16px;
+
+      .item-insured-chinese {
+        position: absolute;
+        top: 50%;
+        height: 30px;
+        padding: 0 0 0 16px;
+        border-left: 2px solid #cfd2de;
+        transform: translateY(-50%);
+        line-height: 30px;
+        box-sizing: border-box;
+        font-size: 24px;
+      }
+    }
+    .protect-price-input-tips {
+      position: relative;
+      margin-top: -4px;
+      .text-content{
+        line-height: 34px;
+      }
+      .protect-price-input-tips-content {
+        line-height: 40px;
+      }
+      .protect-price-input-tips-call {
+        position: relative;
+        display: inline-block;
+        padding-left: 20px;
+        .protect-price-input-tips-text {
+          margin-left: 40px;
+          color: $primary;
+        }
+        .protect-price-input-tips-icon {
+          position: absolute;
+          bottom: -2px;
+          width: 36px;
+          height: 36px;
+        }
+      }
+      .icon-content {
+        height: 24px;
+        width: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 4px;
+        .icon {
+          height: 1em;
+          width: 1em;
+          margin-top: 11px;
+        }
+        .text-content {
+          line-height: 34px;
+        }
+      }
+    }
+    .close-icon {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+
+  .collect-payment-conent {
+    position: relative;
+    .collect-payment-fee-label {
+      color: $text-color-level1;
+      padding-right: 6px;
+      box-sizing: border-box;
+    }
+    .no-auth-fee-icon {
+      display: block;
+      .svg-icon {
+        width: 38px;
+        height: 28px;
+      }
+    }
+    .collect-payment-conent-overlayer {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+    }
+    .collect-payment-fee-extra {
+      position: absolute;
+      top: 50%;
+      height: 30px;
+      padding: 0 0 0 16px;
+      line-height: 30px;
+      transform: translateY(-50%);
+      border-left: 2px solid #cfd2de;
+      font-size: 24px;
+      z-index: 10;
+    }
+    .edit-return-waybill {
+      position: absolute;
+      inset: 0;
+      z-index: 12;
+    }
+    .items-center-wrap {
+      min-width: 180px;
+      text-align: right;
+      justify-content: end;
+      .ky-input--clear{
+        padding: 20px;
+        position: relative;
+        z-index: 20;
+        display: none;
+      }
+    }
+    .ky-input--input-container + .ky-input--clear{
+      display: none;
+    }
+
+    .ky-input--focus {
+      .items-center-wrap .ky-input--clear {
+        display: block;
+      }
+    }
+  }
+}
+
+.agreement-popup-desc-footer {
+  width: 100%;
+  .agreement-popup-desc-footer-btn {
+    margin-top: 20px;
+    gap: 24px;
+  }
+  .color-sub-title {
+    .ky-radio-text {
+      font-size: 24px;
+      margin-left: 2px;
+    }
+    .svg-icon {
+      margin-right: 4px;
+      height: 1.1em;
+    }
+  }
+}

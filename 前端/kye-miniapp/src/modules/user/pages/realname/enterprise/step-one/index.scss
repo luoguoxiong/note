@@ -1,0 +1,93 @@
+// 气泡通过 root-portal 渲染到页面根节点，需使用非嵌套选择器
+.ky-popover-content {
+  max-width: 452px !important;
+}
+
+.realname-page-enterprise-step-one {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff;
+  overflow: hidden;
+  max-width: 100vw;
+
+  .tip {
+    margin-bottom: 24px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 52px;
+    color: #24262B;
+    padding-left: 24px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 14px;
+      width: 8px;
+      height: 24px;
+      border-radius: 0px 4px 4px 0px;
+      background: #8365F6;
+    }
+  }
+
+  .step-one-form {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    width: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+    border-radius: 24px 24px 0px 0px;
+    background: #ffffff;
+    margin: -24px 0px;
+
+    .ky-field {
+      background: #ffffff;
+      margin-bottom: 4px;
+
+      .ky-field--top--content {
+        width: 100%;
+        height: 64px;
+
+        input {
+          background: transparent;
+        }
+      }
+
+      .ky-popover-container {
+        width: 100%;
+
+        .ky-input {
+          box-sizing: border-box;
+          background: #ffffff;
+          height: 64px;
+        }
+      }
+    }
+  }
+
+  .page-footer {
+    padding: 16px 32px;
+    min-height: 120px;
+    margin-bottom: env(safe-area-inset-bottom, 20px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: #E6E8ED;
+    box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.05);
+    z-index: 99;
+
+    .submit-btn {
+      height: 88px;
+      border-radius: 16px;
+      font-weight: 600;
+      flex: 1;
+    }
+  }
+}

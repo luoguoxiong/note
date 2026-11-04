@@ -1,0 +1,28 @@
+.intergral-authorization__richText {
+  padding: 10px 20px 0;
+
+  .content {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 140px);
+  }
+
+  .bottom-btns {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+    /* APP/通用/按钮/投影 */
+    box-shadow: 0px -6px 20px 0px rgba(184, 171, 255, 0.1);
+    box-sizing: border-box;
+    padding: 20px 24px;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+    .btn {
+      width: calc(100vw - 48px);
+      border-radius: 20px;
+    }
+    .btn-color {
+      color: #fff;
+      /* 主色渐变 */
+      background: linear-gradient(98deg, #ac97ff 7%, #8365f6 95%);
+    }
+  }
+}

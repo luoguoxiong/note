@@ -1,0 +1,25 @@
+<view class="custom-input-wrapper">
+  <input
+    class="custom-input"
+    type="{{type}}"
+    value="{{innerValue}}"
+    password="{{password}}"
+    maxlength="{{maxlength}}"
+    placeholder="{{isInputting  || innerValue.length>0 ? '' : placeholder}}"
+    placeholder-style="{{placeholderStyle}}"
+    disabled="{{disabled}}"
+    always-embed="{{alwaysEmbed}}"
+    adjust-position="{{adjustPosition}}"
+    auto-fill="{{autoFill}}"
+    cursor="{{cursor}}"
+    cursor-spacing="{{cursorSpacing}}"
+    hold-keyboard="{{holdKeyboard}}"
+    focus="{{focus}}"
+    bindinput="onInput"
+    bindfocus="onFocus"
+    bindblur="onBlur"
+    bindconfirm="onConfirm"
+    bindkeyboardheightchange="onKeyboardHeightChange"
+    style="font-weight: {{innerValue.length > 0 || isInputting ? 'bold' : 'normal'}};"
+  />
+</view>

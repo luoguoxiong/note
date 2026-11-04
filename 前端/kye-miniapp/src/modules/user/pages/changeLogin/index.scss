@@ -1,0 +1,264 @@
+$kye-color: #8365f6;
+.change-login-phone {
+  padding: 36px 32px 0;
+  background-color: #fff;
+  min-height: 100%;
+  box-sizing: border-box;
+  .ky-dialog{
+    &-title{
+      text-align: center;
+      height: auto;
+    }
+    &-body{
+      color: #6e6d72;
+    }
+  }
+  .skeleton {
+    padding-top: 12px;
+    .top {
+      width: 638px;
+      height: 24px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #f1f3f9 0%, #f8faff 99%);
+    }
+    .card {
+      margin-bottom: 32px;
+      border-radius: 20px;
+      border: 2px solid #ebedf5;
+      padding: 40px 24px;
+      .tit {
+        width: 210px;
+        height: 28px;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #f1f3f9 0%, #f8faff 99%);
+      }
+      .cont {
+        height: 24px;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #f1f3f9 0%, #f8faff 99%);
+        margin-top: 26px;
+      }
+    }
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .tip {
+      font-size: 28px;
+      color: #03050d;
+    }
+    .btn {
+      border-radius: 8px;
+      padding: 10px 16px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      border: 1px solid $kye-color;
+      font-size: 26px;
+      color: $kye-color;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+  .desc {
+    margin-top: 8px;
+    font-size: 26px;
+    color: #666666;
+  }
+  .content_box {
+    margin-top: 24px;
+    .content_item {
+      position: relative;
+      padding: 20px 36px;
+      margin-bottom: 33px;
+      background-image: url('https://ic-img.ky-express.com/netc/20231127_2167128330_!!1701054759030_1372_316.png');
+      background-size: 100% 158px;
+      background-repeat: no-repeat;
+      border-radius: 12px;
+      border: 2px solid #ebedf5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &.disabled {
+        background-color: #f7f8fa;
+        background-image: none;
+        .forbid-switch-login-mobile {
+          border-top: none;
+        }
+      }
+      &.current-login {
+        padding-bottom: 90px;
+      }
+      .current_flag {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 0px 12px 0px 12px;
+        display: flex;
+        flex-direction: column;
+        padding: 8px 13px;
+        background: linear-gradient(286deg, #fdc990 -10%, #ffaa75 99%);
+        font-size: 24px;
+        color: #ffffff;
+        &.disabled {
+          background: linear-gradient(286deg, #dadde6 -10%, #bdbec2 100%);
+        }
+      }
+      .item_left {
+        display: flex;
+        align-items: center;
+        img {
+          width: 116px;
+          height: 116px;
+          margin-right: 28px;
+          border-radius: 50%;
+          &.disabled {
+            opacity: 0.4;
+          }
+        }
+        .info {
+          &_phone {
+            font-size: 32px;
+            font-weight: 500;
+            color: #03050d;
+            &.disabled {
+              color: #c4c7d3;
+            }
+          }
+          &_nickname {
+            font-size: 26px;
+            color: #888ea6;
+            margin-top: 8px;
+            &.disabled {
+              color: #c4c7d3;
+            }
+          }
+        }
+      }
+      .item_right {
+        .delete_btn {
+          padding: 12px 48px;
+          border-radius: 8px;
+          background: #ffffff;
+          box-sizing: border-box;
+          border: 1px solid #c6c6c8;
+          font-size: 24px;
+          color: #03050d;
+        }
+      }
+
+      .forbid-switch-login-mobile {
+        &__wrapper {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: #fff;
+          width: 100%;
+          height: 73px;
+          box-sizing: border-box;
+          padding: 0 36px;
+          border-radius: 12px;
+        }
+        border-top: 1px solid #e6e8ed;
+        padding-top: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .label-desc {
+          font-size: 26px;
+          color: #686b75;
+          display: flex;
+          align-items: center;
+          img {
+            width: 26px;
+            height: 26px;
+            margin-left: 8px;
+          }
+        }
+        .switch-btn {
+          font-size: medium;
+          .icon-switch {
+            width: 64px;
+            height: 36px;
+          }
+        }
+      }
+    }
+  }
+  .add_btn {
+    padding: 24px 0;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 2px solid #ebedf5;
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    span {
+      font-size: 28px;
+      line-height: normal;
+      color: $kye-color;
+    }
+  }
+  .footer {
+    font-size: 24px;
+    line-height: 34px;
+    color: #888ea6;
+    margin: 0 8px;
+  }
+  .delete_dialog {
+    .van-dialog__header {
+      padding-left: 50px;
+      padding-right: 50px;
+      font-size: 34px;
+      font-weight: 600;
+      color: #03050d;
+      line-height: 42px;
+    }
+  }
+  .base-dialog {
+    width: 590px;
+    border-radius: 16px;
+
+    .van-dialog__header {
+      padding-top: 42px;
+      padding-bottom: 25px;
+      height: 48px;
+      line-height: 48px;
+      font-size: 34px;
+      font-weight: bold;
+    }
+
+    .van-dialog__footer {
+      .van-dialog__cancel {
+        height: 100px;
+        font-size: 34px;
+        color: #888ea6;
+      }
+
+      .van-dialog__confirm {
+        height: 100px;
+        font-size: 34px;
+        font-weight: bold;
+        color: #8365f6;
+      }
+    }
+
+    .van-dialog__content {
+      .van-dialog__message {
+        padding: 10px 46px 40px;
+        line-height: 48px;
+        font-size: 30px;
+        color: #6e6d72;
+        word-break: break-all;
+      }
+    }
+  }
+}

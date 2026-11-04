@@ -1,0 +1,56 @@
+// 引入认证卡片样式
+@import '../components/auth-card.scss';
+
+.realname-page-home {
+  min-height: 100%;
+  background-color: #ffffff;
+
+  &__body {
+    padding: 40px 24px 0px 24px;
+    box-sizing: border-box;
+  }
+
+  .lineHeight24 {
+    line-height: 24px;
+    height: 24px;
+  }
+
+  .lineHeight36 {
+    line-height: 36px;
+  }
+
+  .tip {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #fe743c;
+    padding: 20px 40px;
+    background-color: #fff2e6;
+
+    span {
+      flex: 1;
+      font-size: 24px;
+      font-weight: 400;
+      text-align: left;
+      color: #fe743c;
+      min-height: 24px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .page-home-arrow {
+      height: 32px;
+      width: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center
+
+      img {
+        padding: 17px 3px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

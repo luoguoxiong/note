@@ -1,0 +1,33 @@
+.batchSuccessTicket_container {
+    width        : 686px;
+    font-size    : 24px;
+    color        : #55596C;
+    border       : 1px solid #D6D8E7;
+    border-radius: 24px;
+
+    .header {
+        display                : flex;
+        justify-content        : flex-start;
+        align-items            : center;
+        height                 : 60px;
+        padding                : 10px 24px;
+        background-color       : rgb(216 226 255 / 30%);
+        line-height            : 24px;
+        border-top-left-radius : 24px;
+        border-top-right-radius: 24px;
+
+
+        span {
+            &:first-child {
+                margin-right: 16px;
+            }
+
+            &:nth-child(2) {
+                margin-right: 8px;
+                color       : #03050D;
+            }
+        }
+
+    }
+
+}

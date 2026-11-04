@@ -1,0 +1,50 @@
+.float-ball__area {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  background-color: transparent;
+  z-index: 10;
+  &.is-pc {
+    max-width: 375PX;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.float-ball__view {
+  position: relative;
+  pointer-events: auto;
+  height: auto;
+  width: auto;
+}
+
+.float-ball__content.hide {
+  left: 50%;
+  opacity: 0.5;
+  image{
+    opacity: 0.5;
+  }
+}
+
+.float-ball__content {
+  left: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  padding: 0 16px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* #ifdef h5 */
+.float-ball__area {
+  right: calc(50% - 375px);
+}
+/* #endif */

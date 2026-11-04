@@ -1,0 +1,90 @@
+.address-unfold-area-wrapper {
+  .ky-form-item{
+    height: 100%;
+    :deep(.address-unfold-area){
+      height: 100%;
+    }
+    :deep(.input-popover) {
+      width: 100%;
+      height: 100%;
+      .ky-input {
+        height: 100%;
+        .ky-input-wrap {
+          height: 100%;
+          .el-input {
+            height: 100%;
+            .el-input__wrapper {
+              // height: 100%;
+              height: calc(100% - 2px);
+            }
+          }
+        }
+      }
+    }
+    :deep(.el-textarea) {
+      .el-textarea__inner {
+        overflow: hidden;
+        min-height: 32px !important;
+        max-height: 40px;
+        padding: 8px 24px 8px 8px;
+        font-size: 13px;
+        // padding-right: 20px;
+        text-overflow: ellipsis;
+        white-space:normal;
+        color: #24262B;
+        border-radius: 0 4px 4px 0;
+        font-weight: 600;
+        line-height: 14px;
+        letter-spacing: 0;
+        border-left: none;
+        &::placeholder {
+          color: #ADB0B8;
+          font-weight: 400;
+          -webkit-text-fill-color: #ADB0B8;
+        }
+      }
+    }
+    :deep(.detail-address-double) {
+      .el-textarea__inner {
+        padding: 6px 24px 6px 8px !important;
+      }
+    }
+    :deep(.detail-address-clear) {
+      position: absolute;
+      top: calc(50% - 6px);
+      right: 8px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+.address-unfold-area__left{
+  width: calc(25% - 12px) !important;
+  min-width: calc(25% - 12px) !important;
+  height: 100%;
+  .area-address{
+    width: 100%;
+    height: 100%;
+    .input-popover{
+      height: 100%;
+      .ky-input{
+        height: 100%;
+        .ky-input-wrap{
+          height: 100%;
+          .el-input{
+            height: 100%;
+            .el-input__wrapper{
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.isShowExhibition {
+  :deep(.address-unfold-area__left){
+    width: calc(50% - 8px) !important;
+    min-width: calc(50% - 8px) !important;
+  }
+}

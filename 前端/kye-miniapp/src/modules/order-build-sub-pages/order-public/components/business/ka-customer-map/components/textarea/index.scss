@@ -1,0 +1,93 @@
+.text-area-content {
+  display: flex;
+  // overflow-x: auto;
+  width: 686px;
+  height: 100%;
+  background: #f7f8fa;
+  border-radius: 20px;
+  border: 2px solid #e6e8ed;
+  opacity: 1;
+  box-sizing: border-box;
+  flex-direction: column;
+
+  .ky-textarea {
+    height: 100%;
+    padding: 0;
+    background: #f7f8fa;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .content {
+    height: 100%;
+  }
+  .ky-textarea-placeholder {
+    padding: 24px;
+    //padding: 20px 18px 20px 20px;
+    max-width: 100%;
+    word-break: break-all;
+    box-sizing: border-box;
+  }
+  .h5-textarea,
+  .ky-custom-textarea {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 24px;
+    //padding: 20px 18px 20px 20px;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 42px;
+    letter-spacing: 0;
+    color: #03050d;
+    border: 0;
+    overflow: hidden;
+    &::placeholder {
+      font-weight: $font-normal;
+      color: $text-color-level3;
+    }
+    /* 为所有元素设置滚动条样式 */
+    &::-webkit-scrollbar {
+      width: 4px;
+      /* 设置滚动条宽度 */
+    }
+
+    /* 滚动条轨道样式 */
+    &::-webkit-scrollbar-track {
+      background: #f7f8fa;
+      /* 设置轨道背景色 */
+    }
+
+    /* 滚动条手柄样式 */
+    &::-webkit-scrollbar-thumb {
+      background: #d8d8d8;
+      /* 设置手柄背景色 */
+      border-radius: 10px;
+      /* 设置手柄圆角 */
+    }
+  }
+
+  .tool-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 82px;
+    padding: 0 24px;
+    // margin-bottom: -24px;
+    box-sizing: border-box;
+
+    .clear {
+      width: 56px;
+      height: 28px;
+      font-size: 28px;
+      font-weight: normal;
+      line-height: 28px;
+      letter-spacing: -0.64px;
+      color: #8365f6;
+    }
+  }
+  .ky-textarea--disabled {
+    .h5-textarea {
+      color: #c8c9cc !important;
+    }
+  }
+}

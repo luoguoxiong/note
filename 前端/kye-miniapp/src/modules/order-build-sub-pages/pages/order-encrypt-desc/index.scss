@@ -1,0 +1,103 @@
+.order-encrypt-desc {
+  position: relative;
+  overflow-y: scroll;
+  height: 100%;
+  padding: 32px;
+  .order-encrypt-desc-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 163px;
+    background: linear-gradient(0deg, #fff 5%, #e8f3ff 100%);
+  }
+  .main {
+    position: relative;
+    z-index: 2;
+    &-title {
+      margin-bottom: 16px;
+      font-size: 28px;
+      font-weight: 600;
+      color: #24262b;
+    }
+    &-desc {
+      margin-bottom: 40px;
+      line-height: 36px;
+      text {
+        margin: 0;
+        font-size: 24px;
+        color: #55596c;
+        font-weight: normal;
+        line-height: 36px;
+        letter-spacing: 0;
+      }
+      &-f {
+        margin-top: 40px !important;
+      }
+      .main-table-left,
+      .main-table-right {
+        flex: 1;
+      }
+    }
+
+    .margin-desc {
+      text {
+        margin-bottom: 12px;
+      }
+    }
+
+    .main-desc-pass {
+      margin-bottom: 0;
+      border-radius: 8px 8px 0 0;
+      // border-bottom: 1px dashed #cbcdd4;
+      position: relative;
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 654px;
+        border-bottom: 1px dashed #cbcdd4;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    &-table {
+      padding: 16px 12px;
+      background: #f7f8fa;
+      border-radius: 8px;
+      &-title,
+      &-item {
+        margin-bottom: 8px;
+        font-size: 24px;
+        // line-height: 18px;
+        text-align: justify;
+        font-weight: normal;
+      }
+      &-title {
+        padding-bottom: 8px;
+        font-size: 24px;
+        color: #03050d;
+        margin-bottom: 0;
+      }
+      &-item {
+        color: #888ea6;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      // &-line {
+      //   height: 118px;
+      //   margin-right: 24px;
+      //   margin-left: 24px;
+      //   border-left: 1px dashed #cbcdd4;
+      // }
+    }
+  }
+}
+
+.order-encrypt-container {
+  background: #fff;
+  .ky-navbar__placeholder {
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,91 @@
+.user-edit-container {
+  background-color: #f3f4f6;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .ky-field {
+    display: flex;
+    padding: 30px 32px;
+    padding-right: 0px;
+    background: #ffffff;
+    box-sizing: border-box;
+    align-items: center;
+    .ky-input--right-slot {
+      text-align: right;
+      color: #888ea6;
+      min-width: 64px;
+    }
+
+    .ky-field--top--label {
+      margin-bottom: 0;
+    }
+
+    .ky-field--top--content {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      input {
+        background: transparent;
+      }
+
+      .ky-popover-container {
+        flex: 1;
+        width: 100%;
+      }
+    }
+
+    .ky-input {
+      border: none;
+      background-color: transparent;
+      color: #03050d;
+      font-weight: 500;
+      padding: 0 32px;
+
+      .ky-input--clear {
+        padding: 10px 24px;
+      }
+    }
+  }
+
+  .user-edit-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // margin-top: auto;
+    padding: 20px 32px;
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 20px);
+    background: #ffffff;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    .ky-button {
+      height: 88px;
+      flex: 1;
+    }
+  }
+
+  .user-edit-error {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 38px;
+    color: #888ea6;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* #ifdef h5 */
+.user-edit-container {
+  .user-edit-footer {
+    max-width: 750px !important;
+    margin: 0 auto;
+  }
+}
+/* #endif */

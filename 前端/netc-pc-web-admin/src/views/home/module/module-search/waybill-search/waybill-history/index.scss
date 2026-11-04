@@ -1,0 +1,113 @@
+.history {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  padding: 8px 16px;
+  margin-top: 2px;
+  background: #fff;
+  border-radius: 4px;
+  opacity: 1;
+  box-shadow: 0 6px 18px 0 rgb(0 0 0 / 12%);
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 18px;
+  font-size: 12px;
+  .text {
+    font-weight: 600;
+    line-height: 18px;
+    color: #24262B;
+  }
+  span:nth-child(2){
+    font-size: 12px;
+    color: #7143F0;
+    cursor: pointer;
+  }
+}
+.list-wrap {
+  @include scroll-bar;
+
+  display: grid;
+  overflow-y: auto;
+  max-height: 204px;
+  margin-top: 8px;
+  grid-template-columns: repeat(4, 1fr); /* 一行三列 */
+  grid-gap: 8px;
+  margin-bottom: 8px;
+}
+.list-item {
+  overflow: hidden;
+  height: 28px;
+  padding: 0 8px;
+  font-size: 12px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #24262B;
+  background: #f2f3f7;
+  border-radius: 4px;
+  box-sizing: border-box;
+  line-height: 28px;
+  cursor: pointer;
+}
+.hot-content {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 4px;
+  height: 24px;
+  img {
+    width: 16px;
+    height: 16px;
+  }
+  span {
+    width: 48px;
+    height: 18px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #24262B;
+  }
+}
+.recommend-list {
+  display: flex;
+  width: 552px;
+  height: 64px;
+  padding: 0;
+  margin-top: 4px;
+  flex-flow: row wrap;
+  gap: 8px 8px;
+  align-content: flex-start;
+  .list-item {
+    display: flex;
+    align-items: center;
+    width: 142px;
+    height: 28px;
+    background: #F2F3F7;
+    border-radius: 4px;
+    flex-direction: row;
+    gap: 4px;
+    &:hover {
+      background: rgb(36 38 43 / 6%);
+    }
+    &:active {
+      background: rgb(36 38 43 / 8%);
+    }
+    img {
+      width: 14px;
+      height: 14px;
+    }
+    span {
+      width: 108px;
+      height: 14px;
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 14px;
+      color: #24262B;
+    }
+  }
+}

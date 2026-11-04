@@ -1,0 +1,31 @@
+.arrival-container{
+  padding: 0 24px;
+  box-sizing: border-box;
+  margin-top: -10px;
+  transform: translateY(-10px);
+  .arrival-main{
+    border-bottom: 1px solid var(--van-cell-border-color);
+    padding-bottom: 20px;
+    .arrival-time{
+      font-size: 24px;
+      color: $text-color-level2;
+      background: #F5F7FA;
+      border-radius: 12px;
+      box-sizing: border-box;
+      .content-h5{
+        font-size: 24px !important;
+        .h5-span {
+          display: inline;
+        }
+        span{
+          font-size: 24px !important;
+        }
+      }
+      .svg-icon{
+        margin-right: 8px;
+        font-size: 50px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,39 @@
+.real-name-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  padding: 12px 36px 12px 16px;
+  font-size: 24px;
+  color: #ff9300;
+  background: #fff5e8;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin-top: 12px;
+  .repalce-content {
+    flex: 1;
+  }
+
+  .replace-btn {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    font-size: 24px;
+    color: #8365f6;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .close-tips {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 36px;
+    height: 28px;
+    .close-right-top {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+page {
+  height: 100vh;
+}
+.added-service-intro {
+  font-size: 28px;
+  padding: 16px 32px;
+  background: #f2effe url('https://ic-img.ky-express.com/netc/20250619_41395_!!1750300302294_329_64.png') no-repeat
+    center right;
+  background-size: contain;
+  position: static;
+  top: 100px;
+  width: 100%;
+  left: 0;
+  box-sizing: border-box;
+  .svg-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+.p-a-service {
+  background-color: $bg-page;
+  height: calc(100vh - env(safe-area-inset-bottom) - 353px);
+  .scroll-wrap {
+    height: 100%;
+    padding-bottom: 140px;
+  }
+
+  .container-block {
+    background-color: unset;
+    border-radius: 0;
+  }
+
+  .p-a-s-b-w {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+    background-color: #fff;
+    .p-a-service-bottom {
+      padding: 24px 20px;
+    }
+  }
+  .p-a-service-block {
+    & > div:first-child {
+      &.van-cell {
+        border-top-left-radius: $card-radius;
+        border-top-right-radius: $card-radius;
+      }
+    }
+  }
+
+  // :deep(.package-service) .package-service-content .package-service-content-item .content-item-detail .item-backgound {
+  //   z-index: inherit;
+  // }
+
+  .added-service-bottom-page-receipt,
+  .added-service-page-collection,
+  .added-service-page-package,
+  .dismantling-wooden-frame-page,
+  .dispatchNotice-warpper,
+  .clearance-warehouse {
+    background-color: #fff;
+    padding: 24px 32px;
+    padding-bottom: 0;
+  }
+
+  // .dispatchNotice-warpper {
+  //   padding-bottom: 0;
+  // }
+
+  .clearance-warehouse {
+    margin-bottom: 16px;
+    padding-bottom: 0;
+  }
+
+  .collect-payment {
+    padding-bottom: 0;
+    .collect-payment-title {
+      .left {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .added-service-page-package + .dismantling-wooden-frame-page {
+    padding-top: 0;
+  }
+
+  // .dismantling-wooden-frame-page {
+  //   :deep(.dismantling-wooden-frame-content) {
+  //     .font-level3 {
+  //       font-weight: 600;
+  //     }
+  //   }
+  // }
+}
+.added-service-page-btn {
+  padding: 20px 32px;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+}

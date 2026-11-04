@@ -1,0 +1,59 @@
+.skeleton-content{
+  width: 100%;
+  padding: 24px;
+  margin-bottom: 16px;
+  background: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.line-title{
+  display: flex;
+  justify-content: space-between;
+}
+.width320{
+  width: 320px;
+}
+
+.width96{
+  width: 96px;
+}
+
+.width60{
+  width: 90px;
+}
+
+.width120{
+  width: 120px;
+}
+
+.h24{
+  height: 24px;
+}
+
+.h72{
+  height: 72px;
+}
+
+.mtop16{
+  margin-top: 16px;
+}
+.mtop24{
+  margin-top: 24px;
+}
+.card-wrap{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 一行三列 */
+  grid-gap: 16px;
+}
+.card-item{
+  height: 56px;
+}
+
+@include respond-less-1162{
+  .card-wrap{
+    grid-template-columns: repeat(2, 1fr); /* 一行三列 */
+  }
+}
+.place-hold{
+  width: 16px;
+}

@@ -1,0 +1,60 @@
+.idcard-NetworkError {
+    .nerwork-error__warpper {
+        margin-top: -150rpx;
+
+        .reload-btn {
+            width: 144rpx;
+            height: 55rpx;
+            color: #ffffff;
+            background-color: #8365F6;
+            border-radius: 8rpx;
+            font-size: 24rpx;
+        }
+    }
+
+    .idcard-nerwork-error {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        &__warpper {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+
+            view:first-child {
+                image {
+                    width: 280px;
+                    height: 280px;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+            view:nth-child(2) {
+                font-size: 28px;
+                color: #6e6d72;
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            .reload-btn {
+                width: 296px;
+                height: 80px;
+                border: 2px solid #8365f6;
+                border-radius: 10px;
+                color: #8365f6;
+                font-weight: bold;
+                font-size: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                margin-top: 35px;
+            }
+        }
+
+    }
+}

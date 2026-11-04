@@ -1,0 +1,26 @@
+.ky-radio {
+  &.ky-radio--horizontal {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .radio-icon {
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+  :deep(.van-radio__icon) {
+    width: auto;
+    height: auto;
+    :deep(.van-radio__label--disabled) {
+      color: #55596c;
+    }
+  }
+}
+.ky-radio-group.ky-radio-group--horizontal {
+  > view:last-child {
+    .ky-radio {
+      margin-right: 0;
+    }
+  }
+}

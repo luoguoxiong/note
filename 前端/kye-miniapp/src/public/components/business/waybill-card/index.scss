@@ -1,0 +1,362 @@
+.waybill-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+
+  .waybill-card-head {
+    padding: 12px 24px;
+    // background: linear-gradient(180deg, rgba(164, 144, 255, 0) 66%, rgba(155, 155, 255, 0.1) 100%), #ffffff;
+    background: linear-gradient(180deg, rgba(183, 177, 208, 0) 50%, rgba(183, 177, 208, 0.09) 89%, rgba(183, 177, 208, 0.1) 100%), #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .waybill-card-head-left {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .waybill-card-number {
+        font-size: 28px;
+        line-height: 40px;
+        font-weight: 600;
+        color: #24262b;
+        display: flex;
+        align-items: center;
+
+        image {
+          width: 28px;
+          height: 28px;
+          margin-right: 8px;
+          flex-shrink: 0;
+        }
+      }
+
+      .waybill-card-copy {
+        margin-left: 4px;
+
+        image {
+          width: 28px;
+          height: 28px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .waybill-card-content {
+    padding: 24px;
+    position: relative;
+
+    .w-time-edit{
+      color: #8365f6;
+      margin: 0 10px 0 8px;
+    }
+    .waybill-card-absolute {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 32px;
+      width: 306px;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 20px;
+      line-height: 32px;
+      color: #fa7d00;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('https://ic-img.ky-express.com/netc/20250619_48242_!!1750321540939_612_64.png');
+    }
+
+    .waybill-card-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .waybill-card-info-right {
+        flex: 1;
+        min-width: 0;
+        max-width: 100%;
+
+        .waybill-card-info-head {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          // margin-bottom: 24px;
+          position: relative;
+
+          .send-receive-info {
+            flex: 1;
+            max-width: 100%;
+            min-width: 0;
+            .send-flex{
+              display: flex;
+            }
+            .send-align-center {
+              /* #ifdef h5 */
+              align-items: center;
+              /* #endif */
+            }
+            .real-tag{
+              flex-shrink: 0;
+            }
+            .send-receive-info__city {
+              // max-width: 210px;
+              font-size: 34px;
+              font-weight: 600;
+              line-height: 48px;
+              color: #24262b;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              display: block;
+            }
+
+            .send-receive-info__name {
+              font-size: 24px;
+              line-height: 34px;
+              color: #8c8f99;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              margin-top: 8px;
+              margin-right: 6px;
+            }
+
+            .send-receive-info__company {
+              font-size: 24px;
+              line-height: 34px;
+              color: #8c8f99;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              margin-top: 8px;
+            }
+
+            .send-receive-info__company2 {
+              // width: 180px;
+              font-size: 24px;
+              line-height: 34px;
+              color: #8c8f99;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              // white-space: nowrap;
+              margin-top: 8px;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+
+          .send-receive-info-right {
+            text-align: right;
+          }
+
+          .send-receive-logistics {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+
+            .waybill-status {
+              font-size: 24px;
+              line-height: 34px;
+              color: #24262b;
+            }
+
+            .status-error {
+              color: #ff706d;
+            }
+
+            image {
+              pointer-events: none;
+              width: 138px;
+              height: 14px;
+              display: block;
+              margin: 8px 0;
+            }
+
+            .waybill-service {
+              font-size: 24px;
+              line-height: 34px;
+              color: #24262b;
+            }
+          }
+
+          .stamp-box {
+            position: absolute;
+            left: 56%;
+            top: 12px;
+
+            image {
+              height: 120px;
+              width: 120px;
+            }
+          }
+        }
+      }
+    }
+
+    .waybill-card-extra {
+      margin-top: 24px;
+
+      .black-color {
+        color: #24262b;
+      }
+
+      .mr4 {
+        margin-right: 4px;
+      }
+
+      .mr8 {
+        margin-right: 8px;
+      }
+
+      .waybill-card-extra-status {
+        font-size: 24px;
+        line-height: 34px;
+        color: #8c8f99;
+        display: flex;
+        flex-wrap: wrap;
+
+        &>view {
+          flex-shrink: 0;
+        }
+      }
+
+      .mt-8 {
+        margin-top: 8px;
+      }
+      .mt-24 {
+        margin-top: 24px;
+      }
+      .waybill-card-extra-info {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        .waybill-card-extra-info-label {
+          // margin-right: 8px;
+          font-size: 24px;
+          line-height: 34px;
+          color: #8c8f99;
+          flex-shrink: 0;
+        }
+
+        .waybill-card-extra-info-content {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          font-size: 24px;
+          line-height: 34px;
+
+          .ky-tab {
+            margin-left: 4px;
+          }
+        }
+      }
+
+      .waybill-card-extra-label {
+        margin-top: 16px;
+        padding: 11px 16px;
+        background: #f7f8fa;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+
+        .waybill-card-extra-label-icon {
+          margin-right: 8px;
+          width: 38px;
+          height: 38px;
+          flex-shrink: 0;
+        }
+
+        .waybill-card-extra-label-text {
+          font-size: 24px;
+          line-height: 34px;
+          color: #686b75;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block;
+        }
+      }
+    }
+
+    .mb-16 {
+      margin-bottom: 16px;
+    }
+
+    .waybill-card-extra-applyStatus {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px;
+      background-color: #fff3e5;
+      color: #ff9300;
+      font-size: 24px;
+      margin: 16px 0;
+      border-radius: 8px;
+
+      .waybill-card-extra-applyStatus-icon {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+
+  .ky-tag+.ky-tag {
+    margin-bottom: 0;
+  }
+
+  .mb24 {
+    margin-bottom: 24px;
+  }
+}
+
+.notice-box-card {
+  margin-top: 20px;
+  border-radius: 16px;
+  background: #f7f8fa;
+  padding: 16px 16px 0 16px;
+
+  .notice-box-item-card {
+    &:first-child {
+      .waybill-route-card-tips {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .notice-box-item-card+.notice-box-item-card {
+    margin-top: 16px;
+  }
+
+  .more-btn-card {
+    cursor: pointer;
+    color: #8365f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+
+    .more-btn-img-card {
+      transform: rotate(180deg);
+      transition: 0.1s all;
+      width: 15px;
+      height: 8px;
+
+      &.expand-card {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}

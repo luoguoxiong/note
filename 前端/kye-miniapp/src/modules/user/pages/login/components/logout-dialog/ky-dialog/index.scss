@@ -1,0 +1,23 @@
+@import '../../../styles/settings/color';
+.title {
+  position: relative;
+  .title-icon {
+    position: absolute;
+    top: -68px;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+  }
+  .has-title-icon {
+    padding-top: 16px;
+  }
+}
+.content {
+  padding: 0 40px;
+  font-size: 28px;
+  text-align: center;
+  color: $text-color-level2;
+}

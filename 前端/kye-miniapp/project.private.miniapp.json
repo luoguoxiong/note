@@ -1,0 +1,137 @@
+{
+  "miniVersion": "v2",
+  "name": "跨越速运",
+  "version": "8.1.4",
+  "versionCode": 861,
+  "i18nFilePath": "i18n",
+  "mini-android": {
+    "resourcePath": "miniapp/android/nativeResources",
+    "sdkVersion": "1.6.21-beta.1-1316-SNAPSHOT",
+    "minSdkVersion": "24",
+    "toolkitVersion": "0.11.0",
+    "useExtendedSdk": {
+      "media": true,
+      "bluetooth": true,
+      "network": true,
+      "scanner": true,
+      "xweb": true,
+      "skyline": true,
+      "xwebEmbed": true
+    },
+    "manifestPlaceholders": {
+      "JPUSH_PKGNAME": "com.oxbix.spanlogistics ",
+      "JPUSH_APPKEY": "7db3190162817c50f34df055",
+      "JPUSH_CHANNEL": "developer-default",
+      "XIAOMI_APPID": "MI-2882303761517418426",
+      "XIAOMI_APPKEY": "MI-5261741884426",
+      "OPPO_APPKEY": "OP-E72s64b9V400og0S040SS40so",
+      "OPPO_APPID": "OP-3011240",
+      "OPPO_APPSECRET": "OP-C14739654E6c1CC9F6C23401d0A17caa",
+      "VIVO_APPKEY": "fcd57f52a0f04fc6e9833f1262e7e583",
+      "VIVO_APPID": "100034448"
+    },
+    "icons": {
+      "hdpi": "miniapp/icons/android/512X512.png",
+      "mdpi": "miniapp/icons/android/512X512.png",
+      "xhdpi": "miniapp/icons/android/512X512.png",
+      "xxhdpi": "miniapp/icons/android/512X512.png",
+      "xxxhdpi": "miniapp/icons/android/512X512.png"
+    },
+    "splashscreen": {
+      "hdpi": "miniapp/static/4801080@1x.png",
+      "xhdpi": "miniapp/static/7201620@1x.png",
+      "xxhdpi": "miniapp/static/10802430@1x.png"
+    },
+    "enableVConsole": "close",
+    "privacy": {
+      "enable": true,
+      "contentViewImage": "",
+      "template": "miniapp/privacy/miniapp-privacy.json"
+    },
+    "abi": {
+      "arm64-v8a": true,
+      "armeabi-v7a": true
+    },
+    "usePluginSdk": {
+      "map": "1.2.7"
+    },
+    "privateDescriptions": {
+      "POST_NOTIFICATIONS": "当前应用需申请发布通知权限用于通知栏消息推送",
+      "READ_CONTACTS": "当前应用需申请快捷填充寄收信息"
+    },
+    "map": {
+      "qmapAPIKey": "KLABZ-WGZ65-OAWIN-I3HUW-SMER2-COF43"
+    }
+  },
+  "mini-ios": {
+    "sdkVersion": "1.6.22",
+    "toolkitVersion": "0.0.9",
+    "useExtendedSdk": {
+      "WeAppOpenFuns": false,
+      "WeAppNetwork": false,
+      "WeAppBluetooth": true,
+      "WeAppMedia": false,
+      "WeAppLBS": true,
+      "WeAppOthers": true,
+      "WeAppSkyline": true,
+      "WeAppCamera": true,
+      "WeAppImage": true,
+      "WeAppAudio": true,
+      "WeAppVideo": true,
+      "WeAppOpenFuns_HasPay": true
+    },
+    "enableVConsole": "close",
+    "icons": {
+      "mainIcon120": "miniapp/icons/ios/icon_60@2x.png",
+      "mainIcon180": "miniapp/icons/ios/icon_60@3x.png",
+      "spotlightIcon80": "miniapp/icons/ios/icon_40@2x.png",
+      "spotlightIcon120": "miniapp/icons/ios/icon_40@3x.png",
+      "settingsIcon58": "miniapp/icons/ios/icon_29@2x.png",
+      "settingsIcon87": "miniapp/icons/ios/icon_29@3x.png",
+      "notificationIcon40": "miniapp/icons/ios/icon_20@2x.png",
+      "notificationIcon60": "miniapp/icons/ios/icon_20@3x.png",
+      "appStore1024": "miniapp/icons/ios/icon_1024.png"
+    },
+    "splashscreen": {
+      "customImage": "miniapp/static/7201620@1x.png"
+    },
+    "privacy": {
+      "enable": true,
+      "template": "miniapp/privacy/miniapp-privacy.json"
+    },
+    "enableOpenUrlNavigate": true,
+    "appleConnect": {},
+    "buildCloud": {},
+    "privateDescriptions": {
+      "NSPhotoLibraryUsageDescription": "需要写入相册权限，用于上传图片、身份证识别、运单识别查询、ai智能识别图片信息、保存电子存根和电子回单服务，您可在系统设置中管理相关权限",
+      "NSCameraUsageDescription": "需要访问您的相机，用于扫码寄件、查单、上传图片、智能识别地址、身份证识别、ai识别图片服务，您可在系统设置中管理相机访问权限",
+      "NSMicrophoneUsageDescription": "需要获取您的麦克风权限，用于语音输入、语音识别、快速下单、功能反馈服务，您可在系统设置中管理麦克风访问权限",
+      "NSLocationWhenInUseUsageDescription": "需要在使用期间访问您的位置信息，用于提供附近网点、地址定位服务，您可在系统设置中管理定位权限",
+      "NSLocationAlwaysUsageDescription": "需要始终访问您的位置信息，用于持续定位和提供更精准的服务，您可在系统设置中管理定位权限",
+      "NSLocationAlwaysAndWhenInUseUsageDescription": "需要在使用期间及后台访问您的位置信息，用于提供持续定位等服务，您可在系统设置中管理定位权限",
+      "NSContactsUsageDescription": "需要访问您的联系人信息，用于收件人自动填写等服务，您可在系统设置中管理联系人访问权限",
+      "NSCalendarsUsageDescription": "需要访问您的日历，用于创建或同步日程提醒等服务，您可在系统设置中管理日历访问权限",
+      "NSRemindersUsageDescription": "需要访问您的提醒事项，用于任务提醒、寄件进度通知等服务，您可在系统设置中管理提醒访问权限",
+      "NSBluetoothPeripheralUsageDescription": "需要使用蓝牙功能，用于连接蓝牙设备、打印标签等服务，您可在系统设置中管理蓝牙权限",
+      "NSBluetoothAlwaysUsageDescription": "需要始终使用蓝牙功能，用于持续连接设备、打印等服务，您可在系统设置中管理蓝牙权限",
+      "NSSpeechRecognitionUsageDescription": "需要使用语音识别功能，用于语音输入、语音指令等服务，您可在系统设置中管理语音识别权限",
+      "NSLocalNetworkUsageDescription": "需要访问本地网络，用于发现和连接局域网设备等服务，您可在系统设置中管理本地网络访问权限",
+      "NSSystemAdministrationUsageDescription": "需要执行系统相关操作，用于管理设备连接和系统功能，您可在系统设置中管理相关权限",
+      "NSPhotoLibraryAddUsageDescription": "需要写入相册权限，用于上传图片、身份证识别、运单识别查询、ai智能识别图片信息、保存电子存根和电子回单服务，您可在系统设置中管理相关权限"
+    },
+    "enableDebugLog": false,
+    "enableAutoCompletePrivacyDesc": false,
+    "qmapAPIKey": "MUKBZ-LSO6J-MCCFF-XNN36-EBAWF-GPFYT"
+  },
+  "mini-ohos": {
+    "sdkVersion": "0.5.1",
+    "privateDescriptions": {
+      "APPROXIMATELY_LOCATION": "位置权限未开启",
+      "LOCATION": "位置权限未开启",
+      "USEBLUETOOTH": "用于应用接入蓝牙并使用蓝牙能力",
+      "DISCOVER_BLUETOOTH": "用于应用接入蓝牙并使用蓝牙能力",
+      "ACCESS_BLUETOOTH": "用于应用接入蓝牙并使用蓝牙能力"
+    }
+  },
+  "mini-plugin": {}
+}

@@ -1,0 +1,80 @@
+page {
+  height: 100vh;
+}
+.addr-l {
+  height: 100%;
+  .addr-b-p {
+    overflow: hidden;
+    background: $bg-page;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+      background: $bg-page;
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      .tab-wrap {
+        flex: 1;
+        overflow: hidden;
+      }
+
+      .list-refresh-load {
+        height: 100% !important;
+        box-sizing: border-box;
+        .ky-list {
+          .ky-list-refresh-track {
+            .ky-list-scroll-content {
+              .ky-swipe-group {
+                .addr-b-p-list:last-child {
+                  .address-list {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .ky-list__finished-text {
+        line-height: initial;
+        padding-bottom: 10px;
+      }
+
+      .width-100 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .pd-top-16 {
+        padding-top: 16px;
+      }
+    }
+
+    .address-book-loading-box {
+      .ky-loading {
+        .ky-loading-text {
+          font-size: 28px;
+        }
+      }
+    }
+
+    .n-s-r-t {
+      text-align: center;
+      font-size: 28px;
+      font-weight: normal;
+      color: #686b75;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 48px 0;
+      .key-word {
+        @include ellipsis;
+        max-width: 440px;
+      }
+    }
+  }
+}

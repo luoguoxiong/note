@@ -1,0 +1,63 @@
+.select-size-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 16px 32px calc(16px + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.04);
+
+  .footer-batch {
+    .footer-select-all {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      height: 40px;
+
+      .footer-check-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .footer-all-text {
+        margin-left: 12px;
+        font-size: 32px;
+        color: #333;
+        line-height: 40px;
+      }
+
+      // 已选条数：紧跟全选右侧，数字高亮
+      .footer-count {
+        margin-left: 16px;
+        color: #999;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        line-height: 40px;
+
+        .count-highlight {
+          color: #ff9300;
+          line-height: 40px;
+        }
+      }
+    }
+
+    .footer-confirm-btn {
+      flex-shrink: 0;
+      width: 200px;
+    }
+  }
+
+  .footer-add-btn {
+    width: 100%;
+  }
+}
+/* #ifdef h5 */
+.select-size-footer {
+  max-width: 750px !important;
+  margin: 0 auto;
+  right: 0;
+}
+/* #endif */

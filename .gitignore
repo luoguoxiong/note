@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+.DS_Store
+*.log
+.git-embed-backup/
+
+# 敏感文件：密钥与环境配置
+.env
+.env.*
+*.keystore
+*.jks
+*.p8
+*.pem
+private.wx*.key

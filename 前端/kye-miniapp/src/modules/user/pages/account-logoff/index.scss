@@ -1,0 +1,263 @@
+.account-cancellation {
+  background-color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+
+  &__container {
+    padding: 32px 50px;
+    position: relative;
+    box-sizing: border-box;
+
+    &-tips {
+      text-align: center;
+
+      .warning-icon {
+        width: 128px;
+        height: 128px;
+      }
+
+      .user-label {
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 36px;
+        margin: 36px 0 24px;
+        color: #03050d;
+      }
+
+      .confirm-warning {
+        color: #ff706d;
+        line-height: 28px;
+        font-weight: 500;
+        font-size: 28px;
+      }
+    }
+
+    &-desc {
+      background: #f7f8fa;
+      border-radius: 12px;
+      padding: 46px 32px 46px 64px;
+      color: #6e6d72;
+      line-height: 34px;
+      margin: 60px 0;
+      font-size: 26px;
+
+      .desc-item {
+        &:first-child {
+          margin-bottom: 42px;
+        }
+
+        &-label {
+          color: #03050d;
+          position: relative;
+          font-weight: bold;
+          margin-bottom: 20px;
+          font-size: 30px;
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 11px;
+            left: -22px;
+            width: 8px;
+            height: 8px;
+            background: #03050d;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    &-contact {
+      color: #888ea6;
+      font-size: 24px;
+      text-align: center;
+
+      .contact-phone {
+        color: #8365f6;
+        text-decoration: underline;
+      }
+    }
+
+    .cancellation-agreement {
+      margin-bottom: 30px;
+      color: #888ea6;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 28px;
+      line-height: 28px;
+
+      .ky-checkbox-icon {
+        margin-right: 10px;
+      }
+
+      .ky-checkbox__label {
+        margin-left: 10px;
+        line-height: 28px;
+        transform: translateY(2px);
+      }
+
+      .agreement-btn {
+        color: #8365f6;
+      }
+    }
+
+    .agreement-btn,
+    .cancellation-submit-popovers {
+      font-size: 24px !important;
+    }
+
+    .cancellation-submit-popovers {
+      display: flex;
+      align-items: center;
+    }
+
+    .account-cancellation__footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 32px 50px;
+      padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+
+      .ky-button {
+        height: 88px;
+        width: 100%;
+      }
+    }
+
+    /* #ifdef h5 */
+    .account-cancellation__footer {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      right: 0;
+      padding: 32px 50px;
+      max-width: 750px;
+      min-width: 650px;
+      padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+      .ky-button {
+        height: 88px;
+        width: 100%;
+      }
+    }
+    /* #endif */
+  }
+
+  &__feedback {
+    position: relative;
+
+    &-bg {
+      background: url('https://ic-img.ky-express.com/netc/20231024_12162366128_!!1698129830643_750_246.png') no-repeat;
+      background-size: 750px 246px;
+      width: 750px;
+      height: 246px;
+    }
+
+    &-reason {
+      border-radius: 12px 12px 0 0;
+      overflow: hidden;
+      margin-top: -28px;
+
+      .reason-label {
+        font-size: 32px;
+        font-weight: bold;
+        color: #03050d;
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          background: url('https://ic-img.ky-express.com/netc/20231024_96562366160_!!1698131990015_13_12.svg+xml') no-repeat;
+          background-size: 13px 13px;
+          width: 13px;
+          height: 13px;
+          right: -20px;
+          top: 10px;
+        }
+      }
+
+      .ky-cell {
+        padding: 28px 32px;
+        height: 100px;
+      }
+    }
+
+    &-division {
+      background: #f3f4f6;
+      height: 20px;
+    }
+
+    &-desc {
+      padding: 32px;
+
+      .logoff-desc {
+        font-size: 32px;
+        font-weight: bold;
+        color: #03050d;
+        margin-bottom: 20px;
+      }
+
+      .ky-field__control {
+        max-height: 246px;
+      }
+    }
+  }
+
+  .netc-ipx-footer {
+    padding-bottom: 0;
+
+    .ky-button {
+      width: 100%;
+      height: 88px;
+      border-radius: 12px;
+      background: linear-gradient(98deg, #ac97ff 7%, #8365f6 95%);
+      color: #ffffff;
+      font-size: 34px;
+      font-weight: 500;
+      border: none;
+
+      &.ky-button--disabled {
+        background: #dcdee5;
+        color: #ffffff;
+      }
+
+      .ky-button__text {
+        display: flex;
+        align-items: center;
+      }
+
+      .ky-loading {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .netc-ipx-footer__wrapper {
+    padding: 32px !important;
+  }
+}
+
+.account-cancellation__feedback-desc {
+  .ky-textarea {
+    height: 266px;
+    width: unset;
+    border: 1px solid #ebedf5;
+    background: #f7f8fa;
+
+    textarea {
+      background: transparent;
+      height: 160px;
+    }
+  }
+}
+
+.cancellation-submit-btn {
+  font-size: 34px;
+  font-weight: 500;
+  width: 100%;
+}

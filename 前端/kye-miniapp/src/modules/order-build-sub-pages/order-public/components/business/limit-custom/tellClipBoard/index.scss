@@ -1,0 +1,60 @@
+.ky-clipboard-dialog {
+  .l-p-title {
+    font-size: 34px;
+    color: #24262b;
+    font-weight: 600;
+    padding: 56px 0;
+    text-align: center;
+    background-image: url('https://ic-img.ky-express.com/netc/20260917_58571_!!1789653804595_622_192.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .l-p-b {
+    margin-top: -40px;
+    padding: 16px 32px;
+    box-sizing: border-box;
+    width: 100%;
+    border-top: 1px solid #e6e8ed;
+  }
+  .l-p-b-cancel,
+  .l-p-b-submit {
+    flex: 1;
+    box-sizing: border-box;
+    font-size: 27px;
+    .ky-button {
+      padding: 0 30px;
+    }
+  }
+  .l-p-b-submit {
+    margin-left: 24px;
+  }
+  .title-container {
+    padding: 24px;
+    background: #f7f8fa;
+    border: 1px solid #ebedf5;
+    border-radius: 12px;
+    box-sizing: border-box;
+    .ky-clipboard-dialog-item {
+      font-size: 26px;
+      text-align: left;
+      color: $text-color-level1;
+      margin: 10px 0;
+    }
+    .ky-clipboard-dialog-label {
+      display: block;
+      flex-shrink: 0;
+      width: 140px;
+      text-align: justify;
+      color: $text-color-level3;
+      text-align-last: justify;
+    }
+    .address {
+      word-break: break-all;
+      word-wrap: break-word;
+    }
+    .empty {
+      color: #ff706d;
+    }
+  }
+}

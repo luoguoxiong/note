@@ -1,0 +1,77 @@
+.receive {
+  position: relative;
+  padding: 0 24px 24px;
+  border-radius: 0 0 24px 24px;
+  background: #fff;
+
+  .padding-style {
+    padding-bottom: 0;
+  }
+
+  .address-block {
+    .right {
+      margin-bottom: 0;
+    }
+  }
+
+  .address-unfold {
+    .container {
+      padding-bottom: 0;
+    }
+  }
+
+  /** 收件模块禁用场景 */
+  &.disabled {
+    @include no-bg-disabled;
+
+    .book-btn {
+      display: none;
+    }
+
+    .required-icon {
+      display: none;
+    }
+
+    .address-unfold-header {
+      .header__right {
+        display: none;
+      }
+
+      .required {
+        display: none;
+      }
+    }
+
+    .address-unfold-detail-address {
+      .right {
+        display: none;
+      }
+    }
+
+    .header__left__icon {
+      .text {
+        color: #fff !important;
+      }
+    }
+
+    .address-block {
+      .left {
+        .left__icon {
+          color: #fff !important;
+        }
+
+        .h5-span {
+          color: #fff !important;
+        }
+      }
+    }
+
+    .header__left {
+      .header__left__icon {
+        .h5-span {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}

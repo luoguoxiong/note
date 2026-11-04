@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "RUI";
+    src: url("https://ic-h5.kye-erp.com/intro/miniprogram/fonts/font.TTF");
+}
+
+.container {
+    width: 100%;
+    height: 1624px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .text-logo-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 50px;
+
+        .text-logo {
+            width: 352px;
+            height: 29px;
+        }
+    }
+}
+
+.rules {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    z-index: 101;
+    color: #b880ff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+
+    image {
+        width: 24px;
+        height: 24px;
+        margin-right: 6px;
+    }
+}
+
+

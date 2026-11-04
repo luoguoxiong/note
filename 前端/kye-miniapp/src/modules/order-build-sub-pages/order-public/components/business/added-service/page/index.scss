@@ -1,0 +1,137 @@
+.added-service-popup {
+  position: relative;
+
+  .ky-cell {
+
+
+    .ky-cell__value {
+      .single-receipt-service-value {
+        display: inline-block;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        right: 6px;
+        color: #03050d;
+        font-weight: 600;
+        word-break: break-all;
+        line-clamp: 1;
+        width: 430px;
+        @include ellipsis;
+        view {
+          display: inline;
+        }
+
+        .cell-value-icon {
+          display: inline-block;
+          padding: 0 6px;
+          margin-bottom: 2px;
+          white-space: nowrap;
+          border-radius: 6px;
+        }
+        .urgent-icon {
+          margin-top: 2px;
+          margin-right: -4px;
+        }
+
+        // 加急
+        .urgent {
+          font-size: 26px;
+          line-height: 22px;
+          color: #f57200;
+          font-weight: normal;
+        }
+
+        .single-receipt-service-value-text {
+          display: inline-block;
+          margin-bottom: 2px;
+        }
+      }
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      left: 24px;
+      width: 662px;
+      content: '';
+      box-sizing: border-box;
+      pointer-events: none;
+      transform: scaleY(0.5);
+      border-bottom: 2px solid #ebedf5;
+    }
+  }
+
+  .added-service-popup-prompt {
+    position: absolute;
+    top: -60px;
+    right: 30px;
+
+    .popup-prompt-wrapper {
+      position: relative;
+      padding: 16px 20px;
+      font-size: 24px;
+      color: #fff;
+      background: rgb(0 0 0 / 70%);
+      border-radius: 8px;
+      backface-visibility: hidden;
+      font-weight: 600;
+      line-height: 1.4;
+
+      &::before {
+        position: absolute;
+        right: 50px;
+        bottom: -8px;
+        border-style: solid;
+        border-width: 12px 12px 0;
+        border-color: transparent;
+        border-top-color: rgb(0 0 0 / 70%);
+        content: '';
+      }
+    }
+  }
+
+}
+
+.single-receipt-service {
+  position: relative;
+  // padding-bottom: 36px;
+
+  @include hairline(after, $border-bottom-color, bottom);
+  &::after {
+    margin: 0 48px;
+    // border-bottom: 4px solid #ebedf5
+    transform: scale(0.5, 0.4);
+  }
+
+  .single-receipt-service-label {
+    height: 24px;
+    margin-top: 12px;
+    margin-left: 24px;
+    font-size: 24px;
+    color: #ff9300;
+
+    svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+  .ky-cell-extra {
+    width: 100%;
+    text-align: right;
+    box-sizing: border-box;
+  }
+}
+
+.added-service-bottom-popup {
+  // min-height: 684px;
+}
+
+.added-service-bottom-popup-max {
+  height: 80%;
+}
+
+:deep(#added-service-bottom-popup) {
+  .container {
+    padding-bottom: 126px;
+  }
+}

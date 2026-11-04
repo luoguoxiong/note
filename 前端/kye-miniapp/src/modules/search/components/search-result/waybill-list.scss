@@ -1,0 +1,143 @@
+.waybill-search-item>.waybill-card{
+  margin-bottom: 16px;
+}
+.waybill-search-item:last-child>.waybill-card{
+  margin-bottom: 0px;
+}
+.waybill-card-head-right {
+  flex: 1;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+  & > view {
+    display: flex;
+  }
+
+  .right-extra-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    image {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    .right-extra-btn-text {
+      font-size: 24px;
+      line-height: 34px;
+      color: #8365F6;
+      display: block;
+      margin-left: 4px;
+    }
+  }
+}
+
+.waybill-card-bottom {
+  border-top: 2px solid #e6e8ed;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .waybill-card-bottom-right {
+    flex: 1;
+    padding-left: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .waybill-card-bottom-right-btn + .waybill-card-bottom-right-btn {
+      margin-left: 16px;
+    }
+
+    .ky-button {
+      // margin-left: 16px;
+      border-radius: 8px;
+      padding: 0 12px;
+    }
+
+    &-btn {
+      position: relative;
+    }
+  }
+
+  .waybill-card-bottom-more {
+    .ky-popover-menu__dropdown-text {
+      width: 52px;
+    }
+  }
+
+  .waybill-card-button-tips {
+    height: 30px;
+    background: #fff3e5;
+    border-radius: 14px 14px 14px 0px;
+    padding: 4px 7px;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: -18px;
+    right: 0;
+    z-index: 8;
+    border: 1px solid #fff;
+
+    &.disabled {
+      background: #F1F2F7;
+
+      .waybill-card-button-tips-txt {
+        color: #8C8F99;
+      }
+    }
+  }
+
+  .waybill-card-button-tips-txt {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    color: #ff9300;
+    line-height: 20px;
+    flex: 1;
+    transform-origin: center;
+    white-space: nowrap;
+    padding: 8px 6px;
+  }
+}
+
+.ky-dialog .tips.ql-editor .content {
+  text-align: left;
+
+  view, text {
+    display: inline;
+  }
+}
+
+.common-search-page .ky-dialog {
+  .ky-dialog-body {
+    .calculate-tips-block {
+      margin-top: 24px;
+      padding: 12px 20px;
+      background-color: #f7f8fa;
+      border-radius: 8px;
+      line-height: 34px;
+      font-size: 24px;
+      text-align: left;
+    }
+
+    .h5-span {
+      display: inline;
+    }
+  }
+}
+
+.waybill-search-item__Warp {
+  padding: 16px 24px;
+}

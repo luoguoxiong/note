@@ -1,0 +1,122 @@
+{
+  "name": "@kye-netc/kye-miniui",
+  "version": "0.3.8",
+  "description": "小程序组件库脚手架",
+  "author": "KYE-FE",
+  "private": false,
+  "type": "module",
+  "main": "./lib/ky-miniui-lib.umd.js",
+  "module": "./lib/ky-miniui-lib.es.js",
+  "types": "./lib/ky-miniui-lib/index.d.ts",
+  "style": "./lib/style.css",
+  "files": [
+    "./lib",
+    "./packages",
+    "package.json",
+    "README.md",
+    "./skills",
+    "skill.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./packages/ky-miniui-lib/index.ts",
+      "default": "./lib/ky-miniui-lib.umd.js"
+    },
+    "./style.css": "./lib/style.css"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://nexus.ky-tech.com.cn:8081/repository/npmjs-hosted"
+  },
+  "scripts": {
+    "dev:dev": "pnpm run -C example dev:dev",
+    "dev:uat": "pnpm run -C example dev:uat",
+    "dev:prod": "pnpm run -C example dev:prod",
+    "dev:wx": "pnpm run -C ./preview/taro-demo dev:wx",
+    "dev:wx:preview": "pnpm run dev:wx --preview",
+    "dev:alipay": "pnpm run -C ./preview/taro-demo dev:alipay",
+    "dev:h5": "pnpm run -C ./preview/taro-demo dev:h5",
+    "build:dev": "pnpm run -C example build:dev",
+    "build:uat": "pnpm run -C example build:uat",
+    "build:prod": "pnpm run -C example build:prod",
+    "preview:example": "pnpm run -C example preview",
+    "build:lib": "pnpm run -C packages/ky-miniui-lib build",
+    "build:lib:ignore": "pnpm run -C packages/ky-miniui-lib build:ignore",
+    "build:log": "pnpm run -C packages/ky-miniui-lib build:log",
+    "build:wx": "pnpm run -C ./preview/taro-demo build:wx",
+    "build:alipay": "pnpm run -C ./preview/taro-demo build:alipay",
+    "build:h5": "pnpm run -C ./preview/taro-demo build:h5",
+    "copy:h5": "node cli/src/util/copy-h5.ts",
+    "docs:dev": "pnpm run -C docs dev",
+    "docs:build": "pnpm build:h5 && pnpm run -C docs build && pnpm copy:h5",
+    "docs:preview": "pnpm run -C docs serve",
+    "gen:cli": "pnpm run -C cli gen",
+    "clean:deps": "pnpm run clean:modules && pnpm store prune && pnpm install",
+    "clean:modules": "pnpm -r exec rm -rf node_modules && rm -rf node_modules",
+    "start:verdaccio": "pnpm verdaccio",
+    "pub:local": "pnpm publish --registry http://localhost:4873/",
+    "lint": "eslint \"{cli,packages,docs,example}/**/*.{js,ts,vue,jsx,tsx}\" --fix",
+    "pub:node": "pnpm --filter ./packages/node publish --no-git-checks",
+    "publish:all": "pnpm run publish:kye-miniui && pnpm run pub:node",
+    "publish:kye-miniui": "pnpm run build:lib:ignore && npm publish --no-git-checks"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "workspaces": [
+    "packages/*",
+    "cli/*",
+    "docs/*",
+    "example/*"
+  ],
+  "dependencies": {
+    "@tarojs/taro": "4.0.7",
+    "terser-webpack-plugin": "^5.6.1",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@ky-miniui-lib/cli": "workspace:^",
+    "@ky-miniui-lib/docs": "workspace:^",
+    "@ky-miniui-lib/example": "workspace:^",
+    "@ky-miniui-lib/ky-miniui-lib": "workspace:*",
+    "@tarojs/plugin-inject": "^4.0.8",
+    "@types/node": "^18.16.13",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "@vue/compiler-sfc": "^3.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.13.0",
+    "fs-extra": "^11.3.2",
+    "lint-staged": "^13.2.2",
+    "prettier": "^3.3.3",
+    "rimraf": "^3.0.2",
+    "sass": "^1.62.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "typescript": "^4.9.5",
+    "verdaccio": "^5.24.1",
+    "vite": "^4.5.5",
+    "vite-plugin-eslint": "^1.8.1",
+    "vue-docgen-api": "^4.79.2",
+    "vue-tsc": "^1.6.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,vue}": [
+      "pnpm run lint"
+    ]
+  }
+}

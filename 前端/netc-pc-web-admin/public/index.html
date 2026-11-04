@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,
+    viewport-fit=cover, interactive-widget=resizes-content"
+    />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <meta
+            name="keywords"
+            content="跨越速运集团KYE,航空货运,快递公司,物流公司,航空快递,跨越速运,航空快递公司,航空物流公司,快递,航空速递,深圳快递公司,航空速运,空运物流,航空快运,速运,跨越物流"
+    />
+    <meta
+            name="description"
+            content="跨越速运（简称KYE）是专营国内航空门到门的快递公司, 深圳跨越航空物流公司、货运、物流、快递、速递、托运的快递公司拥有国内机场拥有专门的调度中心和无与伦比的航班自主权,向客户推出当天达、 次日达、 隔日达服务,并行业中首度对客户推出“限时未达全额退款”承诺。航空快递公司电话：95324。"
+    />
+    <title>跨越速运集团KYE|快递公司-航空货运-跨越航空物流公司</title>
+    <!-- 生产构建走 CDN externals：vue / vue-router / element-plus 由 CDN 提供，
+         需在业务 bundle 之前同步加载；CSS 置于 head 顶部以保证
+         @netc-design-pc/theme-chalk 的 :root 变量覆盖后加载生效 -->
+    <% if (htmlWebpackPlugin.options.cdn) { %>
+    <% for (const cssHref of htmlWebpackPlugin.options.cdn.css) { %>
+    <link rel="stylesheet" href="<%= cssHref %>" />
+    <% } %>
+    <% for (const jsSrc of htmlWebpackPlugin.options.cdn.js) { %>
+    <script src="<%= jsSrc %>"></script>
+    <% } %>
+    <% } %>
+    <link rel=" icon" href="<%= BASE_URL %>favicon.ico" />
+    <meta
+      name="keywords"
+      content="跨越速运集团KYE,航空货运,快递公司,物流公司,航空快递,跨越速运,航空快递公司,航空物流公司,快递,航空速递,深圳快递公司,航空速运,空运物流,航空快运,速运,跨越物流"
+    />
+    <meta
+      name="description"
+      content="跨越速运（简称KYE）是专营国内航空门到门的快递公司, 深圳跨越航空物流公司、货运、物流、快递、速递、托运的快递公司拥有国内机场拥有专门的调度中心和无与伦比的航班自主权,向客户推出当天达、 次日达、 隔日达服务,并行业中首度对客户推出“限时未达全额退款”承诺。航空快递公司电话：95324。"
+    />
+    <title>跨越速运集团KYE|快递公司-航空货运-跨越航空物流公司</title>
+    <!-- dns预解析 -->
+    <link rel="dns-prefetch" href="//uc.ky-express.com" />
+    <link rel="dns-prefetch" href="//uc-uat.ky-express.com" />
+    <link rel="dns-prefetch" href="//ic-img.ky-express.com" />
+    <link rel="dns-prefetch" href="//ic-img-test.ky-express.com" />
+    <link rel="dns-prefetch" href="//api-uat.kyeapi.com" />
+    <link rel="dns-prefetch" href="//open-dev.kyepm.com" />
+    <link rel="dns-prefetch" href="//api.ky-express.com" />
+    <link rel="dns-prefetch" href="//api-stg.kyeapi.com" />
+    <link rel="dns-prefetch" href="//api-uat.kyeapi.com" />
+    <!-- apm  -->
+    <script>
+      var isProd = location.hostname === 'uc.ky-express.com'
+      var host = isProd ? 'https://uc.ky-express.com' : 'https://uc-uat.ky-express.com'
+      void (function (e, t, n, a, o, i, m) {
+        ;(e._um_apm_namespace = o),
+          (e[o] =
+            e[o] ||
+            function () {
+              ;(e[o].q = e[o].q || []).push(arguments)
+            }),
+          (e[o].l = e[o].l || +new Date()),
+          (i = t.createElement(n)),
+          (i.src = a),
+          (m = t.getElementsByTagName(n)[0]),
+          m.parentNode.insertBefore(i, m)
+      })(window, document, 'script', host + '/netc-static/uapm_20240422.iife.js', '_apm')
+      var appKey = isProd ? 'r2zyfio23houi6nrch8a9uk0' : 'uy7nlxjfxcrozn2o5d3eu07r'
+      var dsn =
+        isProd
+          ? 'https://quickaplus-api.ky-tech.com.cn'
+          : 'https://quickaplus-api-uat.ky-tech.com.cn:1443'
+      var apmParams = {
+        pid: appKey,
+        dsn: dsn,
+        pageFilter: { mode: 'ignore', rules: [] },
+        blankConfig: {
+          blank_target: '#app', // 白屏检查目标元素
+          blank_timeout: 3000, // 白屏检查时机，页面加载后多久检查白屏，单位毫秒
+        },
+      }
+      _apm('create', apmParams)
+      console.log('初始化apm--完成', apmParams)
+      window.addEventListener(
+        'error',
+        function (e) {
+          let typeName = e.target.localName
+          let sourceUrl = ''
+          if (typeName === 'link') {
+            sourceUrl = e.target.href
+          } else if (typeName === 'script') {
+            sourceUrl = e.target.src
+          }
+          if (sourceUrl) {
+            let err = '【静态资源加载失败】: url: ' + sourceUrl
+            window._apm && window._apm('captureException', new Error(err))
+          }
+        },
+        true
+      )
+    </script>
+    <style>
+      /* 首屏 loading（BEM 块：first-loading，避免全局类名污染）：
+         与 src/components/loading/index.vue 保持一致（卡车骨架屏），
+         Vue 应用挂载并渲染首条路由后由 src/App.vue 的 route watch 隐藏（选择器 .first-loading--static） */
+      .first-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: white;
+        pointer-events: none;
+      }
+      .first-loading__skeleton {
+        position: relative;
+        overflow: hidden;
+        width: 496px;
+        height: 300px;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+      .first-loading__bg-container {
+        position: absolute;
+        display: flex;
+        width: 992px;
+        height: 200px;
+        animation: first-loading-slide-bg 2s linear infinite;
+      }
+      .first-loading__bg-container .first-loading__img {
+        width: 496px;
+        height: 200px;
+        object-fit: cover;
+      }
+      .first-loading__truck {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        z-index: 2;
+      }
+      .first-loading__text {
+        position: absolute;
+        top: 200px;
+        width: 100%;
+        font-size: 13px;
+        text-align: center;
+        color: #686b75;
+      }
+      @keyframes first-loading-slide-bg {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-496px); /* 向左移动背景图片的宽度 */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 首屏 loading（卡车骨架屏），路由渲染后由 App.vue 隐藏（钩子：first-loading--static） -->
+      <div class="first-loading first-loading--static">
+        <div class="first-loading__skeleton">
+          <div class="first-loading__bg-container">
+            <img
+              src="https://ic-img.ky-express.com/netc/20240509_32970395158_!!1715255878377_496_200.png"
+              class="first-loading__img"
+            />
+            <img
+              src="https://ic-img.ky-express.com/netc/20240509_32970395158_!!1715255878377_496_200.png"
+              class="first-loading__img"
+            />
+          </div>
+          <img
+            src="https://ic-img.ky-express.com/netc/20240509_19770395130_!!1715255897690_496_200.png"
+            class="first-loading__img"
+          />
+          <img
+            src="https://ic-img.ky-express.com/netc/20240509_2970395148_!!1715255910034_496_200.gif"
+            class="first-loading__truck"
+          />
+          <div class="first-loading__text">页面努力加载中，请耐心稍等</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

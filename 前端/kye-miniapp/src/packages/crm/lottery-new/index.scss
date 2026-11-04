@@ -1,0 +1,219 @@
+page {
+  background: #ffe3df;
+}
+.draw-lottery-page {
+  min-height: 100vh;
+  background: #ffe3df;
+  .lottery-result {
+    .lottery-bg {
+      width: 100%;
+    }
+
+    .result-tips-img {
+      position: absolute;
+      top: 24rpx;
+      left: 0;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      width: 590rpx;
+      height: 183rpx;
+    }
+
+    .my-prize-btn {
+      position: fixed;
+      top: 180rpx;
+      right: 0;
+      width: 44rpx;
+      height: 124rpx;
+      line-height: 44rpx;
+      text-align: center;
+      font-size: 24rpx;
+      color: #FFF;
+      border-radius: 8rpx 0 0 8rpx;
+      writing-mode: vertical-rl;
+      background: linear-gradient(160deg, #FF7EB8 3%, #BD5BF6 100%);
+    }
+  }
+
+  .lottery-info {
+    margin-top: -315rpx;
+    width: 100%;
+    padding: 0 26rpx;
+    box-sizing: border-box;
+
+    .title-bg {
+      width: 132rpx;
+      height: 32rpx;
+    }
+
+    .lottery-form {
+      height: 453rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .not-start-tips {
+        font-size: 36px;
+        color: #03050D;
+        margin-bottom: 24rpx;
+      }
+
+      .start-time {
+        font-size: 24px;
+        color: #FD4948;
+      }
+
+      .phone-input {
+        width: 586rpx;
+        height: 105rpx;
+        font-size: 28rpx;
+        padding: 0 25rpx;
+        border-radius: 20rpx;
+        margin-top: 102px;
+        background: #F3F4F6;
+      }
+
+      .lottery-btn {
+        width: 348rpx;
+        height: 113rpx;
+        margin-top: 60rpx;
+      }
+    }
+
+    .edit-form {
+      justify-content: flex-start;
+    }
+  }
+
+  .activity-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 9;
+    .btn {
+      width: 570px;
+      height: 95px;
+    }
+  }
+
+  .wining-prize {
+    top: 760rpx;
+
+    .wining-prize-box {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 60px 20px 20px;
+
+      .prize-item {
+        position: relative;
+        width: 140rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .prize-icon {
+          width: 140rpx;
+          height: 140rpx;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 18rpx;
+          background: #FFECE7;
+          margin-bottom: 16rpx;
+        }
+
+        .prize-name {
+          width: 100%;
+          text-align: center;
+          font-size: 22rpx;
+          color: #844848;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .coupon-img {
+          width: 140rpx;
+          height: 140rpx;
+        }
+        .copon-tag {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 120rpx;
+          height: 69rpx;
+        }
+      }
+    }
+    .wining-prize-box-2 {
+      .prize-item {
+        margin-right: 140rpx;
+      }
+    }
+    .wining-prize-box-4 {
+      .prize-item {
+        margin-right: 140rpx;
+        &:nth-child(2) {
+          margin-right: 0;
+        }
+        &:nth-child(3),
+        &:nth-child(4) {
+          margin-top: 40rpx;
+        }
+      }
+    }
+    .wining-prize-box-3 {
+      .prize-item {
+        margin-right: 70rpx;
+      }
+    }
+    .wining-prize-box-5 {
+      .prize-item {
+        &:nth-child(3) {
+          margin-right: 0;
+        }
+        &:nth-child(4),
+        &:nth-child(5) {
+          margin-top: 40rpx;
+        }
+      }
+    }
+    .wining-prize-box-over {
+      justify-content: center;
+      flex-wrap: wrap;
+      .prize-item {
+        margin-right: 40rpx;
+      }
+    }
+
+    .not-wining-prize-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20rpx 0 24px;
+
+      .lucky-flower {
+        width: 140rpx;
+        height: 140rpx;
+        margin-bottom: 24rpx;
+      }
+
+      .lucky-text {
+        text-align: center;
+        color: #A41B00;
+        font-size: 24rpx;
+        line-height: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.collapse-list {
+  padding: 8px;
+  border-top: 1px solid #e6e8ed;
+  .collapse-list__value {
+    white-space: wrap;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 38px;
+    color: #24262b;
+  }
+
+  .collapse-list__trigger {
+    font-size: 24px;
+    font-weight: normal;
+    color: #8365f6;
+    padding-top: 8px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .collapse-list__icon {
+    transform: rotate(270deg);
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s;
+  }
+
+  &.collapse-list--collapsed {
+    padding-bottom: 0;
+    .collapse-list__value {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .collapse-list__icon {
+      transform: rotate(90deg);
+    }
+  }
+}

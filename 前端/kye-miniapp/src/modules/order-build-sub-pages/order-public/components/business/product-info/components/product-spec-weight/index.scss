@@ -1,0 +1,44 @@
+.product-spec-required {
+  width: 40px;
+  margin-left: 4px;
+}
+
+.product-info-popover-tips {
+  padding: 20px 16px;
+}
+
+.reminder {
+  margin-top: 2px;
+
+  .reminder__icon {
+    width: 1em;
+    height: 1em;
+    display: block;
+    margin-right: 4px;
+  }
+}
+
+.product-info-actual-weight-popup {
+  padding-right: 0;
+  padding-left: 0;
+
+  &::after {
+    right: 0;
+    left: 0;
+    border: 0;
+  }
+
+  @include hairline(after, $border-bottom-color, bottom);
+}
+
+.product-info-estimateWeight {
+  color: #ff9300;
+}
+
+.product-stepper-content {
+  .ky-input--disabled .h5-input {
+    background: #f7f8fa !important;
+    background-color: #f7f8fa !important;
+  }
+}
+

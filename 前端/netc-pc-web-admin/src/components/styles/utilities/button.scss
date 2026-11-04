@@ -1,0 +1,21 @@
+.ky-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.ky-close-popup-icon {
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: #686B75;
+  cursor: pointer;
+
+  &:hover {
+    fill: #8A61F2;
+  }
+
+  &:active {
+    fill: #3E25E9;
+  }
+}

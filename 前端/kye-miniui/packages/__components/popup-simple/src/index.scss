@@ -1,0 +1,130 @@
+$component: "ky-popup-simple";
+.#{$component}-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: none;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
+.#{$component}-box-show {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.#{$component}-body{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.#{$component}-content {
+  position: fixed;
+  max-width: 100%;
+  max-height: 100%;
+  background: white;
+  overflow: hidden;
+  &.center{
+    position: relative;
+    display: flex;
+    display: inline;
+    width: auto;
+    height: auto;
+  }
+
+  &.top {
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &.top.round{
+    border-radius: 0 0 24px 24px;
+  }
+
+  &.bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &.bottom.round{
+    border-radius: 24px 24px 0 0;
+  }
+
+  &.left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &.left.round{
+    border-radius: 0 24px 24px 0;
+  }
+
+  &.right {
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &.right.round{
+    border-radius: 24px 0 0 24px;
+  }
+}
+
+.popup-center-enter,.popup-center-leave-to  {
+  opacity: 0;
+}
+
+.popup-center-enter-to,.popup-center-leave {
+  opacity: 1;
+}
+
+
+.popup-bottom-enter,.popup-bottom-leave-to  {
+  transform: translateY(100%);
+}
+
+.popup-bottom-enter-to,.popup-bottom-leave {
+  transform: translateY(0);
+}
+
+.popup-top-enter,.popup-top-leave-to  {
+  transform: translateY(-100%);
+}
+
+.popup-top-enter-to,.popup-top-leave {
+  transform: translateY(0);
+}
+
+.popup-left-enter,.popup-left-leave-to  {
+  transform: translateX(-100%);
+}
+
+.popup-left-enter-to,.popup-left-leave {
+  transform: translateY(0);
+}
+
+.popup-right-enter,.popup-right-leave-to  {
+  transform: translateX(100%);
+}
+
+.popup-right-enter-to,.popup-right-leave {
+  transform: translateY(0);
+}
+
+.safe-area-inset-bottom{
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-inset-top{
+  padding-top: env(safe-area-inset-top);
+}

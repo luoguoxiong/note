@@ -1,0 +1,5 @@
+.added-service {
+  &.disabled {
+    @include no-bg-disabled;
+  }
+}

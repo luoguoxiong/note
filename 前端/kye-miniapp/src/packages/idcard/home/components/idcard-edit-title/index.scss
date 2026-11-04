@@ -1,0 +1,38 @@
+.idcard-edit {
+  padding: 0 32px;
+  box-sizing: border-box;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+
+  .idcard-edit-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #24262B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .status-img {
+    width: 88px;
+    height: 34px;
+    margin-left: 8px;
+  }
+
+  .idcard-edit-btn {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+
+  .idcard-edit-text {
+    font-size: 28px;
+    text-align: center;
+    color: #8365F6;
+  }
+}

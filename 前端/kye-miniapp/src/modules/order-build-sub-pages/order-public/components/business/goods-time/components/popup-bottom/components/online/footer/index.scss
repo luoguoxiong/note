@@ -1,0 +1,61 @@
+.goods-time-footer-online {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 128px;
+  padding: 20px 24px;
+  @include popup-footer-border;
+  box-sizing: border-box;
+  bottom: unset !important;
+  .btn {
+    // min-width: 339px;
+    width: 100%;
+    height: 88px;
+    flex: 1;
+  }
+  .goods-current-time {
+    padding: 14px 0;
+    margin-right: 24px;
+    border: 2px solid #8365f6;
+    border-radius: 20px;
+    opacity: 1;
+    box-sizing: border-box;
+    .text {
+      font-size: 34px;
+      font-weight: 600;
+      line-height: 34px;
+      text-align: center;
+      color: #8365f6;
+    }
+    .back-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      font-size: 34px;
+      color: #8365f6;
+      font-weight: 600;
+    }
+    &__tip {
+      margin-top: 6px;
+      font-size: 20px;
+      text-align: center;
+      color: #888ea6;
+      font-weight: normal;
+      line-height: 20px;
+    }
+  }
+  .confirm {
+    width: 100%;
+    height: 88px;
+    font-size: 34px;
+    text-align: center;
+    color: #fff;
+    background: #8365f6;
+    border-radius: 20px;
+    line-height: 88px;
+    font-weight: 600;
+  }
+}

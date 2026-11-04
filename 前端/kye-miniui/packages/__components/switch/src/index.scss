@@ -1,0 +1,119 @@
+$switch-border-radius: 177px;
+$switch-close-bg-color:#E6E8ED;
+
+@keyframes ky-switch-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ky-switch {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  background-color: $primary;
+  border-radius: $switch-border-radius;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  flex: 0 0 auto; // 防止被压缩
+
+  .ky-icon-loading1 {
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+  }
+
+  &.ky-switch--close {
+    background-color: $switch-close-bg-color;
+  }
+  .ky-switch-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: $white;
+    transition: transform 0.3s;
+    box-shadow: 0px 1px 3px 0px rgba(8, 3, 41, 0.24);
+    .ky-switch-label {
+      color: $white;
+      font-size: 24px;
+      &.open {
+        transform: translateX(-16px);
+      }
+      &.close {
+        transform: translateX(16px);
+      }
+    }
+    .ky-switch-loading {
+      width: 12px;
+      height: 12px;
+      border: 2px solid rgba(131, 101, 246, 0.3);
+      border-top-color: #8365f6;
+      border-radius: 50%;
+      animation: ky-switch-rotate 0.8s linear infinite;
+    }
+  }
+  &--disabled {
+    opacity: 0.6;
+  }
+  &--close{
+    background: #E6E8ED;
+  }
+  &--size-normal {
+    min-width: 64px;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    .ky-switch-button {
+      width: 28px;
+      height: 28px;
+      transform: translateX(8%);
+    }
+    &.ky-switch--open {
+      .ky-switch-button {
+        transform: translateX(130%);
+      }
+    }
+  }
+  &--size-large,&--size-medium{
+    min-width:80px;
+    height: 40px;
+    .ky-switch-button {
+      width: 36px;
+      height: 36px;
+      transform: translateX(7%);
+    }
+  }
+  &--size-large {
+    &.ky-switch--open {
+      .ky-switch-button {
+        transform: translateX(120%);
+      }
+    }
+  }
+  &--size-medium {
+    &.ky-switch--open {
+      .ky-switch-button {
+        transform: translateX(120%);
+      }
+    }
+  }
+  &--size-small,&--size-mini{
+    min-width:48px;
+    height: 24px;
+    .ky-switch-button {
+      width: 20px;
+      height: 20px;
+      transform: translateX(12%);
+    }
+    &.ky-switch--open {
+      .ky-switch-button {
+        transform: translateX(130%);
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+/**
+ * 猜您绑定组件样式
+ *
+ * 与 H5 bindCodeGuess/index.scss 保持一致
+ */
+.guess-company-list {
+  padding: 0 32px;
+
+  // 标题区域
+  &__title {
+    display: flex;
+    align-items: flex-end;
+
+    .title-main {
+      font-size: 32px;
+      font-weight: bold;
+      color: #03050d;
+    }
+
+    .title-sub {
+      font-size: 24px;
+      color: #888ea6;
+      margin-left: 8px;
+    }
+  }
+
+  // 推荐公司列表
+  &__list {
+    max-height: 500px;
+    background: #ffffff;
+    border: 2px solid #ebedf5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    margin-top: 26px;
+    overflow-y: auto;
+  }
+
+  // 列表项
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 32px;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: #ebedf5;
+      transform: scaleY(0.5);
+    }
+
+    &:last-child::after {
+      height: 0;
+    }
+
+    .item-left {
+      flex: 1;
+      overflow: hidden;
+
+      .item-name {
+        display: block;
+        font-size: 28px;
+        color: #03050d;
+        line-height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .item-code {
+        display: block;
+        font-size: 24px;
+        color: #888ea6;
+        margin-top: 12px;
+      }
+    }
+
+    .item-loading {
+      display: flex;
+      align-items: center;
+      margin-left: 16px;
+      flex-shrink: 0;
+
+      .loading-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .loading-text {
+        font-size: 24px;
+        color: #8365f6;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  // 空状态
+  &__empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+
+    .empty-text {
+      font-size: 28px;
+      color: #888ea6;
+    }
+  }
+
+  // 底部操作区
+  &__operation {
+    margin-top: 55px;
+
+    .operation-hint {
+      font-size: 32px;
+      font-weight: bold;
+      color: #03050d;
+    }
+
+    .operation-box {
+      margin-top: 32px;
+    }
+
+    .operation-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .item-text {
+        font-size: 28px;
+        color: #03050d;
+        flex: 1;
+      }
+
+      .item-btn {
+        width: 192px;
+        height: 64px;
+        border: 1px solid #8365f6;
+        border-radius: 8px;
+        color: #8365f6;
+        background-color: transparent;
+        font-size: 26px;
+        line-height: 64px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

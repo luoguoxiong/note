@@ -1,0 +1,477 @@
+// 券卡片（750 设计基准）：左券区 + 虚线连接 + 右按钮区
+.coupon-card {
+  position: relative;
+  // scroll-view 横滑范式：inline-flex + 父级 white-space: nowrap（同 industry-info）
+  display: inline-flex;
+  vertical-align: top;
+  align-items: stretch;
+  width: 500px;
+  height: 120px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  margin-right: 24px; // $gap-24
+  &:last-child {
+    margin-right: 48px; // $gap-24
+  }
+
+  &.coupon-card--single {
+    // 单卡自适应占满容器(左区 flex:1 伸展,右区定宽)
+    width: calc(100% - 56px);
+    margin-right: 0;
+  }
+
+  &.coupon-card--disabled {
+    opacity: 0.7;
+  }
+
+  .coupon-card__badge {
+    position: absolute;
+    // DSL：角标 rect 与卡片同点（左上角内），68×28，radius [16,0,16,0]
+    left: 0;
+    top: 0;
+    z-index: 2;
+    height: 28px;
+    padding: 0 8px; // $gap-8
+    display: flex;
+    align-items: center;
+    background: #8365f6;
+    border-radius: 16px 0 16px 0; // $radius-16
+    font-size: 20px; // $fs-20
+    line-height: 28px; // $lh-28
+    color: #ffffff; // $white
+  }
+
+  .coupon-card__left {
+    width: 316px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding-left: 24px; // $gap-24
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 16px 0 0 16px; // $radius-8
+
+    // 移动端 1px 问题:750 基准下 1px 渲染为 0.5 物理像素会丢边,描边统一 2px(=1 物理像素)
+    border: 2px solid #e6e8ed; // $border-default-color
+    border-right: none; // 分隔虚线侧无描边(DSL:连接区直接衔接)
+    // 设计稿实测:暖色调从左侧起向右上消退,纵向均匀;接缝处为纯色,避免与连接条产生色差
+    background: linear-gradient(90deg, rgba(255, 237, 230, 0.4) 0%, rgba(255, 237, 230, 0) 55%), #fff9f8;
+    overflow: hidden;
+  }
+
+  &.coupon-card--single .coupon-card__left {
+    flex: 1;
+  }
+
+  .coupon-card__amount-row {
+    display: flex;
+    align-items: center;
+    gap: 4px; // $gap-4
+  }
+
+  .coupon-card__amount {
+    font-size: 40px;
+    font-weight: 600; // $font-bold
+    line-height: 56px;
+    color: #ff706d; // 券金额红（设计稿 palette p0）
+  }
+
+  .coupon-card__unit {
+    padding-top: 8px; // $gap-8，¥/折 下对齐
+    font-size: 24px; // $fs-24
+    font-weight: 600; // $font-bold
+    line-height: 34px;
+    text-align: center;
+    color: #ff706d;
+  }
+
+  // 免单券大标题（DSL 类型=免单券：32/46 Semibold 红）
+  .coupon-card__freetitle {
+    font-size: 32px;
+    font-weight: 600; // $font-bold
+    line-height: 46px;
+    color: #ff706d;
+  }
+
+  .coupon-card__tag {
+    height: 32px;
+    padding: 0 8px; // $gap-8
+    border-radius: 4px; // $radius-4
+    box-sizing: border-box;
+    border: 2px solid #c4b2ff; // 移动端 1px 问题,统一 2px
+    font-size: 20px; // $fs-20
+    line-height: 28px; // $lh-28
+    display: flex;
+    align-items: center;
+    color: #8365f6;
+
+    // 免单范围标签同描边标签样式
+    &--scope {
+      border-color: #c4b2ff;
+      color: #8365f6;
+    }
+  }
+
+  .coupon-card__desc {
+    font-size: 20px; // $fs-20
+    line-height: 28px; // $lh-28
+    color: #686b75; // $text-color-level3
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  // 券包卡（领券多张，DSL 多类型）：紫渐变整卡 + 渐变描边 + r18
+  &.coupon-card--pack {
+    padding-left: 14px; // DSL pad-l 16 自描边外沿起算,border-box 减 2px 描边
+    border: 2px solid transparent; // $border-width-2
+    border-radius: 16px;
+    background:
+      linear-gradient(154deg, #f0ebff 0%, #e4e0ff 100%) padding-box,
+      linear-gradient(41deg, #c2a9ff 0%, rgba(194, 169, 255, 0) 100%) border-box;
+    // overflow: hidden; // 右区/小券按卡片 r18 裁切
+
+    // DSL：角标与卡片外框同点（绝对定位基于 padding box，需回退 2px 描边）
+    .coupon-card__badge {
+      left: -2px;
+      top: -2px;
+    }
+  }
+
+  // 券包小券列表（136×96 横排，小券间为 24×96 连接区切图，第三张溢出被右区覆盖）
+  .coupon-card__pack-list {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0; // 允许收缩，小券溢出部分被右区覆盖（DSL z 序）
+  }
+
+  // 小券连接区：CSS 绘制 —— 1px 竖虚线(on 2 / off 4) + 白底灰环圆 + 紫⊕(连接帧切图实测)
+  .coupon-card__pack-connector {
+    width: 24px;
+    height: 96px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    position: relative;
+    background-image: repeating-linear-gradient(180deg, #d3d5db 0, #d3d5db 2px, transparent 2px, transparent 6px);
+    background-size: 1px 6px;
+    background-position: center top;
+    background-repeat: repeat-y;
+    background-clip: padding-box, border-box;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      box-sizing: border-box;
+      border: 2px solid #eeeaff;
+      border-radius: 50%;
+      background: #eeeaff;
+    }
+
+    &::before {
+      top: 0px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      bottom: 0px;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+
+    // 连接帧底色
+    &--b {
+      background-color: #fff3ef;
+    }
+
+    &--a {
+      background-color: #fff9f8;
+    }
+  }
+
+  // 白底灰环圆 + 紫⊕(圆直径 22,环 #e6e8ed;⊕ 臂长 11 粗 2,#8365f6)
+  .coupon-card__pack-plus {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    border: 2px solid #e6e8ed;
+    border-radius: 50%;
+    background: #ffffff;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #8365f6;
+    }
+
+    &::before {
+      width: 12px;
+      height: 2px;
+    }
+
+    &::after {
+      width: 2px;
+      height: 12px;
+    }
+  }
+
+  .coupon-card__pack-item {
+    width: 136px;
+    height: 96px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(255, 237, 230, 0) 50%, rgba(255, 237, 230, 0.45) 100%), #fff9f8;
+
+    &:first-child {
+      padding-left: 8px; // $gap-8
+      border-radius: 8px 0 0 8px; // $radius-8
+      background: linear-gradient(270deg, rgba(255, 237, 230, 0) 50%, rgba(255, 237, 230, 0.45) 100%), #fff9f8;
+    }
+
+    &:last-child {
+      padding-right: 8px; // $gap-8
+      border-radius: 0 8px 8px 0; // $radius-8
+      background: linear-gradient(270deg, rgba(255, 237, 230, 0) 50%, rgba(255, 237, 230, 0.45) 100%), #fff9f7;
+    }
+
+    // DSL 类型=两张：小券加宽至 144(144+24+144=312 恰好填满券包组合区)
+    &--pair {
+      width: 144px;
+      flex: 1;
+      &:last-child {
+        background:
+          linear-gradient(90deg, rgba(255, 237, 230, 0) 50%, rgba(255, 237, 230, 0.45) 100%), #fff9f8 !important;
+      }
+    }
+  }
+
+  .coupon-card__pack-amount-row {
+    display: flex;
+    align-items: center;
+    gap: 4px; // $gap-4
+  }
+
+  .coupon-card__pack-amount {
+    font-size: 41px;
+    font-weight: 600; // $font-bold
+    line-height: 56px;
+    color: #ff706d; // 券金额红
+  }
+
+  .coupon-card__pack-unit {
+    padding-top: 8px; // $gap-8
+    font-size: 24px; // $fs-24
+    font-weight: 600; // $font-bold
+    line-height: 34px;
+    color: #ff706d;
+  }
+
+  .coupon-card__pack-type-row {
+    display: flex;
+    align-items: center;
+    gap: 4px; // $gap-4
+  }
+
+  .coupon-card__pack-type {
+    font-size: 20px; // $fs-20
+    line-height: 28px; // $lh-28
+    color: #686b75; // $text-color-level3
+  }
+
+  .coupon-card__pack-count {
+    height: 28px;
+    padding: 0 8px; // $gap-8
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border: 2px solid #c4b2ff; // 移动端 1px 问题,统一 2px
+    border-radius: 16px; // $radius-16
+    font-size: 20px; // $fs-20
+    line-height: 28px; // $lh-28
+    color: #8365f6;
+  }
+
+  // 券包右区（DSL 多优惠券右侧按钮 172×118）：撕边矢量切图 20 + 渐变按钮区 152
+  .coupon-card__pack-right {
+    width: 172px;
+    height: 118px;
+    flex-shrink: 0;
+    align-self: center; // 120 卡内垂直居中 → 顶部偏移 1
+    margin-left: auto;
+    margin-right: -2px; // DSL 右缘贴卡片外框,补偿 2px 描边
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .coupon-card__pack-torn {
+    width: 20px;
+    height: 118px;
+    flex-shrink: 0;
+  }
+
+  .coupon-card__pack-right-inner {
+    width: 152px;
+    height: 118px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 0 16px 0 8px; // DSL pad [0,16,0,8]
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #d6cbff 0%, #e9e2fd 100%);
+    border-radius: 0 16px 16px 0;
+  }
+
+  // 虚线连接区：CSS 绘制 —— 2px 竖虚线(on 4 / off 4) + 上下内凹圆(::before/::after 遮挡)
+  .coupon-card__divider {
+    width: 16px;
+    height: 120px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    position: relative;
+    // 虚线起止 y 10..110(DSL 直线188):透明 border + padding-box 裁剪
+    // border-top: 10px solid transparent;
+    // border-bottom: 10px solid transparent;
+    background-color: #fff9f7; // DSL 连接帧实测纯色
+    background-image: repeating-linear-gradient(180deg, #d3d5db 0, #d3d5db 4px, transparent 4px, transparent 8px);
+    background-size: 2px 8px;
+    background-position: center top;
+    background-repeat: repeat-y;
+    background-clip: padding-box, border-box;
+
+    // 内凹圆:16px,环 2px #e6e8ed(DSL 合并 stroke p1),填充=券区域底色近似值
+    // (区域渐变 rgba(131,101,246,0.08→0.04) 叠白 ≈ #f6f4fd,缺口透出底色、不带紫色)
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      box-sizing: border-box;
+      border: 2px solid #e6e8ed;
+      border-radius: 50%;
+      background: #f7f5fe;
+    }
+
+    &::before {
+      top: 0px;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      bottom: 0px;
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  .coupon-card__right {
+    width: 164px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 0 24px 0 12px; // DSL pad [0,24,0,12]
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 0 16px 16px 0; // $radius-8
+    border: 2px solid #e6e8ed; // $border-default-color(移动端 1px 问题,统一 2px)
+    border-left: none; // 分隔虚线侧无描边(DSL:连接区直接衔接)
+    background: #fff9f8;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .coupon-card__button {
+    width: 128px;
+    height: 48px;
+    border-radius: 8px; // $radius-8
+    background: #8365f6;
+    // miniui 点击态遮罩 ::before 用 border: inherit + border-color:#000,按钮自身无边框则点击态不出现描边
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    &.coupon-card__button--loading {
+      .coupon-card__button-text::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        display: block;
+        background-image: url('https://ic-img.ky-express.com/netc/20250704_76698_!!1751594513407_48_48.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin-right: 6px;
+        animation: coupon-spin 1s linear infinite;
+      }
+    }
+
+    &.coupon-card__button--disabled {
+      opacity: 0.6;
+    }
+  }
+
+  .coupon-card__button-text {
+    font-size: 24px; // $fs-24
+    font-weight: 600; // $font-bold
+    line-height: 34px;
+    color: #ffffff; // $white
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // 已领取/已失效印章（DSL 水印：96×96，opacity 0.2，右区内）
+  .coupon-card__stamp {
+    position: absolute;
+    z-index: 2;
+    right: -20px;
+    top: -28px;
+    width: 96px;
+    height: 96px;
+    // opacity: 0.2;
+  }
+}
+
+// 失效置灰
+// .coupon-card--disabled {
+//   .coupon-card__amount,
+//   .coupon-card__unit,
+//   .coupon-card__desc {
+//     color: #adb0b8; // $text-color-level4
+//   }
+
+//   .coupon-card__tag {
+//     border-color: #adb0b8;
+//     color: #adb0b8;
+//   }
+// }
+
+@keyframes coupon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,136 @@
+.payment-by-third {
+  .body {
+    overflow: scroll;
+    height: 413px;
+    padding-top: 30px;
+    box-sizing: border-box;
+  }
+  .search-btn {
+    width: 95px;
+    height: 52px;
+    font-size: 28px;
+    text-align: center;
+    color: #8365f6;
+    background: #fff;
+    border-radius: 12px;
+    opacity: 1;
+    line-height: 52px;
+    font-weight: $font-normal;
+    &:active {
+      background: #f5f3fe;
+    }
+  }
+  .cur-companyName {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: $font-normal;
+    .label {
+      color: #55596c;
+    }
+    .value {
+      color: #03050d;
+    }
+  }
+  .tips {
+    position: relative;
+    padding-left: 15px;
+    margin-top: 34px;
+    font-size: 22px;
+    color: #888ea6;
+    line-height: 32px;
+    font-weight: $font-normal;
+    .star-tips {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 12px;
+      height: 12px;
+    }
+  }
+  .third-party-payment-account {
+    width: 686px;
+    height: 186px;
+    padding: 24px;
+    margin-top: 32px;
+    background: #f7f8fa;
+    border-radius: 20px;
+    opacity: 1;
+    box-sizing: border-box;
+    &.unselected {
+      pointer-events: none;
+    }
+
+    .tip-title {
+      font-size: 24px;
+      font-weight: $font-normal;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #55596c;
+    }
+    .slide-tag-content {
+      display: flex;
+      margin-top: 12px;
+      min-height: 120px;
+      .account-item {
+        flex-shrink: 0;
+        width: 251px;
+        height: 102px;
+        padding: 20px 24px;
+        margin-right: 20px;
+        font-size: 24px;
+        color: #03050d;
+        background: #fff;
+        border-radius: 20px;
+        box-sizing: border-box;
+        font-weight: $font-normal;
+        line-height: 24px;
+        .label {
+          overflow: hidden;
+          width: 100%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          word-break: keep-all;
+        }
+        .account {
+          overflow: hidden;
+          width: 100%;
+          margin-top: 14px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          word-break: keep-all;
+        }
+      }
+    }
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    width: 750px;
+    height: 128px;
+    padding: 20px 24px;
+    margin-left: -32px;
+    background: #fff;
+    opacity: 1;
+    box-shadow: 0 -6px 20px 0 rgb(184 171 255 / 10%);
+    box-sizing: border-box;
+    .confirm-btn {
+      width: calc(100% - 32px) !important;
+    }
+  }
+  .cell-left-required {
+    width: 40px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+  opacity: 0;
+}

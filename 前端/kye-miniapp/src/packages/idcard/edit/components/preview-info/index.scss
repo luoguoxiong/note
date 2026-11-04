@@ -1,0 +1,67 @@
+  .id-card-page-edit__preview-idcard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background-color: #000;
+
+    .flex-item-center {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .IdcardBaseInfo-warp {
+      width: 100%;
+    }
+
+    .contact-btn {
+      width: 45%;
+      /* 自动布局 */
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 0px;
+
+      border-radius: 44px;
+      opacity: 1;
+      background: #FFFFFF;
+
+      .contact-item-img {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+      }
+
+      .contanct-item {
+        font-size: 26px;
+        font-weight: normal;
+        line-height: 36px;
+        letter-spacing: 0px;
+        margin-left: 8px;
+      }
+    }
+
+    .back-icon {
+      position: absolute;
+      top: 108px;
+      right: 24px;
+      display: block;
+      width: 44px;
+      height: 44px;
+    }
+  }

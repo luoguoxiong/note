@@ -1,0 +1,19 @@
+{
+  "name": "@ky-miniui-lib/calendar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@ky-miniui-lib/button": "workspace:^",
+    "@ky-miniui-lib/popup": "workspace:^",
+    "@ky-miniui-lib/radio": "workspace:^",
+    "@ky-miniui-lib/radiogroup": "workspace:^",
+    "@ky-miniui-lib/utils": "workspace:^"
+  }
+}

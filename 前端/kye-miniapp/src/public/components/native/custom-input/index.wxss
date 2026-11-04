@@ -1,0 +1,8 @@
+.custom-input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.custom-input {
+  width: 100%;
+}

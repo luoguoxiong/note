@@ -1,0 +1,19 @@
+.home-official {
+  width: 710px;
+  position: fixed;
+  bottom: 32px;
+  left: 20px;
+  z-index: 3;
+
+  &__close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 2;
+
+      image {
+          width: 40px;
+          height: 40px;
+      }
+  }
+}

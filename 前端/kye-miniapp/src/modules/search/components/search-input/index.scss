@@ -1,0 +1,37 @@
+.common-search-input {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  .common-search-input__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+  }
+  .common-search-input__controller {
+    flex: 1;
+    border-radius: 12px 0 0 12px;
+    border-right-width: 0;
+    height: 72px;
+    box-sizing: border-box;
+    background: transparent;
+    width: 100% !important;
+    input{
+      height: 100%;
+    }
+    .ky-input--input-container {
+      flex: 1;
+      width: 100% !important;
+      padding: 0;
+      view {
+        height: 100%;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .common-search-input__button {
+    border-radius: 0px 12px 12px 0px;
+    background: #8365f6;
+    min-width: 120px;
+    height: 72px;
+  }
+}

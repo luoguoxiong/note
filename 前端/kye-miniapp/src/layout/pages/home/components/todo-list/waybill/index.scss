@@ -1,0 +1,112 @@
+@import '../common.scss';
+
+.waybill-item {
+  @include card;
+
+  .waybill-item__header {
+    @include card-header;
+
+    .waybill-item__header__right {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .waybill-item__content {
+    position: relative;
+    @include card-content;
+
+
+    .waybill-item__tips{
+      width: 306px;
+      height: 32px;
+      font-size: 20px;
+      font-weight: normal;
+      text-align: center;
+      color: #FA7D00;
+      position: absolute;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('https://ic-img.ky-express.com/netc/20221024_54751702294_!!1666578066988_612_68.png')
+    }
+
+    .waybill-item__info {
+      @include express-info;
+    }
+
+    .waybill-item__content-form {
+      @include form;
+      padding-bottom: 24px;
+
+      .ky-tag {
+        margin: 0;
+        margin-left: 8px;
+        height: 34px;
+        border-radius: 4px;
+        background-color: #f0fff7;
+      }
+    }
+  }
+}
+
+.waybill-empty-status {
+  height: 296px;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 40px;
+  text-align: center;
+  color: #686b75;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 24px;
+}
+
+.waybill-card__limit-bar {
+  padding: 12px;
+}
+
+.waybill-card__title--tag {
+  width: 110px;
+  height: 32px;
+  opacity: 0.96;
+  background: #FFF3E5;
+  border: 1px solid #ffd194;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #ff9300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 22px;
+}
+
+.waybill-item-stamp-box{
+  position: absolute;
+  right: 25%;
+  top: 12px;
+
+  image {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+.ky-dialog .tips.ql-editor .content {
+  text-align: left;
+
+  view, text {
+    display: inline;
+  }
+}

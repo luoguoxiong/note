@@ -1,0 +1,27 @@
+{
+  "name": "@kye-netc/native",
+  "version": "0.2.2",
+  "description": "",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "dev": "father dev",
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "publish": "father build && npm publish --ignore-scripts"
+  },
+  "dependencies": {
+    "@kye-netc/utils": "workspace:^",
+    "js-md5": "^0.7.3",
+    "@types/js-md5": "0.7.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://nexus.ky-tech.com.cn:8081/repository/npmjs-hosted"
+  },
+  "devDependencies": {
+    "father": "^4.5.3"
+  },
+  "author": "",
+  "license": "ISC"
+}

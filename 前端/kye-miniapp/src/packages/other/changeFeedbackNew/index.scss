@@ -1,0 +1,39 @@
+
+.auth-mismatch{
+  padding-top: 160px;
+  &__title{
+    text-align: center;
+    font-size: 28px;
+    color: #03050d;
+    line-height: 40px;
+  }
+  &__content{
+    margin-top: 130px;
+    image{
+      width: 280px;
+      height: 280px;
+      display: block;
+      margin: 0 auto;
+    }
+    view{
+      font-size: 28px;
+      font-weight: 400;
+      text-align: center;
+      color: #6e6d72;
+      margin-top: 30px;
+    }
+  }
+  &__btn{
+    margin-top: 36px;
+    text-align: center;
+    //width: 192px;
+    //height: 78px;
+    //border: 1px solid #8365f6;
+    //border-radius: 10px;
+    //margin: 0 auto;
+    //margin-top: 36px;
+    //font-size: 30px;
+    //font-weight: bold;
+    //color: #8365f6;
+  }
+}

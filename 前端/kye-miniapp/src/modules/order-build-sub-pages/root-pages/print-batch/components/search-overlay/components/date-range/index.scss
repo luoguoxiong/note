@@ -1,0 +1,60 @@
+$c_03050d: #03050d;
+$c_8365f6: #8365F6;
+
+.date-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // width: 461px;
+    height: 60px;
+    padding: 0 24px;
+    background: #f7f8fa;
+    border-radius: 10px;
+
+    &__time {
+        display: flex;
+        justify-content: space-between;
+        width: 374px;
+        font-size: 24px;
+        text-align: left;
+        color: #888ea6;
+        font-weight: 400;
+
+        div:nth-child(2) {
+            color: $c_03050d;
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.footer-tip {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #888EA6;
+}
+
+// .active-range{
+//   @include hairline-round(#8365f6, 10px);
+//   background: rgba(131,101,246,0.08);
+//   .date-range__time{
+//     color: $c_03050d;
+//   }
+// }
+.label {
+    margin: 24px 0;
+    font-size: 26px;
+    color: #03050D;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+:deep(.van-calendar__body) {
+    flex: none;
+    height: 700px;
+}

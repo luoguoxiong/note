@@ -1,0 +1,59 @@
+.info {
+  background: #ffffff;
+  padding: 16px 32px;
+  margin-top: 8px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  &-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-left {
+      display: flex;
+      align-items: center;
+
+      .desc {
+        display: flex;
+        align-items: center;
+        &-image {
+          width: 24px;
+          height: 24px;
+          margin-right: 4px;
+        }
+        &-text {
+          font-size: 24px;
+          line-height: 34px;
+          color: #8365f6;
+        }
+      }
+
+      .title {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 46px;
+        color: #24262b;
+        margin-right: 24px;
+      }
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+
+      .push {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        line-height: 34px;
+        color: #686b75;
+        &-text {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  &-logistics {
+    flex: 1;
+  }
+}

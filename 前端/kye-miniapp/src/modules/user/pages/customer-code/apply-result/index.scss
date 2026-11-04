@@ -1,0 +1,215 @@
+.apply-bind-result {
+  &__header {
+    padding: 160px 64px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .staus {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .icon {
+        width: 120px;
+        height: 120px;
+      }
+
+      .text {
+        margin-top: 32px;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        color: #24262b;
+        line-height: 52px;
+      }
+    }
+
+    .apply-tip {
+      font-size: 28px;
+      color: #24262B;
+      line-height: 40px;
+      text-align: center;
+      margin-top: 16px;
+    }
+  }
+
+  &__body {
+    margin: 0 32px;
+    padding: 32px 32px 0;
+    border-radius: 16px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.03),0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+    .title {
+      font-size: 28px;
+      color: #24262B;
+      font-weight: 600;
+      line-height: 40px;
+    }
+    .content {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      &__left {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        overflow: hidden;
+        .icon_service {
+          flex-shrink: 0;
+          width: 96px;
+          height: 96px;
+        }
+        .info {
+          flex: 1;
+          margin-left: 16px;
+          overflow: hidden;
+          .name {
+            line-height: 40px;
+            font-size: 28px;
+            color: #03050d;
+            font-weight: 600;
+          }
+          .company {
+            line-height: 36px;
+            font-size: 26px;
+            color: #8C8F99;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+        .empty-text {
+          line-height: 36px;
+          font-size: 26px;
+          color: #8C8F99;
+          margin-left: 16px;
+          flex: 1;
+        }
+      }
+      &__right {
+        display: flex;
+        align-items: center;
+        .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          width: 160px;
+          height: 160px;
+          &.margin_sty {
+            margin-right: 16px;
+          }
+          .icon {
+            width: 88px;
+            height: 88px;
+          }
+          .label {
+            line-height: 36px;
+            font-size: 26px;
+            color: #686B75;
+            margin-top: 8px;
+          }
+        }
+        .icon-bswechat {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          background: url('https://ic-img.ky-express.com/netc/20240822_71621882339_!!1724299963405_180_180.gif')
+            no-repeat center;
+          background-size: 90px;
+        }
+        .icon-phone {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          background: url('https://ic-img.ky-express.com/netc/20240822_34221882324_!!1724299963408_180_180.gif')
+            no-repeat center;
+          background-size: 90px;
+        }
+      }
+    }
+  }
+  &__footer {
+    width: 100%;
+    .back-button {
+      display: block;
+      width: 452px;
+      height: 88px;
+      font-size: 32px;
+      color: #ffffff;
+      font-weight: 600;
+      line-height: 88px;
+      border: none;
+      background-color: #8365f6;
+      border-radius: 16px;
+      box-sizing: border-box;
+      margin: 432px auto 0;
+      &::before {
+        opacity: 0;
+      }
+      &:active {
+        background-color: #6b37f9;
+      }
+      /* width: 100%;
+      height: 88px;
+      background: #8365f6;
+      border-radius: 16px;
+      font-size: 32px;
+      color: #ffffff;
+      font-weight: 600;
+      box-sizing: border-box;
+      &:active {
+        background: #6b37f9;
+      } */
+    }
+  }
+}
+
+/* 联系弹窗样式 */
+.contact-popup {
+  padding: 80px 64px;
+  background: #fff;
+  border-radius: 48px 48px 0 0;
+
+  &__title {
+    font-size: 68px;
+    font-weight: bold;
+    color: #24262b;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  &__phone {
+    background: #f7f8fa;
+    border-radius: 24px;
+    padding: 48px 64px;
+    margin-bottom: 80px;
+
+    .label {
+      font-size: 52px;
+      color: #888ea6;
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    .phone {
+      font-size: 72px;
+      font-weight: 600;
+      color: #24262b;
+      letter-spacing: 4px;
+    }
+  }
+
+  &__actions {
+    .action-btn {
+      width: 100%;
+      height: 192px;
+      background: linear-gradient(138deg, #ac97ff 3%, #8365f6 98%);
+      border-radius: 24px;
+      font-size: 68px;
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+export * as contentEditAPIRquest from './web.activity.businessCard.contentEdit'
+export * as businessCardEditTypes from './web.activity.businessCard.edit'
+export * as IdcardHomeDetailTypes from './web.activity.businessCard.getDetail'
+export * as getDetailForEmployeeTypes from './web.activity.businessCard.getDetailForEmployee'
+export * as getSaleQrCodeAPITypes from './web.activity.businessCard.getSaleQrCode'
+export * as menuEditRequestTypes from './web.activity.businessCard.menuEdit'
+export * as videoLikeRequestTypes from './web.activity.businessCard.videoLike'
+export * as recoverDefaultDutyApiTypes from './web.activity.recover.default.duty'
+export * as quickAnalysisAddressAPITypes from './web.address.star.quickAnalysisAddress'
+export * as getMultiLevelSubListAPITypes from './web.basicBiz.address.getMultiLevelSubList'
+export * as uploadImgDataResponseTypes from './web.user.head.uploadImg'
+

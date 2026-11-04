@@ -1,0 +1,108 @@
+.password-apply {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__header {
+    position: relative;
+
+    .text {
+      height: 160px;
+      background: linear-gradient(0deg, #ffffff 0%, #e1e6ff 100%);
+      padding: 0 32px;
+
+      .tip {
+        font-size: 28px;
+        color: #24262b;
+        line-height: 40px;
+        font-weight: 600;
+        padding: 40px 0 23px;
+      }
+    }
+
+    .img-bg {
+      width: 188px;
+      height: 136px;
+      position: absolute;
+      right: 51px;
+      top: 88px;
+    }
+  }
+
+  &__body {
+    padding: 0 32px;
+
+    .ky-popover-container {
+      width: 100%;
+    }
+
+    .form-item {
+      margin-bottom: 4px;
+      // position: relative;
+
+      .ky-textarea {
+        width: 100%;
+        height: auto;
+        background-color: #f7f8fa;
+        border-radius: 12px;
+        padding-top: 24px;
+        padding-bottom: 28px;
+        padding-left: 24px;
+        padding-right: 24px;
+        font-size: 28px;
+        font-weight: 500;
+        border: 2px solid #e6e8ed;
+
+        .textarea-placeholder {
+          color: #888ea6;
+          font-weight: normal;
+        }
+      }
+
+      .ky-popover-container {
+        // 修改input框高度
+        .ky-input {
+          box-sizing: border-box;
+          height: 88px;
+        }
+        // placeholder 居中问题
+        .ky-input-placeholder {
+          line-height: normal;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    padding-top: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .submit-button {
+      width: calc(100% - 64px);
+      height: 88px;
+      background: #8365f6;
+      border-radius: 12px;
+      font-size: 34px;
+      font-weight: 500;
+      color: #fff;
+      margin: 0 32px;
+      box-sizing: border-box;
+    }
+
+    .tip-text {
+      margin-bottom: 60px;
+      padding-top: 80px;
+      text-align: center;
+      color: #888ea6;
+      line-height: 42px;
+      font-size: 26px;
+
+      .color-sty {
+        color: #8365f6;
+      }
+    }
+  }
+}

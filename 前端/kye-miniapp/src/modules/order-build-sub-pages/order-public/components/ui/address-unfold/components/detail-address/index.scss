@@ -1,0 +1,128 @@
+.address-unfold-detail-address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  &[data-validate='receive.detailAddress'] {
+    padding: 14px 0;
+  }
+
+  &.required-field {
+    .required {
+      flex-shrink: 0;
+      width: 42px;
+      height: 26px;
+      margin-right: 8px;
+      // position: absolute;
+      box-sizing: border-box;
+    }
+    .ky-field-order {
+      // padding-left: 42px;
+      word-break: break-all;
+    }
+  }
+  .ky-field-order::after {
+    display: none;
+  }
+
+  @include hairline(after, $border-bottom-color, bottom, 0, 0);
+
+  .left {
+    flex: 1;
+    padding-right: 24px;
+
+    // .van-field {
+    //   .van-field {
+    //     &__body {
+    //       padding-right: 0;
+    //     }
+
+    //     &__control {
+    //       overflow: hidden;
+    //       height: 40px;
+    //       font-size: 28px;
+    //       text-align: justify;
+    //       font-weight: $font-bold;
+    //       line-height: 40px;
+    //     }
+    //   }
+    // }
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    padding-left: 26px;
+    // margin: 26px 0; #600311
+    margin-left: 26px;
+    box-sizing: border-box;
+    flex-direction: column;
+    font-size: 20px;
+    color: #24262b;
+    width: 85px;
+
+    // @include hairline(after, $border-bottom-color, left);
+    border-left: 1.5px solid $border-bottom-color;
+    &__icon {
+      margin-bottom: 2px;
+      width: 32px;
+      height: 32px;
+      background: url('https://ic-img.ky-express.com/netc/20250619_58227_!!1750313961436_56_56.png') no-repeat;
+      background-size: contain;
+    }
+  }
+
+  // &.disabled {
+  //   .ky-field {
+  //     .van-field__control {
+  //       color: #cacaca;
+  //     }
+  //   }
+  // }
+
+  .ky-input {
+    border-bottom: 1px solid transparent;
+  }
+  .ky-input--foucus {
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.address-unfold-detail-address-disabled {
+  background: #f2f3f7;
+  background-clip: content-box;
+  .ky-cell {
+    background: #f2f3f7;
+    background-clip: content-box;
+  }
+  .left {
+    padding-right: 0;
+  }
+  .ky-field-disabled {
+    background: #f2f3f7;
+  }
+  .ky-input--bottom {
+    background: transparent !important;
+    .h5-input {
+      background: transparent !important;
+    }
+  }
+  .ky-field--top--error-text {
+    height: 0;
+  }
+}
+
+.address-unfold-detail__error {
+  padding-bottom: 24px;
+  &:empty {
+    padding-bottom: 0;
+  }
+
+  font-size: 24px;
+  color: $warning;
+  font-weight: normal;
+  line-height: 32px;
+  word-wrap: break-word;
+}

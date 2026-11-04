@@ -1,0 +1,74 @@
+.id-card-page {
+  height: 100vh;
+  width: 100%;
+  background: #f1f2f7;
+  padding-bottom: calc(136px + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+
+  .idcard-home-logo-warp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding-top: 18px;
+    padding-bottom: 40px;
+
+    .logo-style {
+      width: 188px;
+      height: 47px;
+    }
+  }
+
+  .apply-tag {
+    border-radius: 4px;
+    width: 88px;
+    height: 34px;
+    font-size: 24px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF9300;
+    margin-left: 8px;
+    font-weight: normal;
+  }
+
+  .apply-tag.error {
+    background: #FF706D;
+  }
+
+  .icon-apply {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+}
+
+.idcard_canvas_poster_1{
+  width: 420px;
+  height: 338px;
+  position: absolute;
+  z-index: -999;
+  top: -10000px;
+  left: -10000px;
+}
+
+.idcard_canvas_poster_2{
+  width: 558px;
+  height: 430px;
+  position: absolute;
+  z-index: -999;
+  top: -10000px;
+  left: -10000px;
+}
+
+.id-card-page::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background-color: transparent !important;
+}
+
+.id-card-page__without-paddingbottom {
+  padding-bottom: 0 !important;
+}

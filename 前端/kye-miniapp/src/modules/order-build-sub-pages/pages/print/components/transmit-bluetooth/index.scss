@@ -1,0 +1,51 @@
+.transmit-bluetooth {
+  .ky-popup-content {
+    background: none;
+  }
+
+  .ky-popup-body {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: none;
+  }
+
+  .transmit-bluetooth-content {
+    border-radius: 24px;
+    background: #ffffff;
+    width: 622px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    image {
+      width: 280px;
+      height: 280px;
+      margin-bottom: 32px;
+    }
+
+    .transmit-bluetooth-content-title {
+      margin: 32px 0 24px;
+      font-size: 34px;
+      font-weight: 600;
+      line-height: 48px;
+      color: #24262b;
+    }
+
+    .transmit-bluetooth-content-subtitle {
+      padding-bottom: 32px;
+      font-size: 28px;
+      font-weight: normal;
+      line-height: 40px;
+      color: #686b75;
+    }
+  }
+
+  .transmit-bluetooth-close {
+    margin-top: 48px;
+    width: 64px;
+    height: 64px;
+  }
+}

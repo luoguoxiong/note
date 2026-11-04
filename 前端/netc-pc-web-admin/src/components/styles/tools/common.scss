@@ -1,0 +1,80 @@
+/**
+ * 细边框处理
+ */
+/* stylelint-disable */
+@mixin hairline($pseudo: after, $borderColor: #ccc, $direction: '', $radius: 0) {
+  position: relative;
+  &::#{$pseudo} {
+    position: absolute;
+    top: -50%;
+    bottom: -50%;
+    left: -50%;
+    right: -50%;
+    // width: 100%;
+    content: '';
+    box-sizing: border-box;
+    pointer-events: none;
+    transform: scale(0.5);
+
+    @if $direction == left {
+      border-left: 2px solid $borderColor;
+    } @else if $direction == top {
+      border-top: 2px solid $borderColor;
+    } @else if $direction == bottom {
+      border-bottom: 2px solid $borderColor;
+    } @else if $direction == right {
+      border-right: 2px solid $borderColor;
+    } @else {
+      border: 2px solid $borderColor;
+      border-radius: $radius * 2;
+    }
+    @content;
+  }
+}
+
+@mixin middle-dialog-layout {
+  --el-dialog-width: 740px !important;
+  min-height: 208px;
+  height: 80vh;
+  max-height: 864px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  .el-dialog__body {
+    flex: 1;
+    overflow-y: scroll;
+  }
+}
+
+@mixin dialog-auto-height {
+  overflow: hidden;
+  overflow-y: auto;
+  min-height: 160px;
+  height: calc(80vh - 48px);
+  box-sizing: border-box;
+}
+
+@mixin input-suffix-clear-svg {
+  svg {
+    display: none;
+  }
+  width: 12px;
+  height: 12px;
+  background: url('@/assets/clear.png') no-repeat;
+  background-size: 100%;
+}
+
+@mixin common-popover-placement {
+  &[data-popper-placement='top-start'] {
+    margin-bottom: -10px;
+  }
+  &[data-popper-placement='top-end'] {
+    margin-bottom: -10px;
+  }
+  &[data-popper-placement='bottom-start'] {
+    margin-top: -10px;
+  }
+  &[data-popper-placement='bottom-end'] {
+    margin-top: -10px;
+  }
+}

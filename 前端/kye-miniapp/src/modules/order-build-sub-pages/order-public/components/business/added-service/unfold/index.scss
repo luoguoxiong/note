@@ -1,0 +1,186 @@
+.added-service-unfold {
+
+  .single-receipt-service {
+    position: relative;
+    .single-receipt-service-label {
+      position: absolute;
+      bottom: 10px;
+      left: 24px;
+      font-size: 24px;
+      color: #ff9300;
+      text-align: right;
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    .ky-cell-extra {
+      width: 100%;
+      text-align: right;
+      box-sizing: border-box;
+    }
+  }
+  .package-sevice-unflod {
+    position: relative;
+    &.has-tips {
+      .ky-cell {
+        // padding-bottom: 60px;
+      }
+    }
+    .package-sevice-unflod-label {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 24px;
+      color: #ff9300;
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    .package-sevice-unflod-value {
+      @include ellipsis;
+    }
+    .ky-cell-extra {
+      width: 100%;
+      text-align: right;
+      box-sizing: border-box;
+      margin-top: 0.1rem;
+    }
+  }
+  .added-service-unfold-prompt-wrapper {
+    position: relative;
+    .added-service-unfold-prompt {
+      position: absolute;
+      top: -60px;
+      right: 30px;
+      .popup-prompt-wrapper {
+        position: relative;
+        padding: 16px 20px;
+        font-size: 24px;
+        color: #fff;
+        background: rgb(0 0 0 / 70%);
+        border-radius: 8px;
+        backface-visibility: hidden;
+        font-weight: 600;
+        line-height: 1.4;
+        &::before {
+          position: absolute;
+          right: 50px;
+          bottom: -8px;
+          border-style: solid;
+          border-width: 12px 12px 0;
+          border-color: transparent;
+          border-top-color: rgb(0 0 0 / 70%);
+          content: '';
+        }
+      }
+    }
+
+    .single-receipt-service-unfold {
+      .cell-wrapper {
+        .ky-cell {
+          &::after {
+            position: absolute;
+            width: 662px;
+            margin: 0;
+            content: '';
+            inset: -50% 0 -50% 24px;
+            box-sizing: border-box;
+            pointer-events: none;
+            transform: scaleY(0.5);
+            border-bottom: 2px solid #ebedf5;
+          }
+        }
+      }
+    }
+  }
+  .single-collect-payment {
+    padding: 36px 24px;
+  }
+  .goodsControl {
+    position: relative;
+    padding: 24px;
+    padding-bottom: 0;
+    @include hairline(after, $border-bottom-color, bottom);
+  }
+
+  .ky-cell {
+    .receipt-cell-value {
+      justify-content: flex-end;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: flex;
+      // width: 500px;
+      @include ellipsis;
+      .cell-value-title {
+        color: #03050d;
+        font-weight: 600;
+        flex: 1;
+        @include ellipsis;
+      }
+      .cell-value-icon {
+        padding: 0 6px;
+        margin-top: 2px;
+        display: inline-flex;
+        border-radius: 6px;
+      }
+      .urgent-icon {
+        margin-top: 2px;
+        margin-right: -4px;
+      }
+
+      // 加急
+      .urgent {
+        font-size: 26px;
+        line-height: 22px;
+        color: #f57200;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .dismantling-wooden-frame-unfold {
+    position: relative;
+    padding: 37px 23px;
+    @include hairline(after, $border-bottom-color, bottom);
+    .bottom-desc {
+      padding-top: 14px;
+    }
+  }
+}
+.added-service-unfold-popup {}
+.added-service-bottom-unfold, .added-service-bottom-unfold-package-popup {
+  .added-service-bottom-unfold-receipt,
+  .added-service-bottom-unfold-package {
+    overflow-y: scroll;
+    min-height: 348px;
+    padding-bottom: 126px;
+    position: relative;
+    .position-wrap {
+      background-color: transparent;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 100;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+.added-service-bottom-unfold-package-popup.bottom-popup {
+  .content__tip .content__tip__text {
+    font-size: 24px;
+    color: #ff9300;
+  }
+  .added-service-bottom-unfold-package {
+    padding-top: 16px;
+  }
+  .container__body {
+    padding-top: 0;
+  }
+  .color-sub-title {
+    padding-top: 0;
+  }
+}

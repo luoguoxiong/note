@@ -1,0 +1,150 @@
+.setting-page {
+  position: relative;
+  padding: 0 32px;
+  padding-bottom: calc(64px + env(safe-area-inset-bottom));
+  background: #ffffff;
+  flex: 1;
+  // box-sizing: border-box;
+  // display: flex;
+  // flex-direction: column;
+  // min-height: 100%;
+
+  .setting-page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 0;
+    .logo {
+      width: 148px;
+      height: 148px;
+    }
+    .title {
+      margin-top: 32px;
+      font-family: PingFang SC;
+      font-size: 30px;
+      font-weight: normal;
+      line-height: 36px;
+      text-align: center;
+      letter-spacing: normal;
+      color: #6e6d72;
+    }
+  }
+  &-item {
+    height: 96px;
+    border-bottom: 1px solid #e6e8ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+  }
+  &-item-label {
+    color: #24262b;
+  }
+  &-item-text {
+    flex: 1;
+    line-height: 1;
+  }
+  &-item-value {
+    color: #686b75;
+    line-height: 1;
+    margin-right: 8px;
+    &-app-version {
+      display: flex;
+      align-items: center;
+    }
+    &-badge {
+      margin-right: 10px;
+      width: 18px;
+      height: 18px;
+      background: #f75c76;
+      border: 2px solid #ffffff;
+      border-radius: 100%;
+    }
+    &-version {
+      color: #686b75;
+    }
+  }
+  &-item-arrow {
+    width: 28px;
+    height: 28px;
+  }
+  &-btn-group {
+    margin-top: 96px;
+    .ky-button {
+      margin: 0 auto 32px;
+      width: 100%;
+      height: 88px;
+      // font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-loginout {
+    // font-size: 32px;
+    // font-weight: 600;
+    // color: #24262b;
+    // width: 688px;
+    // margin: 108px auto 0;
+    // border: 2px solid #d3d5db;
+    // box-sizing: border-box;
+    // background: #ffffff;
+    // border-radius: 16px;
+  }
+  .version {
+    // position: fixed;
+    // bottom: 80px;
+    // left: 0;
+    padding-top: 24px;
+    margin-top: auto;
+
+    width: 100%;
+    &-content {
+      text-align: center;
+      font-size: 24px;
+      color: #888ea6;
+    }
+  }
+  &-account-cancel {
+    text-align: center;
+    font-size: 24px;
+    color: #979797;
+    font-weight: 500;
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    &-confirm {
+      text-decoration: underline;
+    }
+  }
+}
+
+.setting-page-copyright {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  line-height: 64px;
+  padding-bottom: env(safe-area-inset-bottom);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  background: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  color: #8c8f99;
+}
+
+/* 一键退登请求执行中：入口置灰 */
+.setting-page-item--disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}

@@ -1,0 +1,148 @@
+.batch-scan-wait-container {
+  width: 100vw;
+  position: relative;
+
+  .custom-top-right {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    padding: 11px 16px;
+    color: #8a6df7;
+    background-color: #ffffff;
+    border-radius: 8px;
+    position: absolute;
+    line-height: 1;
+
+    image {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .scan-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .scan-camera {
+    width: 100vw;
+    height: 100%;
+  }
+  .guide {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 686px;
+    height: 372px;
+    z-index: 3;
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 208px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .scan-frame {
+    position: absolute;
+    top: 208px;
+    width: 100%;
+    height: 528px;
+    display: flex;
+    z-index: 2;
+
+    .scan-left,
+    .scan-right {
+      width: 111px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .scan-center {
+      flex: 1;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.01);
+
+      .corner {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-style: solid;
+        border-color: #ffffff;
+        box-sizing: content-box;
+      }
+
+      .top-left {
+        top: -4px;
+        left: -4px;
+        border-width: 8px 0 0 8px;
+      }
+
+      .top-right {
+        top: -4px;
+        right: -4px;
+        border-width: 8px 8px 0 0;
+      }
+
+      .bottom-left {
+        bottom: -4px;
+        left: -4px;
+        border-width: 0 0 8px 8px;
+      }
+
+      .bottom-right {
+        bottom: -4px;
+        right: -4px;
+        border-width: 0 8px 8px 0;
+      }
+    }
+  }
+
+
+  .scan-footer {
+    position: absolute;
+    top: calc(208px + 528px);
+    z-index: 1;
+    width: 100%;
+    height: calc(100vh - 208px - 528px + 50px);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 80px;
+
+    .tips {
+      font-size: 26px;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .scan-footer-btn {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 172px;
+
+      .btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 32px;
+        color: #FFFFFF;
+
+        image {
+          width: 120px;
+          height: 120px;
+          margin: 48px 0 24px;
+        }
+      }
+    }
+  }
+}

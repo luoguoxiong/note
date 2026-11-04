@@ -1,0 +1,83 @@
+.c-a-b-p {
+  .clear-ranglist-item {
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    z-index: 0;
+    height: 96px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #e6e8ed;
+    margin-bottom: 23px;
+    &:active {
+      background: var(--active-bg); /* 按下时的颜色 */
+    }
+    .rl-i-l {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      flex: 1;
+      .icon {
+        width: 28px;
+        height: 28px;
+        margin-right: 16px;
+      }
+      .ranglist-item-title {
+        font-family: PingFang SC;
+        font-size: 32px;
+        font-weight: 600;
+      }
+      .ranglist-item-tip {
+        font-family: PingFang SC;
+        font-size: 26px;
+        font-weight: normal;
+        color: #686b75;
+        margin-left: 8px;
+      }
+    }
+
+    .ranglist-item-btn {
+      font-family: PingFang SC;
+      font-size: 26px;
+      font-weight: normal;
+      letter-spacing: normal;
+      color: #8365f6;
+      height: 100%;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .clear-ranglist-item-active {
+    background: #f2effe;
+    border: 1px solid #8365f6;
+  }
+
+  .clear-ranglist-item-disabled {
+    background: #f1f2f7;
+    border: 1px solid #e6e8ed;
+    color: #8c8f99;
+    .rl-i-l {
+      .ranglist-item-tip {
+        color: #8c8f99;
+      }
+    }
+  }
+
+  .bottom-tip {
+    text-align: center;
+    font-family: PingFang SC;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 34px;
+    text-align: center;
+    letter-spacing: normal;
+    color: #8c8f99;
+    margin-top: 24px;
+  }
+}

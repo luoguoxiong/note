@@ -1,0 +1,113 @@
+.waybill-special-encrypt-popup {
+  position: relative;
+
+  .encrypt-popup-img {
+    display: block;
+    width: 100%;
+  }
+
+  .encrypt-popup-mark {
+    position: absolute;
+    top: 77px;
+    left: 40px;
+    padding-right: 10px;
+
+    .encrypt-popup-mark-title {
+      font-size: 48px;
+      font-weight: 600;
+    }
+
+    .encrypt-popup-mark-icon {
+      margin-left: 18px;
+      font-size: 34px;
+    }
+  }
+
+  .encrypt-popup-block {
+    padding: 24px 32px 32px 32px;
+    background-color: #fff;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+
+    &-setting {
+      padding: 24px;
+      background-color: #fafafc;
+      border-radius: 24px;
+
+      &-title {
+        &-content {
+          display: flex;
+          flex: 1;
+          justify-content: space-between;
+          .text{
+            font-weight: $font-bold;
+          }
+          .rule-title {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: normal;
+            color: #686B75;
+
+            .icon {
+              margin-left: 4px;
+            }
+          }
+        }
+      }
+
+      &-content {
+        margin-top: 24px;
+        background-color: #fff;
+        border: 2px solid $border-bottom-color;
+        border-radius: 16px;
+        overflow: hidden;
+        .lastencrypt-popup-content-cell {
+          &::after {
+            display: none !important;
+          }
+        }
+      }
+    }
+
+    &-type {
+      padding: 24px;
+      margin-top: 20px;
+      background-color: #fafafc;
+      border-radius: 24px;
+
+      &-title {
+        padding-bottom: 24px;
+      }
+
+      &-checkbox {
+        margin-top: 24px;
+        .radio-icon {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    &-desc {
+      padding-top: 8px;
+      padding-left: 32px;
+
+      font-size: 24px;
+      font-weight: normal;
+      line-height: 34px;
+      color: #8C8F99;
+
+      p {
+        margin: 0;
+        color: #8c8f99;
+      }
+    }
+  }
+}
+
+.waybill-special-encrypt-disabled {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}

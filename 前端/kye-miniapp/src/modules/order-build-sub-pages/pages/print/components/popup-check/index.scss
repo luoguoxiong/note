@@ -1,0 +1,62 @@
+.popup-check-header {
+  padding: 16px 16px 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E6E8ED;
+
+  text {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #24262B;
+  }
+
+  image {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.type {
+  padding: 32px;
+
+  .type-item {
+    display: flex;
+    align-items: center;
+    border: 2px solid #e6e8ed;
+    border-radius: 12px;
+    height: 96px;
+    margin-bottom: 24px;
+    padding: 0 24px;
+
+    &.active {
+      border-color: #8365f6;
+      background: #f2effe;
+    }
+
+    .radio-content {
+      position: relative;
+      display: inline-block;
+      margin-right: 16px;
+      // height: 28px !important;
+
+      .radio-checked {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    .type-item-text {
+      font-size: 32px;
+      font-weight: 600;
+      color: #24262b;
+    }
+
+    .type-item-desc {
+      font-size: 26px;
+      color: #686b75;
+      margin-left: 8px;
+    }
+  }
+}

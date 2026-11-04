@@ -1,0 +1,117 @@
+.air-contraband {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 24px;
+  background: #fff;
+  border-radius: 12px;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      font-size: 28px;
+      font-weight: 600;
+      color: #333;
+    }
+    .icon-img {
+      position: relative;
+      padding-left: 40px;
+      font-size: 28px;
+      font-weight: 600;
+      color: #8365f6;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        background: url('https://ic-img.ky-express.com/netc/20250619_36133_!!1750313271962_62_60.png') no-repeat;
+        background-size: 100%;
+        content: '';
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__list {
+    // float: left;
+    &--item {
+      margin-top: 80px;
+      &:first-child {
+        margin-top: 48px;
+      }
+    }
+    &--item:nth-child(13) {
+      .air-contraband__list--title {
+        width: 495px;
+      }
+    }
+    &--title {
+      font-size: 28px;
+      font-weight: 600;
+      color: #333;
+      line-height: 40px;
+    }
+    &--img {
+      width: 100%;
+      min-height: 153px;
+      margin-top: -10px;
+    }
+    &--text {
+      margin-top: 24px;
+      font-size: 24px;
+      white-space: pre-wrap;
+      color: #333;
+      line-height: 36px;
+      font-weight: 400;
+    }
+  }
+
+  &-popup {
+    height: 100%;
+
+    :deep(.netc-bottom-popup__body) {
+      display: flex;
+      overflow: auto;
+      height: 100%;
+      padding: 0;
+      flex-direction: column;
+    }
+
+    &-icons {
+      &__content {
+        display: flex;
+        // overflow: auto;
+        padding: 12px;
+        flex: 1;
+        flex-wrap: wrap;
+        &__list {
+          display: flex;
+          align-items: center;
+          width: 25%;
+          margin-bottom: 33px;
+          flex-direction: column;
+          img {
+            width: 130px;
+            height: 130px;
+          }
+          span {
+            margin-top: 14px;
+            font-size: 24px;
+            font-weight: 400;
+            color: #999;
+          }
+        }
+        &__tips {
+          margin: 0 20px 10px;
+          font-size: 26px;
+          text-align: justify;
+          color: #666;
+          font-weight: 400;
+          line-height: 37px;
+        }
+      }
+    }
+  }
+}

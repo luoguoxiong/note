@@ -1,0 +1,41 @@
+.miniprogram {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+
+  &__banner {
+    image {
+      width: 100%;
+      height: 788px;
+    }
+  }
+
+  &__footer {
+    width: 542px;
+    height: 88px;
+    background: linear-gradient(138deg, #ac97ff 3%, #8365f6 98%);
+    border-radius: 12px;
+    font-size: 34px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 36px;
+  }
+
+  &__logo {
+    position: fixed;
+    bottom: 140px;
+    left: 0;
+    width: 100%;
+
+    image {
+      display: block;
+      margin: 0 auto;
+      width: 224px;
+      height: 56px;
+    }
+  }
+}

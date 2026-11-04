@@ -1,0 +1,119 @@
+.package-service--list {
+  + .package-service--list {
+    margin-top: 24px;
+  }
+  .type-select-tip {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 24px;
+    font-weight: normal;
+    color: #888ea6;
+    margin-bottom: 16px;
+
+    .single-tip {
+      margin-left: 8px;
+    }
+
+    // &.other-package {
+    //   margin-top: 24px;
+    // }
+  }
+  .scroll-height {
+    height: auto;
+    &::-webkit-scrollbar-track-piece {
+      background-color: #f1f1f1;
+      border-left: 1px solid rgba(0, 0, 0, 0);
+    }
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 13px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      display: block;
+      /* #ifdef h5 */
+      display: block;
+      /* #endif */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #c1c1c1;
+      background-clip: padding-box;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      min-height: 28px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #787878;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+  }
+}
+
+.package-service-tips {
+  display: flex;
+  font-size: 24px;
+  color: #ff706d;
+  margin-top: 4px;
+  margin-bottom: 40px;
+  .reminder-icon {
+    width: 24px;
+    margin-right: 8px;
+  }
+  span {
+    flex: 1;
+  }
+}
+
+.package-service-content {
+  flex-wrap: nowrap;
+  display: flex;
+  position: relative;
+  // margin-bottom: 24px;
+  // padding-bottom: 18px;
+  width: max-content;
+
+  /* windows小程序横向滚动问题：https://developers.weixin.qq.com/community/develop/doc/00024cc1e902281c407c0dbc253400 */
+  /* 手动绘制一个scrol-bar，原因如上 */
+  &::-webkit-scrollbar-track-piece {
+    background-color: #f1f1f1;
+    border-left: 1px solid rgba(0, 0, 0, 0);
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 13px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    background-clip: padding-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    min-height: 28px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #787878;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  &:not(.in-pc-mina-env) {
+    &::-webkit-scrollbar {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  .edit-return-waybill {
+    position: absolute;
+    inset: 0;
+    z-index: 12;
+  }
+}

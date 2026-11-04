@@ -1,0 +1,29 @@
+@import '../common.scss';
+
+.todo-adjust-auth {
+  @include card;
+
+  .todo-adjust-auth__header {
+    @include card-header;
+  }
+
+  .todo-adjust-auth__content {
+    display: flex;
+    flex-direction: column;
+
+    .todo-adjust-auth__info {
+      @include express-info;
+    }
+
+    .todo-adjust-auth__form {
+      @include form;
+      padding-bottom: 24px;
+    }
+  }
+
+  .todo-adjust-auth__footer {
+    @include card-footer;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+}

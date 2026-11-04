@@ -1,0 +1,38 @@
+.advertisement-banner  {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  
+  .advertisement-banner-swiper{
+    width: 100%;
+    height:  100%;
+  }
+  .img {
+    width: 100%;
+    height:  100%;
+    display: block;
+    touch-action: none;
+  }
+  .advertisement-banner-dots{
+    position: absolute;
+    bottom: 12px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  .advertisement-banner-dots-item{
+    width: 16px;
+    height: 4px;
+    border-radius: 2px;
+    opacity: 0.5;
+    margin-right: 4px;
+    background: #FFFFFF;
+  }
+  .advertisement-banner-dots-item-active{
+    opacity: 1;
+  }
+}

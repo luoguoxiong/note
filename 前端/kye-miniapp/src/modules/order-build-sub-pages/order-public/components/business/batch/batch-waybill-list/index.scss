@@ -1,0 +1,273 @@
+.batch-waybill-list {
+  background-color: $bg-page;
+  &-content {
+    .waybill-item {
+      position: relative;
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 24px;
+      &-content {
+        position: relative;
+      }
+      .item-gray {
+        color: #8c8f99 !important;
+        .item-gray-text {
+          color: #8c8f99 !important;
+        }
+      }
+      &-left-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 54px;
+        height: 36px;
+        text-align: center;
+        color: #fff;
+        background-color: $primary;
+        border-radius: 11.37px 0 18px;
+        line-height: 36px;
+        &.disabled {
+          color: #fff;
+          background: #cdc1fb;
+        }
+      }
+      &-receive {
+        padding: 24px 24px 24px 60px;
+        &-head {
+          .person-content {
+            max-width: 366px;
+
+            @include ellipsis;
+          }
+          &-phone {
+            position: relative;
+            flex-shrink: 0;
+            margin-left: 12px;
+            font-size: 34px;
+            font-weight: 500;
+          }
+          &-space {
+            flex: 999;
+            margin-right: 60px;
+          }
+          &-delete {
+            position: absolute;
+            right: 0;
+            width: 60px;
+            padding: 24px;
+            text-align: right;
+            &-icon {
+              flex-shrink: 0;
+              width: 36px;
+              height: 36px;
+              // padding-left: 20px;
+              // margin-top: -2px;
+              // margin-left: 24px;
+              font-size: 36px;
+              line-height: 36px;
+            }
+          }
+          &-tips {
+            flex: 1;
+            font-size: 32px;
+            color: #888ea6;
+          }
+        }
+        &-address {
+          padding-top: 12px;
+          line-height: 36px;
+        }
+      }
+      &-info {
+        position: relative;
+        padding: 0 24px 24px;
+        &-content {
+          background-color: $bg-input;
+          border: 2px solid $bg-input-disable;
+          border-radius: 12px;
+          &-cell {
+            position: relative;
+            padding: 0 24px;
+            height: 74px;
+            &::after {
+              position: absolute;
+              right: 24px;
+              bottom: 0;
+              left: 24px;
+              height: 1.5px;
+              background-color: $bg-input-disable;
+              content: '';
+            }
+            &:last-child {
+              &::after {
+                height: 0;
+              }
+            }
+            .cell-label {
+              color: $text-color-level2;
+              .waybill-item-cell-required {
+                width: 40px;
+                margin-left: 8px;
+              }
+            }
+            .cell-value {
+              flex: 1;
+              text-align: right;
+              font-weight: 500;
+              height: 100%;
+
+              @include ellipsis;
+              &-original-price {
+                margin-right: 10px;
+                text-decoration: line-through;
+              }
+              &.blod-text {
+                font-weight: 600;
+              }
+              .info-text {
+                display: block;
+                height: 100%;
+                line-height: 74px;
+                @include ellipsis;
+              }
+            }
+            svg {
+              margin-left: 16px;
+            }
+            .placeholder {
+              font-weight: normal;
+            }
+          }
+        }
+      }
+
+      &-restrict {
+        position: relative;
+        padding: 0 24px 24px;
+        &-content {
+          padding: 16px 12px;
+          border-radius: 12px;
+        }
+        .restrict-content-10 {
+          color: #f05a05;
+          background-color: #fffaf3;
+        }
+        .restrict-content-20 {
+          color: #073385;
+          background-color: #eef3fc;
+        }
+        .restrict-content-30 {
+          color: #073385;
+          background-color: #eef3fc;
+        }
+        .restrict-content-40 {
+          color: #00617d;
+          background-color: #effcff;
+        }
+        .restrict-content-50 {
+          color: #f15556;
+          background-color: #fff9f7;
+        }
+        .restrict-content-60 {
+          color: #f15556;
+          background-color: #fff9f7;
+        }
+        .restrict-content-70 {
+          color: #1236ad;
+          background-color: #f0f8ff;
+        }
+        .restrict-content-80 {
+          color: #f05a05;
+          background-color: #fffaf3;
+        }
+        .restrict-content-200,
+        .restrict-content-4001 {
+          color: #5848a8;
+          background-color: #f6f5ff;
+        }
+        .restrict-content-delete {
+          position: absolute;
+          top: -2px;
+          right: 24px;
+          .icon {
+            width: 36px;
+            height: 28px;
+          }
+        }
+      }
+      &-restrict-icon {
+        position: absolute;
+        top: 80px;
+        right: 110px;
+        z-index: 3;
+        svg,
+        img,
+        i {
+          width: 112px;
+          height: 112px;
+        }
+      }
+      &-restrict-background {
+        position: absolute;
+        inset: 0;
+        top: 88px;
+      }
+      .restrict-style {
+        .waybill-item-receive-head {
+          color: red !important;
+        }
+      }
+      .gray-color {
+        color: #cacaca;
+      }
+    }
+  }
+  .receive-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px 24px 24px 24px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.95);
+    box-sizing: border-box;
+    border: 2px solid #FF706D;
+    .receive-mask-head-delete {
+      position: absolute;
+      right: 0;
+      width: 40px;
+      padding: 24px;
+      text-align: right;
+    }
+    .receive-mask-content {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .receive-mask-content-tip {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      color: #FF706D;
+    }
+    .receive-mask-go {
+      color: #8365F6;
+    }
+    .icon-tips {
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+    }
+    .right-arrow-blue {
+      margin-right: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.line-height-32 {
+  line-height: 32px;
+}

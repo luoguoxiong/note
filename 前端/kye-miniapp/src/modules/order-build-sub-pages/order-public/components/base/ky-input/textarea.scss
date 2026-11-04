@@ -1,0 +1,75 @@
+.ky-textarea :deep() {
+  .van-cell {
+    padding: 0;
+    &::after {
+      border: none;
+    }
+  }
+  .van-cell__value {
+    overflow: hidden;
+    padding: 16px 24px;
+    color: #ccc;
+    background-color: #f7f8fa;
+    border: 1.5px solid #ebedf5;
+    border-radius: 24px;
+
+    // @include hairline(after, $border-bottom-color, border, 24px);
+  }
+  .van-field__word-limit {
+    color: #888ea6 !important;
+    .van-field__word-num {
+      color: #888ea6 !important;
+    }
+  }
+  .van-field__control {
+    line-height: 40px;
+    text-align: justify;
+    word-break: break-all;
+  }
+  .van-field__control::placeholder {
+    font-size: 28px;
+    font-weight: 400;
+    color: #888ea6;
+  }
+  .remark-list {
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+      overflow: hidden;
+      height: 60px;
+      padding: 18px 24px;
+      margin-top: 20px;
+      margin-right: 20px;
+      font-size: 24px;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #03050d;
+      background-color: #f7f8fa;
+      border-radius: 10px;
+      box-sizing: border-box;
+      font-weight: $font-normal;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+  .van-field__clear {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    z-index: 9;
+    margin: 0;
+    font-size: 24px;
+    &::before {
+      display: none;
+    }
+    &::after {
+      position: relative;
+      left: -12px;
+      z-index: 10;
+      padding: 24px;
+      color: #8365f6;
+      content: '清空';
+    }
+  }
+}

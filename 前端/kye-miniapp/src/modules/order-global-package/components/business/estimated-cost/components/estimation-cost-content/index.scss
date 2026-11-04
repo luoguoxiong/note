@@ -1,0 +1,421 @@
+.order-estimation-cost__popup {
+  overflow-y: auto;
+  max-height: 65vh !important;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  &_content {
+    padding: 32px;
+    background: #fff;
+  }
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    margin-top: 40px;
+    color: #03050d;
+    font-weight: normal;
+    line-height: 40px;
+    .title {
+      display: flex;
+      font-size: 28px;
+      font-weight: $font-bold;
+      color: #03050d;
+    }
+    .title-desc {
+      margin-left: 8px;
+      font-size: 24px;
+      color: #888ea6;
+      font-weight: 400;
+    }
+    .amount {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      color: #03050d;
+      font-weight: 600;
+      height: 100%;
+      .icon-arrow {
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+      }
+      .amount-icon-arrow {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+      }
+      .icon-arrow-up-blue {
+        background: url('https://ic-img.ky-express.com/netc-minapp/svg/order/arrow-down-icon.svg') no-repeat;
+        background-size: cover;
+        transform: rotateX(180deg);
+      }
+      .icon-arrow-down-blue {
+        background: url('https://ic-img.ky-express.com/netc-minapp/svg/order/arrow-down-icon.svg') no-repeat;
+        background-size: cover;
+      }
+    }
+    .no-amount-detail {
+      padding-left: 20px;
+    }
+    .discount-marginR {
+      margin-right: 25px;
+      .coupon-color {
+        color: #ff706d;
+      }
+    }
+
+    &.netc-fs-30 {
+      font-size: 30px;
+    }
+    &.netc-fw-500 {
+      font-weight: $font-bold;
+    }
+  }
+  .detail-marginT {
+    margin-top: 32px;
+  }
+  &-detail-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 28px;
+    color: #03050d;
+    margin-bottom: 8px;
+    .title-left {
+      display: flex;
+      font-size: 24px;
+      color: #686b75;
+    }
+    .detail-title-desc {
+      margin-left: 8px;
+      color: #888ea6;
+      font-weight: 400;
+    }
+  }
+  .title-right {
+    display: flex;
+    align-items: center;
+    .example-desc {
+      display: inline-block;
+      font-size: 22px;
+      text-align: center;
+      color: #8365f6;
+    }
+    .detail-icon-arrow {
+      width: 24px;
+      height: 24px;
+      margin-right: -4px;
+    }
+  }
+  &-fee-tip {
+    position: relative;
+    margin-top: 16px;
+    font-size: 24px;
+    color: #ff706d;
+    line-height: 34px;
+    /* #ifdef h5 */
+    display: flex;
+    /* #endif */
+
+    .warn-icon {
+      position: absolute;
+      top: 3px;
+      width: 24px;
+      height: 24px;
+    }
+    .title-desc {
+      text-indent: 30px;
+      line-height: 34px;
+    }
+    &.batch {
+      padding: 0 32px;
+    }
+  }
+  &-detail-content {
+    padding: 24px;
+    margin-top: 24px;
+    font-size: 24px;
+    background: #f7f8fa;
+    border-radius: 12px;
+    .h5-span {
+      display: inline;
+    }
+  }
+  .formula-line-height {
+    line-height: 34px;
+    .h5-span {
+      display: inline;
+    }
+  }
+  .fee-type {
+    line-height: 44px;
+  }
+  .triangle {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: -8px;
+      left: 36px;
+      width: 24px;
+      height: 24px;
+      background-color: #f7f8fa;
+      border-radius: 4px;
+      content: '';
+      transform: rotate(-135deg);
+    }
+  }
+  .special {
+    padding: 20px;
+    padding-bottom: 24px;
+  }
+  .color-gray-special {
+    color: #8c8f99;
+  }
+  .color-black-special {
+    color: #03050d;
+  }
+  .estimation-flex-space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  .added-value-marginT {
+    margin-top: 36px;
+  }
+  .added-value-marginT:nth-child(1) {
+    margin-top: 0;
+  }
+  .added-value-tips {
+    position: relative;
+    padding-left: 14px;
+    margin-top: 16px;
+    font-size: 22px;
+    color: #888ea6;
+  }
+  .added-value-tips::before {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background: #ff706d;
+    border-radius: 3px;
+    content: '';
+  }
+
+  &-value,
+  &-money {
+    font-size: 30px;
+    color: #03050d;
+  }
+  &-detail-value {
+    font-size: 28px;
+    color: #03050d;
+  }
+  &-desc {
+    margin-right: 10px;
+    margin-left: 20px;
+    font-size: 24px;
+    color: #8365f6;
+  }
+  &-label {
+    display: flex;
+    align-items: center;
+  }
+  &_label {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #888ea6;
+    line-height: 24px;
+    &-fee {
+      margin-top: 16px;
+      line-height: 36px;
+      font-size: 24px;
+      color: #fe743c;
+      svg {
+        margin: -5px 5px 0 0;
+      }
+    }
+  }
+  &-add-service-down,
+  &-add-service-up {
+    width: 20px;
+    height: 20px;
+  }
+  &-reduce-amount {
+    font-size: 30px;
+    color: #ff706d;
+  }
+  &-total-money {
+    font-size: 30px;
+    font-weight: $font-bold;
+    color: #ff706d;
+  }
+  &-add-service-detail {
+    position: relative;
+    padding: 24px 24px 0;
+    margin-bottom: 36px;
+    background: #f7f8fa;
+    border-radius: 12px;
+
+    &::after {
+      position: absolute;
+      top: -16px;
+      left: 33px;
+      width: 0;
+      height: 0;
+      content: '';
+      border-left: 16px solid transparent;
+      border-right: 16px solid transparent;
+      border-bottom: 16px solid #f7f8fa;
+    }
+  }
+  &-description-of-fees {
+    margin-bottom: 20px;
+    background: #f7f8fa;
+    border: 1px solid #ebedf5;
+    border-radius: 12px;
+
+    &-example-charge-way {
+      width: 638px;
+      margin-bottom: 24px !important;
+      line-height: 30px;
+      &-example {
+        position: relative;
+        color: #8365f6;
+        &-dialog {
+          position: absolute;
+          right: -40px;
+          bottom: 50px;
+        }
+      }
+    }
+    &-example {
+      padding: 24px 24px 0;
+      font-size: 20px;
+      &-title {
+        font-size: 22px;
+
+        &-fee-calculate {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      > div {
+        margin-bottom: 16px !important;
+      }
+
+      &-total {
+        padding: 24px 24px 0;
+        font-size: 20px;
+        color: #55596c;
+        background-color: #fff;
+        border-radius: 12px;
+        line-height: 30px;
+        &-title {
+          display: flex;
+          align-items: center;
+          font-size: 22px;
+          font-weight: $font-bold;
+          color: #03050d;
+          line-height: 30px;
+          svg {
+            width: 30px;
+            height: 30px;
+            margin-right: 6px;
+            align-self: flex-start;
+          }
+          .title {
+            align-self: flex-start;
+          }
+          .tips {
+            margin-left: 6px;
+            color: #888ea6;
+            flex: 1;
+            font-weight: 400;
+          }
+        }
+        &-charge-way {
+          padding: 24px 0;
+          line-height: 36px;
+          font-size: 24px;
+          border-bottom: 0.5px dashed #cfd2de;
+        }
+        &-charge-way:last-child {
+          border-bottom: none;
+        }
+        &-charge-way-left {
+          font-weight: $font-bold;
+          color: #03050d;
+        }
+        &-charge-way-equal-to {
+          width: 10px;
+          height: 10px;
+          margin: 0 8px;
+        }
+        &-charge-way-fee-miul {
+          width: 10px;
+          height: 10px;
+        }
+        .linehight {
+          color: #03050d;
+        }
+      }
+    }
+    &-example:first-child {
+      font-size: 20px;
+      color: #888ea6;
+    }
+    &-example:nth-child(2) {
+      background: #fff;
+      border-radius: 12px;
+    }
+  }
+  .total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    margin-top: 40px;
+    font-size: 28px;
+    color: #888ea6;
+    &-money,
+    &-unit {
+      color: #ff706d;
+    }
+    &-money {
+      font-size: 36px;
+    }
+  }
+
+  .address-info-container {
+    margin-top: 32px;
+  }
+  .address-info-overflow {
+    overflow: auto;
+    max-height: 650px;
+  }
+  .billing-tips-content-title {
+    margin-top: 16px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #24262b;
+  }
+
+  .billing-tips-detail-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .billing-tips-content-mark {
+    color: #ff706d;
+  }
+  .content-item-label {
+    color: #686b75;
+  }
+
+  .content-item-value {
+    color: #03050d;
+  }
+}

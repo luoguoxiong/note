@@ -1,0 +1,235 @@
+.print-batch {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .print-batch-selected {
+    position: relative;
+    display: flex;
+    // align-items: center;
+    align-items: baseline;
+    overflow: hidden;
+    margin: 16px 10px 16px 32px;
+
+    .label {
+      min-width: 80px;
+      font-size: 24px;
+      text-align: center;
+      color: #6e6d72;
+      font-weight: normal;
+      line-height: 24px;
+    }
+
+    .print-batch-selected__list {
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+      // height: 36px;
+      // white-space: nowrap;
+
+      // &::-webkit-scrollbar {
+      //     display: none;
+
+      //     /* Chrome Safari */
+      // }
+
+      &::after {
+        position: absolute;
+        left: 660px;
+        display: inline-block;
+        width: 48px;
+        height: 36px;
+        background: linear-gradient(90deg, rgb(255 255 255 / 0%) 0%, #fff 100%);
+        opacity: 1;
+        content: '';
+      }
+
+      .item {
+        display: inline-block;
+        padding: 6px 16px;
+        margin-right: 8px;
+        font-size: 24px;
+        text-align: center;
+        color: #6e6d72;
+        background: #f7f8fa;
+        border-radius: 6px;
+        font-weight: normal;
+        line-height: 24px;
+        flex-shrink: 0;
+      }
+    }
+
+    .selected-ellipsis {
+      box-sizing: border-box;
+      max-width: 360px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .print-batch-selected-scroll-bar {
+      height: auto !important;
+
+      &::-webkit-scrollbar {
+        height: 16px;
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: transparent;
+        transition: background-color 1s linear;
+      }
+
+      &:hover {
+        &::-webkit-scrollbar-thumb {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+
+  &-tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding-right: 20px;
+
+    &-tabs {
+      flex: 1;
+    }
+
+    &-screen {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 92px;
+      height: 100%;
+      flex-direction: column;
+      background: #ffffff;
+      box-shadow: -5px 0 10px -5px rgba(0, 0, 0, 0.1);
+      padding-left: 26px;
+      box-sizing: border-box;
+
+      .svg-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 4px;
+      }
+
+      span {
+        font-size: 22px;
+      }
+    }
+
+    .screen-active {
+      position: relative;
+      color: #8365f6;
+      background-color: #f7f8fa;
+
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: -10px;
+        display: block;
+        width: 88px;
+        height: 16px;
+        background: url('https://ic-img.ky-express.com/netc/20250619_4966_!!1750300829136_172_42.png') no-repeat;
+        background-size: 88px 20px;
+        content: '';
+      }
+    }
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 1356px;
+    background: #fff;
+    opacity: 0.9;
+
+    img {
+      width: 200px;
+      height: 100px;
+    }
+
+    div {
+      display: block;
+    }
+  }
+
+  .switch-loading {
+    flex-direction: column;
+    background-color: #f1f2f7;
+
+    img {
+      width: 120px;
+      height: 60px;
+    }
+
+    div {
+      font-size: 28px;
+      color: #8c8f99;
+      margin-top: 16px;
+    }
+  }
+
+  &-list {
+    overflow: auto;
+    background-color: #f1f2f7;
+    flex: 1;
+
+    :deep(.list-refresh-load, .van-pull-refresh) {
+      height: 100%;
+    }
+
+    :deep(.van-list) {
+      padding: 20px 20px 0;
+    }
+
+    :deep(.van-loading) {
+      padding-top: 20px;
+
+      .van-icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .search-card {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-footer {
+    height: 128px;
+  }
+
+  .print-batch-quick-tab-wrap {
+    padding: 18px 32px;
+    color: #686b75;
+    font-size: 28px;
+
+    .label {
+      width: 140px;
+      display: inline-block;
+    }
+
+    .print-batch-quick-tab-item {
+      padding: 8px 16px;
+      border-radius: 8px;
+      background-color: #f7f8fa;
+      margin-right: 10px;
+    }
+
+    .print-batch-quick-tab-item-active {
+      background-color: #f2effe;
+      color: #8365f6;
+    }
+  }
+}

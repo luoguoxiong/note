@@ -1,0 +1,25 @@
+{
+  "format": 2,
+  "compileOptions": {
+    "component2": true,
+    "transpile": {
+      "script": {
+        "ignore": [
+          "node_modules/**"
+        ]
+      }
+    },
+    "globalObjectMode": "enable"
+  },
+  "developOptions": {
+    "sourcemap": {
+      "ignoreInputMaps": true,
+      "columns": false,
+      "ignore": [
+        "**/node_modules/**"
+      ]
+    },
+    "skipTranspile": false
+  },
+  "miniprogramRoot": "./"
+}

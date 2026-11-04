@@ -1,0 +1,359 @@
+/**
+ * 公司列表组件样式
+ */
+.company-list {
+  background-color: #ffffff;
+
+  &.is-popup {
+    border-radius: 24px 24px 0 0;
+    margin-top: -24px;
+  }
+
+  .company-title {
+    position: relative;
+    font-size: 28px;
+    color: #24262B;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-left: 32px;
+    margin-top: 24px;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 4px;
+      height: 24px;
+      background-color: #8365f6;
+    }
+  }
+
+  .list-header {
+    display: flex;
+    align-items: center;
+    padding: 32px;
+    border-bottom: 2px solid #f0f0f0;
+
+    .header-title {
+      flex: 1;
+      font-size: 30px;
+      font-weight: bold;
+      color: #333333;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 28px;
+        background-color: #6b5ce7;
+        border-radius: 3px;
+        margin-right: 12px;
+        vertical-align: middle;
+      }
+    }
+
+    .help-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .list-content {
+    padding: 24px 0;
+    box-sizing: border-box;
+
+    &.height-652 {
+      height: 652px;
+    }
+
+    /* 内部内容容器 - 处理水平内边距 */
+    .list-inner {
+      padding: 0 32px;
+      box-sizing: border-box;
+    }
+
+    .company-item {
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      width: 100%;
+      min-height: 142px;
+      border-radius: 16px;
+      opacity: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      gap: 16px;
+      align-self: stretch;
+      background: #FFFFFF;
+      border: 2px solid #E6E8ED;
+      box-sizing: border-box;
+      // &--current {
+      //   background-color: #f5f3ff;
+      // }
+
+      .item-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        .company-info {
+          flex: 1;
+
+          .company-name {
+            display: inline-block;
+            width: 516px;
+            font-size: 28px;
+            color: #24262B;
+            font-weight: 600;
+            line-height: 40px;
+            margin-bottom: 8px;
+            // white-space: nowrap;
+            // text-overflow: ellipsis;
+            // overflow: hidden;
+          }
+
+          .code-row {
+            display: flex;
+            align-items: center;
+            line-height: 40px;
+
+            .code-label {
+              font-size: 28px;
+              color: #686B75;
+              flex-shrink: 0;
+            }
+
+            .code-value {
+              font-size: 28px;
+              color: #686B75;
+              margin-right: 16px;
+            }
+          }
+        }
+
+        .unbind-btn {
+          position: relative;
+          flex-shrink: 0;
+          color: #8365F6;
+          font-size: 24px;
+          line-height: 34px;
+          padding-left: 28px;
+          border: none;
+          background-color: none;
+
+          .ky-button__text {
+            display: flex;
+            align-items: center;
+          }
+
+          image {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 4px;
+          }
+        }
+
+        /** 切换中状态（参考 H5 BindLoading 组件） */
+        .bind-loading {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          flex-shrink: 0;
+          margin-top: 4px;
+
+          &__loading {
+            .loading-icon {
+              width: 28px;
+              height: 28px;
+              display: block;
+              margin: 0;
+              animation: bind-loading-rotate 2s infinite linear;
+            }
+          }
+
+          &__text {
+            font-size: 24px;
+            color: #8c8f99;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+
+  /* 底部按钮区域 - 固定定位，兼容 iOS 安全距离（参考 BindCodeForm.vue） */
+  .list-footer {
+    // position: fixed;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // z-index: 99;
+    padding: 16px 32px;
+    padding-bottom: calc(16px + env(safe-area-inset-bottom, 34px));
+    min-height: calc(120px + env(safe-area-inset-bottom, 34px));
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border-top: 1px solid #e6e8ed;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+
+    .footer-text {
+      display: block;
+      text-align: center;
+      font-size: 24px;
+      color: #999999;
+      margin-bottom: 20px;
+    }
+
+    .add-btn {
+      width: 100%;
+      height: 88px;
+      border-radius: 16px;
+    }
+  }
+}
+
+/** BindLoading 旋转动画（参考 H5 bindLoading 组件） */
+@keyframes bind-loading-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* 部门信息行（H5: department-item） */
+.company-list {
+  .department-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    width: 100%;
+    height: 64px;
+    border-radius: 8px;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
+    background: #F7F8FA;
+    box-sizing: border-box;
+    .department-name {
+      font-size: 26px;
+      color: #686B75;
+    }
+
+    .switch-btn {
+      font-size: 26px;
+      color: #8365F6;
+      font-weight: 500;
+    }
+  }
+}
+
+/* 确认部门对话框内容 */
+.confirm-dept-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+
+  .confirm-dept-label {
+    font-size: 28px;
+    color: #686B75;
+  }
+
+  .confirm-dept-value {
+    font-size: 28px;
+    color: #24262B;
+    font-weight: 500;
+  }
+}
+
+/**
+ * 底部操作栏样式（原 SwitchCodeFooter，合并至此）
+ * 与 H5 switchCodeFooter/index.scss 保持一致
+ */
+.switch-code-footer {
+  width: 100%;
+  background: #ffffff;
+  padding: 16px 0;
+  box-shadow: 0 -1px 10px rgba(93, 56, 199, 0.1);
+  z-index: 99;
+
+  &.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+  &.safe-area {
+    padding-bottom: calc(16px + env(safe-area-inset-bottom, 17px));
+  }
+
+  &__text {
+    font-size: 24px;
+    text-align: center;
+    color: #888ea6;
+  }
+
+  &__btn {
+    width: calc(100% - 64px) !important;
+    margin: 16px 32px 0 !important;
+  }
+}
+
+/* 单个解绑确认弹窗内容（对齐H5 switch-code__alert--content） */
+.unbind-confirm-content {
+  text-align: center;
+  font-size: 28px;
+  color: #24262B;
+  line-height: 1.6;
+  word-break: break-all;
+}
+
+/* 二次确认弹窗内容（展示待解绑公司列表 - 顿号分隔） */
+.second-confirm-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 0 20px;
+  text-align: left;
+
+  .second-confirm-label {
+    font-size: 26px;
+    color: #24262B;
+    font-weight: 500;
+  }
+
+  /* 可滚动公司名称文本区域（最大高度400px） */
+  .company-scroll-list {
+    max-height: 400px;
+    background-color: #F7F8FA;
+    border-radius: 12px;
+    box-sizing: border-box;
+    text-align: left;
+
+    .company-name-text {
+      padding: 24px 28px;
+      border-radius: 12px;
+      box-sizing: border-box;
+      font-size: 28px;
+      color: #24262B;
+      line-height: 1.6;
+      word-break: break-all;
+    }
+  }
+}

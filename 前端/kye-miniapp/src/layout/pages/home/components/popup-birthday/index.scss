@@ -1,0 +1,98 @@
+.hbp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10001;
+}
+
+/* 弹窗容器 */
+.hbp__warpper {
+  width: 560px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 头部图片 */
+.hbp__head image {
+  width: 560px;
+  height: 214px;
+  display: block;
+}
+
+/* 内容区域 */
+.hbp__content {
+  width: 100%;
+  height: 510px;
+  background: #ffffff;
+  border-radius: 0 0 16px 16px;
+}
+
+/* 文本样式 */
+.hbp__p1 {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  color: #732a00;
+  margin-bottom: 10px;
+  padding-top: 30px;
+}
+
+.hbp__p2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #732a00;
+  margin-left: 172px;
+}
+
+.hbp__p3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+
+  text:first-child {
+    font-size: 48px;
+    color: #732a00;
+    font-weight: bold;
+    margin-right: 8px;
+    margin-top: -9px;
+  }
+
+  text:last-child {
+    font-size: 48px;
+    font-weight: 500;
+    color: #732a00;
+  }
+}
+
+.hbp__p4 {
+  width: 408px;
+  height: 120px;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: justify;
+  color: #732a00;
+  line-height: 40px;
+  margin: 20px auto 0;
+}
+
+/* 按钮 */
+.hbp__btn {
+  width: 240px;
+  height: 64px;
+  background: url('https://ic-img.ky-express.com/netc/20250702_26676_!!1751447863992_480_128.png');
+  background-size: 100% 100%;
+  font-weight: 500;
+  text-align: left;
+  color: #c93501;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto 0;
+}

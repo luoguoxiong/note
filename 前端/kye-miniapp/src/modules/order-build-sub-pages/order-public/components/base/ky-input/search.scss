@@ -1,0 +1,56 @@
+.ky-input-search {
+  .van-search {
+    padding: 24px 32px;
+  }
+  &.highlight {
+    :deep(.van-cell) {
+      border: 1.5px solid #8365f6;
+    }
+  }
+  :deep() {
+    input[type="search"]::placeholder {
+      font-weight: 400;  
+    }
+    .van-field__body {
+      background: #f7f8fa;
+      input {
+        font-size: 28px;
+        font-weight: $font-bold;
+      }
+      .van-icon-clear {
+        z-index: 9999;
+        &::before {
+          position: relative;
+          left: 20px;
+          padding: 0 24px;
+        }
+      }
+    }
+    .search-icon {
+      width: 28px;
+      height: 28px;
+    }
+    .van-search__content {
+      padding-left: 0;
+      background-color: #f7f8fa;
+      border-radius: 20px;
+    }
+
+    .van-cell {
+      padding: 0 24px !important;
+      border: 1.5px solid $bg-input-disable;
+      border-radius: 20px;
+    }
+
+    .van-field__control {
+      font-size: 28px;
+    }
+
+    .van-field__left-icon {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      font-size: 28px;
+    }
+  }
+}

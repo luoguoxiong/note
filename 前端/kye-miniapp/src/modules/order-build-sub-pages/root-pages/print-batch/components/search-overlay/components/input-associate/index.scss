@@ -1,0 +1,54 @@
+.input-associate {
+    position: relative;
+
+    :deep(.input-associate__input) {
+        padding: 18px 24px;
+        background: #F7F8FA;
+        border-radius: 10px;
+
+        .van-field__control,
+        .van-field__body {
+            height: 24px;
+            line-height: 24px;
+            font-size: 24px;
+
+            i {
+                font-size: 36px;
+            }
+        }
+    }
+
+    :deep(.van-popup) {
+        left: 0 !important;
+        width: 100%;
+    }
+
+    &-option {
+        position: absolute;
+        z-index: 999;
+        overflow: hidden;
+        width: 100%;
+        border-radius: 24px;
+        box-shadow: 0 4px 10px 0 rgb(0 0 0 / 30%);
+
+        .item {
+            padding: 36px 24px;
+            font-size: 28px;
+            background: #fff;
+            font-weight: normal;
+            line-height: 28px;
+        }
+
+        // width: 321px;
+    }
+
+    .placement-top {
+        top: -20px;
+        transform: rotateX(180deg);
+        transform-origin: top center;
+
+        .item {
+            transform: rotateX(180deg);
+        }
+    }
+}

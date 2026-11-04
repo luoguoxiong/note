@@ -1,0 +1,333 @@
+<template>
+  <view class="list-standard">
+    <view class="demo-container">
+      <view class="demo-header">
+        <view class="header-title">ListStandard 标准列表</view>
+        <view class="header-subtitle">内置数据加载逻辑，只需传入 fetch 函数</view>
+      </view>
+
+      <view class="demo-content">
+        <view class="card">
+          <view class="card-header">
+            <view class="card-icon">📋</view>
+            <view class="card-title">标准列表完整示例</view>
+            <text class="card-tip">下拉刷新 / 上拉加载 / 内置分页</text>
+          </view>
+          <view class="card-body">
+            <view class="list-container">
+              <ky-list-standard ref="listRef" :fetch="fetchData" :scrollViewProps="scrollViewProps" showLoading>
+                <template #beforeContent>
+                  <view class="list-header">
+                    <text class="header-count">共 {{ totalCount }} 条数据</text>
+                    <text class="header-refresh" @click="handleRefresh">🔄 刷新</text>
+                  </view>
+                </template>
+
+                <template #empty>
+                  <view class="custom-empty">
+                    <text class="empty-icon">📭</text>
+                    <text class="empty-text">暂无数据</text>
+                    <text class="empty-tip">点击下拉刷新重新加载</text>
+                  </view>
+                </template>
+
+                <template #default="{ data }">
+                  <view class="list-item">
+                    <view class="item-avatar">{{ data.avatar }}</view>
+                    <view class="item-content">
+                      <text class="item-name">{{ data.name }}</text>
+                      <text class="item-position">{{ data.position }}</text>
+                      <text class="item-desc">{{ data.desc }}</text>
+                    </view>
+                    <text class="item-tag" :class="`tag-${data.status}`">{{ statusMap[data.status] }}</text>
+                  </view>
+                </template>
+
+                <template #finished>
+                  <view class="list-footer">
+                    <text class="footer-text">— 已加载全部数据 —</text>
+                  </view>
+                </template>
+
+                <template #load-fail>
+                  <view class="load-fail" @click="handleRefresh">
+                    <text class="fail-icon">🔄</text>
+                    <text class="fail-text">加载失败，点击重试</text>
+                  </view>
+                </template>
+              </ky-list-standard>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script lang="ts" setup>
+import { ref } from 'vue'
+import '../index.scss'
+
+interface ListData {
+  id: number
+  avatar: string
+  name: string
+  position: string
+  desc: string
+  status: 'active' | 'vacation' | 'business'
+}
+
+const listRef = ref()
+const totalCount = ref(0)
+
+const statusMap: Record<string, string> = {
+  active: '在职',
+  vacation: '休假',
+  business: '出差',
+}
+
+const scrollViewProps = {
+  scrollWithAnimation: true,
+  showScrollbar: false,
+}
+
+const fetchData = async (page: number) => {
+  await new Promise((resolve) => setTimeout(resolve, 500))
+
+  const avatars = ['👨‍💻', '👩‍💻', '👨‍🚀', '👩‍🚀', '🧑‍🎨', '👨‍🎨', '👩‍⚕️', '👨‍⚕️', '👩‍🎓', '👨‍🎓']
+  const names = ['张三', '李四', '王五', '赵六', '钱七', '孙八', '周九', '吴十', '郑一', '陈二']
+  const positions = [
+    '前端工程师',
+    '后端工程师',
+    '产品经理',
+    '设计师',
+    '测试工程师',
+    '运维工程师',
+    '项目经理',
+    '技术总监',
+  ]
+  const statuses: ('active' | 'vacation' | 'business')[] = ['active', 'vacation', 'business']
+
+  const total = 50
+  totalCount.value = total
+
+  const data: ListData[] = Array.from({ length: 10 }, (_, i) => {
+    const idx = (page - 1) * 10 + i
+    const contentLength = (idx % 3) + 1
+    const descs = [
+      '负责前端页面开发与优化',
+      '专注于后端服务架构设计和性能优化',
+      '主导产品规划与设计，协调跨团队资源推动项目落地',
+    ]
+
+    return {
+      id: idx,
+      avatar: avatars[idx % avatars.length],
+      name: names[idx % names.length] + (idx + 1),
+      position: positions[idx % positions.length],
+      desc: descs[contentLength - 1],
+      status: statuses[idx % statuses.length],
+    }
+  })
+
+  return {
+    data,
+    total,
+  }
+}
+
+const handleRefresh = () => {
+  listRef.value?.init()
+}
+</script>
+
+<style lang="scss">
+.list-standard .demo-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.list-standard .demo-header {
+  flex-shrink: 0;
+}
+
+.list-standard .demo-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.list-standard .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.list-standard .card-header {
+  flex-shrink: 0;
+}
+
+.list-standard .card-tip {
+  font-size: 22rpx;
+  color: #999;
+  margin-left: 16rpx;
+}
+
+.list-standard .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 24rpx;
+}
+
+.list-standard .list-container {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.list-standard .list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 24rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.list-standard .header-count {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.list-standard .header-refresh {
+  font-size: 24rpx;
+  color: #667eea;
+}
+
+.list-standard .list-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 24rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.list-standard .item-avatar {
+  font-size: 64rpx;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+
+.list-standard .item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.list-standard .item-name {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8rpx;
+  display: block;
+}
+
+.list-standard .item-position {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 8rpx;
+  display: block;
+}
+
+.list-standard .item-desc {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 1.4;
+  display: block;
+}
+
+.list-standard .item-tag {
+  font-size: 22rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 20rpx;
+  flex-shrink: 0;
+  margin-left: 16rpx;
+}
+
+.list-standard .tag-active {
+  background: #f6ffed;
+  color: #52c41a;
+}
+
+.list-standard .tag-vacation {
+  background: #fff7e6;
+  color: #fa8c16;
+}
+
+.list-standard .tag-business {
+  background: #e6f7ff;
+  color: #1890ff;
+}
+
+.list-standard .custom-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80rpx 40rpx;
+}
+
+.list-standard .empty-icon {
+  font-size: 80rpx;
+  margin-bottom: 24rpx;
+}
+
+.list-standard .empty-text {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 12rpx;
+}
+
+.list-standard .empty-tip {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.list-standard .list-footer {
+  padding: 20rpx;
+  text-align: center;
+  background: #fff;
+}
+
+.list-standard .footer-text {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.list-standard .load-fail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24rpx;
+  background: #fff;
+}
+
+.list-standard .fail-icon {
+  font-size: 32rpx;
+  margin-right: 12rpx;
+}
+
+.list-standard .fail-text {
+  font-size: 24rpx;
+  color: #fa5151;
+}
+</style>

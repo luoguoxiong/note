@@ -1,0 +1,50 @@
+.advertisement-netc-popup {
+  .container {
+    width: 100% !important;
+    border-radius: 20px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .first-top {
+    width: 590px;
+    height: 755px;
+    overflow: hidden;
+
+    &-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .advertisement-checkbox {
+    width: 32px;
+    height: 32px;
+    vertical-align: unset;
+  }
+
+  .advertisement-netc-close {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 40px;
+    &-icon {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .advertisement-netc-notice {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    justify-content: center;
+  }
+  .advertisement-netc-notice-text {
+    color: #fff;
+    font-size: 28px;
+    line-height: normal;
+    margin-left: 16px;
+    transform: translateY(-2px);
+  }
+}

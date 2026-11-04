@@ -1,0 +1,46 @@
+.goods-type-uploader {
+  .goods-type-uploader-box {
+    width: 144px;
+    height: 144px;
+    border: 2px dashed #e6e8ed;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .gray-add {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+.upload-select-box {
+  .upload-btn {
+    // background: #8365f6;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // color: #fff;
+    color: #24262b;
+    font-size: 32px;
+    // margin-bottom: 12px;
+    border-bottom: 1px solid #e6e8ed;
+    // font-weight: 600;
+  }
+  .line {
+    height: 8px;
+    background: #f1f2f7;
+  }
+}
+.validate-error {
+  .goods-type-uploader-box {
+    border: 2px solid #ff706d;
+  }
+}
+
+.goods-type-uploader-error {
+  .goods-type-uploader-box {
+    border: 2px solid #ff706d;
+    border-radius: 8px;
+  }
+}

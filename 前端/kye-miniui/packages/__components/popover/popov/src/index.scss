@@ -1,0 +1,178 @@
+@use "sass:map";
+
+$themes: (
+  light: (
+    back-ground: #fff,
+    borderColor: #fff,
+    textColor: #24262B,
+    bg:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAABSSURBVDiN3c+5EQAgDANBoHJTuQiI+G2QE1TA3igCQHBc8sT/CWRHv9oABPxJkyJHZDzDi8xxUmSPP0Z0+GXEhhsjd7gy8oYfIhx8EeHiXcSEF4mACCyRJ4gDAAAAAElFTkSuQmCC'
+  ),
+  dark: (
+    back-ground: rgb(36, 38, 43,0.9),
+    borderColor: transparent,
+    textColor: #FFF,
+    bg:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAB9SURBVDiNtdS7EYAgEEXRi9iO/WiFUJD2Y+BvRFhWZV+CJPcEzOi45jCYS04TwCwO0FnGAXpgBCajfvDAsl+G1nEgerY3mBsjAYgAB0BD5IynQAvkFs8Bf5BHvAR8QbJxCXiDFOM1QIOIcQ0gIdW4FsghqjhsvwrtYuFb3ArpMhoBGamKoQAAAABJRU5ErkJggg=='
+  ),
+  error: (
+    back-ground: #FFF3F3,
+    borderColor: #FFAFAB,
+    textColor: #FF706D,
+    bg:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAACcSURBVDiNtc2xDcMgEEbhB2MkG0TKNCkyTvA4FExjyRvAAu4hTSxZAuPDgb+90/tUWtfEwGmCH1cPHs0yMwQJHpYZDdAd+cUBNDFOXZFdnBgnBZCcNWj9AeDxhNu9T/z1Nmq7/Y0U4gBq/3MZOYhnwCWkEi8CTchJ/BAQIYJ4FagiwvgpUERAHBcBGbJNEBcDGSKMNy85a5KzTeEvnRaK6jmDIk8AAAAASUVORK5CYII='
+  ),
+  warning: (
+    back-ground: #FFF3E5,
+    borderColor: #FFD194,
+    textColor: #686B75,
+    bg:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAACcSURBVDiNtc2xDcMgEEbhB33KtNkhylyZIXgG5rK8A5Irl/S+NLFkCYwPB/72Tu8zEmeh4ywx9KvHgGUZ6YLEAMuIBWiO/OIAllWGpsguziqDAZDJO6z5AHB/we3RJv58O7Pd/kYycQCz/7mMHMQT4BJSiGeBKuQkfgioEEW8CBQRZfwUyCKgjquABNmmiKuBBFHGqyeTdzL5qvAXh/WLoL0BV9gAAAAASUVORK5CYII='
+  )
+);
+
+.ky-popover-container {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.ky-popover-content {
+  position: absolute;
+  z-index: 1000;
+  width: max-content;
+  visibility: hidden;
+  max-width: 100vw;
+  box-shadow: 0 2px 12px rgba(50, 50, 51, .12);
+  border-radius: 12px;
+}
+
+
+
+@each $theme, $attributes in $themes {
+  .ky-popover-thenme-#{$theme} {
+    & > .ky-popover-arrow {
+      background: url(map.get($attributes, bg));
+      background-size: 100% 100%;
+      z-index: 2;
+    }
+
+    & > .ky-popover-box {
+      background: map.get($attributes, back-ground);
+      border-color: map.get($attributes, borderColor);
+      color: map.get($attributes, textColor);
+      z-index: 1;
+    }
+  }
+}
+.ky-popover-arrow {
+  position: absolute;
+  width: 24px;
+  height: 16px;
+}
+
+.ky-popover-box {
+  position: relative;
+  padding: 12px 16px;
+  z-index: 2;
+  border-radius: 8px;
+  border: 2px solid;
+  line-height: 34px;
+  font-size: 24px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.ky-popover-mask{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+$scale-x: 0.66;
+$scale-y: 0.56;
+
+.ky-popover-arrow-left {
+  right: -16px;
+  top: 50%;
+  transform: scaleX($scale-x) scaleY($scale-y) rotate(-90deg) translateX(6px);
+}
+
+.ky-popover-arrow-left-start{
+  right: -16px;
+  transform: scaleX($scale-x) scaleY($scale-y) rotate(-90deg) translateX(-6px);
+}
+.ky-popover-arrow-left-end {
+  right: -16px;
+  transform: scaleX($scale-x) scaleY($scale-y) rotate(-90deg) translateX(6px);
+}
+
+.ky-popover-arrow-right {
+  left: -16px;
+  top: 50%;
+  transform: scaleX($scale-x) scaleY($scale-y) rotate(90deg) translateX(-6px);
+}
+
+.ky-popover-arrow-right-start{
+  left: -16px;
+  transform: scaleX($scale-x) scaleY($scale-y) rotate(90deg) translateX(6px);
+}
+.ky-popover-arrow-right-end {
+  left: -16px;
+  transform: scaleX($scale-x) scaleY($scale-y) rotate(90deg) translateX(-6px);
+}
+
+.ky-popover-arrow-bottom {
+  top: -9px;
+  left: 50%;
+  transform: scaleX($scale-x) scaleY($scale-y) rotate(180deg) translateX(8px);
+}
+
+.ky-popover-arrow-bottom-start,
+.ky-popover-arrow-bottom-end {
+  top: -9px;
+  transform: scaleX($scale-x) scaleY($scale-y) rotate(180deg);
+}
+
+.ky-popover-arrow-top {
+  bottom: -9px;
+  left: 50%;
+  transform: scaleX($scale-x) scaleY($scale-y) translateX(-50%);
+}
+
+.ky-popover-arrow-top-start,
+.ky-popover-arrow-top-end {
+  bottom: -9px;
+  transform: scaleX($scale-x) scaleY($scale-y);
+}
+
+
+@keyframes popover-enter {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popover-leave {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+.popover-enter-active {
+  animation: popover-enter 0.15s ease-out forwards;
+}
+
+.popover-leave-active {
+  animation: popover-leave 0.15s ease-in forwards;
+}

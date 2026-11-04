@@ -1,0 +1,33 @@
+.waybiil-ramark {
+  .tag-container {
+    margin-top: 16px;
+  }
+
+  &.hasValue {
+    .cell-wrapper {
+      .van-cell__value {
+        flex: 1 !important;
+        min-width: 60%;
+      }
+    }
+  }
+  .cell-wrapper {
+    .van-cell__value {
+      flex: none;
+    }
+  }
+
+  .cell-wrapper {
+    &::after {
+      position: absolute;
+      right: 0;
+      left: 24px;
+      width: 662px;
+      content: '';
+      box-sizing: border-box;
+      pointer-events: none;
+      transform: scaleY(0.5);
+      border-bottom: 2px solid #ebedf5;
+    }
+  }
+}

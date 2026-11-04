@@ -1,0 +1,23 @@
+#home-banner {
+  .el-carousel__button {
+    width: 24px;
+    height: 6px;
+    opacity: 1;
+    &:target {
+      width: 32px;
+      height: 16px;
+    }
+  }
+  .el-carousel__indicator--horizontal {
+    padding: 8px 4px;
+    margin-bottom: 4px;
+  }
+  .el-carousel__indicator.is-active button {
+    background: #FFF !important;
+    opacity: 1;
+  }
+  .el-carousel__indicator--horizontal button{
+    background: #fff !important;
+    opacity: 0.6;
+  }
+}

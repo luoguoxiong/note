@@ -1,0 +1,20 @@
+.ky-receipt-container-page-org {
+  .ky-receipt-container {
+    // 用于placeholder 换行，命中内部 textarea 类名
+    .order-custom-textarea.h5-textarea {
+      white-space: pre-wrap;
+    }
+  }
+
+  .footer {
+    .h5-button {
+      width: 100%;
+    }
+  }
+
+  .upload-container {
+    .file-delete-icon {
+      font-size: 37px;
+    }
+  }
+}

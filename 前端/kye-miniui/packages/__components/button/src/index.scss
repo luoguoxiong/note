@@ -1,0 +1,218 @@
+$button-default-border-color: #D3D5DB;
+$button-primary-border-color: $primary;
+$button-info-border-color: $primary;
+$button-warning-border-color: #FF9300;
+$button-danger-border-color: #FF706D;
+
+@mixin darken-color($color){
+  background-color: darken($color,10%);
+}
+
+
+.ky-button {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 34px;
+  line-height: 34px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  appearance: none;
+  user-select: none;
+  touch-action: manipulation;
+  vertical-align: bottom;
+  color: $text-color-button;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 8px;
+  &::after{
+    border: none;
+    border-radius: 8px;
+  }
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    border: inherit;
+    border-color: $black;
+    border-radius: inherit;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    content: ' ';
+  }
+  &:not([disabled]):not(.ky-button--primary):active::before {
+    opacity: 0.1;
+  }
+
+  &__wrap{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    .h5-img,img{
+      width: 24px;
+      height: 24px;
+      margin-right: 4px;
+    }
+    .ky-button-loading{
+      animation: ky-button-rotate 0.8s linear infinite;
+    }
+  }
+  &__text{
+    box-sizing: border-box;
+  }
+  &--large {
+    padding: 0 32px;
+    height: 88px;
+    line-height: 88px;
+    font-size: 32px;
+    border-radius: 16px;
+    font-weight: 700;
+  }
+  &--normal {
+    padding: 0 24px;
+    height:64px;
+    line-height: 64px;
+    font-size: 28px;
+    border-radius: 12px;
+  }
+  &--small{
+    padding: 0 24px;
+    height:56px;
+    line-height: 56px;
+    font-size: 24px;
+    border-radius: 8px;
+  }
+  &--mini{
+    padding: 0 20px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 24px;
+    border-radius: 8px;
+  }
+  &--default {
+    background-color:$white;
+    color: $button-default-color;
+    border: 2px solid $button-default-border-color;
+  }
+  &--primary {
+    background-color: $primary;
+    color: $white !important;
+    border: 2px solid $button-primary-border-color;
+    &:not([disabled]):not(.ky-button--disabled):active{
+      background-color: #6B37F9;
+      color: $white;
+    }
+  }
+  &--warning {
+    background-color: #FF9300;
+    color: $white;
+    border: 2px solid $button-warning-border-color;
+    &:not([disabled]):not(.ky-button--disabled):active{
+      @include darken-color($button-warning-border-color);
+      color: $white;
+    }
+  }
+  &--danger {
+    background-color: #FF706D;
+    color: $white;
+    border: 2px solid $button-danger-border-color;
+    &:not([disabled]):not(.ky-button--disabled):active{
+      @include darken-color($button-danger-border-color);
+      color: $white;
+    }
+  }
+  &--info {
+    color: $button-default-color;
+  }
+  &--success {
+    color: $button-default-color;
+  }
+  &--plain{
+    background-color: $white;
+    &.ky-button--primary{
+      color: $primary !important;
+      border-color: $primary;
+    }
+    &.ky-button--default{
+      color:$button-default-color;
+      border-color: #D3D5DB;
+    }
+    &.ky-button--info{
+      color:$button-default-color;
+      border-color: $primary;
+    }
+    &.ky-button--warning{
+      color:$button-warning-border-color;
+      border-color: $button-warning-border-color;
+    }
+    &.ky-button--danger{
+      color:$button-danger-border-color;
+      border-color: $button-danger-border-color;
+    }
+  }
+
+  /* 状态 */
+  &--disabled{
+    cursor: not-allowed;
+    background-color: #D3D5DB;
+    border-color: transparent;
+  }
+  &--loading,&--disabled{
+    &::before{
+      display: none;
+    }
+  }
+}
+
+.ky-button--plain{
+  &.ky-button--primary:not([disabled]):not(.ky-button--disabled):active {
+    color: $button-primary-border-color;
+    border-color: $button-primary-border-color;
+    background-color: #F2EFFE;
+  }
+  &.ky-button--default:not([disabled]):not(.ky-button--disabled):active {
+    color: $button-default-color;
+    border-color: $button-default-border-color;
+    background-color: rgba(0, 0, 0, 0.04);;
+  }
+  &.ky-button--warning:not([disabled]):not(.ky-button--disabled):active {
+    color: $button-warning-border-color;
+    border-color: $button-warning-border-color;
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  &.ky-button--danger:not([disabled]):not(.ky-button--disabled):active {
+    color: $button-danger-border-color;
+    border-color: $button-danger-border-color;
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  &.ky-button--disabled{
+    border-color: #E6E8ED;
+    background-color: #F2F3F7;
+    color: #8C8F99 !important;
+  }
+}
+
+/* #ifdef weapp */
+@import './index.weapp.scss';
+/* #endif */
+
+
+@keyframes ky-button-rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

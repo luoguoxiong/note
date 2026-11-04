@@ -1,0 +1,41 @@
+.rules-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+.cover {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.rules-dialog__content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 640rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  padding-bottom: 24rpx;
+}
+.header img {
+  width: 100%;
+  display: block;
+}
+.rules-item {
+  padding: 16rpx 24rpx;
+}
+.rules-item-title {
+  font-weight: 600;
+  margin-bottom: 12rpx;
+}
+.footer {
+  width: 80%;
+  margin: 16rpx auto 0;
+  display: block;
+  background: #4d46fa;
+  color: #fff;
+  border: none;
+  border-radius: 8rpx;
+  padding: 16rpx 0;
+}

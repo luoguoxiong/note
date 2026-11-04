@@ -1,0 +1,14 @@
+.dispatch-container-page-org {
+  .dispatch-container {
+    // 用于placeholder 换行，命中内部 textarea 类名
+    .order-custom-textarea.h5-textarea {
+      white-space: pre-wrap;
+    }
+  }
+
+  .footer {
+    .h5-button {
+      width: 100%;
+    }
+  }
+}

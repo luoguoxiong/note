@@ -1,0 +1,106 @@
+.notepad-item {
+  padding: 32px 24px 0;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-sizing: border-box;
+  // 和地址薄一致 不要active效果了
+  // &:active {
+  //   background: rgba(79, 9, 217, 0.06);
+  //   .notepad-item__foot {
+  //     border-color: #EBEDF5;
+  //   }
+  // }
+  &__content {
+    position: relative;
+    font-size: 28px;
+    line-height: 42px;
+
+    &-front {
+      max-height: 210px;
+      overflow-y: auto;
+      word-break: break-all;
+    }
+
+    // &-back {
+    //   position: relative;
+    //   overflow: hidden;
+    //   max-height: 168px;
+    //   color: transparent;
+    //   user-select: none;
+    //   word-break: break-all;
+    //   word-wrap: break-word;
+
+    //   @include multi-ellipsis(4);
+    // }
+
+    // &.expand {
+    //   .notepad-item__content-front,
+    //   .notepad-item__content-back {
+    //     display: block;
+    //     height: auto;
+    //     max-height: unset;
+    //   }
+
+    //   .notepad-item__content-back {
+    //     padding-top: 42px;
+    //   }
+    // }
+  }
+
+  // &__operate {
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: 0;
+  //   width: 100%;
+  //   font-size: 24px;
+  //   text-align: right;
+  //   line-height: 30px;
+
+  //   &-more {
+  //     color: #8365f6;
+
+  //     &.expand {
+  //       .more-expand {
+  //         transform: rotate(180deg);
+  //       }
+  //     }
+  //   }
+
+  //   .more-expand {
+  //     margin: -4px 0 0 5px;
+  //     color: #8365f6;
+  //     vertical-align: middle;
+  //   }
+  // }
+
+  &__foot {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 76px;
+    margin-top: 16px;
+    border-top: 1px solid #ebedf5;
+    user-select: none;
+
+    &-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 148px;
+      height: 100%;
+      margin-right: -24px;
+      font-size: 24px;
+      text-align: center;
+      line-height: 100%;
+
+      .svg-icon {
+        width: 36px;
+        height: 36px;
+        margin-right: 5px;
+        vertical-align: middle;
+        margin-top: -2px;
+      }
+    }
+  }
+}

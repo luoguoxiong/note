@@ -1,0 +1,46 @@
+.new-user-search{
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  height: 64px;
+  padding: 0 32px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  background: #F7F8FA;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  border-width: 1px !important;
+  font-weight: 400;
+}
+
+.isPcSearchBar{
+  width: 375PX !important;
+  left: 50% !important;
+  transform: translateX(-50%);
+}
+
+.new-user-search-content{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.new-user-logo{
+  position: absolute;
+  height: 64px;
+  padding: 12px 0;
+  box-sizing: border-box;
+  image{
+    width: 178px;
+    height: 42px;
+  }
+}
+
+.new-user-icon{
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
