@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2016", "DOM"],
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "declaration": true,
+    "baseUrl": "./src",
+    "downlevelIteration": true,
+    "paths": {
+      "@@/*": [".dumi/tmp/*"]
+    }
+  },
+  "include": ["./src/"]
+}

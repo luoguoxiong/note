@@ -1,0 +1,32 @@
+{
+  "name": "@kye-netc/micro-native",
+  "version": "0.0.15-beta.6",
+  "description": "微前端原生通信层(基座-子应用方法调用 + 事件广播，支持 iframe / micro-app / 同进程三种模式)",
+  "type": "module",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "father dev",
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "publish": "father build && npm publish --ignore-scripts"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://nexus.ky-tech.com.cn:8081/repository/npmjs-hosted"
+  },
+  "peerDependencies": {
+    "@micro-zoe/micro-app": "1.0.0-rc.32"
+  }
+}

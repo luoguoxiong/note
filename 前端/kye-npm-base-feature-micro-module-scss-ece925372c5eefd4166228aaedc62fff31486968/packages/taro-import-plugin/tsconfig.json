@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2015","DOM"],
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+    }
+  },
+  "include": ["./src/"]
+}

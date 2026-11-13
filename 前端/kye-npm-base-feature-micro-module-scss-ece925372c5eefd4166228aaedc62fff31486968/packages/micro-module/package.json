@@ -1,0 +1,42 @@
+{
+  "name": "@kye-netc/micro-module",
+  "version": "0.0.15-beta.7",
+  "description": "微前端库(Proxy 沙箱 + 子应用加载器 + 共享组件 + Vue3 适配层)",
+  "type": "module",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js"
+    },
+    "./sub-app": {
+      "types": "./dist/esm/sub-app.d.ts",
+      "import": "./dist/esm/sub-app.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "father dev",
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "publish": "father build && npm publish --ignore-scripts"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://nexus.ky-tech.com.cn:8081/repository/npmjs-hosted"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  }
+}

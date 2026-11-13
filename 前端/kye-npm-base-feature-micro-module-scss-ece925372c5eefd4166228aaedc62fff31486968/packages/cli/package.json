@@ -1,0 +1,36 @@
+{
+  "name": "@kye-netc/cli",
+  "version": "0.2.24",
+  "description": "跨越多端应用发布cli",
+  "type": "module",
+  "bin": {
+    "kycli": "dist/esm/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "father dev",
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "publish": "father build && npm publish --ignore-scripts"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://nexus.ky-tech.com.cn:8081/repository/npmjs-hosted"
+  },
+  "devDependencies": {
+    "father": "^4.5.3"
+  },
+  "resolutions": {
+    "chalk": "4.1.2"
+  },
+  "dependencies": {
+    "cac": "^6.7.11",
+    "minidev": "^2.2.5",
+    "miniprogram-ci": "2.1.30",
+    "inquirer": "^8.2.6"
+  },
+  "author": "",
+  "license": "ISC"
+}
